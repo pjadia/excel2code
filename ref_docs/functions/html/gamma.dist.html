@@ -1,0 +1,259 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p id="__goback">
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    GAMMA.DIST
+   </b>
+   function in Microsoft Excel.
+  </p>
+  <p>
+   Returns the gamma distribution. You can use this function to study variables that may have a skewed distribution. The gamma distribution is commonly used in queuing analysis.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <p>
+   GAMMA.DIST(x,alpha,beta,cumulative)
+  </p>
+  <p>
+   The GAMMA.DIST function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      X
+     </b>
+     Required. The value at which you want to evaluate the distribution.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Alpha
+     </b>
+     Required. A parameter to the distribution.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Beta
+     </b>
+     Required. A parameter to the distribution. If beta = 1, GAMMA.DIST returns the standard gamma distribution.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Cumulative
+     </b>
+     Required. A logical value that determines the form of the function. If cumulative is TRUE, GAMMA.DIST returns the cumulative distribution function; if FALSE, it returns the probability density function.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If x, alpha, or beta is nonnumeric, GAMMA.DIST returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If x &lt; 0, GAMMA.DIST returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If alpha ≤ 0 or if beta ≤ 0, GAMMA.DIST returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     The equation for the gamma probability density function is:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/e770459a-8afb-431d-b931-b1c38b4d36ef?format=avif&amp;w=320 320w,        /images/en-us/e770459a-8afb-431d-b931-b1c38b4d36ef?format=avif&amp;w=480 480w,        /images/en-us/e770459a-8afb-431d-b931-b1c38b4d36ef?format=avif&amp;w=640 640w,        /images/en-us/e770459a-8afb-431d-b931-b1c38b4d36ef?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/e770459a-8afb-431d-b931-b1c38b4d36ef?format=webp&amp;w=320 320w,        /images/en-us/e770459a-8afb-431d-b931-b1c38b4d36ef?format=webp&amp;w=480 480w,        /images/en-us/e770459a-8afb-431d-b931-b1c38b4d36ef?format=webp&amp;w=640 640w,        /images/en-us/e770459a-8afb-431d-b931-b1c38b4d36ef?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/e770459a-8afb-431d-b931-b1c38b4d36ef?format=jpeg&amp;w=320 320w,        /images/en-us/e770459a-8afb-431d-b931-b1c38b4d36ef?format=jpeg&amp;w=480 480w,        /images/en-us/e770459a-8afb-431d-b931-b1c38b4d36ef?format=jpeg&amp;w=640 640w,        /images/en-us/e770459a-8afb-431d-b931-b1c38b4d36ef?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="The equation for the gamma probability density function" class="fluentImage" loading="lazy" src="/images/en-us/e770459a-8afb-431d-b931-b1c38b4d36ef" style="aspect-ratio: 191/38" width="191"/>
+     </picture>
+    </p>
+    <p>
+     The standard gamma probability density function is:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/8ecf9223-a064-43cd-9f5c-75a094d0ae9f?format=avif&amp;w=320 320w,        /images/en-us/8ecf9223-a064-43cd-9f5c-75a094d0ae9f?format=avif&amp;w=480 480w,        /images/en-us/8ecf9223-a064-43cd-9f5c-75a094d0ae9f?format=avif&amp;w=640 640w,        /images/en-us/8ecf9223-a064-43cd-9f5c-75a094d0ae9f?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/8ecf9223-a064-43cd-9f5c-75a094d0ae9f?format=webp&amp;w=320 320w,        /images/en-us/8ecf9223-a064-43cd-9f5c-75a094d0ae9f?format=webp&amp;w=480 480w,        /images/en-us/8ecf9223-a064-43cd-9f5c-75a094d0ae9f?format=webp&amp;w=640 640w,        /images/en-us/8ecf9223-a064-43cd-9f5c-75a094d0ae9f?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/8ecf9223-a064-43cd-9f5c-75a094d0ae9f?format=jpeg&amp;w=320 320w,        /images/en-us/8ecf9223-a064-43cd-9f5c-75a094d0ae9f?format=jpeg&amp;w=480 480w,        /images/en-us/8ecf9223-a064-43cd-9f5c-75a094d0ae9f?format=jpeg&amp;w=640 640w,        /images/en-us/8ecf9223-a064-43cd-9f5c-75a094d0ae9f?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/8ecf9223-a064-43cd-9f5c-75a094d0ae9f" style="aspect-ratio: 113/38" width="113"/>
+     </picture>
+    </p>
+   </li>
+   <li>
+    <p>
+     When alpha = 1, GAMMA.DIST returns the exponential distribution with:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/03a77979-7ad4-49b5-8069-5fae9f776c12?format=avif&amp;w=320 320w,        /images/en-us/03a77979-7ad4-49b5-8069-5fae9f776c12?format=avif&amp;w=480 480w,        /images/en-us/03a77979-7ad4-49b5-8069-5fae9f776c12?format=avif&amp;w=640 640w,        /images/en-us/03a77979-7ad4-49b5-8069-5fae9f776c12?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/03a77979-7ad4-49b5-8069-5fae9f776c12?format=webp&amp;w=320 320w,        /images/en-us/03a77979-7ad4-49b5-8069-5fae9f776c12?format=webp&amp;w=480 480w,        /images/en-us/03a77979-7ad4-49b5-8069-5fae9f776c12?format=webp&amp;w=640 640w,        /images/en-us/03a77979-7ad4-49b5-8069-5fae9f776c12?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/03a77979-7ad4-49b5-8069-5fae9f776c12?format=jpeg&amp;w=320 320w,        /images/en-us/03a77979-7ad4-49b5-8069-5fae9f776c12?format=jpeg&amp;w=480 480w,        /images/en-us/03a77979-7ad4-49b5-8069-5fae9f776c12?format=jpeg&amp;w=640 640w,        /images/en-us/03a77979-7ad4-49b5-8069-5fae9f776c12?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/03a77979-7ad4-49b5-8069-5fae9f776c12" style="aspect-ratio: 41/35" width="41"/>
+     </picture>
+    </p>
+   </li>
+   <li>
+    <p>
+     For a positive integer n, when alpha = n/2, beta = 2, and cumulative = TRUE, GAMMA.DIST returns (1 - CHISQ.DIST.RT(x)) with n degrees of freedom.
+    </p>
+   </li>
+   <li>
+    <p>
+     When alpha is a positive integer, GAMMA.DIST is also known as the Erlang distribution.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </th>
+     <th>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       10.00001131
+      </p>
+     </td>
+     <td>
+      <p>
+       Value at which you want to evaluate the distribution
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       9
+      </p>
+     </td>
+     <td>
+      <p>
+       Alpha parameter to the distribution
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+     <td>
+      <p>
+       Beta parameter to the distribution
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =GAMMA.DIST(A2,A3,A4,FALSE)
+      </p>
+     </td>
+     <td>
+      <p>
+       Probability density using the x, alpha, and beta values in A2, A3, A4, with FALSE cumulative argument.
+      </p>
+     </td>
+     <td>
+      <p>
+       0.032639
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =GAMMA.DIST(A2,A3,A4,TRUE)
+      </p>
+     </td>
+     <td>
+      <p>
+       Cumulative distributuion using the x, alpha, and beta values in A2, A3, A4, with TRUE cumulative argument.
+      </p>
+     </td>
+     <td>
+      <p>
+       0.068094
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

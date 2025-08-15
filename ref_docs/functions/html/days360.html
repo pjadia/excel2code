@@ -1,0 +1,275 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    DAYS360
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Description
+  </h2>
+  <p>
+   The
+   <b class="ocpLegacyBold">
+    DAYS360
+   </b>
+   function returns the number of days between two dates based on a 360-day year (twelve 30-day months), which is used in some accounting calculations. Use this function to help compute payments if your accounting system is based on twelve 30-day months.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Syntax
+  </h2>
+  <p>
+   DAYS360(start_date,end_date,[method])
+  </p>
+  <p>
+   The DAYS360 function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Start_date, end_date
+     </b>
+     Required. The two dates between which you want to know the number of days. If
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       start_date
+      </i>
+     </b>
+     occurs after
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       end_date
+      </i>
+     </b>
+     , the
+     <b class="ocpLegacyBold">
+      DAYS360
+     </b>
+     function returns a negative number. Dates should be entered by using the
+     <b class="ocpLegacyBold">
+      DATE
+     </b>
+     function, or derived from the results of other formulas or functions. For example, use
+     <b class="ocpLegacyBold">
+      DATE(2008,5,23)
+     </b>
+     to return the 23rd day of May, 2008. Problems can occur if dates are entered as text.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Method
+     </b>
+     Optional. A logical value that specifies whether to use the U.S. or European method in the calculation.
+    </p>
+   </li>
+  </ul>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Method
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Defined
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       FALSE or omitted
+      </p>
+     </td>
+     <td>
+      <p>
+       U.S. (NASD) method. If the starting date is the last day of a month, it becomes equal to the 30th day of the same month. If the ending date is the last day of a month and the starting date is earlier than the 30th day of a month, the ending date becomes equal to the 1st day of the next month; otherwise the ending date becomes equal to the 30th day of the same month.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       TRUE
+      </p>
+     </td>
+     <td>
+      <p>
+       European method. Starting dates and ending dates that occur on the 31st day of a month become equal to the 30th day of the same month.
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpNote">
+     Note:
+    </b>
+    Excel stores dates as sequential serial numbers so that they can be used in calculations. By default, January 1, 1900 is serial number 1, and January 1, 2008 is serial number 39448 because it is 39,447 days after January 1, 1900.
+   </p>
+  </div>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection" data-bi-id="__example" id="__example">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Dates
+       </b>
+      </p>
+     </th>
+     <th>
+     </th>
+     <th>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       1-Jan-11
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       30-Jan-11
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1-Feb-11
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       31-Dec-11
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p id="__goback">
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =DAYS360(A3,A4)
+      </p>
+     </td>
+     <td>
+      <p>
+       Number of days between 1/30/2011 and 2/1/2011, based on a 360-day year.
+      </p>
+     </td>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =DAYS360(A2,A5)
+      </p>
+     </td>
+     <td>
+      <p>
+       Number of days between 1/1/2011 and 12/31/2011, based on a 360-day year.
+      </p>
+     </td>
+     <td>
+      <p>
+       360
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =DAYS360(A2,A4)
+      </p>
+     </td>
+     <td>
+      <p>
+       Number of days between 1/1/2011 and 2/1/2011, based on a 360-day year.
+      </p>
+     </td>
+     <td>
+      <p>
+       30
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

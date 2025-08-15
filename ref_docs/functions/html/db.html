@@ -1,0 +1,325 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    DB
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Returns the depreciation of an asset for a specified period using the fixed-declining balance method.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   DB(cost, salvage, life, period, [month])
+  </p>
+  <p>
+   The DB function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Cost
+     </b>
+     Required. The initial cost of the asset.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Salvage
+     </b>
+     Required. The value at the end of the depreciation (sometimes called the salvage value of the asset).
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Life
+     </b>
+     Required. The number of periods over which the asset is being depreciated (sometimes called the useful life of the asset).
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Period
+     </b>
+     Required. The period for which you want to calculate the depreciation. Period must use the same units as life.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Month
+     </b>
+     Optional. The number of months in the first year. If month is omitted, it is assumed to be 12.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     The fixed-declining balance method computes depreciation at a fixed rate. DB uses the following formulas to calculate depreciation for a period:
+    </p>
+    <p>
+     (cost - total depreciation from prior periods) * rate
+    </p>
+    <p>
+     where:
+    </p>
+    <p>
+     rate = 1 - ((salvage / cost) ^ (1 / life)), rounded to three decimal places
+    </p>
+   </li>
+   <li>
+    <p>
+     Depreciation for the first and last periods is a special case. For the first period, DB uses this formula:
+    </p>
+    <p>
+     cost * rate * month / 12
+    </p>
+   </li>
+   <li>
+    <p>
+     For the last period, DB uses this formula:
+    </p>
+    <p>
+     ((cost - total depreciation from prior periods) * rate * (12 - month)) / 12
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       $1,000,000
+      </p>
+     </td>
+     <td>
+      <p>
+       Initial cost
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       $100,000
+      </p>
+     </td>
+     <td>
+      <p>
+       Salvage value
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       6
+      </p>
+     </td>
+     <td>
+      <p>
+       Lifetime in years
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =DB(A2,A3,A4,1,7)
+      </p>
+     </td>
+     <td>
+      <p>
+       Depreciation in first year, with only 7 months calculated
+      </p>
+     </td>
+     <td>
+      <p>
+       $186,083.33
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =DB(A2,A3,A4,2,7)
+      </p>
+     </td>
+     <td>
+      <p>
+       Depreciation in second year
+      </p>
+     </td>
+     <td>
+      <p>
+       $259,639.42
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =DB(A2,A3,A4,3,7)
+      </p>
+     </td>
+     <td>
+      <p>
+       Depreciation in third year
+      </p>
+     </td>
+     <td>
+      <p>
+       $176,814.44
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =DB(A2,A3,A4,4,7)
+      </p>
+     </td>
+     <td>
+      <p>
+       Depreciation in fourth year
+      </p>
+     </td>
+     <td>
+      <p>
+       $120,410.64
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =DB(A2,A3,A4,5,7)
+      </p>
+     </td>
+     <td>
+      <p>
+       Depreciation in fifth year
+      </p>
+     </td>
+     <td>
+      <p>
+       $81,999.64
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =DB(A2,A3,A4,6,7)
+      </p>
+     </td>
+     <td>
+      <p>
+       Depreciation in sixth year
+      </p>
+     </td>
+     <td>
+      <p>
+       $55,841.76
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =DB(A2,A3,A4,7,7)
+      </p>
+     </td>
+     <td>
+      <p>
+       Depreciation in seventh year, with only 5 months calculated
+      </p>
+     </td>
+     <td>
+      <p>
+       $15,845.10
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

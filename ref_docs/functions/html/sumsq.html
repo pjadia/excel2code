@@ -1,0 +1,136 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    SUMSQ
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Description
+  </h2>
+  <p>
+   Returns the sum of the squares of the arguments.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <p>
+   SUMSQ(number1, [number2], ...)
+  </p>
+  <p>
+   The SUMSQ function syntax uses the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Number1, number2, ...
+     </b>
+     Number1 is required. Subsequent numbers are optional. There can be as many as 255 arguments for which you want the sum of the squares.
+    </p>
+   </li>
+   <li>
+    <p>
+     Instead of comma-separated arguments, you can use a single array or a reference to an array.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     Arguments can be
+     <br aria-hidden="true"/>
+     &gt; numbers
+     <br aria-hidden="true"/>
+     &gt; names, arrays, or references containing numbers.
+    </p>
+   </li>
+   <li>
+    <p>
+     The count includes numbers, logical values, and text representations of numbers typed into the list.
+    </p>
+   </li>
+   <li>
+    <p>
+     If an argument is an array or reference, only numbers in that array or reference are counted.
+     <br aria-hidden="true"/>
+     This function will ignore empty cells, logical values, text, or error values in the array or reference.
+    </p>
+   </li>
+   <li>
+    <p>
+     Errors will occur from
+     <br aria-hidden="true"/>
+     &gt; arguments that are error values
+     <br aria-hidden="true"/>
+     &gt; text that cannot be translated into numbers
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   Copy the following example content and paste it in cell A1 of a new Excel worksheet. The formula cell may automatically show the numeric result. Otherwise select it, press F2, and press Enter.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Description (Result)
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =SUMSQ(3, 4)
+      </p>
+     </td>
+     <td>
+      <p>
+       Sum of the squares of 3 and 4 (25)
+      </p>
+     </td>
+     <td>
+      <p>
+       25
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

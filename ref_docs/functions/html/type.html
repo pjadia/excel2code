@@ -1,0 +1,297 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    TYPE
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Description
+  </h2>
+  <p>
+   Returns the type of value. Use TYPE when the behavior of another function depends on the type of value in a particular cell.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <p>
+   TYPE(value)
+  </p>
+  <p>
+   The TYPE function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Value
+     </b>
+     Required. Can be any Microsoft Excel value, such as a number, text, logical value, and so on.
+    </p>
+   </li>
+  </ul>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        If value is
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        TYPE returns
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       Number
+      </p>
+     </td>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Text
+      </p>
+     </td>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Logical value
+      </p>
+     </td>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Error value
+      </p>
+     </td>
+     <td>
+      <p>
+       16
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Array
+      </p>
+     </td>
+     <td>
+      <p>
+       64
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Compound data
+      </p>
+     </td>
+     <td>
+      <p>
+       128
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     TYPE is most useful when you are using functions that can accept different types of data, such as ARGUMENT and INPUT. Use TYPE to find out what type of data is returned by a function or formula.
+    </p>
+   </li>
+   <li>
+    <p>
+     You cannot use TYPE to determine whether a cell contains a formula. TYPE only determines the type of the resulting, or displayed, value. If value is a cell reference to a cell that contains a formula, TYPE returns the type of the formula's resulting value.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </th>
+     <th>
+     </th>
+     <th>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       Smith
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =TYPE(A2)
+      </p>
+     </td>
+     <td>
+      <p>
+       Returns the type of the value in A2. The Text type is indicated by 2.
+      </p>
+     </td>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =TYPE("Mr. "&amp;A2)
+      </p>
+     </td>
+     <td>
+      <p>
+       Returns the type of "Mr. Smith, which is Text.
+      </p>
+     </td>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =TYPE(2+A2)
+      </p>
+     </td>
+     <td>
+      <p>
+       Returns the type of the formula in C6, which returns 16, the type for the error message #VALUE! The error message #VALUE! is shown in C7.
+      </p>
+     </td>
+     <td>
+      <p>
+       16
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =(2+A2)
+      </p>
+     </td>
+     <td>
+      <p>
+       The error value returned by the formula =(2+A2), which is used in C2.
+      </p>
+     </td>
+     <td>
+      <p>
+       #VALUE!
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =TYPE({1,2;3,4})
+      </p>
+     </td>
+     <td>
+      <p>
+       Returns the type of an array constant, which is 64.
+      </p>
+     </td>
+     <td>
+      <p>
+       64
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

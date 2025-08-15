@@ -1,0 +1,352 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    FORECAST.LINEAR
+   </b>
+   and
+   <b class="ocpLegacyBold">
+    FORECAST
+   </b>
+   functions in Microsoft Excel.
+  </p>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpNote">
+     Note:
+    </b>
+    In Excel 2016, the FORECAST function was replaced with FORECAST.LINEAR as part of the new
+    <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/forecasting-functions-reference-897a2fe9-6595-4680-a0b0-93e0308d5f6e">
+     Forecasting functions
+    </a>
+    . The syntax and usage of the two functions are the same, but the older FORECAST function will eventually be deprecated. It's still available for backward compatibility, but consider using the new FORECAST.LINEAR function instead.
+   </p>
+  </div>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Calculate, or predict, a future value by using existing values. The future value is a y-value for a given x-value. The existing values are known x-values and y-values, and the future value is predicted by using linear regression. You can use these functions to predict future sales, inventory requirements, or consumer trends.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <p>
+   FORECAST.LINEAR(x, known_y's, known_x's)
+  </p>
+  <p>
+   - or -
+  </p>
+  <p>
+   FORECAST(x, known_y's, known_x's)
+  </p>
+  <p>
+   The FORECAST/FORECAST.LINEAR function syntax has the following arguments:
+  </p>
+  <table aria-label="" class="banded">
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpRunInHead">
+        Argument
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpRunInHead">
+        Required
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpRunInHead">
+        Refers to
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        x
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       yes
+      </p>
+     </td>
+     <td>
+      <p>
+       The data point for which you want to predict a value.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        known_y's
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       yes
+      </p>
+     </td>
+     <td>
+      <p>
+       The dependent array or range of data.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        known_x's
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       yes
+      </p>
+     </td>
+     <td>
+      <p>
+       The independent array or range of data.
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If
+     <b class="ocpLegacyBold">
+      x
+     </b>
+     is nonnumeric, FORECAST and FORECAST.LINEAR return the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If
+     <b class="ocpLegacyBold">
+      known_y's
+     </b>
+     or
+     <b class="ocpLegacyBold">
+      known_x's
+     </b>
+     is empty or one has more data points than the other, FORECAST and FORECAST.LINEAR return the #N/A error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If the variance of
+     <b class="ocpLegacyBold">
+      known_x's
+     </b>
+     equals zero, then FORECAST and FORECAST.LINEAR return the #DIV/0! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     The equation for FORECAST and FORECAST.LINEAR is a+bx, where:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/9e78d188-aec3-46dc-bc3b-c593e5304937?format=avif&amp;w=320 320w,        /images/en-us/9e78d188-aec3-46dc-bc3b-c593e5304937?format=avif&amp;w=480 480w,        /images/en-us/9e78d188-aec3-46dc-bc3b-c593e5304937?format=avif&amp;w=640 640w,        /images/en-us/9e78d188-aec3-46dc-bc3b-c593e5304937?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/9e78d188-aec3-46dc-bc3b-c593e5304937?format=webp&amp;w=320 320w,        /images/en-us/9e78d188-aec3-46dc-bc3b-c593e5304937?format=webp&amp;w=480 480w,        /images/en-us/9e78d188-aec3-46dc-bc3b-c593e5304937?format=webp&amp;w=640 640w,        /images/en-us/9e78d188-aec3-46dc-bc3b-c593e5304937?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/9e78d188-aec3-46dc-bc3b-c593e5304937?format=jpeg&amp;w=320 320w,        /images/en-us/9e78d188-aec3-46dc-bc3b-c593e5304937?format=jpeg&amp;w=480 480w,        /images/en-us/9e78d188-aec3-46dc-bc3b-c593e5304937?format=jpeg&amp;w=640 640w,        /images/en-us/9e78d188-aec3-46dc-bc3b-c593e5304937?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/9e78d188-aec3-46dc-bc3b-c593e5304937" style="aspect-ratio: 71/25" width="71"/>
+     </picture>
+    </p>
+    <p>
+     and:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758?format=avif&amp;w=320 320w,        /images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758?format=avif&amp;w=480 480w,        /images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758?format=avif&amp;w=640 640w,        /images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758?format=webp&amp;w=320 320w,        /images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758?format=webp&amp;w=480 480w,        /images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758?format=webp&amp;w=640 640w,        /images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758?format=jpeg&amp;w=320 320w,        /images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758?format=jpeg&amp;w=480 480w,        /images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758?format=jpeg&amp;w=640 640w,        /images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758" style="aspect-ratio: 136/53" width="136"/>
+     </picture>
+    </p>
+    <p>
+     and where x and y are the sample means AVERAGE(known_x's) and AVERAGE(known y's).
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Known Y
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Known X
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       6
+      </p>
+     </td>
+     <td>
+      <p>
+       20
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       7
+      </p>
+     </td>
+     <td>
+      <p>
+       28
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       9
+      </p>
+     </td>
+     <td>
+      <p>
+       31
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       15
+      </p>
+     </td>
+     <td>
+      <p>
+       38
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       21
+      </p>
+     </td>
+     <td>
+      <p>
+       40
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p id="__goback">
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =FORECAST.LINEAR(30,A2:A6,B2:B6)
+      </p>
+     </td>
+     <td>
+      <p>
+       Predicts a value for y given an x value of 30
+      </p>
+     </td>
+     <td>
+      <p>
+       10.607253
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+ <section class="ocpRelatedTopics">
+  <h3>
+  </h3>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/forecasting-functions-reference-897a2fe9-6595-4680-a0b0-93e0308d5f6e">
+    Forecasting functions (reference)
+   </a>
+  </p>
+ </section>
+</article>

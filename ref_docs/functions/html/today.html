@@ -1,0 +1,241 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    TODAY
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Description
+  </h2>
+  <p>
+   The
+   <b class="ocpLegacyBold">
+    TODAY
+   </b>
+   function returns the serial number of the current date. The serial number is the date-time code used by Excel for date and time calculations. If the cell format was
+   <b class="ocpUI">
+    General
+   </b>
+   before the function was entered, Excel changes the cell format to
+   <b class="ocpUI">
+    Date
+   </b>
+   . If you want to view the serial number, you must change the cell format to
+   <b class="ocpLegacyBold">
+    General
+   </b>
+   or
+   <b class="ocpLegacyBold">
+    Number
+   </b>
+   .
+  </p>
+  <p>
+   The
+   <b class="ocpLegacyBold">
+    TODAY
+   </b>
+   function is useful when you need to have the current date displayed on a worksheet, regardless of when you open the workbook. It is also useful for calculating intervals. For example, if you know that someone was born in 1963, you might use the following formula to find that person's age as of this year's birthday:
+  </p>
+  <p>
+   <b class="ocpLegacyBold">
+    =
+   </b>
+   <b class="ocpLegacyBold">
+    YEAR(
+   </b>
+   <b class="ocpLegacyBold">
+    TODAY())-1963
+   </b>
+  </p>
+  <p>
+   This formula uses the
+   <b class="ocpLegacyBold">
+    TODAY
+   </b>
+   function as an argument for the
+   <b class="ocpLegacyBold">
+    YEAR
+   </b>
+   function to obtain the current year, and then subtracts 1963, returning the person's age.
+  </p>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpNote">
+     Note:
+    </b>
+    If the
+    <b class="ocpLegacyBold">
+     TODAY
+    </b>
+    function does not update the date when you expect it to, you might need to change the settings that control when the workbook or worksheet recalculates. On the
+    <b class="ocpUI">
+     File
+    </b>
+    tab, click
+    <b class="ocpUI">
+     Options
+    </b>
+    , and then in the
+    <b class="ocpUI">
+     Formulas
+    </b>
+    category under
+    <b class="ocpUI">
+     Calculation options
+    </b>
+    , make sure that
+    <b class="ocpUI">
+     Automatic
+    </b>
+    is selected.
+   </p>
+  </div>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Syntax
+  </h2>
+  <p>
+   TODAY()
+  </p>
+  <p>
+   The TODAY function syntax has no arguments.
+  </p>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpNote">
+     Note:
+    </b>
+    Excel stores dates as sequential serial numbers so they can be used in calculations. By default, January 1, 1900 is serial number 1, and January 1, 2008 is serial number 39448 because it is 39,447 days after January 1, 1900.
+   </p>
+  </div>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection" data-bi-id="__example" id="__example">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =TODAY()
+      </p>
+     </td>
+     <td>
+      <p>
+       Returns the current date.
+      </p>
+     </td>
+     <td>
+      <p>
+       12/1/2011
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =TODAY()+5
+      </p>
+     </td>
+     <td>
+      <p>
+       Returns the current date plus 5 days. For example, if the current date is 1/1/2012, this formula returns 1/6/2012.
+      </p>
+     </td>
+     <td>
+      <p>
+       12/6/2011
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =DATEVALUE("1/1/2030")-TODAY()
+      </p>
+     </td>
+     <td>
+      <p>
+       Returns the number of days between the current date and 1/1/2030. Note that cell A4 must be formatted as General or Number for the result to display correctly.
+      </p>
+     </td>
+     <td>
+      <p>
+       1/31/1918
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =DAY(TODAY())
+      </p>
+     </td>
+     <td>
+      <p>
+       Returns the current day of the month (1 - 31).
+      </p>
+     </td>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =MONTH(TODAY())
+      </p>
+     </td>
+     <td>
+      <p>
+       Returns the current month of the year (1 - 12). For example, if the current month is May, this formula returns 5.
+      </p>
+     </td>
+     <td>
+      <p>
+       12
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

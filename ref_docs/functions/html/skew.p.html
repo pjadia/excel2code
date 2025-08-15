@@ -1,0 +1,267 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p id="__goback">
+   This article describes the formula syntax and usage of the SKEW.P function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Returns the skewness of a distribution based on a population: a characterization of the degree of asymmetry of a distribution around its mean.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   SKEW.P(number 1, [number 2],…)
+  </p>
+  <p>
+   The SKEW.P function syntax has the following arguments.
+  </p>
+  <p>
+   <b class="ocpRunInHead">
+    Number 1, number 2,…
+   </b>
+   Number 1 is required, subsequent numbers are optional. Number 1, number 2,… are 1 to 254 numbers or names, arrays, or reference that contain numbers for which you want the population skewness.
+  </p>
+  <p>
+   SKEW.P uses the following equation:
+  </p>
+  <p>
+   <picture>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/bcce7f62-7063-4a1e-98c7-433e65aaf438?format=avif&amp;w=320 320w,        /images/en-us/bcce7f62-7063-4a1e-98c7-433e65aaf438?format=avif&amp;w=480 480w,        /images/en-us/bcce7f62-7063-4a1e-98c7-433e65aaf438?format=avif&amp;w=640 640w,        /images/en-us/bcce7f62-7063-4a1e-98c7-433e65aaf438?format=avif&amp;w=800 800w" type="image/avif"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/bcce7f62-7063-4a1e-98c7-433e65aaf438?format=webp&amp;w=320 320w,        /images/en-us/bcce7f62-7063-4a1e-98c7-433e65aaf438?format=webp&amp;w=480 480w,        /images/en-us/bcce7f62-7063-4a1e-98c7-433e65aaf438?format=webp&amp;w=640 640w,        /images/en-us/bcce7f62-7063-4a1e-98c7-433e65aaf438?format=webp&amp;w=800 800w" type="image/webp"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/bcce7f62-7063-4a1e-98c7-433e65aaf438?format=jpeg&amp;w=320 320w,        /images/en-us/bcce7f62-7063-4a1e-98c7-433e65aaf438?format=jpeg&amp;w=480 480w,        /images/en-us/bcce7f62-7063-4a1e-98c7-433e65aaf438?format=jpeg&amp;w=640 640w,        /images/en-us/bcce7f62-7063-4a1e-98c7-433e65aaf438?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+    <img alt="SKEW.P equation" class="fluentImage" loading="lazy" src="/images/en-us/bcce7f62-7063-4a1e-98c7-433e65aaf438" style="aspect-ratio: 140/63" width="140"/>
+   </picture>
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     Arguments can either be numbers or names, arrays, or references that contain numbers.
+    </p>
+   </li>
+   <li>
+    <p>
+     Logical values and text representations of numbers that you type directly into the list of arguments are counted.
+    </p>
+   </li>
+   <li>
+    <p>
+     If an array or reference argument contains text, logical values, or empty cells, those values are ignored; however, cells with the value zero (0) are included.
+    </p>
+   </li>
+   <li>
+    <p>
+     SKEW.P uses the standard deviation of an entire population, not a sample.
+    </p>
+   </li>
+   <li>
+    <p>
+     If arguments are values that are not valid, SKEW.P returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If arguments use data types that are not valid, SKEW.P returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If there are fewer than three data points, or the sample standard deviation is zero, SKEW.P returns the #DIV/0! Error value.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Population Data Set
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       5
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       5
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       6
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       7
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =SKEW.P(A2:A11)
+      </p>
+     </td>
+     <td>
+      <p>
+       Skewness of a distribution based on the population of the data set in A2:A11 (0.303193).
+      </p>
+     </td>
+     <td>
+      <p>
+       0.303193
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+   <a class="ocpTopOfPage" data-bi-type="anchor" href="#">
+    Top of Page
+   </a>
+  </p>
+ </section>
+</article>

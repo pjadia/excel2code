@@ -1,0 +1,256 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    INTERCEPT
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Calculates the point at which a line will intersect the y-axis by using existing x-values and y-values. The intercept point is based on a best-fit regression line plotted through the known x-values and known y-values. Use the INTERCEPT function when you want to determine the value of the dependent variable when the independent variable is 0 (zero). For example, you can use the INTERCEPT function to predict a metal's electrical resistance at 0°C when your data points were taken at room temperature and higher.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   INTERCEPT(known_y's, known_x's)
+  </p>
+  <p>
+   The INTERCEPT function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Known_y's
+     </b>
+     Required. The dependent set of observations or data.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Known_x's
+     </b>
+     Required. The independent set of observations or data.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     The arguments should be either numbers or names, arrays, or references that contain numbers.
+    </p>
+   </li>
+   <li>
+    <p>
+     If an array or reference argument contains text, logical values, or empty cells, those values are ignored; however, cells with the value zero are included.
+    </p>
+   </li>
+   <li>
+    <p>
+     If known_y's and known_x's contain a different number of data points or contain no data points, INTERCEPT returns the #N/A error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     The equation for the intercept of the regression line, a, is:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/9e78d188-aec3-46dc-bc3b-c593e5304937?format=avif&amp;w=320 320w,        /images/en-us/9e78d188-aec3-46dc-bc3b-c593e5304937?format=avif&amp;w=480 480w,        /images/en-us/9e78d188-aec3-46dc-bc3b-c593e5304937?format=avif&amp;w=640 640w,        /images/en-us/9e78d188-aec3-46dc-bc3b-c593e5304937?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/9e78d188-aec3-46dc-bc3b-c593e5304937?format=webp&amp;w=320 320w,        /images/en-us/9e78d188-aec3-46dc-bc3b-c593e5304937?format=webp&amp;w=480 480w,        /images/en-us/9e78d188-aec3-46dc-bc3b-c593e5304937?format=webp&amp;w=640 640w,        /images/en-us/9e78d188-aec3-46dc-bc3b-c593e5304937?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/9e78d188-aec3-46dc-bc3b-c593e5304937?format=jpeg&amp;w=320 320w,        /images/en-us/9e78d188-aec3-46dc-bc3b-c593e5304937?format=jpeg&amp;w=480 480w,        /images/en-us/9e78d188-aec3-46dc-bc3b-c593e5304937?format=jpeg&amp;w=640 640w,        /images/en-us/9e78d188-aec3-46dc-bc3b-c593e5304937?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/9e78d188-aec3-46dc-bc3b-c593e5304937" style="aspect-ratio: 71/25" width="71"/>
+     </picture>
+    </p>
+    <p>
+     where the slope, b, is calculated as:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758?format=avif&amp;w=320 320w,        /images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758?format=avif&amp;w=480 480w,        /images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758?format=avif&amp;w=640 640w,        /images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758?format=webp&amp;w=320 320w,        /images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758?format=webp&amp;w=480 480w,        /images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758?format=webp&amp;w=640 640w,        /images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758?format=jpeg&amp;w=320 320w,        /images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758?format=jpeg&amp;w=480 480w,        /images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758?format=jpeg&amp;w=640 640w,        /images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758" style="aspect-ratio: 136/53" width="136"/>
+     </picture>
+    </p>
+    <p>
+     and where x and y are the sample means AVERAGE(known_x's) and AVERAGE(known_y's).
+    </p>
+   </li>
+   <li>
+    <p>
+     The underlying algorithm used in the INTERCEPT and SLOPE functions is different than the underlying algorithm used in the LINEST function. The difference between these algorithms can lead to different results when data is undetermined and collinear. For example, if the data points of the known_y's argument are 0 and the data points of the known_x's argument are 1:
+    </p>
+    <ul>
+     <li>
+      <p>
+       INTERCEPT and SLOPE return a #DIV/0! error. The INTERCEPT and SLOPE algorithm is designed to look for one and only one answer, and in this case there can be more than one answer.
+      </p>
+     </li>
+     <li>
+      <p>
+       LINEST returns a value of 0. The LINEST algorithm is designed to return reasonable results for collinear data, and in this case at least one answer can be found.
+      </p>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Known y
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Known x
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+     <td>
+      <p>
+       6
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+     <td>
+      <p>
+       5
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       9
+      </p>
+     </td>
+     <td>
+      <p>
+       11
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+      <p>
+       7
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       8
+      </p>
+     </td>
+     <td>
+      <p>
+       5
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =INTERCEPT(A2:A6, B2:B6)
+      </p>
+     </td>
+     <td>
+      <p>
+       Point at which a line will intersect the y-axis by using the x-values and y-values above
+      </p>
+     </td>
+     <td>
+      <p>
+       0.0483871
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

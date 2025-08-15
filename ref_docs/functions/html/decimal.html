@@ -1,0 +1,303 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    DECIMAL
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Converts a text representation of a number in a given base into a decimal number.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   DECIMAL(text, radix)
+  </p>
+  <p>
+   The DECIMAL function syntax has the following arguments.
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Text
+     </b>
+     Required.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Radix
+     </b>
+     Required. Radix must be an integer.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     The string length of Text must be less than or equal to 255 characters.
+    </p>
+   </li>
+   <li>
+    <p>
+     The Text argument can be any combination of alpha-numeric characters that are valid for the radix, and is not case sensitive.
+    </p>
+   </li>
+   <li>
+    <p>
+     Excel supports a Text argument greater than or equal to 0 and less than 2^53. A text argument that resolves to a number greater than 2^53 may result in a loss of precision.
+    </p>
+   </li>
+   <li>
+    <p>
+     Radix must be greater than or equal to 2 (binary, or base 2) and less than or equal to 36 (base 36).
+     <br aria-hidden="true"/>
+     A radix greater than 10 use the numeric values 0-9 and the letters A-Z as needed. For example, base 16 (hexadecimal) uses 0-9 and A-F, and base 36 uses 0-9 and A-Z.
+    </p>
+   </li>
+   <li>
+    <p>
+     If either argument is outside its constraints, DECIMAL may return the #NUM! or #VALUE! error value.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        How it works
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       '=DECIMAL("FF",16)
+      </p>
+     </td>
+     <td>
+      <p>
+       Converts the hexadecimal (base 16) value FF to its equivalent decimal (base 10) value (255).
+      </p>
+     </td>
+     <td>
+      <p>
+       =DECIMAL("FF",16)
+      </p>
+     </td>
+     <td>
+      <p>
+       "F" is in position 15 in the base 16 number system. Because all number systems start with 0, the 16th character in hexadecimal will be in the 15th position. The formula below shows how it is converted to decimal:
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+      <p>
+       The HEX2DEC function in cell C3 verifies this result.
+      </p>
+     </td>
+     <td>
+      <p>
+       =HEX2DEC("ff")
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      <p>
+       =(15*(16^1))+(15*(16^0))
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       '=DECIMAL(111,2)
+      </p>
+     </td>
+     <td>
+      <p>
+       Converts the binary (base 2) value 111 to its equivalent decimal (base 10) value (7).
+      </p>
+     </td>
+     <td>
+      <p>
+       =DECIMAL(111,2)
+      </p>
+     </td>
+     <td>
+      <p>
+       "1" is in position 1 in the base 2 number system. The formula below shows how it is converted to decimal:
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+      <p>
+       The BIN2DEC function in cell C6 verifies this result.
+      </p>
+     </td>
+     <td>
+      <p>
+       =BIN2DEC(111)
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      <p>
+       =(1*(2^2))+(1*(2^1))+(1*(2^0))
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       '=DECIMAL("zap",36)
+      </p>
+     </td>
+     <td>
+      <p>
+       Converts the value "zap" in base 36 to its equivalent decimal value (45745).
+      </p>
+     </td>
+     <td>
+      <p>
+       =DECIMAL("zap",36)
+      </p>
+     </td>
+     <td>
+      <p>
+       "z" is in position 35, "a" is in position 10, and "p" is in position 25. The formula below shows how it is converted to decimal.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      <p>
+       =(35*(36^2))+(10*(36^1))+(25*(36^0))
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+   <a class="ocpTopOfPage" data-bi-type="anchor" href="#">
+    Top of Page
+   </a>
+  </p>
+ </section>
+</article>

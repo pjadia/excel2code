@@ -1,0 +1,144 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the SEC
+ function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Returns the secant of an angle.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   SEC(number)
+  </p>
+  <p>
+   The SEC function syntax has the following arguments.
+  </p>
+  <p>
+   <b class="ocpRunInHead">
+    Number
+   </b>
+   Required. Number is the angle in radians for which you want the secant.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     The absolute value of number must be less than 2^27.
+    </p>
+   </li>
+   <li>
+    <p>
+     If the angle is in degrees, either multiply the angle by PI()/180 or use the RADIANS function to covert the angle to radians.
+    </p>
+   </li>
+   <li>
+    <p>
+     If number is outside of its constraints, SEC returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If number is a non-numeric value, SEC returns the #VALUE! error values.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection" data-bi-id="__goback" id="__goback">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =SEC(45)
+      </p>
+     </td>
+     <td>
+      <p>
+       Returns the secant of a 45 degree angle.
+      </p>
+     </td>
+     <td>
+      <p>
+       1.90359
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =SEC(30)
+      </p>
+     </td>
+     <td>
+      <p>
+       Returns the secant of a 30 degree angle.
+      </p>
+     </td>
+     <td>
+      <p>
+       6.48292
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+   <a class="ocpTopOfPage" data-bi-area="__goback" data-bi-type="anchor" href="#">
+    Top of Page
+   </a>
+  </p>
+ </section>
+</article>

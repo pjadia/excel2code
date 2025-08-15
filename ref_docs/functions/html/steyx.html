@@ -1,0 +1,284 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p id="__goback">
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    STEYX
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Returns the standard error of the predicted y-value for each x in the regression. The standard error is a measure of the amount of error in the prediction of y for an individual x.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   STEYX(known_y's, known_x's)
+  </p>
+  <p>
+   The STEYX function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Known_y's
+     </b>
+     Required. An array or range of dependent data points.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Known_x's
+     </b>
+     Required. An array or range of independent data points.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     Arguments can either be numbers or names, arrays, or references that contain numbers.
+    </p>
+   </li>
+   <li>
+    <p>
+     Logical values and text representations of numbers that you type directly into the list of arguments are counted.
+    </p>
+   </li>
+   <li>
+    <p>
+     If an array or reference argument contains text, logical values, or empty cells, those values are ignored; however, cells with the value zero are included.
+    </p>
+   </li>
+   <li>
+    <p>
+     Arguments that are error values or text that cannot be translated into numbers cause errors.
+    </p>
+   </li>
+   <li>
+    <p>
+     If known_y's and known_x's have a different number of data points, STEYX returns the #N/A error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If known_y's and known_x's are empty or have less than three data points, STEYX returns the #DIV/0! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     The equation for the standard error of the predicted y is:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/40053314-52d8-4b47-9770-72793a9364e6?format=avif&amp;w=320 320w,        /images/en-us/40053314-52d8-4b47-9770-72793a9364e6?format=avif&amp;w=480 480w,        /images/en-us/40053314-52d8-4b47-9770-72793a9364e6?format=avif&amp;w=640 640w,        /images/en-us/40053314-52d8-4b47-9770-72793a9364e6?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/40053314-52d8-4b47-9770-72793a9364e6?format=webp&amp;w=320 320w,        /images/en-us/40053314-52d8-4b47-9770-72793a9364e6?format=webp&amp;w=480 480w,        /images/en-us/40053314-52d8-4b47-9770-72793a9364e6?format=webp&amp;w=640 640w,        /images/en-us/40053314-52d8-4b47-9770-72793a9364e6?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/40053314-52d8-4b47-9770-72793a9364e6?format=jpeg&amp;w=320 320w,        /images/en-us/40053314-52d8-4b47-9770-72793a9364e6?format=jpeg&amp;w=480 480w,        /images/en-us/40053314-52d8-4b47-9770-72793a9364e6?format=jpeg&amp;w=640 640w,        /images/en-us/40053314-52d8-4b47-9770-72793a9364e6?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/40053314-52d8-4b47-9770-72793a9364e6" style="aspect-ratio: 281/67" width="281"/>
+     </picture>
+    </p>
+    <p>
+     where x and y are the sample means AVERAGE(known_x’s) and AVERAGE(known_y’s), and n is the sample size.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Known y
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Known x
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+     <td>
+      <p>
+       6
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+     <td>
+      <p>
+       5
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       9
+      </p>
+     </td>
+     <td>
+      <p>
+       11
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+      <p>
+       7
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       8
+      </p>
+     </td>
+     <td>
+      <p>
+       5
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       7
+      </p>
+     </td>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       5
+      </p>
+     </td>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description (Result)
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =STEYX(A3:A9,B3:B9)
+      </p>
+     </td>
+     <td>
+      <p>
+       Standard error of the predicted y-value for each x in the regression (3.305719)
+      </p>
+     </td>
+     <td>
+      <p>
+       3.305719
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

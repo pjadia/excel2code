@@ -1,0 +1,170 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    CHAR
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Description
+  </h2>
+  <p>
+   Returns the character specified by a number. Use CHAR to translate code page numbers you might get from files on other types of computers into characters.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Operating environment
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Character set
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       Macintosh
+      </p>
+     </td>
+     <td>
+      <p>
+       Macintosh character set
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Windows
+      </p>
+     </td>
+     <td>
+      <p>
+       ANSI
+      </p>
+      <p>
+       The ANSI character set was the standard set of characters used in Windows operating systems through Windows 95 and Windows NT, after which Unicode was adopted. ANSI consists of 218 characters, many of which share the same numerical codes as in the ASCII/Unicode formats. https://www.techopedia.com/definition/932/ansi-character-set
+      </p>
+      <p>
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Syntax
+  </h2>
+  <p>
+   CHAR(number)
+  </p>
+  <p>
+   The CHAR function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Number
+     </b>
+     Required. A number between 1 and 255 specifying which character you want. The character is from the character set used by your computer.
+    </p>
+    <div class="ocpAlert">
+     <p class="ocpAlertSection">
+      <b class="ocpNote">
+       Note:
+      </b>
+      Excel for the web supports only CHAR(9), CHAR(10), CHAR(13), and CHAR(32) and above.
+     </p>
+    </div>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =CHAR(65)
+      </p>
+     </td>
+     <td>
+      <p>
+       Displays the character represented by 65 in the computer's character set.
+      </p>
+     </td>
+     <td>
+      <p>
+       A
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =CHAR(33)
+      </p>
+     </td>
+     <td>
+      <p>
+       Displays the character represented by 33 in the computer's character set.
+      </p>
+     </td>
+     <td>
+      <p>
+       !
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

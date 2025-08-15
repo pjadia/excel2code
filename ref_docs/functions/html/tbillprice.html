@@ -1,0 +1,233 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    TBILLPRICE
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Returns the price per $100 face value for a Treasury bill.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   TBILLPRICE(settlement, maturity, discount)
+  </p>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpImportant">
+     Important:
+    </b>
+    Dates should be entered by using the DATE function, or as results of other formulas or functions. For example, use DATE(2008,5,23) for the 23rd day of May, 2008. Problems can occur if dates are entered as text.
+   </p>
+  </div>
+  <p>
+   The TBILLPRICE function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Settlement
+     </b>
+     Required. The Treasury bill's settlement date. The security settlement date is the date after the issue date when the Treasury bill is traded to the buyer.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Maturity
+     </b>
+     Required. The Treasury bill's maturity date. The maturity date is the date when the Treasury bill expires.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Discount
+     </b>
+     Required. The Treasury bill's discount rate.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     Microsoft Excel stores dates as sequential serial numbers so they can be used in calculations. By default, January 1, 1900 is serial number 1, and January 1, 2008 is serial number 39448 because it is 39,448 days after January 1, 1900.
+    </p>
+   </li>
+   <li>
+    <p>
+     Settlement and maturity are truncated to integers.
+    </p>
+   </li>
+   <li>
+    <p>
+     If settlement or maturity is not a valid date, TBILLPRICE returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If discount ≤ 0, TBILLPRICE returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If settlement &gt; maturity, or if maturity is more than one year after settlement, TBILLPRICE returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     TBILLPRICE is calculated as follows:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/5a2ebccf-f3ee-43f2-8098-634db796c7c6?format=avif&amp;w=320 320w,        /images/en-us/5a2ebccf-f3ee-43f2-8098-634db796c7c6?format=avif&amp;w=480 480w,        /images/en-us/5a2ebccf-f3ee-43f2-8098-634db796c7c6?format=avif&amp;w=640 640w,        /images/en-us/5a2ebccf-f3ee-43f2-8098-634db796c7c6?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/5a2ebccf-f3ee-43f2-8098-634db796c7c6?format=webp&amp;w=320 320w,        /images/en-us/5a2ebccf-f3ee-43f2-8098-634db796c7c6?format=webp&amp;w=480 480w,        /images/en-us/5a2ebccf-f3ee-43f2-8098-634db796c7c6?format=webp&amp;w=640 640w,        /images/en-us/5a2ebccf-f3ee-43f2-8098-634db796c7c6?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/5a2ebccf-f3ee-43f2-8098-634db796c7c6?format=jpeg&amp;w=320 320w,        /images/en-us/5a2ebccf-f3ee-43f2-8098-634db796c7c6?format=jpeg&amp;w=480 480w,        /images/en-us/5a2ebccf-f3ee-43f2-8098-634db796c7c6?format=jpeg&amp;w=640 640w,        /images/en-us/5a2ebccf-f3ee-43f2-8098-634db796c7c6?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/5a2ebccf-f3ee-43f2-8098-634db796c7c6" style="aspect-ratio: 272/33" width="272"/>
+     </picture>
+    </p>
+    <p>
+     where:
+    </p>
+    <ul>
+     <li>
+      <p>
+       DSM = number of days from settlement to maturity, excluding any maturity date that is more than one calendar year after the settlement date.
+      </p>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       3/31/2008
+      </p>
+     </td>
+     <td>
+      <p>
+       Settlement date
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       6/1/2008
+      </p>
+     </td>
+     <td>
+      <p>
+       Maturity date
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       9.0%
+      </p>
+     </td>
+     <td>
+      <p>
+       Percent discount rate
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =TBILLPRICE(A2,A3,A4)
+      </p>
+     </td>
+     <td>
+      <p>
+       The price for the Treasury bill, using the terms in A2, A3, and A4.
+      </p>
+     </td>
+     <td>
+      <p>
+       $    98.45
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

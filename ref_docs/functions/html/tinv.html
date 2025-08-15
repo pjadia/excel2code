@@ -1,0 +1,201 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   Returns the two-tailed inverse of the Student's t-distribution.
+  </p>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpImportant">
+     Important:
+    </b>
+    This function has been replaced with one or more new functions that may provide improved accuracy and whose names better reflect their usage. Although this function is still available for backward compatibility, you should consider using the new functions from now on, because this function may not be available in future versions of Excel.
+   </p>
+  </div>
+  <p>
+   For more information about the new functions, see
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/t-inv-2t-function-ce72ea19-ec6c-4be7-bed2-b9baf2264f17">
+    T.INV.2T function
+   </a>
+   or
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/t-inv-function-2908272b-4e61-4942-9df9-a25fec9b0e2e">
+    T.INV function
+   </a>
+   .
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   TINV(probability,deg_freedom)
+  </p>
+  <p>
+   The TINV function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Probability
+     </b>
+     Required. The probability associated with the two-tailed Student's t-distribution.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Deg_freedom
+     </b>
+     Required. The number of degrees of freedom with which to characterize the distribution.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If either argument is nonnumeric, TINV returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If probability &lt;= 0 or if probability &gt; 1, TINV returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If deg_freedom is not an integer, it is truncated.
+    </p>
+   </li>
+   <li>
+    <p>
+     If deg_freedom &lt; 1, TINV returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     TINV returns that value t, such that P(|X| &gt; t) = probability where X is a random variable that follows the t-distribution and P(|X| &gt; t) = P(X &lt; -t or X &gt; t).
+    </p>
+   </li>
+   <li>
+    <p>
+     A one-tailed t-value can be returned by replacing probability with 2*probability. For a probability of 0.05 and degrees of freedom of 10, the two-tailed value is calculated with TINV(0.05,10), which returns 2.28139. The one-tailed value for the same probability and degrees of freedom can be calculated with TINV(2*0.05,10), which returns 1.812462.
+    </p>
+    <div class="ocpAlert">
+     <p class="ocpAlertSection">
+      <b class="ocpNote">
+       Note:
+      </b>
+      In some tables, probability is described as (1-p).
+     </p>
+    </div>
+    <p>
+     Given a value for probability, TINV seeks that value x such that TDIST(x, deg_freedom, 2) = probability. Thus, precision of TINV depends on precision of TDIST. TINV uses an iterative search technique. If the search has not converged after 100 iterations, the function returns the #N/A error value.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       0.05464
+      </p>
+     </td>
+     <td>
+      <p>
+       Probability associated with the Student's two-tailed t-distribution
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       60
+      </p>
+     </td>
+     <td>
+      <p>
+       Degrees of freedom
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =TINV(A2,A3)
+      </p>
+     </td>
+     <td>
+      <p>
+       The t-value of the Student's  t-distribution based on the arguments in A2 and A3.
+      </p>
+     </td>
+     <td>
+      <p>
+       1.96
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

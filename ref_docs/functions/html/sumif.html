@@ -1,0 +1,694 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   You use the
+   <b class="ocpLegacyBold">
+    SUMIF
+   </b>
+   function to sum the values in a range that meet criteria that you specify. For example, suppose that in a column that contains numbers, you want to sum only the values that are larger than 5. You can use the following formula:
+   <b class="ocpLiteral">
+    =SUMIF(B2:B25,"&gt;5")
+   </b>
+  </p>
+  <div class="ocpVideo" data-channel="ALTENUS_MS_OFFICE" data-llcc="en-us" data-player="ocvideo" data-videoid="RWe8KX" data-videotitle="Video: The SUMIF function" data-videotype="single" id="ocpVideo1">
+   <universal-media-player options='{"partnerName":"SupportService","autoplay":false,"reporting":false,"language":"en-us","title":"Video: The SUMIF function","poster":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-49d09ada-5df1-4634-b1aa-ea943b706752/thumbnail_w800.jpeg","sources":[{"type":"MP4","quality":"HQ","src":""},{"type":"MP4","quality":"HD","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-49d09ada-5df1-4634-b1aa-ea943b706752/video_1001_1730435266179_1280x720.mp4"},{"type":"MP4","quality":"LO","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-49d09ada-5df1-4634-b1aa-ea943b706752/video_1001_1730435266179_640x360.mp4"},{"type":"DASH","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-49d09ada-5df1-4634-b1aa-ea943b706752/video_1001_1730435266179.mpd"},{"type":"HLS","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-49d09ada-5df1-4634-b1aa-ea943b706752/video_1001_1730435266179_master.m3u8"}],"ccFiles":[{"url":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-49d09ada-5df1-4634-b1aa-ea943b706752/en_us_en-us.vtt","locale":"en-us","ccType":"VTT"}]}'>
+    <picture>
+     <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=avif&amp;w=320 320w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=avif&amp;w=480 480w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=avif&amp;w=640 640w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=avif&amp;w=800 800w" type="image/avif"/>
+     <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=webp&amp;w=320 320w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=webp&amp;w=480 480w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=webp&amp;w=640 640w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=webp&amp;w=800 800w" type="image/webp"/>
+     <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=jpeg&amp;w=320 320w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=jpeg&amp;w=480 480w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=jpeg&amp;w=640 640w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+     <img alt="Your browser does not support video. Install Microsoft Silverlight, Adobe Flash Player, or Internet Explorer 9." class="fluentImage" loading="lazy" src="/images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7" style="aspect-ratio: 960/540" width="960"/>
+    </picture>
+   </universal-media-player>
+  </div>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpTip">
+     Tips:
+    </b>
+   </p>
+   <ul class="ocpAlertSectionListContainer">
+    <li>
+     <p>
+      If you want, you can apply the criteria to one range and sum the corresponding values in a different range. For example, the formula
+      <b class="ocpLegacyBold">
+       =SUMIF(B2:B5, "John", C2:C5)
+      </b>
+      sums only the values in the range C2:C5, where the corresponding cells in the range B2:B5 equal "John."
+     </p>
+    </li>
+    <li>
+     <p>
+      To sum cells based on multiple criteria, see
+      <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/sumifs-function-c9e748f5-7ea7-455d-9406-611cebce642b">
+       SUMIFS function
+      </a>
+      .
+     </p>
+    </li>
+   </ul>
+  </div>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpImportant">
+     Important:
+    </b>
+    The SUMIF function returns incorrect results when you use it to match strings longer than 255 characters or to the string
+    <b class="ocpLiteral">
+     #VALUE!
+    </b>
+    .
+   </p>
+  </div>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Syntax
+  </h2>
+  <p>
+   SUMIF(range, criteria, [sum_range])
+  </p>
+  <p>
+   The
+   <b class="ocpLegacyBold">
+    SUMIF
+   </b>
+   function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      range
+     </b>
+     Required. The range of cells that you want evaluated by criteria. Cells in each range must be numbers or names, arrays, or references that contain numbers. Blank and text values are ignored. The selected range may contain dates in standard Excel format (examples below).
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      criteria
+     </b>
+     Required. The criteria in the form of a number, expression, a cell reference, text, or a function that defines which cells will be added. Wildcard characters can be included - a question mark (?) to match any single character, an asterisk (*) to match any sequence of characters. If you want to find an actual question mark or asterisk, type a tilde (
+     <b class="ocpLegacyBold">
+      ~
+     </b>
+     ) preceding the character.
+    </p>
+    <p>
+     For example, criteria can be expressed as 32, "&gt;32", B5, "3?", "apple*", "*~?", or TODAY().
+    </p>
+    <div class="ocpAlert">
+     <p class="ocpAlertSection">
+      <b class="ocpImportant">
+       Important:
+      </b>
+      Any text criteria or any criteria that includes logical or mathematical symbols must be enclosed in double quotation marks (
+      <b class="ocpUI">
+       "
+      </b>
+      ). If the criteria is numeric, double quotation marks are not required.
+     </p>
+    </div>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      sum_range
+     </b>
+     Optional. The actual cells to add, if you want to add cells other than those specified in the
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       range
+      </i>
+     </b>
+     argument. If the
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       sum_range
+      </i>
+     </b>
+     argument is omitted, Excel adds the cells that are specified in the
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       range
+      </i>
+     </b>
+     argument (the same cells to which the criteria is applied).
+    </p>
+    <p>
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       Sum_range
+      </i>
+     </b>
+     should be the same size and shape as
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       range
+      </i>
+     </b>
+     . If it isn't, performance may suffer, and the formula will sum a range of cells that starts with the first cell in
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       sum_range
+      </i>
+     </b>
+     but has the same dimensions as
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       range
+      </i>
+     </b>
+     . For example:
+    </p>
+    <table aria-label="" class="banded">
+     <thead>
+      <tr>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          <i class="ocpItalic">
+           range
+          </i>
+         </b>
+        </p>
+       </th>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          <i class="ocpItalic">
+           sum_range
+          </i>
+         </b>
+        </p>
+       </th>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          Actual summed cells
+         </b>
+        </p>
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         A1:A5
+        </p>
+       </td>
+       <td>
+        <p>
+         B1:B5
+        </p>
+       </td>
+       <td>
+        <p>
+         B1:B5
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         A1:A5
+        </p>
+       </td>
+       <td>
+        <p>
+         B1:K5
+        </p>
+       </td>
+       <td>
+        <p>
+         B1:B5
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection" data-bi-id="__example" id="__example">
+  <h2 class="" id="ID0EFH">
+   Examples
+  </h2>
+  <section aria-labelledby="ID0EDDBH" class="ocpSection">
+   <h3 class="" id="ID0EDDBH">
+    <b class="ocpLegacyBold">
+     Example 1
+    </b>
+   </h3>
+   <p>
+    Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+   </p>
+   <table aria-label="" class="banded">
+    <thead>
+     <tr>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         Property Value
+        </b>
+       </p>
+      </th>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         Commission
+        </b>
+       </p>
+      </th>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         Data
+        </b>
+       </p>
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <p>
+        $100,000
+       </p>
+      </td>
+      <td>
+       <p>
+        $7,000
+       </p>
+      </td>
+      <td>
+       <p>
+        $250,000
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        $200,000
+       </p>
+      </td>
+      <td>
+       <p>
+        $14,000
+       </p>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        $300,000
+       </p>
+      </td>
+      <td>
+       <p>
+        $21,000
+       </p>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        $400,000
+       </p>
+      </td>
+      <td>
+       <p>
+        $28,000
+       </p>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        <b class="ocpLegacyBold">
+         Formula
+        </b>
+       </p>
+      </td>
+      <td>
+       <p>
+        <b class="ocpLegacyBold">
+         Description
+        </b>
+       </p>
+      </td>
+      <td>
+       <p>
+        <b class="ocpLegacyBold">
+         Result
+        </b>
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        =SUMIF(A2:A5,"&gt;160000",B2:B5)
+       </p>
+      </td>
+      <td>
+       <p>
+        Sum of the commissions for property values over $160,000.
+       </p>
+      </td>
+      <td>
+       <p>
+        $63,000
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        =SUMIF(A2:A5,"&gt;160000")
+       </p>
+      </td>
+      <td>
+       <p>
+        Sum of the property values over $160,000.
+       </p>
+      </td>
+      <td>
+       <p>
+        $900,000
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        =SUMIF(A2:A5,300000,B2:B5)
+       </p>
+      </td>
+      <td>
+       <p>
+        Sum of the commissions for property values equal to $300,000.
+       </p>
+      </td>
+      <td>
+       <p>
+        $21,000
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        =SUMIF(A2:A5,"&gt;" &amp; C2,B2:B5)
+       </p>
+      </td>
+      <td>
+       <p>
+        Sum of the commissions for property values greater than the value in C2.
+       </p>
+      </td>
+      <td>
+       <p>
+        $49,000
+       </p>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section aria-labelledby="ID0EDBBH" class="ocpSection">
+   <h3 class="" id="ID0EDBBH">
+    <b class="ocpLegacyBold">
+     Example 2
+    </b>
+   </h3>
+   <p>
+    Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+   </p>
+   <table aria-label="" class="banded">
+    <thead>
+     <tr>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         Category
+        </b>
+       </p>
+      </th>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         Food
+        </b>
+       </p>
+      </th>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         Sales
+        </b>
+       </p>
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <p>
+        Vegetables
+       </p>
+      </td>
+      <td>
+       <p>
+        Tomatoes
+       </p>
+      </td>
+      <td>
+       <p>
+        $2,300
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        Vegetables
+       </p>
+      </td>
+      <td>
+       <p>
+        Celery
+       </p>
+      </td>
+      <td>
+       <p>
+        $5,500
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        Fruits
+       </p>
+      </td>
+      <td>
+       <p>
+        Oranges
+       </p>
+      </td>
+      <td>
+       <p>
+        $800
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+      </td>
+      <td>
+       <p>
+        Butter
+       </p>
+      </td>
+      <td>
+       <p>
+        $400
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        Vegetables
+       </p>
+      </td>
+      <td>
+       <p>
+        Carrots
+       </p>
+      </td>
+      <td>
+       <p>
+        $4,200
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        Fruits
+       </p>
+      </td>
+      <td>
+       <p>
+        Apples
+       </p>
+      </td>
+      <td>
+       <p>
+        $1,200
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        <b class="ocpLegacyBold">
+         Formula
+        </b>
+       </p>
+      </td>
+      <td>
+       <p>
+        <b class="ocpLegacyBold">
+         Description
+        </b>
+       </p>
+      </td>
+      <td>
+       <p>
+        <b class="ocpLegacyBold">
+         Result
+        </b>
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        =SUMIF(A2:A7,"Fruits",C2:C7)
+       </p>
+      </td>
+      <td>
+       <p>
+        Sum of the sales of all foods in the "Fruits" category.
+       </p>
+      </td>
+      <td>
+       <p>
+        $2,000
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        =SUMIF(A2:A7,"Vegetables",C2:C7)
+       </p>
+      </td>
+      <td>
+       <p>
+        Sum of the sales of all foods in the "Vegetables" category.
+       </p>
+      </td>
+      <td>
+       <p>
+        $12,000
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        =SUMIF(B2:B7,"*es",C2:C7)
+       </p>
+      </td>
+      <td>
+       <p>
+        Sum of the sales of all foods that end in "es" (Tomatoes, Oranges, and Apples).
+       </p>
+      </td>
+      <td>
+       <p>
+        $4,300
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        =SUMIF(A2:A7,"",C2:C7)
+       </p>
+      </td>
+      <td>
+       <p>
+        Sum of the sales of all foods that do not have a category specified.
+       </p>
+      </td>
+      <td>
+       <p>
+        $400
+       </p>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <p>
+    <a class="ocpTopOfPage" data-bi-area="__example" data-bi-type="anchor" href="#">
+     Top of Page
+    </a>
+   </p>
+  </section>
+ </section>
+ <section aria-labelledby="" class="ocpSection">
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   See also
+  </h2>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/sumifs-function-c9e748f5-7ea7-455d-9406-611cebce642b">
+    SUMIFS function
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/countif-function-e0de10c6-f885-4e71-abb4-1f464816df34">
+    COUNTIF function
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/sum-values-based-on-multiple-conditions-e610ae0f-4d27-480c-9119-eb644f1e847e">
+    Sum values based on multiple conditions
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/how-to-avoid-broken-formulas-in-excel-8309381d-33e8-42f6-b889-84ef6df1d586">
+    How to avoid broken formulas
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/vlookup-function-0bbc8083-26fe-4963-8ab8-93a18ad188a1">
+    VLOOKUP function
+   </a>
+  </p>
+ </section>
+</article>

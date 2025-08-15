@@ -1,0 +1,349 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p id="__goback">
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    ZTEST
+   </b>
+   function in Microsoft Excel.
+  </p>
+  <p>
+   Returns the one-tailed probability-value of a z-test. For a given hypothesized population mean, μ0, ZTEST returns the probability that the sample mean would be greater than the average of observations in the data set (array) — that is, the observed sample mean.
+  </p>
+  <p>
+   To see how ZTEST can be used in a formula to compute a two-tailed probability value, see "Remarks" below.
+  </p>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpImportant">
+     Important:
+    </b>
+    This function has been replaced with one or more new functions that may provide improved accuracy and whose names better reflect their usage. Although this function is still available for backward compatibility, you should consider using the new functions from now on, because this function may not be available in future versions of Excel.
+   </p>
+  </div>
+  <p>
+   For more information about the new function, see
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/z-test-function-d633d5a3-2031-4614-a016-92180ad82bee">
+    Z.TEST function
+   </a>
+   .
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   ZTEST(array,x,[sigma])
+  </p>
+  <p>
+   The ZTEST function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Array
+     </b>
+     Required. The array or range of data against which to test x.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      X
+     </b>
+     Required. The value to test.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Sigma
+     </b>
+     Optional. The population (known) standard deviation. If omitted, the sample standard deviation is used.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If array is empty, ZTEST returns the #N/A error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     ZTEST is calculated as follows when sigma is not omitted:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/5f81bc76-f745-46c1-903e-effbaa6e4197?format=avif&amp;w=320 320w,        /images/en-us/5f81bc76-f745-46c1-903e-effbaa6e4197?format=avif&amp;w=480 480w,        /images/en-us/5f81bc76-f745-46c1-903e-effbaa6e4197?format=avif&amp;w=640 640w,        /images/en-us/5f81bc76-f745-46c1-903e-effbaa6e4197?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/5f81bc76-f745-46c1-903e-effbaa6e4197?format=webp&amp;w=320 320w,        /images/en-us/5f81bc76-f745-46c1-903e-effbaa6e4197?format=webp&amp;w=480 480w,        /images/en-us/5f81bc76-f745-46c1-903e-effbaa6e4197?format=webp&amp;w=640 640w,        /images/en-us/5f81bc76-f745-46c1-903e-effbaa6e4197?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/5f81bc76-f745-46c1-903e-effbaa6e4197?format=jpeg&amp;w=320 320w,        /images/en-us/5f81bc76-f745-46c1-903e-effbaa6e4197?format=jpeg&amp;w=480 480w,        /images/en-us/5f81bc76-f745-46c1-903e-effbaa6e4197?format=jpeg&amp;w=640 640w,        /images/en-us/5f81bc76-f745-46c1-903e-effbaa6e4197?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Formula" class="fluentImage" loading="lazy" src="/images/en-us/5f81bc76-f745-46c1-903e-effbaa6e4197" style="aspect-ratio: 396/30" width="396"/>
+     </picture>
+    </p>
+    <p>
+     or when sigma is omitted:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/d885fed0-baf1-4862-b564-3a662c9da5c5?format=avif&amp;w=320 320w,        /images/en-us/d885fed0-baf1-4862-b564-3a662c9da5c5?format=avif&amp;w=480 480w,        /images/en-us/d885fed0-baf1-4862-b564-3a662c9da5c5?format=avif&amp;w=640 640w,        /images/en-us/d885fed0-baf1-4862-b564-3a662c9da5c5?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/d885fed0-baf1-4862-b564-3a662c9da5c5?format=webp&amp;w=320 320w,        /images/en-us/d885fed0-baf1-4862-b564-3a662c9da5c5?format=webp&amp;w=480 480w,        /images/en-us/d885fed0-baf1-4862-b564-3a662c9da5c5?format=webp&amp;w=640 640w,        /images/en-us/d885fed0-baf1-4862-b564-3a662c9da5c5?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/d885fed0-baf1-4862-b564-3a662c9da5c5?format=jpeg&amp;w=320 320w,        /images/en-us/d885fed0-baf1-4862-b564-3a662c9da5c5?format=jpeg&amp;w=480 480w,        /images/en-us/d885fed0-baf1-4862-b564-3a662c9da5c5?format=jpeg&amp;w=640 640w,        /images/en-us/d885fed0-baf1-4862-b564-3a662c9da5c5?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="formula" class="fluentImage" loading="lazy" src="/images/en-us/d885fed0-baf1-4862-b564-3a662c9da5c5" style="aspect-ratio: 374/29" width="374"/>
+     </picture>
+    </p>
+    <p>
+     where x is the sample mean AVERAGE(array); s is the sample standard deviation STDEV(array); and n is the number of observations in the sample COUNT(array).
+    </p>
+   </li>
+   <li>
+    <p>
+     ZTEST represents the probability that the sample mean would be greater than the observed value AVERAGE(array), when the underlying population mean is μ0. From the symmetry of the Normal distribution, if AVERAGE(array) &lt; μ0, ZTEST will return a value greater than 0.5.
+    </p>
+   </li>
+   <li>
+    <p>
+     The following Excel formula can be used to calculate the two-tailed probability that the sample mean would be further from μ0 (in either direction) than AVERAGE(array), when the underlying population mean is μ0:
+    </p>
+    <p>
+     =2 * MIN(ZTEST(array,μ0,sigma), 1 - ZTEST(array,μ0,sigma)).
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       6
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       7
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       8
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       6
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       5
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       9
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description (Result)
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =ZTEST(A2:A11,4)
+      </p>
+     </td>
+     <td>
+      <p>
+       One-tailed probability-value of a z-test for the data set above, at the hypothesized population mean of 4 (0.090574)
+      </p>
+     </td>
+     <td>
+      <p>
+       0.090574
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =2 * MIN(ZTEST(A2:A11,4), 1 - ZTEST(A2:A11,4))
+      </p>
+     </td>
+     <td>
+      <p>
+       Two-tailed probability-value of a z-test for the data set above, at the hypothesized population mean of 4 (0.181148)
+      </p>
+     </td>
+     <td>
+      <p>
+       0.181148
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =ZTEST(A2:A11,6)
+      </p>
+     </td>
+     <td>
+      <p>
+       One-tailed probability-value of a z-test for the data set above, at the hypothesized population mean of 6 (0.863043)
+      </p>
+     </td>
+     <td>
+      <p>
+       0.863043
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =2 * MIN(ZTEST(A2:A11,6), 1 - ZTEST(A2:A11,6))
+      </p>
+     </td>
+     <td>
+      <p>
+       Two-tailed probability-value of a z-test for the data set above, at the hypothesized population mean of 6 (0.273913)
+      </p>
+     </td>
+     <td>
+      <p>
+       0.273913
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

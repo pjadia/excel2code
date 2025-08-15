@@ -1,0 +1,111 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    COLUMNS
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Description
+  </h2>
+  <p>
+   Returns the number of columns in an array or reference.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Syntax
+  </h2>
+  <p>
+   COLUMNS(array)
+  </p>
+  <p>
+   The COLUMNS function syntax has the following argument:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Array
+     </b>
+     Required. An array or array formula, or a reference to a range of cells for which you want the number of columns.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p id="__goback">
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =COLUMNS(C1:E4)
+      </p>
+     </td>
+     <td>
+      <p>
+       Number of columns in the reference C1:E4.
+      </p>
+     </td>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =COLUMNS({1,2,3;4,5,6})
+      </p>
+     </td>
+     <td>
+      <p>
+       Number of columns in the array constant {1,2,3;4,5,6}. There are two 3-column rows, containing 1,2, and 3 in the first row and 4,5, and 6 in the second row.
+      </p>
+     </td>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

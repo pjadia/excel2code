@@ -1,0 +1,294 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    HYPERLINK
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Description
+  </h2>
+  <p>
+   The
+   <b class="ocpUI">
+    HYPERLINK
+   </b>
+   function creates a shortcut that jumps to another location in the current workbook, or opens a document stored on a network server, an intranet, or the Internet. When you click a cell that contains a
+   <b class="ocpUI">
+    HYPERLINK
+   </b>
+   function, Excel jumps to the location listed, or opens the document you specified.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <p>
+   <b class="ocpUI">
+    HYPERLINK
+   </b>
+   (link_location, [friendly_name])
+  </p>
+  <p>
+   The HYPERLINK function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Link_location
+     </b>
+     Required. The path and file name to the document to be opened. Link_location can refer to a place in a document — such as a specific cell or named range in an Excel worksheet or workbook, or to a bookmark in a Microsoft Word document. The path can be to a file that is stored on a hard disk drive. The path can also be a universal naming convention (UNC) path on a server (in Microsoft Excel for Windows) or a Uniform Resource Locator (URL) path on the Internet or an intranet.
+    </p>
+    <div class="ocpAlert">
+     <p class="ocpAlertSection">
+      <b class="ocpNote">
+       Note:
+      </b>
+      Excel for the web the HYPERLINK function is valid for web addresses (URLs) only. Link_location can be a text string enclosed in quotation marks or a reference to a cell that contains the link as a text string.
+      <br aria-hidden="true"/>
+      <br aria-hidden="true"/>
+      If the jump specified in link_location does not exist or cannot be navigated, an error appears when you click the cell.
+     </p>
+    </div>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Friendly_name
+     </b>
+     Optional. The jump text or numeric value that is displayed in the cell. Friendly_name is displayed in blue and is underlined. If friendly_name is omitted, the cell displays the link_location as the jump text.
+     <br aria-hidden="true"/>
+     <br aria-hidden="true"/>
+     Friendly_name can be a value, a text string, a name, or a cell that contains the jump text or value.
+     <br aria-hidden="true"/>
+     <br aria-hidden="true"/>
+     If friendly_name returns an error value (for example, #VALUE!), the cell displays the error instead of the jump text.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Remark
+  </h2>
+  <p id="__goback">
+   In the Excel desktop application, to select a cell that contains a hyperlink without jumping to the hyperlink destination, click the cell and hold the mouse button until the pointer becomes a cross
+   <picture>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/c58629e8-a0fb-4e46-9b42-89b1aa893fc0?format=avif&amp;w=320 320w,        /images/en-us/c58629e8-a0fb-4e46-9b42-89b1aa893fc0?format=avif&amp;w=480 480w,        /images/en-us/c58629e8-a0fb-4e46-9b42-89b1aa893fc0?format=avif&amp;w=640 640w,        /images/en-us/c58629e8-a0fb-4e46-9b42-89b1aa893fc0?format=avif&amp;w=800 800w" type="image/avif"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/c58629e8-a0fb-4e46-9b42-89b1aa893fc0?format=webp&amp;w=320 320w,        /images/en-us/c58629e8-a0fb-4e46-9b42-89b1aa893fc0?format=webp&amp;w=480 480w,        /images/en-us/c58629e8-a0fb-4e46-9b42-89b1aa893fc0?format=webp&amp;w=640 640w,        /images/en-us/c58629e8-a0fb-4e46-9b42-89b1aa893fc0?format=webp&amp;w=800 800w" type="image/webp"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/c58629e8-a0fb-4e46-9b42-89b1aa893fc0?format=jpeg&amp;w=320 320w,        /images/en-us/c58629e8-a0fb-4e46-9b42-89b1aa893fc0?format=jpeg&amp;w=480 480w,        /images/en-us/c58629e8-a0fb-4e46-9b42-89b1aa893fc0?format=jpeg&amp;w=640 640w,        /images/en-us/c58629e8-a0fb-4e46-9b42-89b1aa893fc0?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+    <img alt="Excel selection cursor" class="fluentImage" loading="lazy" src="/images/en-us/c58629e8-a0fb-4e46-9b42-89b1aa893fc0" style="aspect-ratio: 15/15" width="15"/>
+   </picture>
+   , then release the mouse button. In Excel for the web, select a cell by clicking it when the pointer is an arrow; jump to the hyperlink destination by clicking when the pointer is a pointing hand.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Examples
+  </h2>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Example
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =HYPERLINK("http://example.microsoft.com/report/budget report.xlsx", "Click for report")
+      </p>
+     </td>
+     <td>
+      <p>
+       Opens a workbook saved at http://example.microsoft.com/report. The cell displays "Click for report" as its jump text.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =HYPERLINK("[http://example.microsoft.com/report/budget report.xlsx]Annual!F10", D1)
+      </p>
+     </td>
+     <td>
+      <p>
+       Creates a hyperlink to cell F10 on the
+       <b class="ocpLegacyBold">
+        Annual
+       </b>
+       worksheet in the workbook saved at http://example.microsoft.com/report. The cell on the worksheet that contains the hyperlink displays the contents of cell D1 as its jump text.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =HYPERLINK("[http://example.microsoft.com/report/budget report.xlsx]'First Quarter'!DeptTotal", "Click to see First Quarter Department Total")
+      </p>
+     </td>
+     <td>
+      <p>
+       Creates a hyperlink to the range named
+       <b class="ocpLegacyBold">
+        DeptTotal
+       </b>
+       on the
+       <b class="ocpLegacyBold">
+        First Quarter
+       </b>
+       worksheet in the workbook saved at http://example.microsoft.com/report. The cell on the worksheet that contains the hyperlink displays "Click to see First Quarter Department Total" as its jump text.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =HYPERLINK("http://example.microsoft.com/Annual Report.docx]QrtlyProfits", "Quarterly Profit Report")
+      </p>
+     </td>
+     <td>
+      <p>
+       To create a hyperlink to a specific location in a Word file, you use a bookmark to define the location you want to jump to in the file. This example creates a hyperlink to the bookmark
+       <b class="ocpLegacyBold">
+        QrtlyProfits
+       </b>
+       in the file
+       <b class="ocpLegacyBold">
+        Annual Report.doc
+       </b>
+       saved at http://example.microsoft.com.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =HYPERLINK("\\FINANCE\Statements\1stqtr.xlsx", D5)
+      </p>
+     </td>
+     <td>
+      <p>
+       Displays the contents of cell D5 as the jump text in the cell and opens the workbook saved on the
+       <b class="ocpLegacyBold">
+        FINANCE
+       </b>
+       server in the
+       <b class="ocpLegacyBold">
+        Statements
+       </b>
+       share. This example uses a UNC path.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =HYPERLINK("D:\FINANCE\1stqtr.xlsx", H10)
+      </p>
+     </td>
+     <td>
+      <p>
+       Opens the workbook
+       <b class="ocpLegacyBold">
+        1stqtr.xlsx
+       </b>
+       that is stored in the
+       <b class="ocpLegacyBold">
+        Finance
+       </b>
+       directory on drive D, and displays the numeric value that is stored in cell H10.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =HYPERLINK("[C:\My Documents\Mybook.xlsx]Totals")
+      </p>
+     </td>
+     <td>
+      <p>
+       Creates a hyperlink to the
+       <b class="ocpLegacyBold">
+        Totals
+       </b>
+       area in another (external) workbook,
+       <b class="ocpLegacyBold">
+        Mybook.xlsx
+       </b>
+       .
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =HYPERLINK("[Book1.xlsx]Sheet1!A10","Go to Sheet1 &gt; A10")
+      </p>
+     </td>
+     <td>
+      <p>
+       To jump to a different location in the current worksheet, include both the workbook name, and worksheet name like this, where Sheet1 is the current worksheet.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =HYPERLINK("[Book1.xlsx]January!A10","Go to January &gt; A10")
+      </p>
+     </td>
+     <td>
+      <p>
+       To jump to a different location in the current worksheet, include both the workbook name, and worksheet name like this, where January is another worksheet in the workbook.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =HYPERLINK(CELL("address",January!A1),"Go to January &gt; A1")
+      </p>
+     </td>
+     <td>
+      <p>
+       To jump to a different location in the current worksheet without using the fully qualified worksheet reference ([Book1.xlsx]), you can use this, where CELL("address") returns the current workbook name.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =HYPERLINK($Z$1)
+      </p>
+     </td>
+     <td>
+      <p>
+       To quickly update all formulas in a worksheet that use a HYPERLINK function with the same arguments, you can place the link target in another cell on the same or another worksheet, and then use an absolute reference to that cell as the link_location in the HYPERLINK formulas. Changes that you make to the link target are immediately reflected in the HYPERLINK formulas.
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

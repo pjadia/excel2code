@@ -1,0 +1,270 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   Returns the quartile of the data set, based on percentile values from 0 to 1, exclusive.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <p>
+   <b class="ocpUI">
+    QUARTILE.EXC(array, quart)
+   </b>
+  </p>
+  <p>
+   The QUARTILE.EXC function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Array
+     </b>
+     Required. The array or cell range of numeric values for which you want the quartile value.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Quart
+     </b>
+     Required. Indicates which value to return.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If array is empty, QUARTILE.EXC returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If quart is not an integer, it is truncated.
+    </p>
+   </li>
+   <li>
+    <p>
+     If quart ≤ 0 or if quart ≥ 4, QUARTILE.EXC returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     MIN, MEDIAN, and MAX return the same value as QUARTILE.EXC when quart is equal to 0 (zero), 2, and 4, respectively.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </th>
+     <th>
+     </th>
+     <th>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       6
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       7
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       15
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       36
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       39
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       40
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       41
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       42
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       43
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       47
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       49
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =QUARTILE.EXC(A2:A12,1)
+      </p>
+     </td>
+     <td>
+      <p>
+       Locates the position of the first quartile (15).
+      </p>
+     </td>
+     <td>
+      <p>
+       15
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =QUARTILE.EXC(A2:A12,3)
+      </p>
+     </td>
+     <td>
+      <p>
+       Locates the position of the third quartile (43).
+      </p>
+     </td>
+     <td>
+      <p>
+       43
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

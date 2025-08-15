@@ -1,0 +1,196 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    EXACT
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Description
+  </h2>
+  <p>
+   Compares two text strings and returns TRUE if they are exactly the same, FALSE otherwise. EXACT is case-sensitive but ignores formatting differences. Use EXACT to test text being entered into a document.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Syntax
+  </h2>
+  <p>
+   EXACT(text1, text2)
+  </p>
+  <p>
+   The EXACT function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Text1
+     </b>
+     Required. The first text string.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Text2
+     </b>
+     Required. The second text string.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        First string
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Second string
+       </b>
+      </p>
+     </th>
+     <th>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       word
+      </p>
+     </td>
+     <td>
+      <p>
+       word
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Word
+      </p>
+     </td>
+     <td>
+      <p>
+       word
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       w ord
+      </p>
+     </td>
+     <td>
+      <p>
+       word
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p id="__goback">
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =EXACT(A2,B2)
+      </p>
+     </td>
+     <td>
+      <p>
+       Checks whether the strings in the first row match
+      </p>
+     </td>
+     <td>
+      <p>
+       TRUE
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =EXACT(A3,B3)
+      </p>
+     </td>
+     <td>
+      <p>
+       Checks whether the strings in the second row match ("W" is uppercase in A3)
+      </p>
+     </td>
+     <td>
+      <p>
+       FALSE
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =EXACT(A4,B4)
+      </p>
+     </td>
+     <td>
+      <p>
+       Checks whether the strings in the third row match (A4 contains a space between "w" and "ord")
+      </p>
+     </td>
+     <td>
+      <p>
+       FALSE
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

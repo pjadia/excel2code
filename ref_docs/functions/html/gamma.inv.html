@@ -1,0 +1,190 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p id="__goback">
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    GAMMA.INV
+   </b>
+   function in Microsoft Excel.
+  </p>
+  <p>
+   Returns the inverse of the gamma cumulative distribution. If p = GAMMA.DIST(x,...), then GAMMA.INV(p,...) = x. You can use this function to study a variable whose distribution may be skewed.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   GAMMA.INV(probability,alpha,beta)
+  </p>
+  <p>
+   The GAMMA.INV function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Probability
+     </b>
+     Required. The probability associated with the gamma distribution.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Alpha
+     </b>
+     Required. A parameter to the distribution.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Beta
+     </b>
+     Required. A parameter to the distribution. If beta = 1, GAMMA.INV returns the standard gamma distribution.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If any argument is text, GAMMA.INV returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If probability &lt; 0 or probability &gt; 1, GAMMA.INV returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If alpha ≤ 0 or if beta ≤ 0, GAMMA.INV returns the #NUM! error value.
+    </p>
+   </li>
+  </ul>
+  <p>
+   Given a value for probability, GAMMA.INV seeks that value x such that GAMMA.DIST(x, alpha, beta, TRUE) = probability. Thus, precision of GAMMA.INV depends on precision of GAMMA.DIST. GAMMA.INV uses an iterative search technique. If the search has not converged after 64 iterations, the function returns the #N/A error value.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       0.068094
+      </p>
+     </td>
+     <td>
+      <p>
+       Probability associated with the gamma distribution
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       9
+      </p>
+     </td>
+     <td>
+      <p>
+       Alpha parameter to the distribution
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+     <td>
+      <p>
+       Beta parameter to the distribution
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =GAMMA.INV(A2,A3,A4)
+      </p>
+     </td>
+     <td>
+      <p>
+       Inverse of the gamma cumulative distribution for the probability, alpha, and beta arguments in A2, A3, and A4.
+      </p>
+     </td>
+     <td>
+      <p>
+       10.0000112
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

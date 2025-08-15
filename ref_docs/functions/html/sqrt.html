@@ -1,0 +1,160 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    SQRT
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Description
+  </h2>
+  <p>
+   Returns a positive square root.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <p>
+   SQRT(number)
+  </p>
+  <p>
+   The SQRT function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Number
+     </b>
+     Required. The number for which you want the square root.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Remark
+  </h2>
+  <p>
+   If number is negative, SQRT returns the #NUM! error value.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </th>
+     <th>
+     </th>
+     <th>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       -16
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =SQRT(16)
+      </p>
+     </td>
+     <td>
+      <p>
+       Square root of 16.
+      </p>
+     </td>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =SQRT(A2)
+      </p>
+     </td>
+     <td>
+      <p>
+       Square root of -16. Because the number is negative, the #NUM! error message is returned.
+      </p>
+     </td>
+     <td>
+      <p>
+       #NUM!
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =SQRT(ABS(A2))
+      </p>
+     </td>
+     <td>
+      <p>
+       Avoiding the #NUM! error message by first using the ABS function to find the absolute value of -16 and then finding the square root.
+      </p>
+     </td>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

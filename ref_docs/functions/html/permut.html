@@ -1,0 +1,208 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    PERMUT
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Returns the number of permutations for a given number of objects that can be selected from number objects. A permutation is any set or subset of objects or events where internal order is significant. Permutations are different from combinations, for which the internal order is not significant. Use this function for lottery-style probability calculations.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   PERMUT(number, number_chosen)
+  </p>
+  <p>
+   The PERMUT function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Number
+     </b>
+     Required. An integer that describes the number of objects.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Number_chosen
+     </b>
+     Required. An integer that describes the number of objects in each permutation.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     Both arguments are truncated to integers.
+    </p>
+   </li>
+   <li>
+    <p>
+     If number or number_chosen is nonnumeric, PERMUT returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If number ≤ 0 or if number_chosen &lt; 0, PERMUT returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If number &lt; number_chosen, PERMUT returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     The equation for the number of permutations is:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/49ee3a03-4ed6-4eca-a55e-e963604de404?format=avif&amp;w=320 320w,        /images/en-us/49ee3a03-4ed6-4eca-a55e-e963604de404?format=avif&amp;w=480 480w,        /images/en-us/49ee3a03-4ed6-4eca-a55e-e963604de404?format=avif&amp;w=640 640w,        /images/en-us/49ee3a03-4ed6-4eca-a55e-e963604de404?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/49ee3a03-4ed6-4eca-a55e-e963604de404?format=webp&amp;w=320 320w,        /images/en-us/49ee3a03-4ed6-4eca-a55e-e963604de404?format=webp&amp;w=480 480w,        /images/en-us/49ee3a03-4ed6-4eca-a55e-e963604de404?format=webp&amp;w=640 640w,        /images/en-us/49ee3a03-4ed6-4eca-a55e-e963604de404?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/49ee3a03-4ed6-4eca-a55e-e963604de404?format=jpeg&amp;w=320 320w,        /images/en-us/49ee3a03-4ed6-4eca-a55e-e963604de404?format=jpeg&amp;w=480 480w,        /images/en-us/49ee3a03-4ed6-4eca-a55e-e963604de404?format=jpeg&amp;w=640 640w,        /images/en-us/49ee3a03-4ed6-4eca-a55e-e963604de404?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/49ee3a03-4ed6-4eca-a55e-e963604de404" style="aspect-ratio: 88/35" width="88"/>
+     </picture>
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       100
+      </p>
+     </td>
+     <td>
+      <p>
+       Number of objects
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+     <td>
+      <p>
+       Number of objects in each permutation
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        R
+       </b>
+       <b class="ocpLegacyBold">
+        esult
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =PERMUT(A2,A3)
+      </p>
+     </td>
+     <td>
+      <p>
+       Permutations possible for the arguments specified in A2:A3.
+      </p>
+     </td>
+     <td>
+      <p>
+       970200
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =PERMUT(3,2)
+      </p>
+     </td>
+     <td>
+      <p>
+       Permutations possible for a group of 3 objects where 2 are chosen.
+      </p>
+     </td>
+     <td>
+      <p>
+       6
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

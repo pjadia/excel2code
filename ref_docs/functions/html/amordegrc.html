@@ -1,0 +1,436 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpImportant">
+     Important:
+    </b>
+    Because of changes to the depreciation methodology of the French accounting system, this function is deprecated and should no longer be used. It is included for compatibility of old workbooks only.
+   </p>
+  </div>
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    AMORDEGRC
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Description
+  </h2>
+  <p>
+   Returns the depreciation for each accounting period. This function is provided for the French accounting system. If an asset is purchased in the middle of the accounting period, the prorated depreciation is taken into account. The function is similar to AMORLINC, except that a depreciation coefficient is applied in the calculation depending on the life of the assets.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <p>
+   AMORDEGRC(cost, date_purchased, first_period, salvage, period, rate, [basis])
+  </p>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpImportant">
+     Important:
+    </b>
+    Dates should be entered by using the DATE function, or as results of other formulas or functions. For example, use DATE(2008,5,23) for the 23rd day of May, 2008. Problems can occur if dates are entered as text.
+   </p>
+  </div>
+  <p>
+   The AMORDEGRC function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Cost
+     </b>
+     Required. The cost of the asset.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Date_purchased
+     </b>
+     Required. The date of the purchase of the asset.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      First_period
+     </b>
+     Required. The date of the end of the first period.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Salvage
+     </b>
+     Required. The salvage value at the end of the life of the asset.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Period
+     </b>
+     Required. The period.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Rate
+     </b>
+     Required. The rate of depreciation.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Basis
+     </b>
+     Optional. The year basis to be used.
+    </p>
+   </li>
+  </ul>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Basis
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Date system
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       0 or omitted
+      </p>
+     </td>
+     <td>
+      <p>
+       360 days (NASD method)
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+      <p>
+       Actual
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+     <td>
+      <p>
+       365 days in a year
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+     <td>
+      <p>
+       360 days in a year (European method)
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     Microsoft Excel stores dates as sequential serial numbers so they can be used in calculations. By default, January 1, 1900 is serial number 1, and January 1, 2008 is serial number 39448 because it is 39,448 days after January 1, 1900.
+    </p>
+   </li>
+   <li>
+    <p>
+     This function will return the depreciation until the last period of the life of the assets or until the cumulated value of depreciation is greater than the cost of the assets minus the salvage value.
+    </p>
+   </li>
+   <li>
+    <p>
+     The depreciation coefficients are:
+    </p>
+   </li>
+  </ul>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Life of assets (1/rate)
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Depreciation coefficient
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       Between 3 and 4 years
+      </p>
+     </td>
+     <td>
+      <p>
+       1.5
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Between 5 and 6 years
+      </p>
+     </td>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       More than 6 years
+      </p>
+     </td>
+     <td>
+      <p>
+       2.5
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <ul>
+   <li>
+    <p>
+     The depreciation rate will grow to 50 percent for the period preceding the last period and will grow to 100 percent for the last period.
+    </p>
+   </li>
+   <li>
+    <p>
+     If the life of assets is between 0 (zero) and 1, 1 and 2, 2 and 3, or 4 and 5, the #NUM! error value is returned.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </th>
+     <th>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       2400
+      </p>
+     </td>
+     <td>
+      <p>
+       Cost
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       39679
+      </p>
+     </td>
+     <td>
+      <p>
+       Date purchased
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       39813
+      </p>
+     </td>
+     <td>
+      <p>
+       End of the first period
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       300
+      </p>
+     </td>
+     <td>
+      <p>
+       Salvage value
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+      <p>
+       Period
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       0.15
+      </p>
+     </td>
+     <td>
+      <p>
+       Depreciation rate
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+      <p>
+       Actual basis (see above)
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =AMORDEGRC(A2,A3,A4,A5,A6,A7,A8)
+      </p>
+     </td>
+     <td>
+      <p>
+       First period depreciation
+      </p>
+     </td>
+     <td>
+      <p>
+       776
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

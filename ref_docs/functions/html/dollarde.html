@@ -1,0 +1,144 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p id="__goback">
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    DOLLARDE
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Converts a dollar price expressed as an integer part and a fraction part, such as 1.02, into a dollar price expressed as a decimal number. Fractional dollar numbers are sometimes used for security prices.
+  </p>
+  <p>
+   The fraction part of the value is divided by an integer that you specify. For example, if you want your price to be expressed to a precision of 1/16 of a dollar, you divide the fraction part by 16. In this case, 1.02 represents $1.125 ($1 + 2/16 = $1.125).
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   DOLLARDE(fractional_dollar, fraction)
+  </p>
+  <p>
+   The DOLLARDE function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Fractional_dollar
+     </b>
+     Required. A number expressed as an integer part and a fraction part, separated by a decimal symbol.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Fraction
+     </b>
+     Required. The integer to use in the denominator of the fraction.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If fraction is not an integer, it is truncated.
+    </p>
+   </li>
+   <li>
+    <p>
+     If fraction is less than 0, DOLLARDE returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If fraction is greater than or equal to 0 and less than 1, DOLLARDE returns the #DIV/0! error value.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =DOLLARDE(1.02,16)
+      </p>
+     </td>
+     <td>
+      <p>
+       Converts 1.02, read as 1 and 2/16, to a decimal number (1.125). Because the fraction value is 16, the price has a precision of 1/16 of a dollar.
+      </p>
+     </td>
+     <td>
+      <p>
+       1.125
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =DOLLARDE(1.1,32)
+      </p>
+     </td>
+     <td>
+      <p>
+       Converts 1.1, read as 1 and 10/32, to a decimal number (1.3125). Because the fraction value is 32, the price has a precision of 1/32 of a dollar.
+      </p>
+     </td>
+     <td>
+      <p>
+       1.3125
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

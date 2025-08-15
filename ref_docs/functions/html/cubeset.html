@@ -1,0 +1,331 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    CUBESET
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Defines a calculated set of members or tuples by sending a set expression to the cube on the server, which creates the set, and then returns that set to Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   CUBESET(connection, set_expression, [caption], [sort_order], [sort_by])
+  </p>
+  <p>
+   The CUBESET function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Connection
+     </b>
+     Required. A text string of the name of the connection to the cube.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Set_expression
+     </b>
+     Required. A text string of a set expression that results in a set of members or tuples. Set_expression can also be a cell reference to an Excel range that contains one or more members, tuples, or sets included in the set.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Caption
+     </b>
+     Optional. A text string that is displayed in the cell instead of the caption, if one is defined, from the cube.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Sort_order
+     </b>
+     Optional. The type of sort, if any, to perform and can be one of the following:
+    </p>
+   </li>
+  </ul>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Integer
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Enumerated constant
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Sort_by
+       </b>
+       <b class="ocpLegacyBold">
+        argument
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       0
+      </p>
+     </td>
+     <td>
+      <p>
+       SortNone
+      </p>
+     </td>
+     <td>
+      <p>
+       Leaves the set in existing order.
+      </p>
+     </td>
+     <td>
+      <p>
+       Ignored
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+      <p>
+       SortAscending
+      </p>
+     </td>
+     <td>
+      <p>
+       Sorts set in ascending order by sort_by.
+      </p>
+     </td>
+     <td>
+      <p>
+       Required
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+     <td>
+      <p>
+       SortDescending
+      </p>
+     </td>
+     <td>
+      <p>
+       Sorts set in descending order by sort_by.
+      </p>
+     </td>
+     <td>
+      <p>
+       Required
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+     <td>
+      <p>
+       SortAlphaAscending
+      </p>
+     </td>
+     <td>
+      <p>
+       Sorts set in alpha ascending order.
+      </p>
+     </td>
+     <td>
+      <p>
+       Ignored
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+     <td>
+      <p>
+       Sort_Alpha_Descending
+      </p>
+     </td>
+     <td>
+      <p>
+       Sorts set in alpha descending order.
+      </p>
+     </td>
+     <td>
+      <p>
+       Ignored
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       5
+      </p>
+     </td>
+     <td>
+      <p>
+       Sort_Natural_Ascending
+      </p>
+     </td>
+     <td>
+      <p>
+       Sorts set in natural ascending order.
+      </p>
+     </td>
+     <td>
+      <p>
+       Ignored
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       6
+      </p>
+     </td>
+     <td>
+      <p>
+       Sort_Natural_Descending
+      </p>
+     </td>
+     <td>
+      <p>
+       Sorts set in natural descending order.
+      </p>
+     </td>
+     <td>
+      <p>
+       Ignored
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <ul>
+   <li>
+    <p>
+     The default value is 0. An alpha sort for a set of tuples sorts on the last element in each tuple. For more information on these different sort orders, see the Microsoft Office SQL Analysis Services help system.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Sort_by
+     </b>
+     Optional. A text string of the value by which to sort. For example, to get the city with the highest sales, set_expression would be a set of cities, and sort_by would be the sales measure. Or, to get the city with the highest population, set_expression would be a set of cities, and sort_by would be the population measure. If sort_order requires sort_by, and sort_by is omitted, CUBESET returns the #VALUE! error message.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     When the CUBESET function evaluates, it temporarily displays a "#GETTING_DATA…" message in the cell before all of the data is retrieved.
+    </p>
+   </li>
+   <li>
+    <p>
+     If the connection name is not a valid workbook connection stored in the workbook, CUBESET returns a #NAME? error value. If the Online Analytical Processing (OLAP) server is not running, not available, or returns an error message, CUBESET returns a #NAME? error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If the set_expression syntax is incorrect or the set contains at least one member with a different dimension than the other members, CUBESET returns a #N/A error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If set_expression is longer than 255 characters, which is the limit for an argument to a function, CUBESET returns a #VALUE! error value. To use text strings longer than 255 characters, enter the text string in a cell (for which the limit is 32,767 characters), and then use a cell reference as the argument.
+    </p>
+   </li>
+   <li>
+    <p>
+     CUBESET may return a #N/A error value if you reference a session-based object, such as a calculated member or named set, in a PivotTable when sharing a connection, and that PivotTable is deleted or you convert the PivotTable to formulas. (On the
+     <b class="ocpUI">
+      Options
+     </b>
+     tab, in the
+     <b class="ocpUI">
+      Tools
+     </b>
+     group, click
+     <b class="ocpUI">
+      OLAP Tools
+     </b>
+     , and then click
+     <b class="ocpUI">
+      Convert to Formulas
+     </b>
+     .)
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Examples
+  </h2>
+  <p>
+   =CUBESET("Finance","Order([Product].[Product].[Product Category].Members,[Measures].[Unit Sales],ASC)","Products")
+  </p>
+  <p>
+   =CUBESET("Sales","[Product].[All Products].Children","Products",1,"[Measures].[Sales Amount]")
+  </p>
+ </section>
+</article>

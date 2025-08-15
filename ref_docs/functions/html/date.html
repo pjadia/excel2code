@@ -1,0 +1,579 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   Use Excel's DATE function when you need to take three separate values and combine them to form a date.
+  </p>
+ </section>
+ <div class="ocpSection">
+  <h2 class="ocpExpandoHead">
+   <button aria-controls="ID0EN-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EN-button" ms.interactiontype="11" type="button">
+    <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+     <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+     </i>
+    </div>
+    <div class="ocpExpandoHeadTitleContainer" role="none">
+     Technical details
+    </div>
+   </button>
+  </h2>
+  <div aria-labelledby="ID0EN-button" class="ocpebw" id="ID0EN-panel" role="region">
+   <div class="ocpExpandoBody">
+    <p>
+     The
+     <b class="ocpLegacyBold">
+      DATE
+     </b>
+     function returns the sequential serial number that represents a particular date.
+    </p>
+    <p>
+     <b class="ocpLegacyBold">
+      Syntax:
+     </b>
+     DATE(year,month,day)
+    </p>
+    <p>
+     The DATE function syntax has the following arguments:
+    </p>
+    <ul>
+     <li>
+      <p>
+       <b class="ocpRunInHead">
+        Year
+       </b>
+       Required. The value of the
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         year
+        </i>
+       </b>
+       argument can include one to four digits. Excel interprets the
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         year
+        </i>
+       </b>
+       argument according to the date system your computer is using. By default, Microsoft Excel for Windows uses the 1900 date system, which means the first date is January 1, 1900.
+      </p>
+      <div class="ocpAlert">
+       <p class="ocpAlertSection">
+        <b class="ocpTip">
+         Tip:
+        </b>
+        Use four digits for the
+        <b class="ocpLegacyBold">
+         <i class="ocpItalic">
+          year
+         </i>
+        </b>
+        argument to prevent unwanted results. For example, "07" could mean "1907" or "2007." Four digit years prevent confusion.
+       </p>
+      </div>
+      <p>
+      </p>
+      <ul>
+       <li>
+        <p>
+         If
+         <b class="ocpLegacyBold">
+          <i class="ocpItalic">
+           year
+          </i>
+         </b>
+         is between 0 (zero) and 1899 (inclusive), Excel adds that value to 1900 to calculate the year. For example, DATE(108,1,2) returns January 2, 2008 (1900+108).
+        </p>
+       </li>
+       <li>
+        <p>
+         If
+         <b class="ocpLegacyBold">
+          <i class="ocpItalic">
+           year
+          </i>
+         </b>
+         is between 1900 and 9999 (inclusive), Excel uses that value as the year. For example, DATE(2008,1,2) returns January 2, 2008.
+        </p>
+       </li>
+       <li>
+        <p>
+         If
+         <b class="ocpLegacyBold">
+          <i class="ocpItalic">
+           year
+          </i>
+         </b>
+         is less than 0 or is 10000 or greater, Excel returns the #NUM! error value.
+        </p>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <p>
+       <b class="ocpRunInHead">
+        Month
+       </b>
+       Required. A positive or negative integer representing the month of the year from 1 to 12 (January to December).
+      </p>
+      <ul>
+       <li>
+        <p>
+         If
+         <b class="ocpLegacyBold">
+          <i class="ocpItalic">
+           month
+          </i>
+         </b>
+         is greater than 12,
+         <b class="ocpLegacyBold">
+          <i class="ocpItalic">
+           month
+          </i>
+         </b>
+         adds that number of months to the first month in the year specified. For example, DATE(2008,14,2) returns the serial number representing February 2, 2009.
+        </p>
+       </li>
+       <li>
+        <p>
+         If
+         <b class="ocpLegacyBold">
+          <i class="ocpItalic">
+           month
+          </i>
+         </b>
+         is less than 1,
+         <b class="ocpLegacyBold">
+          <i class="ocpItalic">
+           month
+          </i>
+         </b>
+         subtracts the magnitude of that number of months, plus 1, from the first month in the year specified. For example, DATE(2008,-3,2) returns the serial number representing September 2, 2007.
+        </p>
+       </li>
+      </ul>
+     </li>
+     <li>
+      <p>
+       <b class="ocpRunInHead">
+        Day
+       </b>
+       Required. A positive or negative integer representing the day of the month from 1 to 31.
+      </p>
+      <ul>
+       <li>
+        <p>
+         If
+         <b class="ocpLegacyBold">
+          <i class="ocpItalic">
+           day
+          </i>
+         </b>
+         is greater than the number of days in the month specified,
+         <b class="ocpLegacyBold">
+          <i class="ocpItalic">
+           day
+          </i>
+         </b>
+         adds that number of days to the first day in the month. For example, DATE(2008,1,35) returns the serial number representing February 4, 2008.
+        </p>
+       </li>
+       <li>
+        <p>
+         If
+         <b class="ocpLegacyBold">
+          <i class="ocpItalic">
+           day
+          </i>
+         </b>
+         is less than 1,
+         <b class="ocpLegacyBold">
+          <i class="ocpItalic">
+           day
+          </i>
+         </b>
+         subtracts the magnitude that number of days, plus one, from the first day of the month specified. For example, DATE(2008,1,-15) returns the serial number representing December 16, 2007.
+        </p>
+       </li>
+      </ul>
+     </li>
+    </ul>
+    <div class="ocpAlert">
+     <p class="ocpAlertSection">
+      <b class="ocpNote">
+       Note:
+      </b>
+      Excel stores dates as sequential serial numbers so that they can be used in calculations. January 1, 1900 is serial number 1, and January 1, 2008 is serial number 39448 because it is 39,447 days after January 1, 1900. You will need to change the number format (Format Cells) in order to display a proper date.
+     </p>
+    </div>
+    <picture>
+     <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/8f4e5f5d-8ea5-44f6-aae8-f473176fe431?format=avif&amp;w=320 320w,        /images/en-us/8f4e5f5d-8ea5-44f6-aae8-f473176fe431?format=avif&amp;w=480 480w,        /images/en-us/8f4e5f5d-8ea5-44f6-aae8-f473176fe431?format=avif&amp;w=640 640w,        /images/en-us/8f4e5f5d-8ea5-44f6-aae8-f473176fe431?format=avif&amp;w=800 800w" type="image/avif"/>
+     <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/8f4e5f5d-8ea5-44f6-aae8-f473176fe431?format=webp&amp;w=320 320w,        /images/en-us/8f4e5f5d-8ea5-44f6-aae8-f473176fe431?format=webp&amp;w=480 480w,        /images/en-us/8f4e5f5d-8ea5-44f6-aae8-f473176fe431?format=webp&amp;w=640 640w,        /images/en-us/8f4e5f5d-8ea5-44f6-aae8-f473176fe431?format=webp&amp;w=800 800w" type="image/webp"/>
+     <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/8f4e5f5d-8ea5-44f6-aae8-f473176fe431?format=jpeg&amp;w=320 320w,        /images/en-us/8f4e5f5d-8ea5-44f6-aae8-f473176fe431?format=jpeg&amp;w=480 480w,        /images/en-us/8f4e5f5d-8ea5-44f6-aae8-f473176fe431?format=jpeg&amp;w=640 640w,        /images/en-us/8f4e5f5d-8ea5-44f6-aae8-f473176fe431?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+     <img alt="DATE function example 1" class="fluentImage" loading="lazy" src="/images/en-us/8f4e5f5d-8ea5-44f6-aae8-f473176fe431" style="aspect-ratio: 386/131" width="386"/>
+    </picture>
+    <p>
+     <b class="ocpLegacyBold">
+      Syntax
+     </b>
+     : DATE(year,month,day)
+    </p>
+    <p>
+     For example:
+     <b class="ocpLegacyBold">
+      =DATE(C2,A2,B2)
+     </b>
+     combines the year from cell C2, the month from cell A2, and the day from cell B2 and puts them into one cell as a date. The example below shows the final result in cell D2.
+    </p>
+    <picture>
+     <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/d14634e7-c3df-40ad-94ca-d44878460a00?format=avif&amp;w=320 320w,        /images/en-us/d14634e7-c3df-40ad-94ca-d44878460a00?format=avif&amp;w=480 480w,        /images/en-us/d14634e7-c3df-40ad-94ca-d44878460a00?format=avif&amp;w=640 640w,        /images/en-us/d14634e7-c3df-40ad-94ca-d44878460a00?format=avif&amp;w=800 800w" type="image/avif"/>
+     <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/d14634e7-c3df-40ad-94ca-d44878460a00?format=webp&amp;w=320 320w,        /images/en-us/d14634e7-c3df-40ad-94ca-d44878460a00?format=webp&amp;w=480 480w,        /images/en-us/d14634e7-c3df-40ad-94ca-d44878460a00?format=webp&amp;w=640 640w,        /images/en-us/d14634e7-c3df-40ad-94ca-d44878460a00?format=webp&amp;w=800 800w" type="image/webp"/>
+     <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/d14634e7-c3df-40ad-94ca-d44878460a00?format=jpeg&amp;w=320 320w,        /images/en-us/d14634e7-c3df-40ad-94ca-d44878460a00?format=jpeg&amp;w=480 480w,        /images/en-us/d14634e7-c3df-40ad-94ca-d44878460a00?format=jpeg&amp;w=640 640w,        /images/en-us/d14634e7-c3df-40ad-94ca-d44878460a00?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+     <img alt="DATE function Example 2" class="fluentImage" loading="lazy" src="/images/en-us/d14634e7-c3df-40ad-94ca-d44878460a00" style="aspect-ratio: 508/165" width="508"/>
+    </picture>
+    <p>
+     <b class="ocpLegacyBold">
+      Need to insert dates without a formula?
+     </b>
+     No problem. You can
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/insert-the-current-date-and-time-in-a-cell-b5663451-10b0-40ab-9e71-6b0ce5768138">
+      insert the current date and time in a cell
+     </a>
+     , or you can insert a date that gets updated. You can also
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/fill-data-automatically-in-worksheet-cells-74e31bdd-d993-45da-aa82-35a236c5b5db">
+      fill data automatically in worksheet cells.
+     </a>
+    </p>
+   </div>
+  </div>
+ </div>
+ <div class="ocpSection">
+  <h2 class="ocpExpandoHead">
+   <button aria-controls="ID0EL-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EL-button" ms.interactiontype="11" type="button">
+    <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+     <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+     </i>
+    </div>
+    <div class="ocpExpandoHeadTitleContainer" role="none">
+     Change the date format
+    </div>
+   </button>
+  </h2>
+  <div aria-labelledby="ID0EL-button" class="ocpebw" id="ID0EL-panel" role="region">
+   <div class="ocpExpandoBody">
+    <ol type="1">
+     <li>
+      <p>
+       On the
+       <b class="ocpLegacyBold">
+        Home
+       </b>
+       tab in the
+       <b class="ocpUI">
+        Number
+       </b>
+       section select ether
+       <b class="ocpUI">
+        Long Date
+       </b>
+       or
+       <b class="ocpUI">
+        Short Date
+       </b>
+       .
+      </p>
+     </li>
+     <li>
+      <p>
+       Alternatively, right-click the cell(s) you want to change and select
+       <b class="ocpUI">
+        Format cells
+       </b>
+       or
+       <b class="ocpUI">
+       </b>
+       press
+       <b class="ocpLegacyBold">
+        Ctrl+1
+       </b>
+       <b class="ocpUI">
+        .
+       </b>
+       On a Mac, Ctrl-click the cells (Command+1 on a Mac).
+      </p>
+     </li>
+     <li>
+      <p>
+       Select
+       <b class="ocpUI">
+        Date
+       </b>
+       from the
+       <b class="ocpUI">
+        Category
+       </b>
+       menu.
+      </p>
+     </li>
+     <li>
+      <p>
+       3. Choose the
+       <b class="ocpUI">
+        Locale (location)
+       </b>
+       and Date format you want.
+      </p>
+     </li>
+     <li>
+      <p>
+       For more information on formatting dates, see
+       <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/format-a-date-the-way-you-want-in-excel-8e10019e-d5d8-47a1-ba95-db95123d273e">
+        Format a date the way you want
+       </a>
+       .
+      </p>
+      <picture>
+       <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/ea38935d-f96a-48a5-a1f7-82ae71c1f5eb?format=avif&amp;w=320 320w,        /images/en-us/ea38935d-f96a-48a5-a1f7-82ae71c1f5eb?format=avif&amp;w=480 480w,        /images/en-us/ea38935d-f96a-48a5-a1f7-82ae71c1f5eb?format=avif&amp;w=640 640w,        /images/en-us/ea38935d-f96a-48a5-a1f7-82ae71c1f5eb?format=avif&amp;w=800 800w" type="image/avif"/>
+       <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/ea38935d-f96a-48a5-a1f7-82ae71c1f5eb?format=webp&amp;w=320 320w,        /images/en-us/ea38935d-f96a-48a5-a1f7-82ae71c1f5eb?format=webp&amp;w=480 480w,        /images/en-us/ea38935d-f96a-48a5-a1f7-82ae71c1f5eb?format=webp&amp;w=640 640w,        /images/en-us/ea38935d-f96a-48a5-a1f7-82ae71c1f5eb?format=webp&amp;w=800 800w" type="image/webp"/>
+       <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/ea38935d-f96a-48a5-a1f7-82ae71c1f5eb?format=jpeg&amp;w=320 320w,        /images/en-us/ea38935d-f96a-48a5-a1f7-82ae71c1f5eb?format=jpeg&amp;w=480 480w,        /images/en-us/ea38935d-f96a-48a5-a1f7-82ae71c1f5eb?format=jpeg&amp;w=640 640w,        /images/en-us/ea38935d-f96a-48a5-a1f7-82ae71c1f5eb?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+       <img alt="Format a cell as a date" class="fluentImage" loading="lazy" src="/images/en-us/ea38935d-f96a-48a5-a1f7-82ae71c1f5eb" style="aspect-ratio: 520/457" width="520"/>
+      </picture>
+     </li>
+    </ol>
+   </div>
+  </div>
+ </div>
+ <div class="ocpSection">
+  <h2 class="ocpExpandoHead">
+   <button aria-controls="ID0EJ-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EJ-button" ms.interactiontype="11" type="button">
+    <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+     <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+     </i>
+    </div>
+    <div class="ocpExpandoHeadTitleContainer" role="none">
+     Calculate a date based on another date
+    </div>
+   </button>
+  </h2>
+  <div aria-labelledby="ID0EJ-button" class="ocpebw" id="ID0EJ-panel" role="region">
+   <div class="ocpExpandoBody">
+    <p>
+     You can use the DATE function to create a date that is based on another cell’s date. For example, you can use the
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/year-function-c64f017a-1354-490d-981f-578e8ec8d3b9">
+      YEAR
+     </a>
+     ,
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/month-function-579a2881-199b-48b2-ab90-ddba0eba86e8">
+      MONTH
+     </a>
+     , and
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/day-function-8a7d1cbb-6c7d-4ba1-8aea-25c134d03101">
+      DAY
+     </a>
+     functions to create an anniversary date that’s based on another cell. Let’s say an employee’s first day at work is 10/1/2016; the DATE function can be used to establish his fifth year anniversary date:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/031fb8d8-08ca-447c-a4df-547350c63607?format=avif&amp;w=320 320w,        /images/en-us/031fb8d8-08ca-447c-a4df-547350c63607?format=avif&amp;w=480 480w,        /images/en-us/031fb8d8-08ca-447c-a4df-547350c63607?format=avif&amp;w=640 640w,        /images/en-us/031fb8d8-08ca-447c-a4df-547350c63607?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/031fb8d8-08ca-447c-a4df-547350c63607?format=webp&amp;w=320 320w,        /images/en-us/031fb8d8-08ca-447c-a4df-547350c63607?format=webp&amp;w=480 480w,        /images/en-us/031fb8d8-08ca-447c-a4df-547350c63607?format=webp&amp;w=640 640w,        /images/en-us/031fb8d8-08ca-447c-a4df-547350c63607?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/031fb8d8-08ca-447c-a4df-547350c63607?format=jpeg&amp;w=320 320w,        /images/en-us/031fb8d8-08ca-447c-a4df-547350c63607?format=jpeg&amp;w=480 480w,        /images/en-us/031fb8d8-08ca-447c-a4df-547350c63607?format=jpeg&amp;w=640 640w,        /images/en-us/031fb8d8-08ca-447c-a4df-547350c63607?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Calculate a date based on another date" class="fluentImage" loading="lazy" src="/images/en-us/031fb8d8-08ca-447c-a4df-547350c63607" style="aspect-ratio: 352/179" width="352"/>
+     </picture>
+    </p>
+    <ol type="1">
+     <li>
+      <p>
+       The DATE function creates a date.
+      </p>
+      <p>
+       <i class="ocpItalic">
+        =DATE(YEAR(C2)+5,MONTH(C2),DAY(C2))
+       </i>
+      </p>
+     </li>
+     <li>
+      <p>
+       The YEAR function looks at cell C2 and extracts "2012".
+      </p>
+     </li>
+     <li>
+      <p>
+       Then, "+5" adds 5 years, and establishes "2017" as the anniversary year in cell D2.
+      </p>
+     </li>
+     <li>
+      <p>
+       The MONTH function extracts the "3" from C2. This establishes "3" as the month in cell D2.
+      </p>
+     </li>
+     <li>
+      <p>
+       The DAY function extracts "14" from C2. This establishes "14" as the day in cell D2.
+      </p>
+     </li>
+    </ol>
+   </div>
+  </div>
+ </div>
+ <div class="ocpSection">
+  <h2 class="ocpExpandoHead">
+   <button aria-controls="ID0EH-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EH-button" ms.interactiontype="11" type="button">
+    <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+     <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+     </i>
+    </div>
+    <div class="ocpExpandoHeadTitleContainer" role="none">
+     Convert text strings and numbers into dates
+    </div>
+   </button>
+  </h2>
+  <div aria-labelledby="ID0EH-button" class="ocpebw" id="ID0EH-panel" role="region">
+   <div class="ocpExpandoBody">
+    <p>
+     If you open a file that came from another program, Excel will try to recognize dates within the data. But sometimes the dates aren't recognizable. This is may be because the numbers don't resemble a typical date, or because the data is formatted as text. If this is the case, you can use the DATE function to convert the information into dates. For example, in the following illustration, cell C2 contains a date that is in the format: YYYYMMDD. It is also formatted as text. To convert it into a date, the DATE function was used in conjunction with the
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/left-function-9203d2d2-7960-479b-84c6-1ea52b99640c">
+      LEFT
+     </a>
+     ,
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/mid-function-d5f9e25c-d7d6-472e-b568-4ecb12433028">
+      MID
+     </a>
+     , and
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/right-function-240267ee-9afa-4639-a02b-f19e1786cf2f">
+      RIGHT
+     </a>
+     functions.
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/c6e1fe5a-6ac3-47c7-94bf-8b6a5062464e?format=avif&amp;w=320 320w,        /images/en-us/c6e1fe5a-6ac3-47c7-94bf-8b6a5062464e?format=avif&amp;w=480 480w,        /images/en-us/c6e1fe5a-6ac3-47c7-94bf-8b6a5062464e?format=avif&amp;w=640 640w,        /images/en-us/c6e1fe5a-6ac3-47c7-94bf-8b6a5062464e?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/c6e1fe5a-6ac3-47c7-94bf-8b6a5062464e?format=webp&amp;w=320 320w,        /images/en-us/c6e1fe5a-6ac3-47c7-94bf-8b6a5062464e?format=webp&amp;w=480 480w,        /images/en-us/c6e1fe5a-6ac3-47c7-94bf-8b6a5062464e?format=webp&amp;w=640 640w,        /images/en-us/c6e1fe5a-6ac3-47c7-94bf-8b6a5062464e?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/c6e1fe5a-6ac3-47c7-94bf-8b6a5062464e?format=jpeg&amp;w=320 320w,        /images/en-us/c6e1fe5a-6ac3-47c7-94bf-8b6a5062464e?format=jpeg&amp;w=480 480w,        /images/en-us/c6e1fe5a-6ac3-47c7-94bf-8b6a5062464e?format=jpeg&amp;w=640 640w,        /images/en-us/c6e1fe5a-6ac3-47c7-94bf-8b6a5062464e?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Convert text strings and numbers into dates" class="fluentImage" loading="lazy" src="/images/en-us/c6e1fe5a-6ac3-47c7-94bf-8b6a5062464e" style="aspect-ratio: 342/185" width="342"/>
+     </picture>
+    </p>
+    <ol type="1">
+     <li>
+      <p>
+       The DATE function creates a date.
+      </p>
+      <p>
+       <i class="ocpItalic">
+        =DATE(LEFT(C2,4),MID(C2,5,2),RIGHT(C2,2))
+       </i>
+      </p>
+     </li>
+     <li>
+      <p>
+       The LEFT function looks at cell C2 and takes the first 4 characters from the left. This establishes “2014” as the year of the converted date in cell D2.
+      </p>
+     </li>
+     <li>
+      <p>
+       The MID function looks at cell C2. It starts at the 5th character, and then takes 2 characters to the right. This establishes “03” as the month of the converted date in cell D2. Because the formatting of D2 set to
+       <b class="ocpLegacyBold">
+        Date
+       </b>
+       , the “0” isn’t included in the final result.
+      </p>
+     </li>
+     <li>
+      <p>
+       The RIGHT function looks at cell C2 and takes the first 2 characters starting from the very right and moving left. This establishes “14” as the day of the date in D2.
+      </p>
+     </li>
+    </ol>
+   </div>
+  </div>
+ </div>
+ <div class="ocpSection">
+  <h2 class="ocpExpandoHead">
+   <button aria-controls="ID0EF-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EF-button" ms.interactiontype="11" type="button">
+    <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+     <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+     </i>
+    </div>
+    <div class="ocpExpandoHeadTitleContainer" role="none">
+     Increase or decrease a date by a certain number of days
+    </div>
+   </button>
+  </h2>
+  <div aria-labelledby="ID0EF-button" class="ocpebw" id="ID0EF-panel" role="region">
+   <div class="ocpExpandoBody">
+    <p>
+     To increase or decrease a date by a certain number of days, simply add or subtract the number of days to the value or cell reference containing the date.
+    </p>
+    <p>
+     In the example below, cell A5 contains the date that we want to increase and decrease by
+     <i class="ocpItalic">
+      7
+     </i>
+     days (the value in C5).
+    </p>
+    <picture>
+     <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/b8eec6cd-4b2c-48e9-bf1e-439311f04373?format=avif&amp;w=320 320w,        /images/en-us/b8eec6cd-4b2c-48e9-bf1e-439311f04373?format=avif&amp;w=480 480w,        /images/en-us/b8eec6cd-4b2c-48e9-bf1e-439311f04373?format=avif&amp;w=640 640w,        /images/en-us/b8eec6cd-4b2c-48e9-bf1e-439311f04373?format=avif&amp;w=800 800w" type="image/avif"/>
+     <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/b8eec6cd-4b2c-48e9-bf1e-439311f04373?format=webp&amp;w=320 320w,        /images/en-us/b8eec6cd-4b2c-48e9-bf1e-439311f04373?format=webp&amp;w=480 480w,        /images/en-us/b8eec6cd-4b2c-48e9-bf1e-439311f04373?format=webp&amp;w=640 640w,        /images/en-us/b8eec6cd-4b2c-48e9-bf1e-439311f04373?format=webp&amp;w=800 800w" type="image/webp"/>
+     <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/b8eec6cd-4b2c-48e9-bf1e-439311f04373?format=jpeg&amp;w=320 320w,        /images/en-us/b8eec6cd-4b2c-48e9-bf1e-439311f04373?format=jpeg&amp;w=480 480w,        /images/en-us/b8eec6cd-4b2c-48e9-bf1e-439311f04373?format=jpeg&amp;w=640 640w,        /images/en-us/b8eec6cd-4b2c-48e9-bf1e-439311f04373?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+     <img alt="Increase or decrease a date by a certain number of days" class="fluentImage" loading="lazy" src="/images/en-us/b8eec6cd-4b2c-48e9-bf1e-439311f04373" style="aspect-ratio: 374/336" width="374"/>
+    </picture>
+   </div>
+  </div>
+ </div>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   See Also
+  </h2>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/add-or-subtract-dates-b83768f5-f695-4311-98b1-757345f7e926">
+    Add or subtract dates
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/insert-the-current-date-and-time-in-a-cell-b5663451-10b0-40ab-9e71-6b0ce5768138">
+    Insert the current date and time in a cell
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/fill-data-automatically-in-worksheet-cells-74e31bdd-d993-45da-aa82-35a236c5b5db">
+    Fill data automatically in worksheet cells
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/year-function-c64f017a-1354-490d-981f-578e8ec8d3b9">
+    YEAR function
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/month-function-579a2881-199b-48b2-ab90-ddba0eba86e8">
+    MONTH function
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/day-function-8a7d1cbb-6c7d-4ba1-8aea-25c134d03101">
+    DAY function
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/today-function-5eb3078d-a82c-4736-8930-2f51a028fdd9">
+    TODAY function
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/datevalue-function-df8b07d4-7761-4a93-bc33-b7471bbff252">
+    DATEVALUE function
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/date-and-time-functions-reference-fd1b5961-c1ae-4677-be58-074152f97b81">
+    Date and time functions (reference)
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/excel-functions-by-category-5f91f4e9-7b42-46d2-9bd1-63f26a86c0eb">
+    All Excel functions (by category)
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/excel-functions-alphabetical-b3944572-255d-4efb-bb96-c6d90033e188">
+    All Excel functions (alphabetical)
+   </a>
+  </p>
+ </section>
+</article>

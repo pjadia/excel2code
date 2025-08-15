@@ -1,0 +1,567 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    AVERAGEIF
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Description
+  </h2>
+  <p>
+   Returns the average (arithmetic mean) of all the cells in a range that meet a given criteria.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <p>
+   AVERAGEIF(range, criteria, [average_range])
+  </p>
+  <p>
+   The AVERAGEIF function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Range
+     </b>
+     Required. One or more cells to average, including numbers or names, arrays, or references that contain numbers.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Criteria
+     </b>
+     Required. The criteria in the form of a number, expression, cell reference, or text that defines which cells are averaged. For example, criteria can be expressed as 32, "32", "&gt;32", "apples", or B4.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Average_range
+     </b>
+     Optional. The actual set of cells to average. If omitted, range is used.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     Cells in range that contain TRUE or FALSE are ignored.
+    </p>
+   </li>
+   <li>
+    <p>
+     If a cell in average_range is an empty cell, AVERAGEIF ignores it.
+    </p>
+   </li>
+   <li>
+    <p>
+     If range is a blank or text value, AVERAGEIF returns the #DIV0! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If a cell in criteria is empty, AVERAGEIF treats it as a 0 value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If no cells in the range meet the criteria, AVERAGEIF returns the #DIV/0! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     You can use the wildcard characters, question mark (?) and asterisk (*), in criteria. A question mark matches any single character; an asterisk matches any sequence of characters. If you want to find an actual question mark or asterisk, type a tilde (~) before the character.
+    </p>
+   </li>
+   <li>
+    <p>
+     Average_range does not have to be the same size and shape as range. The actual cells that are averaged are determined by using the top, left cell in average_range as the beginning cell, and then including cells that correspond in size and shape to range. For example:
+    </p>
+   </li>
+  </ul>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        If range is
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        And average_range is
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Then the actual cells evaluated are
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       A1:A5
+      </p>
+     </td>
+     <td>
+      <p>
+       B1:B5
+      </p>
+     </td>
+     <td>
+      <p>
+       B1:B5
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       A1:A5
+      </p>
+     </td>
+     <td>
+      <p>
+       B1:B3
+      </p>
+     </td>
+     <td>
+      <p>
+       B1:B5
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       A1:B4
+      </p>
+     </td>
+     <td>
+      <p>
+       C1:D4
+      </p>
+     </td>
+     <td>
+      <p>
+       C1:D4
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       A1:B4
+      </p>
+     </td>
+     <td>
+      <p>
+       C1:C2
+      </p>
+     </td>
+     <td>
+      <p>
+       C1:D4
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpNote">
+     Note:
+    </b>
+    The AVERAGEIF function measures central tendency, which is the location of the center of a group of numbers in a statistical distribution. The three most common measures of central tendency are:
+   </p>
+  </div>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Average
+     </b>
+     which is the arithmetic mean, and is calculated by adding a group of numbers and then dividing by the count of those numbers. For example, the average of 2, 3, 3, 5, 7, and 10 is 30 divided by 6, which is 5.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Median
+     </b>
+     which is the middle number of a group of numbers; that is, half the numbers have values that are greater than the median, and half the numbers have values that are less than the median. For example, the median of 2, 3, 3, 5, 7, and 10 is 4.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Mode
+     </b>
+     which is the most frequently occurring number in a group of numbers. For example, the mode of 2, 3, 3, 5, 7, and 10 is 3.
+    </p>
+   </li>
+  </ul>
+  <p>
+   For a symmetrical distribution of a group of numbers, these three measures of central tendency are all the same. For a skewed distribution of a group of numbers, they can be different.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Examples
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p id="range_a1">
+       <b class="ocpLegacyBold">
+        Property Value
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Commission
+       </b>
+      </p>
+     </th>
+     <th>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       100000
+      </p>
+     </td>
+     <td>
+      <p>
+       7000
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       200000
+      </p>
+     </td>
+     <td>
+      <p>
+       14000
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       300000
+      </p>
+     </td>
+     <td>
+      <p>
+       21000
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       400000
+      </p>
+     </td>
+     <td>
+      <p>
+       28000
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =AVERAGEIF(B2:B5,"&lt;23000")
+      </p>
+     </td>
+     <td>
+      <p>
+       Average of all commissions less than 23000. Three of the four commissions meet this condition, and their total is 42000.
+      </p>
+     </td>
+     <td>
+      <p>
+       14000
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =AVERAGEIF(A2:A5,"&lt;250000")
+      </p>
+     </td>
+     <td>
+      <p>
+       Average of all property values less than 250000. Two of the four property values meet this condition, and their total is 300000.
+      </p>
+     </td>
+     <td>
+      <p>
+       150000
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =AVERAGEIF(A2:A5,"&lt;95000")
+      </p>
+     </td>
+     <td>
+      <p>
+       Average of all property values less than 95000. Because there are 0 property values that meet this condition, the AVERAGEIF function returns the #DIV/0! error because it tries to divide by 0.
+      </p>
+     </td>
+     <td>
+      <p>
+       #DIV/0!
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =AVERAGEIF(A2:A5,"&gt;250000",B2:B5)
+      </p>
+     </td>
+     <td>
+      <p>
+       Average of all commissions with a property value greater than 250000. Two commissions meet this condition, and their total is 49000.
+      </p>
+     </td>
+     <td>
+      <p>
+       24500
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <section aria-labelledby="ID0EDBBD" class="ocpSection">
+   <h3 class="" id="ID0EDBBD">
+    Example 2
+   </h3>
+   <table aria-label="" class="banded">
+    <thead>
+     <tr>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         Region
+        </b>
+       </p>
+      </th>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         Profits (Thousands)
+        </b>
+       </p>
+      </th>
+      <th>
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <p>
+        East
+       </p>
+      </td>
+      <td>
+       <p>
+        45678
+       </p>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        West
+       </p>
+      </td>
+      <td>
+       <p>
+        23789
+       </p>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        North
+       </p>
+      </td>
+      <td>
+       <p>
+        -4789
+       </p>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        South (New Office)
+       </p>
+      </td>
+      <td>
+       <p>
+        0
+       </p>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        MidWest
+       </p>
+      </td>
+      <td>
+       <p>
+        9678
+       </p>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        <b class="ocpLegacyBold">
+         Formula
+        </b>
+       </p>
+      </td>
+      <td>
+       <p>
+        <b class="ocpLegacyBold">
+         Description
+        </b>
+       </p>
+      </td>
+      <td>
+       <p>
+        <b class="ocpLegacyBold">
+         Result
+        </b>
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        =AVERAGEIF(A2:A6,"=*West",B2:B6)
+       </p>
+      </td>
+      <td>
+       <p>
+        Average of all profits for the West and MidWest regions.
+       </p>
+      </td>
+      <td>
+       <p>
+        16733.5
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        =AVERAGEIF(A2:A6,"&lt;&gt;*(New Office)",B2:B6)
+       </p>
+      </td>
+      <td>
+       <p>
+        Average of all profits for all regions excluding new offices.
+       </p>
+      </td>
+      <td>
+       <p>
+        18589
+       </p>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+ </section>
+</article>

@@ -1,0 +1,267 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p id="__goback">
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    BIT
+   </b>
+   <b class="ocpLegacyBold">
+    XOR
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Returns a bitwise 'XOR' of two numbers.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   BITXOR(number1, number2)
+  </p>
+  <p>
+   The BITXOR function syntax has the following arguments.
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Number1
+     </b>
+     Required. Must be greater than or equal to 0.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Number2
+     </b>
+     Required. Must be greater than or equal to 0.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     BITXOR returns a decimal number that is the result of the sum of a bitwise 'XOR' (exclusive XOR) of its parameters.
+    </p>
+   </li>
+   <li>
+    <p>
+     If either argument is outside its constraint, BITXOR returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If either argument is greater than (2^48)-1, BITXOR returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If either argument is a non-numeric value, BITXOR returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     In the result, each bit position is 1 if the values of the parameters at that bit position are not equal; in other words, one value is 0 and the other is 1. For example, using BITXOR(5,3), 5 is expressed as 101 in binary and 3 as 11 in binary. To help with comparison, you can consider 3 as 011. From right to left, the bit values at the three positions in this example are the same (1) only at the rightmost position. A 'not equal' result returns a 1 for the second and third positions from the right, and an ‘equal’ result returns 0 for the rightmost position.
+    </p>
+   </li>
+   <li>
+    <p>
+     Values of 1 returned from the bit positions progress from right to left as powers of 2. The rightmost bit returns 1 (2^0), the bit to the left returns 2 (2^1), and so on.
+    </p>
+   </li>
+   <li>
+    <p>
+     Using the same example, 0 is returned for the rightmost bit position because it is a 0, 2 (2^1) is returned for the second bit position from the right (a 1 value), and 4 (2^2) is returned for the leftmost bit (also a 1 value). The total is 6, in decimal representation.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        How it works
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =BITXOR(5,3)
+      </p>
+     </td>
+     <td>
+      <p>
+       Returns the total of the bitwise "Exclusive Or" comparision at each bit position.
+      </p>
+     </td>
+     <td>
+      <p>
+       6
+      </p>
+     </td>
+     <td>
+      <p>
+       The number 5 is 101 in binary, and 3 is 11. You can express 11 as 011 so that both numbers have 3 digits. A bitwise 'Exclusive Or' comparison checks to see if both digits at each position are not equal and, if true, returns a positive value for that position.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Test: At which positions are the digits not equal?
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      <p>
+       5 in binary = 101
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      <p>
+       3 in binary = 011
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      <p>
+       yyn
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      <p>
+       (1*(2^2))+(1*(2^1))+(1*0)
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      <p>
+       4+2+0
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      <p>
+       6
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+   <a class="ocpTopOfPage" data-bi-type="anchor" href="#">
+    Top of Page
+   </a>
+  </p>
+ </section>
+</article>

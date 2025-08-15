@@ -1,0 +1,177 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   Scans an array by applying a
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/lambda-function-bd212d27-1cd1-4321-a34a-ccbf254b8b67">
+    LAMBDA
+   </a>
+   to each value and returns an array that has each intermediate value.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDL" class="ocpSection">
+  <h2 class="" id="ID0EDL">
+   Syntax
+  </h2>
+  <p>
+   =SCAN ([initial_value], array, lambda(accumulator, value, body))
+  </p>
+  <p>
+   The SCAN function syntax has the following arguments and parameters:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      [initial_value]
+     </b>
+     Sets the starting value for the accumulator.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      array
+     </b>
+     An array to be scanned.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      lambda
+     </b>
+     A LAMBDA that is called to reduce the array. The LAMBDA takes three parameters:
+    </p>
+    <ul>
+     <li>
+      <p>
+       <b class="ocpRunInHead">
+        accumulator
+       </b>
+       The value totaled up and returned as the final result.
+      </p>
+     </li>
+     <li>
+      <p>
+       <b class="ocpRunInHead">
+        value
+       </b>
+       The current value from the array.
+      </p>
+     </li>
+     <li>
+      <p>
+       <b class="ocpRunInHead">
+        body
+       </b>
+       The calculation applied to each element in the array.
+      </p>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Remarks
+  </h2>
+  <p>
+   Use the initial_value argument to set the starting value for the accumulator parameter. If you are working with text, set the initial value to "".
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Errors
+  </h2>
+  <p>
+   Providing an invalid LAMBDA function or an incorrect number of parameters returns a #VALUE! error called "Incorrect Parameters".
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Examples
+  </h2>
+  <p>
+   <b class="ocpLegacyBold">
+    Example 1: Create a list of factorials
+   </b>
+  </p>
+  <p>
+   Enter the sample data into cells A1:C2, and then copy the formula into cell D4:
+  </p>
+  <p>
+   <span class="ocpCodeInline">
+    =SCAN(1, A1:C2, LAMBDA(a,b,a*b))
+   </span>
+  </p>
+  <p>
+   <picture>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/430c3d1d-db08-4a29-b3c9-588c339b7cac?format=avif&amp;w=320 320w,        /images/en-us/430c3d1d-db08-4a29-b3c9-588c339b7cac?format=avif&amp;w=480 480w,        /images/en-us/430c3d1d-db08-4a29-b3c9-588c339b7cac?format=avif&amp;w=640 640w,        /images/en-us/430c3d1d-db08-4a29-b3c9-588c339b7cac?format=avif&amp;w=800 800w" type="image/avif"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/430c3d1d-db08-4a29-b3c9-588c339b7cac?format=webp&amp;w=320 320w,        /images/en-us/430c3d1d-db08-4a29-b3c9-588c339b7cac?format=webp&amp;w=480 480w,        /images/en-us/430c3d1d-db08-4a29-b3c9-588c339b7cac?format=webp&amp;w=640 640w,        /images/en-us/430c3d1d-db08-4a29-b3c9-588c339b7cac?format=webp&amp;w=800 800w" type="image/webp"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/430c3d1d-db08-4a29-b3c9-588c339b7cac?format=jpeg&amp;w=320 320w,        /images/en-us/430c3d1d-db08-4a29-b3c9-588c339b7cac?format=jpeg&amp;w=480 480w,        /images/en-us/430c3d1d-db08-4a29-b3c9-588c339b7cac?format=jpeg&amp;w=640 640w,        /images/en-us/430c3d1d-db08-4a29-b3c9-588c339b7cac?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+    <img alt="First SCAN function example" class="fluentImage" loading="lazy" src="/images/en-us/430c3d1d-db08-4a29-b3c9-588c339b7cac" style="aspect-ratio: 582/196" width="582"/>
+   </picture>
+  </p>
+  <p>
+   <b class="ocpLegacyBold">
+    Example 2: Concatenate characters in an array
+   </b>
+  </p>
+  <p>
+   Enter the sample data into cells A1:C2, and then copy the formula into cell D4:
+  </p>
+  <p>
+   <span class="ocpCodeInline">
+    =SCAN("",A1:C2,LAMBDA(a,b,a&amp;b))
+   </span>
+  </p>
+  <p>
+   <picture>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/914422ab-f843-49ba-b0de-082385f9cd11?format=avif&amp;w=320 320w,        /images/en-us/914422ab-f843-49ba-b0de-082385f9cd11?format=avif&amp;w=480 480w,        /images/en-us/914422ab-f843-49ba-b0de-082385f9cd11?format=avif&amp;w=640 640w,        /images/en-us/914422ab-f843-49ba-b0de-082385f9cd11?format=avif&amp;w=800 800w" type="image/avif"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/914422ab-f843-49ba-b0de-082385f9cd11?format=webp&amp;w=320 320w,        /images/en-us/914422ab-f843-49ba-b0de-082385f9cd11?format=webp&amp;w=480 480w,        /images/en-us/914422ab-f843-49ba-b0de-082385f9cd11?format=webp&amp;w=640 640w,        /images/en-us/914422ab-f843-49ba-b0de-082385f9cd11?format=webp&amp;w=800 800w" type="image/webp"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/914422ab-f843-49ba-b0de-082385f9cd11?format=jpeg&amp;w=320 320w,        /images/en-us/914422ab-f843-49ba-b0de-082385f9cd11?format=jpeg&amp;w=480 480w,        /images/en-us/914422ab-f843-49ba-b0de-082385f9cd11?format=jpeg&amp;w=640 640w,        /images/en-us/914422ab-f843-49ba-b0de-082385f9cd11?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+    <img alt="Second SCAN function example" class="fluentImage" loading="lazy" src="/images/en-us/914422ab-f843-49ba-b0de-082385f9cd11" style="aspect-ratio: 585/198" width="585"/>
+   </picture>
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   See Also
+  </h2>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/lambda-function-bd212d27-1cd1-4321-a34a-ccbf254b8b67">
+    LAMBDA function
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/map-function-48006093-f97c-47c1-bfcc-749263bb1f01">
+    MAP function
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/reduce-function-42e39910-b345-45f3-84b8-0642b568b7cb">
+    REDUCE function
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/makearray-function-b80da5ad-b338-4149-a523-5b221da09097">
+    MAKEARRAY function
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/bycol-function-58463999-7de5-49ce-8f38-b7f7a2192bfb">
+    BYCOL function
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/byrow-function-2e04c677-78c8-4e6b-8c10-a4602f2602bb">
+    BYROW function
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/isomitted-function-831d6fbc-0f07-40c4-9c5b-9c73fd1d60c1">
+    ISOMITTED function
+   </a>
+  </p>
+ </section>
+</article>

@@ -1,0 +1,257 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   Returns the beta distribution.
+  </p>
+  <p>
+   The beta distribution is commonly used to study variation in the percentage of something across samples, such as the fraction of the day people spend watching television.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   BETA.DIST(x,alpha,beta,cumulative,[A],[B])
+  </p>
+  <p>
+   The BETA.DIST function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      X
+     </b>
+     Required. The value between A and B at which to evaluate the function
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Alpha
+     </b>
+     Required. A parameter of the distribution.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Beta
+     </b>
+     Required. A parameter of the distribution.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Cumulative
+     </b>
+     Required. A logical value that determines the form of the function. If cumulative is TRUE, BETA.DIST returns the cumulative distribution function; if FALSE, it returns the probability density function.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      A
+     </b>
+     Optional. A lower bound to the interval of x.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      B
+     </b>
+     Optional. An upper bound to the interval of x.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If any argument is nonnumeric, BETA.DIST returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If alpha ≤ 0 or beta ≤ 0, BETA.DIST returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If x &lt; A, x &gt; B, or A = B, BETA.DIST returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If you omit values for A and B, BETA.DIST uses the standard cumulative beta distribution, so that A = 0 and B = 1
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+     <td>
+      <p>
+       Value at which to evaluate the function
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       8
+      </p>
+     </td>
+     <td>
+      <p>
+       Parameter of the distribution
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       10
+      </p>
+     </td>
+     <td>
+      <p>
+       Parameter of the distribution
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+      <p>
+       Lower bound
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+     <td>
+      <p>
+       Upper bound
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =BETA.DIST(A2,A3,A4,TRUE,A5,A6)
+      </p>
+     </td>
+     <td>
+      <p>
+       Cumulative beta probability density function, for the above parameters
+      </p>
+     </td>
+     <td>
+      <p>
+       0.6854706
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =BETA.DIST(A2,A3,A4,FALSE,A5,A6)
+      </p>
+     </td>
+     <td>
+      <p>
+       Beta probability density function, for the above parameters
+      </p>
+     </td>
+     <td>
+      <p>
+       1.4837646
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

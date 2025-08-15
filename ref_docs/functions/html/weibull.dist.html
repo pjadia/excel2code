@@ -1,0 +1,251 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p id="__goback">
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    WEIBULL.DIST
+   </b>
+   function in Microsoft Excel.
+  </p>
+  <p>
+   Returns the Weibull distribution. Use this distribution in reliability analysis, such as calculating a device's mean time to failure.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   WEIBULL.DIST(x,alpha,beta,cumulative)
+  </p>
+  <p>
+   The WEIBULL.DIST function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      X
+     </b>
+     Required. The value at which to evaluate the function.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Alpha
+     </b>
+     Required. A parameter to the distribution.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Beta
+     </b>
+     Required. A parameter to the distribution.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Cumulative
+     </b>
+     Required. Determines the form of the function.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If x, alpha, or beta is nonnumeric, WEIBULL.DIST returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If x &lt; 0, WEIBULL.DIST returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If alpha ≤ 0 or if beta ≤ 0, WEIBULL.DIST returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     The equation for the Weibull cumulative distribution function is:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/1f4b63e9-6a9d-4888-8cec-2d28ef6644ca?format=avif&amp;w=320 320w,        /images/en-us/1f4b63e9-6a9d-4888-8cec-2d28ef6644ca?format=avif&amp;w=480 480w,        /images/en-us/1f4b63e9-6a9d-4888-8cec-2d28ef6644ca?format=avif&amp;w=640 640w,        /images/en-us/1f4b63e9-6a9d-4888-8cec-2d28ef6644ca?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/1f4b63e9-6a9d-4888-8cec-2d28ef6644ca?format=webp&amp;w=320 320w,        /images/en-us/1f4b63e9-6a9d-4888-8cec-2d28ef6644ca?format=webp&amp;w=480 480w,        /images/en-us/1f4b63e9-6a9d-4888-8cec-2d28ef6644ca?format=webp&amp;w=640 640w,        /images/en-us/1f4b63e9-6a9d-4888-8cec-2d28ef6644ca?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/1f4b63e9-6a9d-4888-8cec-2d28ef6644ca?format=jpeg&amp;w=320 320w,        /images/en-us/1f4b63e9-6a9d-4888-8cec-2d28ef6644ca?format=jpeg&amp;w=480 480w,        /images/en-us/1f4b63e9-6a9d-4888-8cec-2d28ef6644ca?format=jpeg&amp;w=640 640w,        /images/en-us/1f4b63e9-6a9d-4888-8cec-2d28ef6644ca?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/1f4b63e9-6a9d-4888-8cec-2d28ef6644ca" style="aspect-ratio: 140/18" width="140"/>
+     </picture>
+    </p>
+   </li>
+   <li>
+    <p>
+     The equation for the Weibull probability density function is:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/7d3e8be7-0483-40c2-a21a-8f169834f1c0?format=avif&amp;w=320 320w,        /images/en-us/7d3e8be7-0483-40c2-a21a-8f169834f1c0?format=avif&amp;w=480 480w,        /images/en-us/7d3e8be7-0483-40c2-a21a-8f169834f1c0?format=avif&amp;w=640 640w,        /images/en-us/7d3e8be7-0483-40c2-a21a-8f169834f1c0?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/7d3e8be7-0483-40c2-a21a-8f169834f1c0?format=webp&amp;w=320 320w,        /images/en-us/7d3e8be7-0483-40c2-a21a-8f169834f1c0?format=webp&amp;w=480 480w,        /images/en-us/7d3e8be7-0483-40c2-a21a-8f169834f1c0?format=webp&amp;w=640 640w,        /images/en-us/7d3e8be7-0483-40c2-a21a-8f169834f1c0?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/7d3e8be7-0483-40c2-a21a-8f169834f1c0?format=jpeg&amp;w=320 320w,        /images/en-us/7d3e8be7-0483-40c2-a21a-8f169834f1c0?format=jpeg&amp;w=480 480w,        /images/en-us/7d3e8be7-0483-40c2-a21a-8f169834f1c0?format=jpeg&amp;w=640 640w,        /images/en-us/7d3e8be7-0483-40c2-a21a-8f169834f1c0?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/7d3e8be7-0483-40c2-a21a-8f169834f1c0" style="aspect-ratio: 180/31" width="180"/>
+     </picture>
+    </p>
+   </li>
+   <li>
+    <p>
+     When alpha = 1, WEIBULL.DIST returns the exponential distribution with:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/6c797f20-3fdc-4a38-9520-e85e1471e049?format=avif&amp;w=320 320w,        /images/en-us/6c797f20-3fdc-4a38-9520-e85e1471e049?format=avif&amp;w=480 480w,        /images/en-us/6c797f20-3fdc-4a38-9520-e85e1471e049?format=avif&amp;w=640 640w,        /images/en-us/6c797f20-3fdc-4a38-9520-e85e1471e049?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/6c797f20-3fdc-4a38-9520-e85e1471e049?format=webp&amp;w=320 320w,        /images/en-us/6c797f20-3fdc-4a38-9520-e85e1471e049?format=webp&amp;w=480 480w,        /images/en-us/6c797f20-3fdc-4a38-9520-e85e1471e049?format=webp&amp;w=640 640w,        /images/en-us/6c797f20-3fdc-4a38-9520-e85e1471e049?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/6c797f20-3fdc-4a38-9520-e85e1471e049?format=jpeg&amp;w=320 320w,        /images/en-us/6c797f20-3fdc-4a38-9520-e85e1471e049?format=jpeg&amp;w=480 480w,        /images/en-us/6c797f20-3fdc-4a38-9520-e85e1471e049?format=jpeg&amp;w=640 640w,        /images/en-us/6c797f20-3fdc-4a38-9520-e85e1471e049?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/6c797f20-3fdc-4a38-9520-e85e1471e049" style="aspect-ratio: 29/29" width="29"/>
+     </picture>
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       105
+      </p>
+     </td>
+     <td>
+      <p>
+       Value at which to evaluate the function
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       20
+      </p>
+     </td>
+     <td>
+      <p>
+       Alpha parameter to the distribution
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       100
+      </p>
+     </td>
+     <td>
+      <p>
+       Beta parameter to the distribution
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description (Result)
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =WEIBULL.DIST(A2,A3,A4,TRUE)
+      </p>
+     </td>
+     <td>
+      <p>
+       Weibull cumulative distribution function for the terms above (0.929581)
+      </p>
+     </td>
+     <td>
+      <p>
+       0.929581
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =WEIBULL.DIST(A2,A3,A4,FALSE)
+      </p>
+     </td>
+     <td>
+      <p>
+       Weibull probability density function for the terms above (0.035589)
+      </p>
+     </td>
+     <td>
+      <p>
+       0.035589
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

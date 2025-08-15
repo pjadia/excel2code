@@ -1,0 +1,163 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    RTD
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Description
+  </h2>
+  <p>
+   Retrieves real-time data from a program that supports COM automation.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <p>
+   RTD(ProgID, server, topic1, [topic2], ...)
+  </p>
+  <p>
+   The RTD function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      ProgID
+     </b>
+     Required. The name of the ProgID of a registered COM automation add-in that has been installed on the local computer. Enclose the name in quotation marks.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      server
+     </b>
+     Required. Name of the server where the add-in should be run. If there is no server, and the program is run locally, leave the argument blank. Otherwise, enter quotation marks ("") around the server name. When using RTD within Visual Basic for Applications (VBA), double quotation marks or the VBA
+     <b class="ocpUI">
+      NullString
+     </b>
+     property are required for the server, even if the server is running locally.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Topic1, topic2, ...
+     </b>
+     Topic1 is required, subsequent topics are optional. 1 to 253 parameters that together represent a unique piece of real-time data.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     The RTD COM automation add-in must be created and registered on a local computer. If you haven't installed a real-time data server, you will get an error message in a cell when you try to use the RTD function.
+    </p>
+   </li>
+   <li>
+    <p>
+     When the server has been programmed to continually update results, unlike other functions, RTD formulas will change when Microsoft Excel is in automatic calculation mode.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Description (Result)
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =RTD("mycomaddin.progid",,"Server_name","Price")
+      </p>
+     </td>
+     <td>
+      <p>
+       Real-time data retrieved from a program that supports COM automation.
+      </p>
+     </td>
+     <td>
+      <p>
+       #N/A
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Note
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       The RTD COM automation add-in must be created and registered on a local computer. If you haven't installed a real-time data server, the RTD function returns the #N/A error message in a cell when you try to use the RTD function.
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

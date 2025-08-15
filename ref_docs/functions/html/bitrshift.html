@@ -1,0 +1,165 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p id="__goback">
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    BITRSHIFT
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Returns a number shifted right by the specified number of bits.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   BITRSHIFT(number, shift_amount)
+  </p>
+  <p>
+   The BITRSHIFT function syntax has the following arguments.
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Number
+     </b>
+     Required. Must be an integer greater than or equal to 0.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Shift_amount
+     </b>
+     Required. Must be an integer.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     Shifting a number right is equivalent to removing digits from the rightmost side of the binary representation of the number. For example, a 2-bit shift to the right on the decimal value 13 converts its binary value (1101) to 11, or 3 in decimal.
+    </p>
+   </li>
+   <li>
+    <p>
+     If either argument is outside its constraints, BITRSHIFT returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If Number is greater than (2^48)-1, BITRSHIFT returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If the absolute value of Shift_amount is greater than 53, BITRSHIFT returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If either argument is a non-numeric value, BITRSHIFT returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     A negative number used as the Shift_amount argument shifts the number of bits to the left.
+    </p>
+   </li>
+   <li>
+    <p>
+     A negative number used as the Shift_amount argument returns the same result as a positive Shift_amount argument for the
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/bitlshift-function-c55bb27e-cacd-4c7c-b258-d80861a03c9c">
+      BITLSHIFT function
+     </a>
+     .
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        How it works
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =BITRSHIFT(13,2)
+      </p>
+     </td>
+     <td>
+      <p>
+       Shifts bits right for the number by stripping the specified rightmost digits of the number represented in binary. The number returned is represented in decimal.
+      </p>
+     </td>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+     <td>
+      <p>
+       13 is represented as 1101 in binary. Stripping the rightmost two digits results in 11, which is 3 in decimal.
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+   <a class="ocpTopOfPage" data-bi-type="anchor" href="#">
+    Top of Page
+   </a>
+  </p>
+ </section>
+</article>

@@ -1,0 +1,416 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   The
+   <b class="ocpLegacyBold">
+    REGEXTEST
+   </b>
+   function allows you to check whether any part of supplied text matches a regular expression ("regex"). It will return TRUE if there is a match and FALSE if there is not.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Syntax
+  </h2>
+  <p>
+   The
+   <b class="ocpLegacyBold">
+    REGEXTEST
+   </b>
+   function determines whether any part of
+   <i class="ocpItalic">
+    text
+   </i>
+   matches the
+   <i class="ocpItalic">
+    pattern
+   </i>
+   .
+   <i class="ocpItalic">
+   </i>
+  </p>
+  <p>
+   The syntax of the REGEXTEST function is:
+  </p>
+  <p>
+   <b class="ocpLegacyBold">
+    REGEXTEST(text, pattern, [case_sensitivity])
+   </b>
+  </p>
+  <p>
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       Argument
+      </p>
+     </th>
+     <th>
+      <p>
+       Description
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        text
+       </b>
+      </p>
+      <p>
+       (required)
+      </p>
+     </td>
+     <td>
+      <p>
+       The text or the reference to a cell containing the text you want to match against.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        pattern
+       </b>
+      </p>
+      <p>
+       (required)
+      </p>
+     </td>
+     <td>
+      <p>
+       The regular expression ("regex") that describes the pattern of text you want to match.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+      </p>
+      <p>
+       <b class="ocpLegacyBold">
+        case_sensitivity
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       Determines whether the match is case-sensitive. By default, the match is case-sensitive. Enter one of the following:
+      </p>
+      <p>
+       <b class="ocpLegacyBold">
+        0:
+       </b>
+       Case sensitive
+      </p>
+      <p>
+       <b class="ocpLegacyBold">
+        1:
+       </b>
+       Case insensitive
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpNote">
+     Notes:
+    </b>
+    When writing regex patterns, symbols called ‘tokens’ can be used that match with a variety of characters. These are some simple tokens for reference:
+   </p>
+   <ul class="ocpAlertSectionListContainer">
+    <li>
+     <p>
+      “[0-9]”: any numerical digit
+     </p>
+    </li>
+    <li>
+     <p>
+      “[a-z]”: a character in the range of a to z
+     </p>
+    </li>
+    <li>
+     <p>
+      “.”: any character
+     </p>
+    </li>
+    <li>
+     <p>
+      “a”: the “a” character
+     </p>
+    </li>
+    <li>
+     <p>
+      “a*”: zero or more “a”
+     </p>
+    </li>
+    <li>
+     <p>
+      “a+”: one or more “a”
+     </p>
+    </li>
+    <li>
+     <p>
+      All regular expressions for this function, as well as
+      <a class="ocpExternalLink" data-bi-type="anchor" href="https://prod.support.services.microsoft.com/en-us/topic/4b96c140-9205-4b6e-9fbe-6aa9e783ff57" target="_blank">
+       REGEXEXTRACT
+      </a>
+      and
+      <a class="ocpExternalLink" data-bi-type="anchor" href="https://prod.support.services.microsoft.com/en-us/topic/9c030bb2-5e47-4efc-bad5-4582d7100897" target="_blank">
+       REGEXREPLACE
+      </a>
+      use the PCRE2 'flavor' of regex.
+     </p>
+    </li>
+    <li>
+     <p>
+      REGEXEXTRACT always return text values. You can convert these results back to a number with the VALUE function.
+     </p>
+    </li>
+   </ul>
+  </div>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Examples
+  </h2>
+  <p>
+   Copy the example data and paste it in cell A1 of a new Excel worksheet. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <div class="ocpSection">
+   <h3 class="ocpExpandoHead">
+    <button aria-controls="ID0EDBD-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EDBD-button" ms.interactiontype="11" type="button">
+     <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+      <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+      </i>
+     </div>
+     <div class="ocpExpandoHeadTitleContainer" role="none">
+      Example 1
+     </div>
+    </button>
+   </h3>
+   <div aria-labelledby="ID0EDBD-button" class="ocpebw" id="ID0EDBD-panel" role="region">
+    <div class="ocpExpandoBody">
+     <p>
+      Check various aspects of the string 'alfalfa'
+     </p>
+     <table aria-label="" class="banded">
+      <tbody>
+       <tr>
+        <td>
+         <p>
+          <b class="ocpLegacyBold">
+           Data
+          </b>
+         </p>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          alfalfa
+         </p>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          <b class="ocpLegacyBold">
+           Formulas
+          </b>
+         </p>
+        </td>
+        <td>
+         <p>
+          <b class="ocpLegacyBold">
+           Questions
+          </b>
+         </p>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          =REGEXTEST(A2,"a")
+         </p>
+        </td>
+        <td>
+         <p>
+          Does it contain the letter 'a'?
+         </p>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          =REGEXTEST(A2,"[a-z]")
+         </p>
+        </td>
+        <td>
+         <p>
+          Does it contain any lower case letters?
+         </p>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          =REGEXTEST(A2,"[A-Z]")
+         </p>
+        </td>
+        <td>
+         <p>
+          Does it contain any upper case letters?
+         </p>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          =REGEXTEST(A2,"[aeiou]")
+         </p>
+        </td>
+        <td>
+         <p>
+          Does it contain any vowels?
+         </p>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          =REGEXTEST(A2,"[0-9]")
+         </p>
+        </td>
+        <td>
+         <p>
+          Does it contain any number digits?
+         </p>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p>
+      The following illustration shows the results.
+     </p>
+     <p>
+      <picture>
+       <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/b58ebf3b-b718-4b30-93bf-cfca5c2766a2?format=avif&amp;w=320 320w,        /images/en-us/b58ebf3b-b718-4b30-93bf-cfca5c2766a2?format=avif&amp;w=480 480w,        /images/en-us/b58ebf3b-b718-4b30-93bf-cfca5c2766a2?format=avif&amp;w=640 640w,        /images/en-us/b58ebf3b-b718-4b30-93bf-cfca5c2766a2?format=avif&amp;w=800 800w" type="image/avif"/>
+       <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/b58ebf3b-b718-4b30-93bf-cfca5c2766a2?format=webp&amp;w=320 320w,        /images/en-us/b58ebf3b-b718-4b30-93bf-cfca5c2766a2?format=webp&amp;w=480 480w,        /images/en-us/b58ebf3b-b718-4b30-93bf-cfca5c2766a2?format=webp&amp;w=640 640w,        /images/en-us/b58ebf3b-b718-4b30-93bf-cfca5c2766a2?format=webp&amp;w=800 800w" type="image/webp"/>
+       <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/b58ebf3b-b718-4b30-93bf-cfca5c2766a2?format=jpeg&amp;w=320 320w,        /images/en-us/b58ebf3b-b718-4b30-93bf-cfca5c2766a2?format=jpeg&amp;w=480 480w,        /images/en-us/b58ebf3b-b718-4b30-93bf-cfca5c2766a2?format=jpeg&amp;w=640 640w,        /images/en-us/b58ebf3b-b718-4b30-93bf-cfca5c2766a2?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+       <img alt="Using REGEXTEXT to answer various questions about the word 'alfalfa'" class="fluentImage" loading="lazy" src="/images/en-us/b58ebf3b-b718-4b30-93bf-cfca5c2766a2" style="aspect-ratio: 370/189" width="370"/>
+      </picture>
+     </p>
+     <p>
+     </p>
+    </div>
+   </div>
+  </div>
+  <div class="ocpSection">
+   <h3 class="ocpExpandoHead">
+    <button aria-controls="ID0EBBD-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EBBD-button" ms.interactiontype="11" type="button">
+     <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+      <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+      </i>
+     </div>
+     <div class="ocpExpandoHeadTitleContainer" role="none">
+      Example 2
+     </div>
+    </button>
+   </h3>
+   <div aria-labelledby="ID0EBBD-button" class="ocpebw" id="ID0EBBD-panel" role="region">
+    <div class="ocpExpandoBody">
+     <p>
+      Check whether phone numbers have the specific format "(###) ###-####", using the pattern:
+     </p>
+     <p>
+      "^\([0-9]{3}\) [0-9]{3}-[0-9]{4}$"
+     </p>
+     <div class="ocpAlert">
+      <p class="ocpAlertSection">
+       <b class="ocpNote">
+        Note:
+       </b>
+       Backslash "\" is used to 'escape' parentheses "()" and some other characters. In this pattern, "\(" is interpreted as "(" and "\)" is interpreted as ")"
+      </p>
+     </div>
+     <table aria-label="" class="banded">
+      <tbody>
+       <tr>
+        <td>
+         <p>
+          <b class="ocpLegacyBold">
+           Data
+          </b>
+         </p>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          (378) 555-4195
+         </p>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          +1(878) 555-8622
+         </p>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          <b class="ocpLegacyBold">
+           Formulas
+          </b>
+         </p>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          =REGEXTEST(A2,"^\([0-9]{3}\) [0-9]{3}-[0-9]{4}$")
+         </p>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          =REGEXTEST(A2,"^\([0-9]{3}\) [0-9]{3}-[0-9]{4}$")
+         </p>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p>
+      The following illustration shows the result.
+     </p>
+     <p>
+      <picture>
+       <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/591ec6a5-2c5a-42e6-b765-b09de6f9340c?format=avif&amp;w=320 320w,        /images/en-us/591ec6a5-2c5a-42e6-b765-b09de6f9340c?format=avif&amp;w=480 480w,        /images/en-us/591ec6a5-2c5a-42e6-b765-b09de6f9340c?format=avif&amp;w=640 640w,        /images/en-us/591ec6a5-2c5a-42e6-b765-b09de6f9340c?format=avif&amp;w=800 800w" type="image/avif"/>
+       <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/591ec6a5-2c5a-42e6-b765-b09de6f9340c?format=webp&amp;w=320 320w,        /images/en-us/591ec6a5-2c5a-42e6-b765-b09de6f9340c?format=webp&amp;w=480 480w,        /images/en-us/591ec6a5-2c5a-42e6-b765-b09de6f9340c?format=webp&amp;w=640 640w,        /images/en-us/591ec6a5-2c5a-42e6-b765-b09de6f9340c?format=webp&amp;w=800 800w" type="image/webp"/>
+       <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/591ec6a5-2c5a-42e6-b765-b09de6f9340c?format=jpeg&amp;w=320 320w,        /images/en-us/591ec6a5-2c5a-42e6-b765-b09de6f9340c?format=jpeg&amp;w=480 480w,        /images/en-us/591ec6a5-2c5a-42e6-b765-b09de6f9340c?format=jpeg&amp;w=640 640w,        /images/en-us/591ec6a5-2c5a-42e6-b765-b09de6f9340c?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+       <img alt='Using REGEXTEST to check whether phone numbers are in a specific syntax, with the pattern "^\([0-9]{3}\) [0-9]{3}-[0-9]{4}$"' class="fluentImage" loading="lazy" src="/images/en-us/591ec6a5-2c5a-42e6-b765-b09de6f9340c" style="aspect-ratio: 140/148" width="140"/>
+      </picture>
+     </p>
+     <p>
+     </p>
+    </div>
+   </div>
+  </div>
+ </section>
+</article>

@@ -1,0 +1,171 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    ISEVEN
+   </b>
+   function
+ in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Returns TRUE if number is even, or FALSE if number is odd.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   ISEVEN(number)
+  </p>
+  <p>
+   The ISEVEN function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Number
+     </b>
+     Required. The value to test. If number is not an integer, it is truncated.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <p>
+   If number is nonnumeric, ISEVEN returns the #VALUE! error value.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =ISEVEN(-1)
+      </p>
+     </td>
+     <td>
+      <p>
+       Tests whether -1 is even
+      </p>
+     </td>
+     <td>
+      <p>
+       FALSE
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =ISEVEN(2.5)
+      </p>
+     </td>
+     <td>
+      <p>
+       Checks whether 2.5 is even. The decimal portion, .5, is truncated, so 2 is tested.
+      </p>
+     </td>
+     <td>
+      <p>
+       TRUE
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =ISEVEN(5)
+      </p>
+     </td>
+     <td>
+      <p>
+       Tests whether 5 is even.
+      </p>
+     </td>
+     <td>
+      <p>
+       FALSE
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =ISEVEN(0)
+      </p>
+     </td>
+     <td>
+      <p>
+       Zero (0) is considered even.
+      </p>
+     </td>
+     <td>
+      <p>
+       TRUE
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       12/23/2011
+      </p>
+     </td>
+     <td>
+      <p>
+       Tests the date in A6. The decimal representation of 12/23/2011 is 40900.
+      </p>
+     </td>
+     <td>
+      <p>
+       TRUE
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

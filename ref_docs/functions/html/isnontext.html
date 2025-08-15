@@ -1,0 +1,653 @@
+<article class="ocpArticleContent">
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Description
+  </h2>
+  <p>
+   Each of these functions, referred to collectively as the
+   <b class="ocpLegacyBold">
+    IS
+   </b>
+   functions, checks the specified value and returns TRUE or FALSE depending on the outcome. For example, the
+   <b class="ocpLegacyBold">
+    ISBLANK
+   </b>
+   function returns the logical value TRUE if the value argument is a reference to an empty cell; otherwise it returns FALSE.
+  </p>
+  <p>
+   You can use an
+   <b class="ocpLegacyBold">
+    IS
+   </b>
+   function to get information about a value before performing a calculation or other action with it. For example, you can use the
+   <b class="ocpLegacyBold">
+    ISERROR
+   </b>
+   function in conjunction with the
+   <b class="ocpLegacyBold">
+    IF
+   </b>
+   function to perform a different action if an error occurs:
+  </p>
+  <p>
+   <b class="ocpLegacyBold">
+    =
+   </b>
+   <b class="ocpLegacyBold">
+    IF(
+   </b>
+   <b class="ocpLegacyBold">
+    ISERROR(A1), "An error occurred.", A1 * 2)
+   </b>
+  </p>
+  <p>
+   This formula checks to see if an error condition exists in A1. If so, the
+   <b class="ocpLegacyBold">
+    IF
+   </b>
+   function returns the message "An error occurred." If no error exists, the
+   <b class="ocpLegacyBold">
+    IF
+   </b>
+   function performs the calculation A1*2.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <p>
+   ISBLANK(value)
+  </p>
+  <p>
+   ISERR(value)
+  </p>
+  <p>
+   ISERROR(value)
+  </p>
+  <p>
+   ISEVEN(value)
+  </p>
+  <p>
+   ISLOGICAL(value)
+  </p>
+  <p>
+   ISNA(value)
+  </p>
+  <p>
+   ISNONTEXT(value)
+  </p>
+  <p>
+   ISNUMBER(value)
+  </p>
+  <p>
+   ISODD(value)
+  </p>
+  <p>
+   ISREF(value)
+  </p>
+  <p>
+   ISTEXT(value)
+  </p>
+  <p>
+   The
+   <b class="ocpLegacyBold">
+    IS
+   </b>
+   function syntax has the following argument:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      value
+     </b>
+     Required. The value that you want tested. The value argument can be a blank (empty cell), error, logical value, text, number, or reference value, or a name referring to any of these.
+    </p>
+   </li>
+  </ul>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Function
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Returns TRUE if
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       ISBLANK
+      </p>
+     </td>
+     <td>
+      <p>
+       Value refers to an empty cell.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       ISERR
+      </p>
+     </td>
+     <td>
+      <p>
+       Value refers to any error value except #N/A.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       ISERROR
+      </p>
+     </td>
+     <td>
+      <p>
+       Value refers to any error value (#N/A, #VALUE!, #REF!, #DIV/0!, #NUM!, #NAME?, or #NULL!).
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       ISEVEN
+      </p>
+     </td>
+     <td>
+      <p>
+       Value refers to an even number.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       ISLOGICAL
+      </p>
+     </td>
+     <td>
+      <p>
+       Value refers to a logical value.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       ISNA
+      </p>
+     </td>
+     <td>
+      <p>
+       Value refers to the #N/A (value not available) error value.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       ISNONTEXT
+      </p>
+     </td>
+     <td>
+      <p>
+       Value refers to any item that is not text. (Note that this function returns TRUE if the value refers to a blank cell.)
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       ISNUMBER
+      </p>
+     </td>
+     <td>
+      <p>
+       Value refers to a number.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       ISODD
+      </p>
+     </td>
+     <td>
+      <p>
+       Value refers to an odd number.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       ISREF
+      </p>
+     </td>
+     <td>
+      <p>
+       Value refers to a reference.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       ISTEXT
+      </p>
+     </td>
+     <td>
+      <p>
+       Value refers to text.
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     The value arguments of the
+     <b class="ocpLegacyBold">
+      IS
+     </b>
+     functions are not converted. Any numeric values that are enclosed in double quotation marks are treated as text. For example, in most other functions where a number is required, the text value "19" is converted to the number 19. However, in the formula
+     <b class="ocpLegacyBold">
+      ISNUMBER(
+     </b>
+     <b class="ocpLegacyBold">
+      "19")
+     </b>
+     , "19" is not converted from a text value to a number value, and the
+     <b class="ocpLegacyBold">
+      ISNUMBER
+     </b>
+     function returns FALSE.
+    </p>
+   </li>
+   <li>
+    <p>
+     The
+     <b class="ocpLegacyBold">
+      IS
+     </b>
+     functions are useful in formulas for testing the outcome of a calculation. When combined with the
+     <b class="ocpLegacyBold">
+      IF
+     </b>
+     function, these functions provide a method for locating errors in formulas (see the following examples).
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection" data-bi-id="__example" id="__example">
+  <h2 class="" id="ID0EFD">
+   Examples
+  </h2>
+  <section aria-labelledby="ID0EDBBD" class="ocpSection">
+   <h3 class="" id="ID0EDBBD">
+    Example 1
+   </h3>
+   <p>
+    Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+   </p>
+   <table aria-label="" class="banded">
+    <thead>
+     <tr>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         Formula
+        </b>
+       </p>
+      </th>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         Description
+        </b>
+       </p>
+      </th>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         Result
+        </b>
+       </p>
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <p>
+        =ISLOGICAL(TRUE)
+       </p>
+      </td>
+      <td>
+       <p>
+        Checks whether TRUE is a logical value
+       </p>
+      </td>
+      <td>
+       <p>
+        TRUE
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        =ISLOGICAL("TRUE")
+       </p>
+      </td>
+      <td>
+       <p>
+        Checks whether "TRUE" is a logical value
+       </p>
+      </td>
+      <td>
+       <p>
+        FALSE
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        =ISNUMBER(4)
+       </p>
+      </td>
+      <td>
+       <p>
+        Checks whether 4 is a number
+       </p>
+      </td>
+      <td>
+       <p>
+        TRUE
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        =ISREF(G8)
+       </p>
+      </td>
+      <td>
+       <p>
+        Checks whether G8 is a valid reference
+       </p>
+      </td>
+      <td>
+       <p>
+        TRUE
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        =ISREF(XYZ1)
+       </p>
+      </td>
+      <td>
+       <p>
+        Checks whether XYZ1 is a valid reference
+       </p>
+      </td>
+      <td>
+       <p>
+        FALSE
+       </p>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <p id="__goback">
+    Example 2
+   </p>
+   <p>
+    Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+   </p>
+   <table aria-label="" class="banded">
+    <thead>
+     <tr>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         Data
+        </b>
+       </p>
+      </th>
+      <th>
+      </th>
+      <th>
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <p>
+        Gold
+       </p>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        Region1
+       </p>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        #REF!
+       </p>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        330.92
+       </p>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        #N/A
+       </p>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        <b class="ocpLegacyBold">
+         Formula
+        </b>
+       </p>
+      </td>
+      <td>
+       <p>
+        <b class="ocpLegacyBold">
+         Description
+        </b>
+       </p>
+      </td>
+      <td>
+       <p>
+        <b class="ocpLegacyBold">
+         Result
+        </b>
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        =ISBLANK(A2)
+       </p>
+      </td>
+      <td>
+       <p>
+        Checks whether cell A2 is blank.
+       </p>
+      </td>
+      <td>
+       <p>
+        FALSE
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        =ISERROR(A4)
+       </p>
+      </td>
+      <td>
+       <p>
+        Checks whether the value in cell A4, #REF!, is an error.
+       </p>
+      </td>
+      <td>
+       <p>
+        TRUE
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        =ISNA(A4)
+       </p>
+      </td>
+      <td>
+       <p>
+        Checks whether the value in cell A4, #REF!, is the #N/A error.
+       </p>
+      </td>
+      <td>
+       <p>
+        FALSE
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        =ISNA(A6)
+       </p>
+      </td>
+      <td>
+       <p>
+        Checks whether the value in cell A6, #N/A, is the #N/A error.
+       </p>
+      </td>
+      <td>
+       <p>
+        TRUE
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        =ISERR(A6)
+       </p>
+      </td>
+      <td>
+       <p>
+        Checks whether the value in cell A6, #N/A, is an error.
+       </p>
+      </td>
+      <td>
+       <p>
+        FALSE
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        =ISNUMBER(A5)
+       </p>
+      </td>
+      <td>
+       <p>
+        Checks whether the value in cell A5, 330.92, is a number.
+       </p>
+      </td>
+      <td>
+       <p>
+        TRUE
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        =ISTEXT(A3)
+       </p>
+      </td>
+      <td>
+       <p>
+        Checks whether the value in cell A3, Region1, is text.
+       </p>
+      </td>
+      <td>
+       <p>
+        TRUE
+       </p>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+ </section>
+</article>

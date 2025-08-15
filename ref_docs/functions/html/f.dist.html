@@ -1,0 +1,250 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    F.DIST
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDL" class="ocpSection">
+  <h2 class="" id="ID0EDL">
+   Description
+  </h2>
+  <p>
+   Returns the F probability distribution. You can use this function to determine whether two data sets have different degrees of diversity. For example, you can examine the test scores of men and women entering high school, and determine if the variability in the females is different from that found in the males.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Syntax
+  </h2>
+  <p>
+   F.DIST(x,deg_freedom1,deg_freedom2,cumulative)
+  </p>
+  <p>
+   The F.DIST function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      X
+     </b>
+     Required. The value at which to evaluate the function.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Deg_freedom1
+     </b>
+     Required. The numerator degrees of freedom.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Deg_freedom2
+     </b>
+     Required. The denominator degrees of freedom.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Cumulative
+     </b>
+     Required. A logical value that determines the form of the function. If cumulative is TRUE, F.DIST returns the cumulative distribution function; if FALSE, it returns the probability density function.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If any argument is nonnumeric, F.DIST returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If x is negative, F.DIST returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If deg_freedom1 or deg_freedom2 is not an integer, it is truncated.
+    </p>
+   </li>
+   <li>
+    <p>
+     If deg_freedom1 &lt; 1, F.DIST returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If deg_freedom2 &lt; 1, F.DIST returns the #NUM! error value.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </th>
+     <th>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       15.2069
+      </p>
+     </td>
+     <td>
+      <p>
+       Value at which to evaluate the function
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       6
+      </p>
+     </td>
+     <td>
+      <p>
+       Numerator degrees of freedom
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+     <td>
+      <p>
+       Denominator degrees of freedom
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =F.DIST(A2,A3,A4,TRUE)
+      </p>
+     </td>
+     <td>
+      <p>
+       F probability using the cumulative distribution function (TRUE cumulative argument).
+      </p>
+     </td>
+     <td>
+      <p>
+       0.99
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =F.DIST(A2,A3,A4,FALSE)
+      </p>
+     </td>
+     <td>
+      <p>
+       F probability using the probability density function (FALSE cumulative argument).
+      </p>
+     </td>
+     <td>
+      <p>
+       0.0012238
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+   <a class="ocpTopOfPage" data-bi-type="anchor" href="#">
+    Top of Page
+   </a>
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Need more help?
+  </h2>
+  <p>
+   You can always ask an expert in the
+   <a class="ocpExternalLink" data-bi-type="anchor" href="https://techcommunity.microsoft.com/t5/Excel/ct-p/Excel_Cat" target="_blank">
+    Excel Tech Community
+   </a>
+   or get support in
+   <a class="ocpExternalLink" data-bi-type="anchor" href="https://answers.microsoft.com/lang/msoffice/forum/msoffice_excel" target="_blank">
+    Communities
+   </a>
+   .
+  </p>
+  <p>
+  </p>
+ </section>
+</article>

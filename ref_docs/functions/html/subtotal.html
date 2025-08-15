@@ -1,0 +1,498 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    SUBTOTAL
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Description
+  </h2>
+  <p>
+   Returns a subtotal in a list or database. It is generally easier to create a list with subtotals by using the
+   <b class="ocpUI">
+    Subtotal
+   </b>
+   command in the
+   <b class="ocpUI">
+    Outline
+   </b>
+   group on the
+   <b class="ocpUI">
+    Data
+   </b>
+   tab in the Excel desktop application. Once the subtotal list is created, you can modify it by editing the SUBTOTAL function.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <p>
+   SUBTOTAL(function_num,ref1,[ref2],...)
+  </p>
+  <p>
+   The SUBTOTAL function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Function_num
+     </b>
+     Required. The number 1-11 or 101-111 that specifies the function to use for the subtotal. 1-11 includes manually-hidden rows, while 101-111 excludes them; filtered-out cells are always excluded.
+    </p>
+   </li>
+  </ul>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Function_num
+       </b>
+       <br aria-hidden="true"/>
+       <b class="ocpLegacyBold">
+        (includes hidden rows)
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Function_num
+       </b>
+       <br aria-hidden="true"/>
+       <b class="ocpLegacyBold">
+        (ignores hidden rows)
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Function
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+      <p>
+       101
+      </p>
+     </td>
+     <td>
+      <p>
+       AVERAGE
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+     <td>
+      <p>
+       102
+      </p>
+     </td>
+     <td>
+      <p>
+       COUNT
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+     <td>
+      <p>
+       103
+      </p>
+     </td>
+     <td>
+      <p>
+       COUNTA
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+     <td>
+      <p>
+       104
+      </p>
+     </td>
+     <td>
+      <p>
+       MAX
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       5
+      </p>
+     </td>
+     <td>
+      <p>
+       105
+      </p>
+     </td>
+     <td>
+      <p>
+       MIN
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       6
+      </p>
+     </td>
+     <td>
+      <p>
+       106
+      </p>
+     </td>
+     <td>
+      <p>
+       PRODUCT
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       7
+      </p>
+     </td>
+     <td>
+      <p>
+       107
+      </p>
+     </td>
+     <td>
+      <p>
+       STDEV
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       8
+      </p>
+     </td>
+     <td>
+      <p>
+       108
+      </p>
+     </td>
+     <td>
+      <p>
+       STDEVP
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       9
+      </p>
+     </td>
+     <td>
+      <p>
+       109
+      </p>
+     </td>
+     <td>
+      <p>
+       SUM
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       10
+      </p>
+     </td>
+     <td>
+      <p>
+       110
+      </p>
+     </td>
+     <td>
+      <p>
+       VAR
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       11
+      </p>
+     </td>
+     <td>
+      <p>
+       111
+      </p>
+     </td>
+     <td>
+      <p>
+       VARP
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Ref1
+     </b>
+     Required. The first named range or reference for which you want the subtotal.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Ref2,...
+     </b>
+     Optional. Named ranges or references 2 to 254 for which you want the subtotal.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If there are other subtotals within ref1, ref2,… (or nested subtotals), these nested subtotals are ignored to avoid double counting.
+    </p>
+   </li>
+   <li>
+    <p>
+     For the function_num constants from 1 to 11, the SUBTOTAL function includes the values of rows hidden by the
+     <b class="ocpUI">
+      Hide Rows
+     </b>
+     command under the
+     <b class="ocpUI">
+      Hide &amp; Unhide
+     </b>
+     submenu of the
+     <b class="ocpUI">
+      Format
+     </b>
+     command in the
+     <b class="ocpUI">
+      Cells
+     </b>
+     group on the
+     <b class="ocpUI">
+      Home
+     </b>
+     tab in the Excel desktop application. Use these constants when you want to subtotal hidden and nonhidden numbers in a list. For the function_Num constants from 101 to 111, the SUBTOTAL function ignores values of rows hidden by the
+     <b class="ocpUI">
+      Hide Rows
+     </b>
+     command. Use these constants when you want to subtotal only nonhidden numbers in a list.
+    </p>
+   </li>
+   <li>
+    <p>
+     The SUBTOTAL function ignores any rows that are not included in the result of a filter, no matter which function_num value you use.
+    </p>
+   </li>
+   <li>
+    <p>
+     The SUBTOTAL function is designed for columns of data, or vertical ranges. It is not designed for rows of data, or horizontal ranges. For example, when you subtotal a horizontal range using a function_num of 101 or greater, such as SUBTOTAL(109,B2:G2), hiding a column does not affect the subtotal. But, hiding a row in a subtotal of a vertical range does affect the subtotal.
+    </p>
+   </li>
+   <li>
+    <p>
+     If any of the references are 3-D references, SUBTOTAL returns the #VALUE! error value.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection" data-bi-id="__example" id="__example">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </th>
+     <th>
+     </th>
+     <th>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       120
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       10
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       150
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       23
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =SUBTOTAL(9,A2:A5)
+      </p>
+     </td>
+     <td>
+      <p>
+       The sum of the subtotal of the cells A2:A5, using 9 as the first argument.
+      </p>
+     </td>
+     <td>
+      <p>
+       303
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =SUBTOTAL(1,A2:A5)
+      </p>
+     </td>
+     <td>
+      <p>
+       The average of the subtotal of the cells A2:A5, using 1 as the first argument.
+      </p>
+     </td>
+     <td>
+      <p>
+       75.75
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Notes
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td colspan="3">
+      <p>
+       The SUBTOTAL function always requires a numeric argument (1 through 11, 101 through 111) as its first argument. This numeric argument is applied to the subtotal of the values (cell ranges, named ranges) that are specified as the arguments that follow.
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

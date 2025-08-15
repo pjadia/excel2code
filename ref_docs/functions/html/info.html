@@ -1,0 +1,275 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    INFO
+   </b>
+   function in Microsoft Excel.
+  </p>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpNote">
+     Note:
+    </b>
+    The INFO function is not available in Excel Web App.
+   </p>
+  </div>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Description
+  </h2>
+  <p>
+   Returns information about the current operating environment.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Syntax
+  </h2>
+  <p>
+   INFO(type_text)
+  </p>
+  <p>
+   The INFO function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Type_text
+     </b>
+     Required. Text that specifies what type of information you want returned.
+    </p>
+   </li>
+  </ul>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Type_text
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Returns
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       "directory"
+      </p>
+     </td>
+     <td>
+      <p>
+       Path of the current directory or folder specified in the Excel option,
+       <b class="ocpUI">
+        At startup, open all files in
+       </b>
+       (Select
+       <b class="ocpUI">
+        File
+       </b>
+       &gt;
+       <b class="ocpUI">
+        Options
+       </b>
+       &gt;
+       <b class="ocpUI">
+        Advanced
+       </b>
+       &gt;
+       <b class="ocpUI">
+        General
+       </b>
+       ).
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       "numfile"
+      </p>
+     </td>
+     <td>
+      <p>
+       Number of worksheets in the open workbooks.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       "origin"
+      </p>
+     </td>
+     <td>
+      <p>
+       Returns the absolute cell reference of the top and leftmost cell visible in the window, based on the current scrolling position, as text prepended with "$A:". This value is intended for for Lotus 1-2-3 release 3.x compatibility. The actual value returned depends on the current reference style setting. Using D9 as an example, the return value would be:
+      </p>
+      <ul>
+       <li>
+        <p>
+         <b class="ocpRunInHead">
+          A1 reference style
+         </b>
+         "$A:$D$9".
+        </p>
+       </li>
+       <li>
+        <p>
+         <b class="ocpRunInHead">
+          R1C1 reference style
+         </b>
+         "$A:R9C4"
+        </p>
+       </li>
+      </ul>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       "osversion"
+      </p>
+     </td>
+     <td>
+      <p>
+       Current operating system version, as text.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       "recalc"
+      </p>
+     </td>
+     <td>
+      <p>
+       Current recalculation mode; returns "Automatic" or "Manual".
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       "release"
+      </p>
+     </td>
+     <td>
+      <p>
+       Version of Microsoft Excel, as text.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       "system"
+      </p>
+     </td>
+     <td>
+      <p>
+       Name of the operating environment:
+       <br aria-hidden="true"/>
+       Macintosh = "mac"
+       <br aria-hidden="true"/>
+       Windows = "pcdos"
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpImportant">
+     Important:
+    </b>
+    In previous versions of Microsoft Excel, the "memavail", "memused", and "totmem" type_text values, returned memory information. These type_text values are no longer supported and now return a #N/A error value.
+   </p>
+  </div>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection" data-bi-id="__goback" id="__goback">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   Copy the example formulas in the following table, and paste them in a new Excel worksheet.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =INFO("numfile")
+      </p>
+     </td>
+     <td>
+      <p>
+       Number of worksheets in open workbooks
+      </p>
+     </td>
+     <td>
+      <p>
+       a number indicating how many sheets are in the currently open workbooks
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =INFO("recalc")
+      </p>
+     </td>
+     <td>
+      <p>
+       Recalculation mode for the workbook.
+      </p>
+     </td>
+     <td>
+      <p>
+       "Automatic" or "Manual" depending on the current state of your calculation options.
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

@@ -1,0 +1,286 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    SLOPE
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Description
+  </h2>
+  <p>
+   Returns the slope of the linear regression line through data points in known_y's and known_x's. The slope is the vertical distance divided by the horizontal distance between any two points on the line, which is the rate of change along the regression line.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <p>
+   SLOPE(known_y's, known_x's)
+  </p>
+  <p>
+   The SLOPE function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Known_y's
+     </b>
+     Required. An array or cell range of numeric dependent data points.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Known_x's
+     </b>
+     Required. The set of independent data points.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     The arguments must be either numbers or names, arrays, or references that contain numbers.
+    </p>
+   </li>
+   <li>
+    <p>
+     If an array or reference argument contains text, logical values, or empty cells, those values are ignored; however, cells with the value zero are included.
+    </p>
+   </li>
+   <li>
+    <p>
+     If known_y's and known_x's are empty or have a different number of data points, SLOPE returns the #N/A error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     The equation for the slope of the regression line is:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758?format=avif&amp;w=320 320w,        /images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758?format=avif&amp;w=480 480w,        /images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758?format=avif&amp;w=640 640w,        /images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758?format=webp&amp;w=320 320w,        /images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758?format=webp&amp;w=480 480w,        /images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758?format=webp&amp;w=640 640w,        /images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758?format=jpeg&amp;w=320 320w,        /images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758?format=jpeg&amp;w=480 480w,        /images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758?format=jpeg&amp;w=640 640w,        /images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/8e8ca310-3d42-4762-b3be-8dde84e87758" style="aspect-ratio: 136/53" width="136"/>
+     </picture>
+    </p>
+    <p>
+     where x and y are the sample means AVERAGE(known_x’s) and AVERAGE(known_y’s).
+    </p>
+   </li>
+   <li>
+    <p>
+     The underlying algorithm used in the SLOPE and INTERCEPT functions is different than the underlying algorithm used in the LINEST function. The difference between these algorithms can lead to different results when data is undetermined and collinear. For example, if the data points of the known_y's argument are 0 and the data points of the known_x's argument are 1:
+    </p>
+    <ul>
+     <li>
+      <p>
+       SLOPE and INTERCEPT return a #DIV/0! error. The SLOPE and INTERCEPT algorithm is designed to look for one and only one answer, and in this case there can be more than one answer.
+      </p>
+     </li>
+     <li>
+      <p>
+       LINEST returns a value of 0. The LINEST algorithm is designed to return reasonable results for collinear data, and in this case at least one answer can be found.
+      </p>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </th>
+     <th>
+     </th>
+     <th>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Known y
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Known x
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1/2/1900
+      </p>
+     </td>
+     <td>
+      <p>
+       6
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1/3/1900
+      </p>
+     </td>
+     <td>
+      <p>
+       5
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1/9/1900
+      </p>
+     </td>
+     <td>
+      <p>
+       11
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1/1/1900
+      </p>
+     </td>
+     <td>
+      <p>
+       7
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1/8/1900
+      </p>
+     </td>
+     <td>
+      <p>
+       5
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1/7/1900
+      </p>
+     </td>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1/5/1900
+      </p>
+     </td>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =SLOPE(A3:A9,B3:B9)
+      </p>
+     </td>
+     <td>
+      <p>
+       Slope of the linear regression line through the data points in A3:A9 and B3:B9.
+      </p>
+     </td>
+     <td>
+      <p>
+       0.305556
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

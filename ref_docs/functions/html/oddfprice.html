@@ -1,0 +1,537 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    ODDFPRICE
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Description
+  </h2>
+  <p>
+   Returns the price per $100 face value of a security having an odd (short or long) first period.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <p>
+   ODDFPRICE(settlement, maturity, issue, first_coupon, rate, yld, redemption, frequency, [basis])
+  </p>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpImportant">
+     Important:
+    </b>
+    Dates should be entered by using the DATE function, or as results of other formulas or functions. For example, use DATE(2008,5,23) for the 23rd day of May, 2008. Problems can occur if dates are entered as text.
+   </p>
+  </div>
+  <p>
+   The ODDFPRICE function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Settlement
+     </b>
+     Required. The security's settlement date. The security settlement date is the date after the issue date when the security is traded to the buyer.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Maturity
+     </b>
+     Required. The security's maturity date. The maturity date is the date when the security expires.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Issue
+     </b>
+     Required. The security's issue date.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      First_coupon
+     </b>
+     Required. The security's first coupon date.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Rate
+     </b>
+     Required. The security's interest rate.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Yld
+     </b>
+     Required. The security's annual yield.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Redemption
+     </b>
+     Required. The security's redemption value per $100 face value.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Frequency
+     </b>
+     Required. The number of coupon payments per year. For annual payments, frequency = 1; for semiannual, frequency = 2; for quarterly, frequency = 4.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Basis
+     </b>
+     Optional. The type of day count basis to use.
+    </p>
+   </li>
+  </ul>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Basis
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Day count basis
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       0 or omitted
+      </p>
+     </td>
+     <td>
+      <p>
+       US (NASD) 30/360
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+      <p>
+       Actual/actual
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+     <td>
+      <p>
+       Actual/360
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+     <td>
+      <p>
+       Actual/365
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+     <td>
+      <p>
+       European 30/360
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     Microsoft Excel stores dates as sequential serial numbers so they can be used in calculations. By default, January 1, 1900 is serial number 1, and January 1, 2008 is serial number 39448 because it is 39,448 days after January 1, 1900.
+    </p>
+   </li>
+   <li>
+    <p>
+     The settlement date is the date a buyer purchases a coupon, such as a bond. The maturity date is the date when a coupon expires. For example, suppose a 30-year bond is issued on January 1, 2008, and is purchased by a buyer six months later. The issue date would be January 1, 2008, the settlement date would be July 1, 2008, and the maturity date would be January 1, 2038, which is 30 years after the January 1, 2008, issue date.
+    </p>
+   </li>
+   <li>
+    <p>
+     Settlement, maturity, issue, first_coupon, and basis are truncated to integers.
+    </p>
+   </li>
+   <li>
+    <p>
+     If settlement, maturity, issue, or first_coupon is not a valid date, ODDFPRICE returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If rate &lt; 0 or if yld &lt; 0, ODDFPRICE returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If basis &lt; 0 or if basis &gt; 4, ODDFPRICE returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     The following date condition must be satisfied; otherwise, ODDFPRICE returns the #NUM! error value:
+    </p>
+    <p>
+     maturity &gt; first_coupon &gt; settlement &gt; issue
+    </p>
+   </li>
+   <li>
+    <p>
+     ODDFPRICE is calculated as follows:
+    </p>
+    <p>
+     Odd short first coupon:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/b92829d6-4c3e-456b-8513-e99722941053?format=avif&amp;w=320 320w,        /images/en-us/b92829d6-4c3e-456b-8513-e99722941053?format=avif&amp;w=480 480w,        /images/en-us/b92829d6-4c3e-456b-8513-e99722941053?format=avif&amp;w=640 640w,        /images/en-us/b92829d6-4c3e-456b-8513-e99722941053?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/b92829d6-4c3e-456b-8513-e99722941053?format=webp&amp;w=320 320w,        /images/en-us/b92829d6-4c3e-456b-8513-e99722941053?format=webp&amp;w=480 480w,        /images/en-us/b92829d6-4c3e-456b-8513-e99722941053?format=webp&amp;w=640 640w,        /images/en-us/b92829d6-4c3e-456b-8513-e99722941053?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/b92829d6-4c3e-456b-8513-e99722941053?format=jpeg&amp;w=320 320w,        /images/en-us/b92829d6-4c3e-456b-8513-e99722941053?format=jpeg&amp;w=480 480w,        /images/en-us/b92829d6-4c3e-456b-8513-e99722941053?format=jpeg&amp;w=640 640w,        /images/en-us/b92829d6-4c3e-456b-8513-e99722941053?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/b92829d6-4c3e-456b-8513-e99722941053" style="aspect-ratio: 460/273" width="460"/>
+     </picture>
+    </p>
+    <p>
+     where:
+    </p>
+    <ul>
+     <li>
+      <p>
+       A = number of days from the beginning of the coupon period to the settlement date (accrued days).
+      </p>
+     </li>
+     <li>
+      <p>
+       DSC = number of days from the settlement to the next coupon date.
+      </p>
+     </li>
+     <li>
+      <p>
+       DFC = number of days from the beginning of the odd first coupon to the first coupon date.
+      </p>
+     </li>
+     <li>
+      <p>
+       E = number of days in the coupon period.
+      </p>
+     </li>
+     <li>
+      <p>
+       N = number of coupons payable between the settlement date and the redemption date. (If this number contains a fraction, it is raised to the next whole number.)
+      </p>
+      <p>
+       Odd long first coupon:
+      </p>
+      <p>
+       <picture>
+        <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/2c7de552-94e0-40c6-81f2-3fea99e8776c?format=avif&amp;w=320 320w,        /images/en-us/2c7de552-94e0-40c6-81f2-3fea99e8776c?format=avif&amp;w=480 480w,        /images/en-us/2c7de552-94e0-40c6-81f2-3fea99e8776c?format=avif&amp;w=640 640w,        /images/en-us/2c7de552-94e0-40c6-81f2-3fea99e8776c?format=avif&amp;w=800 800w" type="image/avif"/>
+        <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/2c7de552-94e0-40c6-81f2-3fea99e8776c?format=webp&amp;w=320 320w,        /images/en-us/2c7de552-94e0-40c6-81f2-3fea99e8776c?format=webp&amp;w=480 480w,        /images/en-us/2c7de552-94e0-40c6-81f2-3fea99e8776c?format=webp&amp;w=640 640w,        /images/en-us/2c7de552-94e0-40c6-81f2-3fea99e8776c?format=webp&amp;w=800 800w" type="image/webp"/>
+        <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/2c7de552-94e0-40c6-81f2-3fea99e8776c?format=jpeg&amp;w=320 320w,        /images/en-us/2c7de552-94e0-40c6-81f2-3fea99e8776c?format=jpeg&amp;w=480 480w,        /images/en-us/2c7de552-94e0-40c6-81f2-3fea99e8776c?format=jpeg&amp;w=640 640w,        /images/en-us/2c7de552-94e0-40c6-81f2-3fea99e8776c?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+        <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/2c7de552-94e0-40c6-81f2-3fea99e8776c" style="aspect-ratio: 300/390" width="300"/>
+       </picture>
+      </p>
+      <p>
+       where:
+      </p>
+     </li>
+     <li>
+      <p>
+       Ai = number of days from the beginning of the ith, or last, quasi-coupon period within odd period.
+      </p>
+     </li>
+     <li>
+      <p>
+       DCi = number of days from dated date (or issue date) to first quasi-coupon (i = 1) or number of days in quasi-coupon (i = 2,..., i = NC).
+      </p>
+     </li>
+     <li>
+      <p>
+       DSC = number of days from settlement to next coupon date.
+      </p>
+     </li>
+     <li>
+      <p>
+       E = number of days in coupon period.
+      </p>
+     </li>
+     <li>
+      <p>
+       N = number of coupons payable between the first real coupon date and redemption date. (If this number contains a fraction, it is raised to the next whole number.)
+      </p>
+     </li>
+     <li>
+      <p>
+       NC = number of quasi-coupon periods that fit in odd period. (If this number contains a fraction, it is raised to the next whole number.)
+      </p>
+     </li>
+     <li>
+      <p>
+       NLi = normal length in days of the full ith, or last, quasi-coupon period within odd period.
+      </p>
+     </li>
+     <li>
+      <p>
+       Nq = number of whole quasi-coupon periods between settlement date and first coupon.
+      </p>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Argument description
+       </b>
+      </p>
+     </th>
+     <th>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       11/11/2008
+      </p>
+     </td>
+     <td>
+      <p>
+       Settlement date
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       3/1/2021
+      </p>
+     </td>
+     <td>
+      <p>
+       Maturity date
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       10/15/2008
+      </p>
+     </td>
+     <td>
+      <p>
+       Issue date
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       3/1/2009
+      </p>
+     </td>
+     <td>
+      <p>
+       First coupon date
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       7.85%
+      </p>
+     </td>
+     <td>
+      <p>
+       Percent coupon
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       6.25%
+      </p>
+     </td>
+     <td>
+      <p>
+       Percent yield
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       $100.00
+      </p>
+     </td>
+     <td>
+      <p>
+       Redemptive value
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+     <td>
+      <p>
+       Frequency is semiannual
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+      <p>
+       Actual/actual basis
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =ODDFPRICE(A2, A3, A4, A5, A6, A7, A8, A9, A10)
+      </p>
+     </td>
+     <td>
+      <p>
+       The price per $100 face value of a security having an odd (short or long) first period, for the bond using the terms in cells A2:A10 as arguments for the function.
+      </p>
+     </td>
+     <td>
+      <p>
+       $  113.60
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

@@ -1,0 +1,239 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    COVARIANCE.P
+   </b>
+   function in Microsoft Excel.
+  </p>
+  <p>
+   Returns population covariance, the average of the products of deviations for each data point pair in two data sets. Use covariance to determine the relationship between two data sets. For example, you can examine whether greater income accompanies greater levels of education.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   COVARIANCE.P(array1,array2)
+  </p>
+  <p>
+   The COVARIANCE.P function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Array1
+     </b>
+     Required. The first cell range of integers.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Array2
+     </b>
+     Required. The second cell range of integers.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     The arguments must either be numbers or be names, arrays, or references that contain numbers.
+    </p>
+   </li>
+   <li>
+    <p>
+     If an array or reference argument contains text, logical values, or empty cells, those values are ignored; however, cells with the value zero are included.
+    </p>
+   </li>
+   <li>
+    <p>
+     If array1 and array2 have different numbers of data points, COVARIANCE.P returns the #N/A error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If either array1 or array2 is empty, COVARIANCE.P returns the #DIV/0! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     The covariance is:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/b5051bb7-e20d-4b81-867f-080decc48390?format=avif&amp;w=320 320w,        /images/en-us/b5051bb7-e20d-4b81-867f-080decc48390?format=avif&amp;w=480 480w,        /images/en-us/b5051bb7-e20d-4b81-867f-080decc48390?format=avif&amp;w=640 640w,        /images/en-us/b5051bb7-e20d-4b81-867f-080decc48390?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/b5051bb7-e20d-4b81-867f-080decc48390?format=webp&amp;w=320 320w,        /images/en-us/b5051bb7-e20d-4b81-867f-080decc48390?format=webp&amp;w=480 480w,        /images/en-us/b5051bb7-e20d-4b81-867f-080decc48390?format=webp&amp;w=640 640w,        /images/en-us/b5051bb7-e20d-4b81-867f-080decc48390?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/b5051bb7-e20d-4b81-867f-080decc48390?format=jpeg&amp;w=320 320w,        /images/en-us/b5051bb7-e20d-4b81-867f-080decc48390?format=jpeg&amp;w=480 480w,        /images/en-us/b5051bb7-e20d-4b81-867f-080decc48390?format=jpeg&amp;w=640 640w,        /images/en-us/b5051bb7-e20d-4b81-867f-080decc48390?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/b5051bb7-e20d-4b81-867f-080decc48390" style="aspect-ratio: 197/47" width="197"/>
+     </picture>
+    </p>
+    <p>
+     where
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/e50bfa35-f7a7-44ee-91eb-d25d79f90f42?format=avif&amp;w=320 320w,        /images/en-us/e50bfa35-f7a7-44ee-91eb-d25d79f90f42?format=avif&amp;w=480 480w,        /images/en-us/e50bfa35-f7a7-44ee-91eb-d25d79f90f42?format=avif&amp;w=640 640w,        /images/en-us/e50bfa35-f7a7-44ee-91eb-d25d79f90f42?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/e50bfa35-f7a7-44ee-91eb-d25d79f90f42?format=webp&amp;w=320 320w,        /images/en-us/e50bfa35-f7a7-44ee-91eb-d25d79f90f42?format=webp&amp;w=480 480w,        /images/en-us/e50bfa35-f7a7-44ee-91eb-d25d79f90f42?format=webp&amp;w=640 640w,        /images/en-us/e50bfa35-f7a7-44ee-91eb-d25d79f90f42?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/e50bfa35-f7a7-44ee-91eb-d25d79f90f42?format=jpeg&amp;w=320 320w,        /images/en-us/e50bfa35-f7a7-44ee-91eb-d25d79f90f42?format=jpeg&amp;w=480 480w,        /images/en-us/e50bfa35-f7a7-44ee-91eb-d25d79f90f42?format=jpeg&amp;w=640 640w,        /images/en-us/e50bfa35-f7a7-44ee-91eb-d25d79f90f42?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="x and y" class="fluentImage" loading="lazy" src="/images/en-us/e50bfa35-f7a7-44ee-91eb-d25d79f90f42" style="aspect-ratio: 52/19" width="52"/>
+     </picture>
+    </p>
+    <p>
+     are the sample means AVERAGE(array1) and AVERAGE(array2), and n is the sample size.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Data1
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Data2
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+     <td>
+      <p>
+       9
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+     <td>
+      <p>
+       7
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+     <td>
+      <p>
+       12
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       5
+      </p>
+     </td>
+     <td>
+      <p>
+       15
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       6
+      </p>
+     </td>
+     <td>
+      <p>
+       17
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =COVARIANCE.P(A2:A6, B2:B6)
+      </p>
+     </td>
+     <td>
+      <p>
+       Covariance, the average of the products of deviations for each data point pair above
+      </p>
+     </td>
+     <td>
+      <p>
+       5.2
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

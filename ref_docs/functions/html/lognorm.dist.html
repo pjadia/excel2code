@@ -1,0 +1,217 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   Returns the lognormal distribution of x, where ln(x) is normally distributed with parameters Mean and Standard_dev.
+  </p>
+  <p>
+   Use this function to analyze data that has been logarithmically transformed.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   LOGNORM.DIST(x,mean,standard_dev,cumulative)
+  </p>
+  <p>
+   The LOGNORM.DIST function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      X
+     </b>
+     Required. The value at which to evaluate the function.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Mean
+     </b>
+     Required. The mean of ln(x).
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Standard_dev
+     </b>
+     Required. The standard deviation of ln(x).
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Cumulative
+     </b>
+     Required. A logical value that determines the form of the function. If cumulative is TRUE, LOGNORM.DIST returns the cumulative distribution function; if FALSE, it returns the probability density function.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If any argument is nonnumeric, LOGNORM.DIST returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If x ≤ 0 or if standard_dev ≤ 0, LOGNORM.DIST returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     The equation for the lognormal cumulative distribution function is:
+    </p>
+    <p>
+     LOGNORM.DIST(
+     <i class="ocpItalic">
+      x,µ,o
+     </i>
+     ) = NORM.S.DIST(
+     <i class="ocpItalic">
+      1n(x)-µ / o
+     </i>
+     )
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+     <td>
+      <p>
+       Value at which to evaluate the function (x)
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       3.5
+      </p>
+     </td>
+     <td>
+      <p>
+       Mean of ln(x)
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1.2
+      </p>
+     </td>
+     <td>
+      <p>
+       Standard deviation of ln(x)
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =LOGNORM.DIST(A2,A3,A4,TRUE)
+      </p>
+     </td>
+     <td>
+      <p>
+       Cumulative lognormal distribution at 4, using the arguments in A2:A4.
+      </p>
+     </td>
+     <td>
+      <p>
+       0.0390836
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =LOGNORM.DIST(A2,A3,A4,FALSE)
+      </p>
+     </td>
+     <td>
+      <p>
+       Probability lognormal distribution at 4, using the same arguments.
+      </p>
+     </td>
+     <td>
+      <p>
+       0.0176176
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

@@ -1,0 +1,466 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    SEARCH
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Description
+  </h2>
+  <p>
+   The
+   <b class="ocpLegacyBold">
+    SEARCH
+   </b>
+   function locate one text string within a second text string, and return the number of the starting position of the first text string from the first character of the second text string. For example, to find the position of the letter "n" in the word "printer", you can use the following function:
+  </p>
+  <p>
+   =SEARCH("n","printer")
+  </p>
+  <p>
+   This function returns
+   <b class="ocpLegacyBold">
+    4
+   </b>
+   because "n" is the fourth character in the word "printer."
+  </p>
+  <p>
+   You can also search for words within other words. For example, the function
+  </p>
+  <p>
+   =SEARCH("base","database")
+  </p>
+  <p>
+   returns
+   <b class="ocpLegacyBold">
+    5
+   </b>
+   , because the word "base" begins at the fifth character of the word "database". You can use the
+   <b class="ocpLegacyBold">
+    SEARCH
+   </b>
+   to determine the location of a character or text string within another text string, and then use the
+   <b class="ocpLegacyBold">
+    MID
+   </b>
+   to return the text, or use the
+   <b class="ocpLegacyBold">
+    REPLACE
+   </b>
+   to change the text. These functions are demonstrated in
+   <a aria-label=" Example 1" class="ocpInlineLink" data-bi-type="anchor" href="#bm1">
+    Example 1
+   </a>
+   in this article.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <p>
+   SEARCH(find_text,within_text,[start_num])
+  </p>
+  <p>
+   The SEARCH function has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      find_text
+     </b>
+     Required. The text that you want to find.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      within_text
+     </b>
+     Required. The text in which you want to search for the value of the
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       find_text
+      </i>
+     </b>
+     argument.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      start_num
+     </b>
+     Optional. The character number in the
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       within_text
+      </i>
+     </b>
+     argument at which you want to start searching.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Remark
+  </h2>
+  <ul>
+   <li>
+    <p>
+     The
+     <b class="ocpLegacyBold">
+      SEARCH
+     </b>
+     function are not case sensitive. If you want to do a case sensitive search, you can use
+     <b class="ocpLegacyBold">
+      FIND
+     </b>
+     .
+    </p>
+   </li>
+   <li>
+    <p>
+     You can use the wildcard characters — the question mark (
+     <b class="ocpLegacyBold">
+      ?
+     </b>
+     ) and asterisk (
+     <b class="ocpLegacyBold">
+      *
+     </b>
+     ) — in the
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       find_text
+      </i>
+     </b>
+     argument. A question mark matches any single character; an asterisk matches any sequence of characters. If you want to find an actual question mark or asterisk, type a tilde (
+     <b class="ocpLegacyBold">
+      ~
+     </b>
+     ) before the character.
+    </p>
+   </li>
+   <li>
+    <p>
+     If the value of
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       find_text
+      </i>
+     </b>
+     is not found, the #VALUE! error value is returned.
+    </p>
+   </li>
+   <li>
+    <p>
+     If the
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       start_num
+      </i>
+     </b>
+     argument is omitted, it is assumed to be 1.
+    </p>
+   </li>
+   <li>
+    <p>
+     If
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       start_num
+      </i>
+     </b>
+     is not greater than 0 (zero) or is greater than the length of the
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       within_text
+      </i>
+     </b>
+     argument, the #VALUE! error value is returned.
+    </p>
+   </li>
+   <li>
+    <p>
+     Use
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       start_num
+      </i>
+     </b>
+     to skip a specified number of characters. Using the
+     <b class="ocpLegacyBold">
+      SEARCH
+     </b>
+     function as an example, suppose you are working with the text string "AYF0093.YoungMensApparel". To find the position of the first "Y" in the descriptive part of the text string, set
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       start_num
+      </i>
+     </b>
+     equal to 8 so that the serial number portion of the text (in this case, "AYF0093") is not searched. The
+     <b class="ocpLegacyBold">
+      SEARCH
+     </b>
+     function starts the search operation at the eighth character position, finds the character that is specified in the
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       find_text
+      </i>
+     </b>
+     argument at the next position, and returns the number 9. The
+     <b class="ocpLegacyBold">
+      SEARCH
+     </b>
+     function always returns the number of characters from the start of the
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       within_text
+      </i>
+     </b>
+     argument, counting the characters you skip if the
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       start_num
+      </i>
+     </b>
+     argument is greater than 1.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection" data-bi-id="bm1" id="bm1">
+  <h2 class="" id="ID0EDD">
+   Examples
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </th>
+     <th>
+     </th>
+     <th>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       Statements
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Profit Margin
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       margin
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       The "boss" is here.
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =SEARCH("e",A2,6)
+      </p>
+     </td>
+     <td>
+      <p>
+       Position of the first "e" in the string in cell A2, starting at the sixth position.
+      </p>
+     </td>
+     <td>
+      <p>
+       7
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =SEARCH(A4,A3)
+      </p>
+     </td>
+     <td>
+      <p>
+       Position of "margin" (string for which to search is cell A4) in "Profit Margin" (cell in which to search is A3).
+      </p>
+     </td>
+     <td>
+      <p>
+       8
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =REPLACE(A3,SEARCH(A4,A3),6,"Amount")
+      </p>
+     </td>
+     <td>
+      <p>
+       Replaces "Margin" with "Amount" by first searching for the position of "Margin" in cell A3, and then replacing that character and the next five characters with the string "Amount."
+      </p>
+     </td>
+     <td>
+      <p>
+       Profit Amount
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =MID(A3,SEARCH(" ",A3)+1,4)
+      </p>
+     </td>
+     <td>
+      <p>
+       Returns the first four characters that follow the first space character in "Profit Margin" (cell A3).
+      </p>
+     </td>
+     <td>
+      <p>
+       Marg
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =SEARCH("""",A5)
+      </p>
+     </td>
+     <td>
+      <p>
+       Position of the first double quotation mark (") in cell A5.
+      </p>
+     </td>
+     <td>
+      <p>
+       5
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =MID(A5,SEARCH("""",A5)+1,SEARCH("""",A5,SEARCH("""",A5)+1)-SEARCH("""",A5)-1)
+      </p>
+     </td>
+     <td>
+      <p>
+       Returns only the text enclosed in the double quotation marks in cell A5.
+      </p>
+     </td>
+     <td>
+      <p>
+       boss
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+  </p>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpImportant">
+     Important:
+    </b>
+   </p>
+   <ul class="ocpAlertSectionListContainer">
+    <li>
+     <p>
+      The SEARCHB function is deprecated.
+     </p>
+    </li>
+    <li>
+     <p>
+      In workbooks set to
+      <a class="ocpArticleLink" data-bi-area="bm1" data-bi-type="anchor" href="/en-us/office/compatibility-versions-49f5d3bf-d9a4-47a3-9db8-e776f664cbf9">
+       Compatibility Version 2
+      </a>
+      , SEARCH has improved behavior with Surrogate Pairs, counting them as one character instead of two. Variation Selectors (commonly used with emojis) will still be counted as separate characters. Read more here:
+      <a class="ocpExternalLink" data-bi-area="bm1" data-bi-type="anchor" href="https://learn.microsoft.com/en-us/globalization/encoding/unicode-standard" target="_blank">
+       The Unicode standard
+      </a>
+     </p>
+    </li>
+   </ul>
+  </div>
+  <p>
+  </p>
+ </section>
+</article>

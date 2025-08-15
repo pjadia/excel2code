@@ -1,0 +1,204 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    AVEDEV
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Returns the average of the absolute deviations of data points from their mean. AVEDEV is a measure of the variability in a data set.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   AVEDEV(number1, [number2], ...)
+  </p>
+  <p>
+   The AVEDEV function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Number1, number2, ...
+     </b>
+     Number1 is required, subsequent numbers are optional. 1 to 255 arguments for which you want the average of the absolute deviations. You can also use a single array or a reference to an array instead of arguments separated by commas.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     AVEDEV is influenced by the unit of measurement in the input data.
+    </p>
+   </li>
+   <li>
+    <p>
+     Arguments must either be numbers or be names, arrays, or references that contain numbers.
+    </p>
+   </li>
+   <li>
+    <p>
+     Logical values and text representations of numbers that you type directly into the list of arguments are counted.
+    </p>
+   </li>
+   <li>
+    <p>
+     If an array or reference argument contains text, logical values, or empty cells, those values are ignored; however, cells with the value zero are included.
+    </p>
+   </li>
+   <li>
+    <p>
+     The equation for average deviation is:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/2c328fff-b4af-4e42-bb34-4f7bf5e2e85c?format=avif&amp;w=320 320w,        /images/en-us/2c328fff-b4af-4e42-bb34-4f7bf5e2e85c?format=avif&amp;w=480 480w,        /images/en-us/2c328fff-b4af-4e42-bb34-4f7bf5e2e85c?format=avif&amp;w=640 640w,        /images/en-us/2c328fff-b4af-4e42-bb34-4f7bf5e2e85c?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/2c328fff-b4af-4e42-bb34-4f7bf5e2e85c?format=webp&amp;w=320 320w,        /images/en-us/2c328fff-b4af-4e42-bb34-4f7bf5e2e85c?format=webp&amp;w=480 480w,        /images/en-us/2c328fff-b4af-4e42-bb34-4f7bf5e2e85c?format=webp&amp;w=640 640w,        /images/en-us/2c328fff-b4af-4e42-bb34-4f7bf5e2e85c?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/2c328fff-b4af-4e42-bb34-4f7bf5e2e85c?format=jpeg&amp;w=320 320w,        /images/en-us/2c328fff-b4af-4e42-bb34-4f7bf5e2e85c?format=jpeg&amp;w=480 480w,        /images/en-us/2c328fff-b4af-4e42-bb34-4f7bf5e2e85c?format=jpeg&amp;w=640 640w,        /images/en-us/2c328fff-b4af-4e42-bb34-4f7bf5e2e85c?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/2c328fff-b4af-4e42-bb34-4f7bf5e2e85c" style="aspect-ratio: 71/35" width="71"/>
+     </picture>
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+     <td>
+      <p>
+       Average of the absolute deviations of the numbers in cells A2:A8 from their mean (1.020408)
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       5
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       6
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       7
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       5
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p id="__goback">
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =AVEDEV(A2:A8)
+      </p>
+     </td>
+     <td>
+      <p>
+       1.020408
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

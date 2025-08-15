@@ -1,0 +1,136 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p id="__goback">
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    HEX2DEC
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Converts a hexadecimal number to decimal.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   HEX2DEC(number)
+  </p>
+  <p>
+   The HEX2DEC function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Number
+     </b>
+     Required. The hexadecimal number you want to convert. Number cannot contain more than 10 characters (40 bits). The most significant bit of number is the sign bit. The remaining 39 bits are magnitude bits. Negative numbers are represented using two's-complement notation.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remark
+  </h2>
+  <p>
+   If number is not a valid hexadecimal number, HEX2DEC returns the #NUM! error value.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =HEX2DEC("A5")
+      </p>
+     </td>
+     <td>
+      <p>
+       Converts hexadecimal A5 to decimal
+      </p>
+     </td>
+     <td>
+      <p>
+       165
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =HEX2DEC("FFFFFFFF5B")
+      </p>
+     </td>
+     <td>
+      <p>
+       Converts hexadecimal FFFFFFFF5B to decimal
+      </p>
+     </td>
+     <td>
+      <p>
+       -165
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =HEX2DEC("3DA408B9")
+      </p>
+     </td>
+     <td>
+      <p>
+       Converts hexadecimal 3DA408B9 to decimal
+      </p>
+     </td>
+     <td>
+      <p>
+       1.034E+09
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

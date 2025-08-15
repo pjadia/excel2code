@@ -1,0 +1,518 @@
+Excel Function HTML Download Summary
+==================================================
+
+✅ ABS: functions/html/abs.html
+✅ ACCRINT: functions/html/accrint.html
+✅ ACCRINTM: functions/html/accrintm.html
+✅ ACOS: functions/html/acos.html
+✅ ACOSH: functions/html/acosh.html
+✅ ACOT (2013)​​​​​​​: functions/html/acot_.html
+✅ ACOTH (2013): functions/html/acoth.html
+✅ ADDRESS: functions/html/address.html
+✅ AGGREGATE: functions/html/aggregate.html
+✅ AMORDEGRC: functions/html/amordegrc.html
+✅ AMORLINC: functions/html/amorlinc.html
+✅ AND: functions/html/and.html
+✅ ARABIC (2013): functions/html/arabic.html
+✅ AREAS: functions/html/areas.html
+✅ ARRAYTOTEXT (2021): functions/html/arraytotext_.html
+✅ ASC: functions/html/asc.html
+✅ ASIN: functions/html/asin.html
+✅ ASINH: functions/html/asinh.html
+✅ ATAN: functions/html/atan.html
+✅ ATAN2: functions/html/atan2.html
+✅ ATANH: functions/html/atanh.html
+✅ AVEDEV: functions/html/avedev.html
+✅ AVERAGE: functions/html/average.html
+✅ AVERAGEA: functions/html/averagea.html
+✅ AVERAGEIF: functions/html/averageif.html
+✅ AVERAGEIFS: functions/html/averageifs.html
+✅ BAHTTEXT: functions/html/bahttext.html
+✅ BASE: functions/html/base.html
+✅ BESSELI: functions/html/besseli.html
+✅ BESSELJ: functions/html/besselj.html
+✅ BESSELK: functions/html/besselk.html
+✅ BESSELY: functions/html/bessely.html
+✅ BETA.DIST (2010): functions/html/beta.dist.html
+✅ BETA.INVn (2010): functions/html/beta.invn.html
+✅ BETADIST: functions/html/betadist.html
+✅ BETAINV: functions/html/betainv.html
+✅ BIN2DEC: functions/html/bin2dec.html
+✅ BIN2HEX: functions/html/bin2hex.html
+✅ BIN2OCT: functions/html/bin2oct.html
+✅ BINOM.DIST(2010): functions/html/binom.dist.html
+✅ BINOM.DIST.RANGE (2013): functions/html/binom.dist.range.html
+✅ BINOM.INV (2010): functions/html/binom.inv.html
+✅ BINOMDIST: functions/html/binomdist.html
+✅ BITAND (2013): functions/html/bitand.html
+✅ BITLSHIFT (2013): functions/html/bitlshift.html
+✅ BITOR (2013): functions/html/bitor.html
+✅ BITRSHIFT (2013): functions/html/bitrshift.html
+✅ BITXOR (2013): functions/html/bitxor.html
+✅ BYCOL (2024): functions/html/bycol.html
+✅ BYROW (2024): functions/html/byrow.html
+✅ CALL: functions/html/call.html
+✅ CEILING: functions/html/ceiling.html
+✅ CEILING.MATH (2013): functions/html/ceiling.math.html
+✅ CEILING.PRECISE: functions/html/ceiling.precise.html
+✅ CELL: functions/html/cell.html
+✅ CHAR: functions/html/char.html
+✅ CHIDIST: functions/html/chidist.html
+✅ CHIINV: functions/html/chiinv.html
+✅ CHISQ.DIST (2010): functions/html/chisq.dist.html
+✅ CHISQ.DIST.RT (2010): functions/html/chisq.dist.rt.html
+✅ CHISQ.INV (2010): functions/html/chisq.inv.html
+✅ CHISQ.INV.RT (2010): functions/html/chisq.inv.rt.html
+✅ CHISQ.TEST (2010): functions/html/chisq.test.html
+✅ CHITEST: functions/html/chitest.html
+✅ CHOOSE: functions/html/choose.html
+✅ CHOOSECOLS (2024): functions/html/choosecols.html
+✅ CHOOSEROWS (2024): functions/html/chooserows.html
+✅ CLEAN: functions/html/clean.html
+✅ CODE: functions/html/code.html
+✅ COLUMN: functions/html/column.html
+✅ COLUMNS: functions/html/columns.html
+✅ COMBIN: functions/html/combin.html
+✅ COMBINA (2013): functions/html/combina.html
+✅ COMPLEX: functions/html/complex.html
+✅ CONCAT (2019): functions/html/concat.html
+✅ CONCATENATE: functions/html/concatenate.html
+✅ CONFIDENCE: functions/html/confidence.html
+✅ CONFIDENCE.NORM (2010): functions/html/confidence.norm.html
+✅ CONFIDENCE.T (2010): functions/html/confidence.t.html
+✅ CONVERT: functions/html/convert.html
+✅ CORREL: functions/html/correl.html
+✅ COS: functions/html/cos.html
+✅ COSH: functions/html/cosh.html
+✅ COT (2013): functions/html/cot.html
+✅ COTH (2013): functions/html/coth.html
+✅ COUNT: functions/html/count.html
+✅ COUNTA: functions/html/counta.html
+✅ COUNTBLANK: functions/html/countblank.html
+✅ COUNTIF: functions/html/countif.html
+✅ COUNTIFS: functions/html/countifs.html
+✅ COUPDAYBS: functions/html/coupdaybs.html
+✅ COUPDAYS: functions/html/coupdays.html
+✅ COUPDAYSNC: functions/html/coupdaysnc.html
+✅ COUPNCD: functions/html/coupncd.html
+✅ COUPNUM: functions/html/coupnum.html
+✅ COUPPCD: functions/html/couppcd.html
+✅ COVAR: functions/html/covar.html
+✅ COVARIANCE.P (2010): functions/html/covariance.p.html
+✅ COVARIANCE.S (2010): functions/html/covariance.s.html
+✅ CRITBINOM: functions/html/critbinom.html
+✅ CSC (2013): functions/html/csc.html
+✅ CSCH (2013): functions/html/csch.html
+✅ CUBEKPIMEMBER: functions/html/cubekpimember.html
+✅ CUBEMEMBER: functions/html/cubemember.html
+✅ CUBEMEMBERPROPERTY: functions/html/cubememberproperty.html
+✅ CUBERANKEDMEMBER: functions/html/cuberankedmember.html
+✅ CUBESET: functions/html/cubeset.html
+✅ CUBESETCOUNT: functions/html/cubesetcount.html
+✅ CUBEVALUE: functions/html/cubevalue.html
+✅ CUMIPMT: functions/html/cumipmt.html
+✅ CUMPRINC: functions/html/cumprinc.html
+✅ DATE: functions/html/date.html
+✅ DATEDIF: functions/html/datedif.html
+✅ DATEVALUE: functions/html/datevalue.html
+✅ DAVERAGE: functions/html/daverage.html
+✅ DAY: functions/html/day.html
+✅ DAYS (2013): functions/html/days.html
+✅ DAYS360: functions/html/days360.html
+✅ DB: functions/html/db.html
+✅ DBCS (2013): functions/html/dbcs.html
+✅ DCOUNT: functions/html/dcount.html
+✅ DCOUNTA: functions/html/dcounta.html
+✅ DDB: functions/html/ddb.html
+✅ DEC2BIN: functions/html/dec2bin.html
+✅ DEC2HEX: functions/html/dec2hex.html
+✅ DEC2OCT: functions/html/dec2oct.html
+✅ DECIMAL (2013): functions/html/decimal.html
+✅ DEGREES: functions/html/degrees.html
+✅ DELTA: functions/html/delta.html
+✅ DETECTLANGUAGE (Microsoft 365): functions/html/detectlanguage_microsoft_365_.html
+✅ DEVSQ: functions/html/devsq.html
+✅ DGET: functions/html/dget.html
+✅ DISC: functions/html/disc.html
+✅ DMAX: functions/html/dmax.html
+✅ DMIN: functions/html/dmin.html
+✅ DOLLAR: functions/html/dollar.html
+✅ DOLLARDE: functions/html/dollarde.html
+✅ DOLLARFR: functions/html/dollarfr.html
+✅ DPRODUCT: functions/html/dproduct.html
+✅ DROP (2024): functions/html/drop.html
+✅ DSTDEV: functions/html/dstdev.html
+✅ DSTDEVP: functions/html/dstdevp.html
+✅ DSUM: functions/html/dsum.html
+✅ DURATION: functions/html/duration.html
+✅ DVAR: functions/html/dvar.html
+✅ DVARP: functions/html/dvarp.html
+✅ EDATE: functions/html/edate.html
+✅ EFFECT: functions/html/effect.html
+✅ ENCODEURL (2013): functions/html/encodeurl.html
+✅ EOMONTH: functions/html/eomonth.html
+✅ ERF: functions/html/erf.html
+✅ ERF.PRECISE (2010): functions/html/erf.precise.html
+✅ ERFC: functions/html/erfc.html
+✅ ERFC.PRECISE (2010): functions/html/erfc.precise.html
+✅ ERROR.TYPE: functions/html/error.type.html
+✅ EUROCONVERT: functions/html/euroconvert.html
+✅ EVEN: functions/html/even.html
+✅ EXACT: functions/html/exact.html
+✅ EXP: functions/html/exp.html
+✅ EXPAND (2024): functions/html/expand.html
+✅ EXPON.DIST (2010): functions/html/expon.dist.html
+✅ EXPONDIST: functions/html/expondist.html
+✅ F.DIST (2010): functions/html/f.dist.html
+✅ F.DIST.RT (2010): functions/html/f.dist.rt.html
+✅ F.INV (2010): functions/html/f.inv.html
+✅ F.INV.RT (2010): functions/html/f.inv.rt.html
+✅ F.TEST (2010): functions/html/f.test.html
+✅ FACT: functions/html/fact.html
+✅ FACTDOUBLE: functions/html/factdouble.html
+✅ FALSE: functions/html/false.html
+✅ FDIST: functions/html/fdist.html
+✅ FILTER (2021): functions/html/filter.html
+✅ FILTERXML (2013): functions/html/filterxml.html
+✅ FIND, FINDB: functions/html/find_findb.html
+✅ FINV: functions/html/finv.html
+✅ FISHER: functions/html/fisher.html
+✅ FISHERINV: functions/html/fisherinv.html
+✅ FIXED: functions/html/fixed.html
+✅ FLOOR: functions/html/floor.html
+✅ FLOOR.MATH (2013): functions/html/floor.math.html
+✅ FLOOR.PRECISE: functions/html/floor.precise.html
+✅ FORECAST: functions/html/forecast.html
+✅ FORECAST.ETS (2016): functions/html/forecast.ets.html
+✅ FORECAST.ETS.CONFINT (2016): functions/html/forecast.ets.confint.html
+✅ FORECAST.ETS.SEASONALITY (2016): functions/html/forecast.ets.seasonality.html
+✅ FORECAST.ETS.STAT (2016): functions/html/forecast.ets.stat.html
+✅ FORECAST.LINEAR (2016): functions/html/forecast.linear.html
+✅ FORMULATEXT (2013): functions/html/formulatext.html
+✅ FREQUENCY: functions/html/frequency.html
+✅ FTEST: functions/html/ftest.html
+✅ FV: functions/html/fv.html
+✅ FVSCHEDULE: functions/html/fvschedule.html
+✅ GAMMA (2013): functions/html/gamma.html
+✅ GAMMA.DIST (2010): functions/html/gamma.dist.html
+✅ GAMMA.INV (2010): functions/html/gamma.inv.html
+✅ GAMMADIST: functions/html/gammadist.html
+✅ GAMMAINV: functions/html/gammainv.html
+✅ GAMMALN: functions/html/gammaln.html
+✅ GAMMALN.PRECISE (2010): functions/html/gammaln.precise.html
+✅ GAUSS (2013): functions/html/gauss.html
+✅ GCD: functions/html/gcd.html
+✅ GEOMEAN: functions/html/geomean.html
+✅ GESTEP: functions/html/gestep.html
+✅ GETPIVOTDATA: functions/html/getpivotdata.html
+✅ GROUPBY (Microsoft 365): functions/html/groupby_microsoft_365_.html
+✅ GROWTH: functions/html/growth.html
+✅ HARMEAN: functions/html/harmean.html
+✅ HEX2BIN: functions/html/hex2bin.html
+✅ HEX2DEC: functions/html/hex2dec.html
+✅ HEX2OCT: functions/html/hex2oct.html
+✅ HLOOKUP: functions/html/hlookup.html
+✅ HOUR: functions/html/hour.html
+✅ HSTACK (2024): functions/html/hstack.html
+✅ HYPERLINK: functions/html/hyperlink.html
+✅ HYPGEOM.DIST: functions/html/hypgeom.dist.html
+✅ HYPGEOMDIST: functions/html/hypgeomdist.html
+✅ IF: functions/html/if.html
+✅ IFERROR: functions/html/iferror.html
+✅ IFNA (2013): functions/html/ifna.html
+✅ IFS (2019): functions/html/ifs.html
+✅ IMABS: functions/html/imabs.html
+✅ IMAGE (2024): functions/html/image.html
+✅ IMAGINARY: functions/html/imaginary.html
+✅ IMARGUMENT: functions/html/imargument.html
+✅ IMCONJUGATE: functions/html/imconjugate.html
+✅ IMCOS: functions/html/imcos.html
+✅ IMCOSH (2013): functions/html/imcosh.html
+✅ IMCOT (2013): functions/html/imcot.html
+✅ IMCSC (2013): functions/html/imcsc.html
+✅ IMCSCH (2013): functions/html/imcsch.html
+✅ IMDIV: functions/html/imdiv.html
+✅ IMEXP: functions/html/imexp.html
+✅ IMLN: functions/html/imln.html
+✅ IMLOG10: functions/html/imlog10.html
+✅ IMLOG2: functions/html/imlog2.html
+✅ IMPOWER: functions/html/impower.html
+✅ IMPRODUCT: functions/html/improduct.html
+✅ IMREAL: functions/html/imreal.html
+✅ IMSEC (2013): functions/html/imsec.html
+✅ IMSECH (2013): functions/html/imsech.html
+✅ IMSIN: functions/html/imsin.html
+✅ IMSINH (2013): functions/html/imsinh.html
+✅ IMSQRT: functions/html/imsqrt.html
+✅ IMSUB: functions/html/imsub.html
+✅ IMSUM: functions/html/imsum.html
+✅ IMTAN (2013): functions/html/imtan.html
+✅ INDEX: functions/html/index.html
+✅ INDIRECT: functions/html/indirect.html
+✅ INFO: functions/html/info.html
+✅ INT: functions/html/int.html
+✅ INTERCEPT: functions/html/intercept.html
+✅ INTRATE: functions/html/intrate.html
+✅ IPMT: functions/html/ipmt.html
+✅ IRR: functions/html/irr.html
+✅ ISBLANK: functions/html/isblank.html
+✅ ISERR: functions/html/iserr.html
+✅ ISERROR: functions/html/iserror.html
+✅ ISEVEN: functions/html/iseven.html
+✅ ISFORMULA (2013): functions/html/isformula.html
+✅ ISLOGICAL: functions/html/islogical.html
+✅ ISNA: functions/html/isna.html
+✅ ISNONTEXT: functions/html/isnontext.html
+✅ ISNUMBER: functions/html/isnumber.html
+✅ ISO.CEILING (2013): functions/html/iso.ceiling.html
+✅ ISODD: functions/html/isodd.html
+✅ ISOMITTED (2024): functions/html/isomitted.html
+✅ ISOWEEKNUM (2013): functions/html/isoweeknum.html
+✅ ISPMT: functions/html/ispmt.html
+✅ ISREF: functions/html/isref.html
+✅ ISTEXT: functions/html/istext.html
+✅ JIS: functions/html/jis.html
+✅ KURT: functions/html/kurt.html
+✅ LAMBDA (2024): functions/html/lambda.html
+✅ LARGE: functions/html/large.html
+✅ LCM: functions/html/lcm.html
+✅ LEFT, LEFTB: functions/html/left_leftb.html
+✅ LEN, LENB: functions/html/len_lenb.html
+✅ LET (2021): functions/html/let.html
+✅ LINEST: functions/html/linest.html
+✅ LN: functions/html/ln.html
+✅ LOG: functions/html/log.html
+✅ LOG10: functions/html/log10.html
+✅ LOGEST: functions/html/logest.html
+✅ LOGINV: functions/html/loginv.html
+✅ LOGNORM.DIST (2010): functions/html/lognorm.dist.html
+✅ LOGNORM.INV (2010): functions/html/lognorm.inv.html
+✅ LOGNORMDIST: functions/html/lognormdist.html
+✅ LOOKUP: functions/html/lookup.html
+✅ LOWER: functions/html/lower.html
+✅ MAKEARRAY (2024): functions/html/makearray.html
+✅ MAP (2024): functions/html/map.html
+✅ MATCH: functions/html/match.html
+✅ MAX: functions/html/max.html
+✅ MAXA: functions/html/maxa.html
+✅ MAXIFS (2019): functions/html/maxifs.html
+✅ MDETERM: functions/html/mdeterm.html
+✅ MDURATION: functions/html/mduration.html
+✅ MEDIAN: functions/html/median.html
+✅ MID, MIDB: functions/html/mid_midb.html
+✅ MIN: functions/html/min.html
+✅ MINA: functions/html/mina.html
+✅ MINIFS (2019): functions/html/minifs.html
+✅ MINUTE: functions/html/minute.html
+✅ MINVERSE: functions/html/minverse.html
+✅ MIRR: functions/html/mirr.html
+✅ MMULT: functions/html/mmult.html
+✅ MOD: functions/html/mod.html
+✅ MODE: functions/html/mode.html
+✅ MODE.MULT (2010): functions/html/mode.mult.html
+✅ MODE.SNGL (2010): functions/html/mode.sngl.html
+✅ MONTH: functions/html/month.html
+✅ MROUND: functions/html/mround.html
+✅ MULTINOMIAL: functions/html/multinomial.html
+✅ MUNIT (2013): functions/html/munit.html
+✅ N: functions/html/n.html
+✅ NA: functions/html/na.html
+✅ NEGBINOM.DIST (2010): functions/html/negbinom.dist.html
+✅ NEGBINOMDIST: functions/html/negbinomdist.html
+✅ NETWORKDAYS: functions/html/networkdays.html
+✅ NETWORKDAYS.INTL (2010): functions/html/networkdays.intl.html
+✅ NOMINAL: functions/html/nominal.html
+✅ NORM.DIST (2010): functions/html/norm.dist.html
+✅ NORM.INV (2010): functions/html/norm.inv.html
+✅ NORM.S.DIST (2010): functions/html/norm.s.dist.html
+✅ NORM.S.INV (2010): functions/html/norm.s.inv.html
+✅ NORMDIST: functions/html/normdist.html
+✅ NORMINV: functions/html/norminv.html
+✅ NORMSDIST: functions/html/normsdist.html
+✅ NORMSINV: functions/html/normsinv.html
+✅ NOT: functions/html/not.html
+✅ NOW: functions/html/now.html
+✅ NPER: functions/html/nper.html
+✅ NPV: functions/html/npv.html
+✅ NUMBERVALUE (2013): functions/html/numbervalue.html
+✅ OCT2BIN: functions/html/oct2bin.html
+✅ OCT2DEC: functions/html/oct2dec.html
+✅ OCT2HEX: functions/html/oct2hex.html
+✅ ODD: functions/html/odd.html
+✅ ODDFPRICE: functions/html/oddfprice.html
+✅ ODDFYIELD: functions/html/oddfyield.html
+✅ ODDLPRICE: functions/html/oddlprice.html
+✅ ODDLYIELD: functions/html/oddlyield.html
+✅ OFFSET: functions/html/offset.html
+✅ OR: functions/html/or.html
+✅ PDURATION (2013): functions/html/pduration.html
+✅ PEARSON: functions/html/pearson.html
+✅ PERCENTILE: functions/html/percentile.html
+✅ PERCENTILE.EXC (2010): functions/html/percentile.exc.html
+✅ PERCENTILE.INC (2010): functions/html/percentile.inc.html
+✅ PERCENTOF (Microsoft 365)​​​​​​​: functions/html/percentof_microsoft_365_.html
+✅ PERCENTRANK: functions/html/percentrank.html
+✅ PERCENTRANK.EXC (2010): functions/html/percentrank.exc.html
+✅ PERCENTRANK.INC (2010): functions/html/percentrank.inc.html
+✅ PERMUT: functions/html/permut.html
+✅ PERMUTATIONA (2013): functions/html/permutationa.html
+✅ PHI (2013): functions/html/phi.html
+✅ PHONETIC: functions/html/phonetic.html
+✅ PI: functions/html/pi.html
+✅ PIVOTBY (Microsoft 365): functions/html/pivotby_microsoft_365_.html
+✅ PMT: functions/html/pmt.html
+✅ POISSON: functions/html/poisson.html
+✅ POISSON.DIST (2010): functions/html/poisson.dist.html
+✅ POWER: functions/html/power.html
+✅ PPMT: functions/html/ppmt.html
+✅ PRICE: functions/html/price.html
+✅ PRICEDISC: functions/html/pricedisc.html
+✅ PRICEMAT: functions/html/pricemat.html
+✅ PROB: functions/html/prob.html
+✅ PRODUCT: functions/html/product.html
+✅ PROPER: functions/html/proper.html
+✅ PV: functions/html/pv.html
+✅ QUARTILE: functions/html/quartile.html
+✅ QUARTILE.EXC (2010): functions/html/quartile.exc.html
+✅ QUARTILE.INC (2010): functions/html/quartile.inc.html
+✅ QUOTIENT: functions/html/quotient.html
+✅ RADIANS: functions/html/radians.html
+✅ RAND: functions/html/rand.html
+✅ RANDARRAY (2021): functions/html/randarray.html
+✅ RANDBETWEEN: functions/html/randbetween.html
+✅ RANK: functions/html/rank.html
+✅ RANK.AVG (2010): functions/html/rank.avg.html
+✅ RANK.EQ (2010): functions/html/rank.eq.html
+✅ RATE: functions/html/rate.html
+✅ RECEIVED: functions/html/received.html
+✅ REDUCE (2024): functions/html/reduce.html
+✅ REGEXEXTRACT (Microsoft 365): functions/html/regexextract_microsoft_365_.html
+✅ REGEXREPLACE (Microsoft 365): functions/html/regexreplace_microsoft_365_.html
+✅ REGEXTEST (Microsoft 365)​​​​​​​: functions/html/regextest_microsoft_365_.html
+✅ REGISTER.ID: functions/html/register.id.html
+✅ REPLACE, REPLACEB: functions/html/replace_replaceb.html
+✅ REPT: functions/html/rept.html
+✅ RIGHT, RIGHTB: functions/html/right_rightb.html
+✅ ROMAN: functions/html/roman.html
+✅ ROUND: functions/html/round.html
+✅ ROUNDDOWN: functions/html/rounddown.html
+✅ ROUNDUP: functions/html/roundup.html
+✅ ROW: functions/html/row.html
+✅ ROWS: functions/html/rows.html
+✅ RRI (2013): functions/html/rri.html
+✅ RSQ: functions/html/rsq.html
+✅ RTD: functions/html/rtd.html
+✅ SCAN (2024): functions/html/scan.html
+✅ SEARCH, SEARCHB: functions/html/search_searchb.html
+✅ SEC (2013): functions/html/sec.html
+✅ SECH (2013): functions/html/sech.html
+✅ SECOND: functions/html/second.html
+✅ SEQUENCE (2021): functions/html/sequence.html
+✅ SERIESSUM: functions/html/seriessum.html
+✅ SHEET (2013): functions/html/sheet.html
+✅ SHEETS (2013): functions/html/sheets.html
+✅ SIGN: functions/html/sign.html
+✅ SIN: functions/html/sin.html
+✅ SINH: functions/html/sinh.html
+✅ SKEW: functions/html/skew.html
+✅ SKEW.P (2013): functions/html/skew.p.html
+✅ SLN: functions/html/sln.html
+✅ SLOPE: functions/html/slope.html
+✅ SMALL: functions/html/small.html
+✅ SORT (2021): functions/html/sort.html
+✅ SORTBY (2021): functions/html/sortby.html
+✅ SQRT: functions/html/sqrt.html
+✅ SQRTPI: functions/html/sqrtpi.html
+✅ STANDARDIZE: functions/html/standardize.html
+✅ STDEV: functions/html/stdev.html
+✅ STDEV.P (2010): functions/html/stdev.p.html
+✅ STDEV.S (2010): functions/html/stdev.s.html
+✅ STDEVA: functions/html/stdeva.html
+✅ STDEVP: functions/html/stdevp.html
+✅ STDEVPA: functions/html/stdevpa.html
+✅ STEYX: functions/html/steyx.html
+✅ STOCKHISTORY: functions/html/stockhistory.html
+✅ STOCKHISTORY (Microsoft 365): functions/html/stockhistory_microsoft_365_.html
+✅ SUBSTITUTE: functions/html/substitute.html
+✅ SUBTOTAL: functions/html/subtotal.html
+✅ SUM: functions/html/sum.html
+✅ SUMIF: functions/html/sumif.html
+✅ SUMIFS: functions/html/sumifs.html
+✅ SUMPRODUCT: functions/html/sumproduct.html
+✅ SUMSQ: functions/html/sumsq.html
+✅ SUMX2MY2: functions/html/sumx2my2.html
+✅ SUMX2PY2: functions/html/sumx2py2.html
+✅ SUMXMY2: functions/html/sumxmy2.html
+✅ SWITCH (2019): functions/html/switch.html
+✅ SYD: functions/html/syd.html
+✅ T: functions/html/t.html
+✅ T.DIST (2010): functions/html/t.dist.html
+✅ T.DIST.2T (2010): functions/html/t.dist.2t.html
+✅ T.DIST.RT (2010): functions/html/t.dist.rt.html
+✅ T.INV (2010): functions/html/t.inv.html
+✅ T.INV.2T (2010): functions/html/t.inv.2t.html
+✅ T.TEST (2010): functions/html/t.test.html
+✅ TAKE (2024): functions/html/take.html
+✅ TAN: functions/html/tan.html
+✅ TANH: functions/html/tanh.html
+✅ TBILLEQ: functions/html/tbilleq.html
+✅ TBILLPRICE: functions/html/tbillprice.html
+✅ TBILLYIELD: functions/html/tbillyield.html
+✅ TDIST: functions/html/tdist.html
+✅ TEXT: functions/html/text.html
+✅ TEXTAFTER (2024): functions/html/textafter.html
+✅ TEXTBEFORE (2024): functions/html/textbefore.html
+✅ TEXTJOIN (2019): functions/html/textjoin.html
+✅ TEXTSPLIT (2024): functions/html/textsplit.html
+✅ TIME: functions/html/time.html
+✅ TIMEVALUE: functions/html/timevalue.html
+✅ TINV: functions/html/tinv.html
+✅ TOCOL (2024): functions/html/tocol.html
+✅ TODAY: functions/html/today.html
+✅ TOROW (2024): functions/html/torow.html
+✅ TRANSLATE (Microsoft 365)​​​​​​​: functions/html/translate_microsoft_365_.html
+✅ TRANSPOSE: functions/html/transpose.html
+✅ TREND: functions/html/trend.html
+✅ TRIM: functions/html/trim.html
+✅ TRIMMEAN: functions/html/trimmean.html
+✅ TRIMRANGE (Microsoft 365): functions/html/trimrange_microsoft_365_.html
+✅ TRUE: functions/html/true.html
+✅ TRUNC: functions/html/trunc.html
+✅ TTEST: functions/html/ttest.html
+✅ TYPE: functions/html/type.html
+✅ UNICHAR (2013): functions/html/unichar.html
+✅ UNICODE (2013): functions/html/unicode.html
+✅ UNIQUE (2021): functions/html/unique.html
+✅ UPPER: functions/html/upper.html
+✅ VALUE: functions/html/value.html
+✅ VALUETOTEXT (2021)​​​​​​​: functions/html/valuetotext_.html
+✅ VAR: functions/html/var.html
+✅ VAR.P (2010): functions/html/var.p.html
+✅ VAR.S (2010): functions/html/var.s.html
+✅ VARA: functions/html/vara.html
+✅ VARP: functions/html/varp.html
+✅ VARPA: functions/html/varpa.html
+✅ VDB: functions/html/vdb.html
+✅ VLOOKUP: functions/html/vlookup.html
+✅ VSTACK (2024): functions/html/vstack.html
+✅ WEBSERVICE (2013): functions/html/webservice.html
+✅ WEEKDAY: functions/html/weekday.html
+✅ WEEKNUM: functions/html/weeknum.html
+✅ WEIBULL: functions/html/weibull.html
+✅ WEIBULL.DIST (2010): functions/html/weibull.dist.html
+✅ WORKDAY: functions/html/workday.html
+✅ WORKDAY.INTL (2010): functions/html/workday.intl.html
+✅ WRAPCOLS (2024): functions/html/wrapcols.html
+✅ WRAPROWS (2024): functions/html/wraprows.html
+✅ XIRR: functions/html/xirr.html
+✅ XLOOKUP (2021): functions/html/xlookup.html
+✅ XMATCH (2021): functions/html/xmatch.html
+✅ XNPV: functions/html/xnpv.html
+✅ XOR (2013): functions/html/xor.html
+✅ YEAR: functions/html/year.html
+✅ YEARFRAC: functions/html/yearfrac.html
+✅ YIELD: functions/html/yield.html
+✅ YIELDDISC: functions/html/yielddisc.html
+✅ YIELDMAT: functions/html/yieldmat.html
+✅ Z.TEST (2010): functions/html/z.test.html
+✅ ZTEST: functions/html/ztest.html

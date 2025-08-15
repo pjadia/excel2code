@@ -1,0 +1,506 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpTip">
+     Tip:
+    </b>
+    Try using the new
+    <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/xmatch-function-d966da31-7a6b-4a13-a1c6-5a33ed6a0312">
+     XMATCH
+    </a>
+    function, an improved version of MATCH that works in any direction and returns exact matches by default, making it easier and more convenient to use than its predecessor.
+   </p>
+  </div>
+  <p>
+   The
+   <b class="ocpLegacyBold">
+    MATCH
+   </b>
+   function searches for a specified item in a range of cells, and then returns the relative position of that item in the range. For example, if the range A1:A3 contains the values 5, 25, and 38, then the formula
+   <b class="ocpLiteral">
+    =MATCH(25,A1:A3,0)
+   </b>
+   returns the number 2, because 25 is the second item in the range.
+  </p>
+  <div class="ocpVideo" data-channel="ALTENUS_MS_OFFICE" data-llcc="en-us" data-player="ocvideo" data-videoid="RWeYX9" data-videotitle="Video: Using the MATCH function in Excel" data-videotype="single" id="ocpVideo1">
+   <universal-media-player options='{"partnerName":"SupportService","autoplay":false,"reporting":false,"language":"en-us","title":"Video: Using the MATCH function in Excel","poster":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-6e0b0da8-546f-4419-bb4a-37be88dc07bb/thumbnail_w800.png","sources":[{"type":"MP4","quality":"HQ","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-6e0b0da8-546f-4419-bb4a-37be88dc07bb/video_1001_1730168977367_1920x1080.mp4"},{"type":"MP4","quality":"HD","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-6e0b0da8-546f-4419-bb4a-37be88dc07bb/video_1001_1730168977367_1280x720.mp4"},{"type":"MP4","quality":"LO","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-6e0b0da8-546f-4419-bb4a-37be88dc07bb/video_1001_1730168977367_640x360.mp4"},{"type":"DASH","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-6e0b0da8-546f-4419-bb4a-37be88dc07bb/video_1001_1730168977367.mpd"},{"type":"HLS","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-6e0b0da8-546f-4419-bb4a-37be88dc07bb/video_1001_1730168977367_master.m3u8"}],"ccFiles":[{"url":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-6e0b0da8-546f-4419-bb4a-37be88dc07bb/en_us_en-us.vtt","locale":"en-us","ccType":"VTT"}]}'>
+    <picture>
+     <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=avif&amp;w=320 320w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=avif&amp;w=480 480w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=avif&amp;w=640 640w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=avif&amp;w=800 800w" type="image/avif"/>
+     <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=webp&amp;w=320 320w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=webp&amp;w=480 480w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=webp&amp;w=640 640w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=webp&amp;w=800 800w" type="image/webp"/>
+     <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=jpeg&amp;w=320 320w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=jpeg&amp;w=480 480w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=jpeg&amp;w=640 640w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+     <img alt="Your browser does not support video. Install Microsoft Silverlight, Adobe Flash Player, or Internet Explorer 9." class="fluentImage" loading="lazy" src="/images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7" style="aspect-ratio: 960/540" width="960"/>
+    </picture>
+   </universal-media-player>
+  </div>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpTip">
+     Tip:
+    </b>
+    Use
+    <b class="ocpLegacyBold">
+     MATCH
+    </b>
+    instead of one of the
+    <b class="ocpLegacyBold">
+     LOOKUP
+    </b>
+    functions when you need the position of an item in a range instead of the item itself. For example, you might use the
+    <b class="ocpLegacyBold">
+     MATCH
+    </b>
+    function to provide a value for the
+    <b class="ocpLegacyBold">
+     <i class="ocpItalic">
+      row_num
+     </i>
+    </b>
+    argument of the
+    <b class="ocpLegacyBold">
+     INDEX
+    </b>
+    function.
+   </p>
+  </div>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Syntax
+  </h2>
+  <p>
+   MATCH(lookup_value, lookup_array, [match_type])
+  </p>
+  <p>
+   The MATCH function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      lookup_value
+     </b>
+     Required. The value that you want to match in
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       lookup_array
+      </i>
+     </b>
+     . For example, when you look up someone's number in a telephone book, you are using the person's name as the lookup value, but the telephone number is the value you want.
+     <br aria-hidden="true"/>
+     <br aria-hidden="true"/>
+     The
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       lookup_value
+      </i>
+     </b>
+     argument can be a value (number, text, or logical value) or a cell reference to a number, text, or logical value.
+     <br aria-hidden="true"/>
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      lookup_array
+     </b>
+     Required. The range of cells being searched.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      match_type
+     </b>
+     Optional. The number -1, 0, or 1. The
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       match_type
+      </i>
+     </b>
+     argument specifies how Excel matches
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       lookup_value
+      </i>
+     </b>
+     with values in
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       lookup_array
+      </i>
+     </b>
+     . The default value for this argument is 1.
+     <br aria-hidden="true"/>
+     <br aria-hidden="true"/>
+     The following table describes how the function finds values based on the setting of the
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       match_type
+      </i>
+     </b>
+     argument.
+    </p>
+   </li>
+  </ul>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Match_type
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Behavior
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       1 or omitted
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        MATCH
+       </b>
+       finds the largest value that is less than or equal to
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         lookup_value
+        </i>
+       </b>
+       . The values in the
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         lookup_array
+        </i>
+       </b>
+       argument must be placed in ascending order, for example: ...-2, -1, 0, 1, 2, ..., A-Z, FALSE, TRUE.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       0
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        MATCH
+       </b>
+       finds the first value that is exactly equal to
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         lookup_value
+        </i>
+       </b>
+       . The values in the
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         lookup_array
+        </i>
+       </b>
+       argument can be in any order.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       -1
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        MATCH
+       </b>
+       finds the smallest value that is greater than or equal to
+       <b class="ocpLegacyBold">
+       </b>
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         lookup_value
+        </i>
+       </b>
+       . The values in the
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         lookup_array
+        </i>
+       </b>
+       argument must be placed in descending order, for example: TRUE, FALSE, Z-A, ...2, 1, 0, -1, -2, ..., and so on.
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpLegacyBold">
+      MATCH
+     </b>
+     returns the position of the matched value within
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       lookup_array
+      </i>
+     </b>
+     , not the value itself. For example,
+     <b class="ocpLegacyBold">
+      MATCH("b",{"
+     </b>
+     <b class="ocpLegacyBold">
+      a","b","c
+     </b>
+     <b class="ocpLegacyBold">
+      "},0)
+     </b>
+     returns 2, which is the relative position of "b" within the array {"a","b","c"}.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpLegacyBold">
+      MATCH
+     </b>
+     does not distinguish between uppercase and lowercase letters when matching text values.
+    </p>
+   </li>
+   <li>
+    <p>
+     If
+     <b class="ocpLegacyBold">
+      MATCH
+     </b>
+     is unsuccessful in finding a match, it returns the #N/A error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       match_type
+      </i>
+     </b>
+     is 0 and
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       lookup_value
+      </i>
+     </b>
+     is a text string, you can use the wildcard characters — the question mark (
+     <b class="ocpLegacyBold">
+      ?
+     </b>
+     ) and asterisk (
+     <b class="ocpLegacyBold">
+      *
+     </b>
+     ) — in the
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       lookup_value
+      </i>
+     </b>
+     argument. A question mark matches any single character; an asterisk matches any sequence of characters. If you want to find an actual question mark or asterisk, type a tilde (
+     <b class="ocpLegacyBold">
+      ~
+     </b>
+     ) before the character.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection" data-bi-id="__example" id="__example">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Product
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Count
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       Bananas
+      </p>
+     </td>
+     <td>
+      <p>
+       25
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Oranges
+      </p>
+     </td>
+     <td>
+      <p>
+       38
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Apples
+      </p>
+     </td>
+     <td>
+      <p>
+       40
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Pears
+      </p>
+     </td>
+     <td>
+      <p>
+       41
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =MATCH(39,B2:B5,1)
+      </p>
+     </td>
+     <td>
+      <p>
+       Because there is not an exact match, the position of the next lowest value (38) in the range B2:B5 is returned.
+      </p>
+     </td>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =MATCH(41,B2:B5,0)
+      </p>
+     </td>
+     <td>
+      <p>
+       The position of the value 41 in the range B2:B5.
+      </p>
+     </td>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =MATCH(40,B2:B5,-1)
+      </p>
+     </td>
+     <td>
+      <p>
+       Returns an error because the values in the range B2:B5 are not in descending order.
+      </p>
+     </td>
+     <td>
+      <p>
+       #N/A
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+ <section class="ocpRelatedTopics">
+  <h3>
+  </h3>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/vlookup-function-0bbc8083-26fe-4963-8ab8-93a18ad188a1">
+    VLOOKUP function
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/index-function-a5dcf0dd-996d-40a4-a822-b56b061328bd">
+    INDEX function
+   </a>
+  </p>
+ </section>
+</article>

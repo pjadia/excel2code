@@ -1,0 +1,277 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    IRR
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Description
+  </h2>
+  <p>
+   Returns the internal rate of return for a series of cash flows represented by the numbers in values. These cash flows do not have to be even, as they would be for an annuity. However, the cash flows must occur at regular intervals, such as monthly or annually. The internal rate of return is the interest rate received for an investment consisting of payments (negative values) and income (positive values) that occur at regular periods.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <p>
+   IRR(values, [guess])
+  </p>
+  <p>
+   The IRR function syntax has the following arguments:
+  </p>
+  <p>
+   <b class="ocpRunInHead">
+    Values:
+   </b>
+   Required. An array or a reference to cells that contain numbers for which you want to calculate the internal rate of return.
+  </p>
+  <ul>
+   <li>
+    <p>
+     Values must contain at least one positive value and one negative value to calculate the internal rate of return.
+    </p>
+   </li>
+   <li>
+    <p>
+     IRR uses the order of values to interpret the order of cash flows. Be sure to enter your payment and income values in the sequence you want.
+    </p>
+   </li>
+   <li>
+    <p>
+     If an array or reference argument contains text, logical values, or empty cells, those values are ignored.
+    </p>
+   </li>
+  </ul>
+  <p>
+   <b class="ocpRunInHead">
+    Guess:
+   </b>
+   Optional. A number that you guess is close to the result of IRR.
+  </p>
+  <ul>
+   <li>
+    <p>
+     Microsoft Excel uses an iterative technique for calculating IRR. Starting with guess, IRR cycles through the calculation until the result is accurate within 0.00001 percent. If IRR can't find a result that works after 20 tries, the #NUM! error value is returned.
+    </p>
+   </li>
+   <li>
+    <p>
+     In most cases you do not need to provide guess for the IRR calculation. If guess is omitted, it is assumed to be 0.1 (10 percent).
+    </p>
+   </li>
+   <li>
+    <p>
+     If IRR gives the #NUM! error value, or if the result is not close to what you expected, try again with a different value for guess.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Remarks
+  </h2>
+  <p>
+   IRR is closely related to NPV, the net present value function. The rate of return calculated by IRR is the interest rate corresponding to a 0 (zero) net present value. The following formula demonstrates how NPV and IRR are related:
+  </p>
+  <p>
+   NPV(IRR(A2:A7),A2:A7) equals 1.79E-09 [Within the accuracy of the IRR calculation, the value is effectively 0 (zero).]
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </th>
+     <th>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       -$70,000
+      </p>
+     </td>
+     <td>
+      <p>
+       Initial cost of a business
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       $12,000
+      </p>
+     </td>
+     <td>
+      <p>
+       Net income for the first year
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       $15,000
+      </p>
+     </td>
+     <td>
+      <p>
+       Net income for the second year
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       $18,000
+      </p>
+     </td>
+     <td>
+      <p>
+       Net income for the third year
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       $21,000
+      </p>
+     </td>
+     <td>
+      <p>
+       Net income for the fourth year
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       $26,000
+      </p>
+     </td>
+     <td>
+      <p>
+       Net income for the fifth year
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =IRR(A2:A6)
+      </p>
+     </td>
+     <td>
+      <p>
+       Investment's internal rate of return after four years
+      </p>
+     </td>
+     <td>
+      <p>
+       -2.1%
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =IRR(A2:A7)
+      </p>
+     </td>
+     <td>
+      <p>
+       Internal rate of return after five years
+      </p>
+     </td>
+     <td>
+      <p>
+       8.7%
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =IRR(A2:A4,-10%)
+      </p>
+     </td>
+     <td>
+      <p>
+       To calculate the internal rate of return after two years, you need to include a guess (in this example, -10%).
+      </p>
+     </td>
+     <td>
+      <p>
+       -44.4%
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

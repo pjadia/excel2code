@@ -1,0 +1,191 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    COMPLEX
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Converts real and imaginary coefficients into a complex number of the form x + yi or x + yj.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   COMPLEX(real_num, i_num, [suffix])
+  </p>
+  <p>
+   The COMPLEX function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Real_num
+     </b>
+     Required. The real coefficient of the complex number.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      I_num
+     </b>
+     Required. The imaginary coefficient of the complex number.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Suffix
+     </b>
+     Optional. The suffix for the imaginary component of the complex number. If omitted, suffix is assumed to be "i".
+    </p>
+   </li>
+  </ul>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpNote">
+     Note:
+    </b>
+    All complex number functions accept "i" and "j" for suffix, but neither "I" nor "J". Using uppercase results in the #VALUE! error value. All functions that accept two or more complex numbers require that all suffixes match.
+   </p>
+  </div>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If real_num is nonnumeric, COMPLEX returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If i_num is nonnumeric, COMPLEX returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If suffix is neither "i" nor "j", COMPLEX returns the #VALUE! error value.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =COMPLEX(3,4)
+      </p>
+     </td>
+     <td>
+      <p>
+       Complex number with 3 and 4 as the real and imaginary coefficients
+      </p>
+     </td>
+     <td>
+      <p>
+       3+4i
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =COMPLEX(3,4,"j")
+      </p>
+     </td>
+     <td>
+      <p>
+       Complex number with 3 and 4 as the real and imaginary coefficients, and j as the suffix
+      </p>
+     </td>
+     <td>
+      <p>
+       3+4j
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =COMPLEX(0,1)
+      </p>
+     </td>
+     <td>
+      <p>
+       Complex number with 0 and 1 as the real and imaginary coefficients
+      </p>
+     </td>
+     <td>
+      <p>
+       i
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =COMPLEX(1,0)
+      </p>
+     </td>
+     <td>
+      <p>
+       Complex number with 1 and 0 as the real and imaginary coefficients
+      </p>
+     </td>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

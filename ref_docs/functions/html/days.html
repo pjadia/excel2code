@@ -1,0 +1,202 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p id="__goback">
+   This article describes the formula syntax and usage of the
+   <b class="ocpUI">
+    DAYS
+   </b>
+   function in Microsoft Excel. For information about the
+   <b class="ocpLegacyBold">
+    DAY
+   </b>
+   function, see
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/day-function-8a7d1cbb-6c7d-4ba1-8aea-25c134d03101">
+    DAY function
+   </a>
+   .
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Description
+  </h2>
+  <p>
+   Returns the number of days between two dates.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <p>
+   DAYS(end_date, start_date)
+  </p>
+  <p>
+   The DAYS function syntax has the following arguments.
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      End_date
+     </b>
+     Required. Start_date and End_date are the two dates between which you want to know the number of days.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Start_date
+     </b>
+     Required. Start_date and End_date are the two dates between which you want to know the number of days.
+    </p>
+   </li>
+  </ul>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpNote">
+     Note:
+    </b>
+    Excel stores dates as sequential serial numbers so that they can be used in calculations. By default, Jan 1, 1900 is serial number 1, and January 1, 2008 is serial number 39448 because it is 39447 days after January 1, 1900.
+   </p>
+  </div>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If both date arguments are numbers, DAYS uses EndDate–StartDate to calculate the number of days in between both dates.
+    </p>
+   </li>
+   <li>
+    <p>
+     If either one of the date arguments is text, that argument is treated as DATEVALUE(date_text) and returns an integer date instead of a time component.
+    </p>
+   </li>
+   <li>
+    <p>
+     If date arguments are numeric values that fall outside the range of valid dates, DAYS returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If date arguments are strings that cannot be parsed as valid dates, DAYS returns the #VALUE! error value.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </th>
+     <th>
+     </th>
+     <th>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       31-DEC-2021
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1-JAN-2021
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =DAYS("15-MAR-2021","1-FEB-2021")
+      </p>
+     </td>
+     <td>
+      <p>
+       Finds the number of days between the end date (15-MAR-2021) and start date (1-FEB-2021). When you enter a date directly in the function, you need to enclose it in quotation marks. Result is 42.
+      </p>
+     </td>
+     <td>
+      <p>
+       42
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =DAYS(A2,A3)
+      </p>
+     </td>
+     <td>
+      <p>
+       Finds the number of days between the end date in A2 and the start date in A3 (364).
+      </p>
+     </td>
+     <td>
+      <p>
+       364
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+   <a class="ocpTopOfPage" data-bi-type="anchor" href="#">
+    Top of Page
+   </a>
+  </p>
+ </section>
+</article>

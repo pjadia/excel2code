@@ -1,0 +1,269 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    CUBEKPIMEMBER
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Returns a key performance indicator (KPI) property and displays the KPI name in the cell. A KPI is a quantifiable measurement, such as monthly gross profit or quarterly employee turnover, that is used to monitor an organization's performance.
+  </p>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpNote">
+     Note:
+    </b>
+    The CUBEKPIMEMBER function is supported only when the workbook is connected to a Microsoft SQL Server 2005 Analysis Services or later data source.
+   </p>
+  </div>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   CUBEKPIMEMBER(connection, kpi_name, kpi_property, [caption])
+  </p>
+  <p>
+   The CUBEKPIMEMBER function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Connection
+     </b>
+     Required. A text string of the name of the connection to the cube.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Kpi_name
+     </b>
+     Required. A text string of the name of the KPI in the cube.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Kpi_property
+     </b>
+     Required. The KPI component returned and can be one of the following:
+    </p>
+   </li>
+  </ul>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Integer
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Enumerated constant
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+      <p>
+       KPIValue
+      </p>
+     </td>
+     <td>
+      <p>
+       The actual value
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+     <td>
+      <p>
+       KPIGoal
+      </p>
+     </td>
+     <td>
+      <p>
+       A target value
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+     <td>
+      <p>
+       KPIStatus
+      </p>
+     </td>
+     <td>
+      <p>
+       The state of the KPI at a specific moment in time
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+     <td>
+      <p>
+       KPITrend
+      </p>
+     </td>
+     <td>
+      <p>
+       A measure of the value over time
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       5
+      </p>
+     </td>
+     <td>
+      <p>
+       KPIWeight
+      </p>
+     </td>
+     <td>
+      <p>
+       A relative importance assigned to the KPI
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       6
+      </p>
+     </td>
+     <td>
+      <p>
+       KPICurrentTimeMember
+      </p>
+     </td>
+     <td>
+      <p>
+       A temporal context for the KPI
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <ul>
+   <li>
+    <p>
+     If you specify KPIValue for kpi_property, only kpi_name is displayed in the cell.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Caption
+     </b>
+     Optional. An alternative text string that is displayed in the cell instead of kpi_name and kpi_property.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     When the CUBEKPIMEMBER function evaluates, it temporarily displays a "#GETTING_DATA…" message in the cell before all of the data is retrieved.
+    </p>
+   </li>
+   <li>
+    <p>
+     To use the KPI in a calculation, specify the CUBEKPIMEMBER function as a member_expression argument in the CUBEVALUE function.
+    </p>
+   </li>
+   <li>
+    <p>
+     If the connection name is not a valid workbook connection that is stored in the workbook, CUBEKPIMEMBER returns a #NAME? error value. If the Online Analytical Processing (OLAP) server is not running, not available, or returns an error message, CUBEKPIMEMBER returns a #NAME? error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     CUBEKPIMEMBER returns a #N/A error value when kpi_name or kpi_property is invalid.
+    </p>
+   </li>
+   <li>
+    <p>
+     CUBEKPIMEMBER may return a #N/A error value if you reference a session-based object, such as a calculated member or named set, in a PivotTable when sharing a connection, and that PivotTable is deleted or you convert the PivotTable to formulas. (On the
+     <b class="ocpUI">
+      Options
+     </b>
+     tab, in the
+     <b class="ocpUI">
+      Tools
+     </b>
+     group, click
+     <b class="ocpUI">
+      OLAP Tools
+     </b>
+     , and then click
+     <b class="ocpUI">
+      Convert to Formulas
+     </b>
+     .)
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Examples
+  </h2>
+  <p>
+   =CUBEKPIMEMBER("Sales","MySalesKPI",1)
+  </p>
+  <p id="__goback">
+   =CUBEKPIMEMBER("Sales","MySalesKPI", KPIGoal,"Sales KPI Goal")
+  </p>
+ </section>
+</article>

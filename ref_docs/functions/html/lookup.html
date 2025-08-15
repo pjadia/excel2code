@@ -1,0 +1,743 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p id="bmbacktotop">
+   Use LOOKUP, one of the
+   <a class="ocpInlineCrossLink" data-bi-type="anchor" href="/en-us/office/excel-functions-by-category-5f91f4e9-7b42-46d2-9bd1-63f26a86c0eb#__toc309306714">
+    lookup and reference functions
+   </a>
+   , when you need to look in a single row or column and find a value from the same position in a second row or column.
+  </p>
+  <p>
+   For example, let's say you know the part number for an auto part, but you don't know the price. You can use the LOOKUP function to return the price in cell H2 when you enter the auto part number in cell H1.
+  </p>
+  <p>
+   <picture>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/f20c029f-78f1-4fd2-b2ae-432062b856d2?format=avif&amp;w=320 320w,        /images/en-us/f20c029f-78f1-4fd2-b2ae-432062b856d2?format=avif&amp;w=480 480w,        /images/en-us/f20c029f-78f1-4fd2-b2ae-432062b856d2?format=avif&amp;w=640 640w,        /images/en-us/f20c029f-78f1-4fd2-b2ae-432062b856d2?format=avif&amp;w=800 800w" type="image/avif"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/f20c029f-78f1-4fd2-b2ae-432062b856d2?format=webp&amp;w=320 320w,        /images/en-us/f20c029f-78f1-4fd2-b2ae-432062b856d2?format=webp&amp;w=480 480w,        /images/en-us/f20c029f-78f1-4fd2-b2ae-432062b856d2?format=webp&amp;w=640 640w,        /images/en-us/f20c029f-78f1-4fd2-b2ae-432062b856d2?format=webp&amp;w=800 800w" type="image/webp"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/f20c029f-78f1-4fd2-b2ae-432062b856d2?format=jpeg&amp;w=320 320w,        /images/en-us/f20c029f-78f1-4fd2-b2ae-432062b856d2?format=jpeg&amp;w=480 480w,        /images/en-us/f20c029f-78f1-4fd2-b2ae-432062b856d2?format=jpeg&amp;w=640 640w,        /images/en-us/f20c029f-78f1-4fd2-b2ae-432062b856d2?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+    <img alt="An example of how you might use the LOOKUP function" class="fluentImage" loading="lazy" src="/images/en-us/f20c029f-78f1-4fd2-b2ae-432062b856d2" style="aspect-ratio: 924/142" width="924"/>
+   </picture>
+  </p>
+  <p>
+   Use the LOOKUP function to search one row or one column. In the above example, we're searching prices in column D.
+  </p>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpTip">
+     Tips:
+    </b>
+    Consider one of the newer lookup functions, depending on which version you are using.
+   </p>
+   <ul class="ocpAlertSectionListContainer">
+    <li>
+     <p>
+      Use
+      <b class="ocpLegacyBold">
+       <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/vlookup-function-0bbc8083-26fe-4963-8ab8-93a18ad188a1">
+        VLOOKUP
+       </a>
+      </b>
+      to search one row or column, or to search multiple rows and columns (like a table).
+      <b class="ocpLegacyBold">
+       It's a much improved version of LOOKUP
+      </b>
+      .
+      <b class="ocpLegacyBold">
+       <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/excel">
+        Watch this video about how to use VLOOKUP
+       </a>
+      </b>
+      .
+     </p>
+    </li>
+    <li>
+     <p>
+      If you are using Microsoft 365, use
+      <b class="ocpLegacyBold">
+       <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/xlookup-function-b7fd680e-6d10-43e6-84f9-88eae8bf5929">
+        XLOOKUP
+       </a>
+      </b>
+      - it's not only faster, it also lets you search in any direction (up, down, left, right).
+     </p>
+    </li>
+   </ul>
+  </div>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   There are two ways to use LOOKUP: Vector form and Array form
+  </h2>
+  <ul>
+   <li>
+    <p>
+     <a aria-label=" Vector form" class="ocpInlineLink" data-bi-type="anchor" href="#bmvector_form">
+      Vector form
+     </a>
+     : Use this form of LOOKUP to search one row or one column for a value. Use the vector form when you want to specify the range that contains the values that you want to match. For example, if you want to search for a value in column A, down to row 6.
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/2eb22f02-f2a4-458f-a7ab-9c57e49383e0?format=avif&amp;w=320 320w,        /images/en-us/2eb22f02-f2a4-458f-a7ab-9c57e49383e0?format=avif&amp;w=480 480w,        /images/en-us/2eb22f02-f2a4-458f-a7ab-9c57e49383e0?format=avif&amp;w=640 640w,        /images/en-us/2eb22f02-f2a4-458f-a7ab-9c57e49383e0?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/2eb22f02-f2a4-458f-a7ab-9c57e49383e0?format=webp&amp;w=320 320w,        /images/en-us/2eb22f02-f2a4-458f-a7ab-9c57e49383e0?format=webp&amp;w=480 480w,        /images/en-us/2eb22f02-f2a4-458f-a7ab-9c57e49383e0?format=webp&amp;w=640 640w,        /images/en-us/2eb22f02-f2a4-458f-a7ab-9c57e49383e0?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/2eb22f02-f2a4-458f-a7ab-9c57e49383e0?format=jpeg&amp;w=320 320w,        /images/en-us/2eb22f02-f2a4-458f-a7ab-9c57e49383e0?format=jpeg&amp;w=480 480w,        /images/en-us/2eb22f02-f2a4-458f-a7ab-9c57e49383e0?format=jpeg&amp;w=640 640w,        /images/en-us/2eb22f02-f2a4-458f-a7ab-9c57e49383e0?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Example of a vector" class="fluentImage" loading="lazy" src="/images/en-us/2eb22f02-f2a4-458f-a7ab-9c57e49383e0" style="aspect-ratio: 327/194" width="327"/>
+     </picture>
+    </p>
+   </li>
+   <li>
+    <p>
+     <a aria-label=" Array form" class="ocpInlineLink" data-bi-type="anchor" href="#bmarray_form">
+      Array form
+     </a>
+     : We strongly recommend using
+     <b class="ocpLegacyBold">
+      <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/vlookup-function-0bbc8083-26fe-4963-8ab8-93a18ad188a1">
+       VLOOKUP
+      </a>
+     </b>
+     or
+     <b class="ocpLegacyBold">
+      <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/hlookup-function-a3034eec-b719-4ba3-bb65-e1ad662ed95f">
+       HLOOKUP
+      </a>
+     </b>
+     instead of the array form.
+     <b class="ocpLegacyBold">
+      <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/excel">
+       Watch this video about using VLOOKUP
+      </a>
+     </b>
+     . The array form is provided for compatibility with other spreadsheet programs, but it's functionality is limited.
+    </p>
+    <p>
+     An array is a collection of values in rows and columns (like a table) that you want to search. For example, if you want to search columns A and B, down to row 6. LOOKUP will return the nearest match. To use the array form, your data must be sorted.
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/5dc93d05-b5ff-41de-855c-79d68f1d28dd?format=avif&amp;w=320 320w,        /images/en-us/5dc93d05-b5ff-41de-855c-79d68f1d28dd?format=avif&amp;w=480 480w,        /images/en-us/5dc93d05-b5ff-41de-855c-79d68f1d28dd?format=avif&amp;w=640 640w,        /images/en-us/5dc93d05-b5ff-41de-855c-79d68f1d28dd?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/5dc93d05-b5ff-41de-855c-79d68f1d28dd?format=webp&amp;w=320 320w,        /images/en-us/5dc93d05-b5ff-41de-855c-79d68f1d28dd?format=webp&amp;w=480 480w,        /images/en-us/5dc93d05-b5ff-41de-855c-79d68f1d28dd?format=webp&amp;w=640 640w,        /images/en-us/5dc93d05-b5ff-41de-855c-79d68f1d28dd?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/5dc93d05-b5ff-41de-855c-79d68f1d28dd?format=jpeg&amp;w=320 320w,        /images/en-us/5dc93d05-b5ff-41de-855c-79d68f1d28dd?format=jpeg&amp;w=480 480w,        /images/en-us/5dc93d05-b5ff-41de-855c-79d68f1d28dd?format=jpeg&amp;w=640 640w,        /images/en-us/5dc93d05-b5ff-41de-855c-79d68f1d28dd?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Example of a table, which is an array" class="fluentImage" loading="lazy" src="/images/en-us/5dc93d05-b5ff-41de-855c-79d68f1d28dd" style="aspect-ratio: 233/218" width="233"/>
+     </picture>
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection" data-bi-id="bmvector_form" id="bmvector_form">
+  <h2 class="" id="ID0EFH">
+   Vector form
+  </h2>
+  <p>
+   The vector form of
+   <b class="ocpLegacyBold">
+    LOOKUP
+   </b>
+   looks in a one-row or one-column range (known as a vector) for a value and returns a value from the same position in a second one-row or one-column range.
+  </p>
+  <section aria-labelledby="ID0EDDBH" class="ocpSection">
+   <h3 class="" id="ID0EDDBH">
+    Syntax
+   </h3>
+   <p>
+    LOOKUP(lookup_value, lookup_vector, [result_vector])
+   </p>
+   <p>
+    The
+    <b class="ocpLegacyBold">
+     LOOKUP
+    </b>
+    function vector form syntax has the following arguments:
+   </p>
+   <ul>
+    <li>
+     <p>
+      <b class="ocpRunInHead">
+       lookup_value
+      </b>
+      Required. A value that
+      <b class="ocpLegacyBold">
+       LOOKUP
+      </b>
+      searches for in the first vector.
+      <b class="ocpLegacyBold">
+       <i class="ocpItalic">
+        Lookup_value
+       </i>
+      </b>
+      can be a number, text, a logical value, or a name or reference that refers to a value.
+     </p>
+    </li>
+    <li>
+     <p>
+      <b class="ocpRunInHead">
+       lookup_vector
+      </b>
+      Required. A range that contains only one row or one column. The values in
+      <b class="ocpLegacyBold">
+       <i class="ocpItalic">
+        lookup_vector
+       </i>
+      </b>
+      can be text, numbers, or logical values.
+     </p>
+     <div class="ocpAlert">
+      <p class="ocpAlertSection">
+       <b class="ocpImportant">
+        Important:
+       </b>
+       The values in
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         lookup_vector
+        </i>
+       </b>
+       must be placed in ascending order: ..., -2, -1, 0, 1, 2, ..., A-Z, FALSE, TRUE; otherwise,
+       <b class="ocpLegacyBold">
+        LOOKUP
+       </b>
+       might not return the correct value. Uppercase and lowercase text are equivalent.
+      </p>
+     </div>
+    </li>
+    <li>
+     <p>
+      <b class="ocpRunInHead">
+       result_vector
+      </b>
+      Optional. A range that contains only one row or column. The
+      <b class="ocpLegacyBold">
+       <i class="ocpItalic">
+        result_vector
+       </i>
+      </b>
+      argument must be the same size as
+      <b class="ocpLegacyBold">
+       <i class="ocpItalic">
+        lookup_vector
+       </i>
+      </b>
+      . It has to be the same size.
+     </p>
+    </li>
+   </ul>
+  </section>
+  <section aria-labelledby="ID0EDBBH" class="ocpSection">
+   <h3 class="" id="ID0EDBBH">
+    Remarks
+   </h3>
+   <ul>
+    <li>
+     <p>
+      If the
+      <b class="ocpLegacyBold">
+       LOOKUP
+      </b>
+      function can't find the
+      <b class="ocpLegacyBold">
+       <i class="ocpItalic">
+        lookup_value
+       </i>
+      </b>
+      , the function matches the largest value in
+      <b class="ocpLegacyBold">
+       <i class="ocpItalic">
+        lookup_vector
+       </i>
+      </b>
+      that is less than or equal to
+      <b class="ocpLegacyBold">
+       <i class="ocpItalic">
+        lookup_value
+       </i>
+      </b>
+      .
+     </p>
+    </li>
+    <li>
+     <p>
+      If
+      <b class="ocpLegacyBold">
+       <i class="ocpItalic">
+        lookup_value
+       </i>
+      </b>
+      is smaller than the smallest value in
+      <b class="ocpLegacyBold">
+       <i class="ocpItalic">
+        lookup_vector
+       </i>
+      </b>
+      ,
+      <b class="ocpLegacyBold">
+       LOOKUP
+      </b>
+      returns the #N/A error value.
+     </p>
+    </li>
+   </ul>
+  </section>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection" data-bi-id="__example" id="__example">
+  <h2 class="" id="ID0EDF">
+   Vector examples
+  </h2>
+  <p>
+   You can try out these examples in your own Excel worksheet to learn how the LOOKUP function works. In the first example, you're going to end up with a spreadsheet that looks similar to this one:
+  </p>
+  <p>
+   <picture>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/dd7d730c-bb4c-4437-bd4d-5bad860dce03?format=avif&amp;w=320 320w,        /images/en-us/dd7d730c-bb4c-4437-bd4d-5bad860dce03?format=avif&amp;w=480 480w,        /images/en-us/dd7d730c-bb4c-4437-bd4d-5bad860dce03?format=avif&amp;w=640 640w,        /images/en-us/dd7d730c-bb4c-4437-bd4d-5bad860dce03?format=avif&amp;w=800 800w" type="image/avif"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/dd7d730c-bb4c-4437-bd4d-5bad860dce03?format=webp&amp;w=320 320w,        /images/en-us/dd7d730c-bb4c-4437-bd4d-5bad860dce03?format=webp&amp;w=480 480w,        /images/en-us/dd7d730c-bb4c-4437-bd4d-5bad860dce03?format=webp&amp;w=640 640w,        /images/en-us/dd7d730c-bb4c-4437-bd4d-5bad860dce03?format=webp&amp;w=800 800w" type="image/webp"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/dd7d730c-bb4c-4437-bd4d-5bad860dce03?format=jpeg&amp;w=320 320w,        /images/en-us/dd7d730c-bb4c-4437-bd4d-5bad860dce03?format=jpeg&amp;w=480 480w,        /images/en-us/dd7d730c-bb4c-4437-bd4d-5bad860dce03?format=jpeg&amp;w=640 640w,        /images/en-us/dd7d730c-bb4c-4437-bd4d-5bad860dce03?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+    <img alt="An example of using the LOOKUP function" class="fluentImage" loading="lazy" src="/images/en-us/dd7d730c-bb4c-4437-bd4d-5bad860dce03" style="aspect-ratio: 541/288" width="541"/>
+   </picture>
+  </p>
+  <ol type="1">
+   <li>
+    <p>
+     Copy the data in following table, and paste it into a new Excel worksheet.
+    </p>
+    <table aria-label="" class="banded">
+     <thead>
+      <tr>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          Copy this data into column A
+         </b>
+        </p>
+       </th>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          Copy this data into column B
+         </b>
+        </p>
+       </th>
+       <th>
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         <b class="ocpLegacyBold">
+          Frequency
+         </b>
+        </p>
+        <p>
+         4.14
+        </p>
+       </td>
+       <td>
+        <p>
+         <b class="ocpLegacyBold">
+          Color
+         </b>
+        </p>
+        <p>
+         red
+        </p>
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         4.19
+        </p>
+       </td>
+       <td>
+        <p>
+         orange
+        </p>
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         5.17
+        </p>
+       </td>
+       <td>
+        <p>
+         yellow
+        </p>
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         5.77
+        </p>
+       </td>
+       <td>
+        <p>
+         green
+        </p>
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         6.39
+        </p>
+       </td>
+       <td>
+        <p>
+         blue
+        </p>
+       </td>
+       <td>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </li>
+   <li>
+    <p>
+     Next, copy the LOOKUP formulas from the following table into column D of your worksheet.
+    </p>
+    <table aria-label="" class="banded">
+     <thead>
+      <tr>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          Copy this formula into the D column
+         </b>
+        </p>
+       </th>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          Here's what this formula does
+         </b>
+        </p>
+       </th>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          Here's the result you'll see
+         </b>
+        </p>
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         <b class="ocpLegacyBold">
+          Formula
+         </b>
+        </p>
+       </td>
+       <td>
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         =LOOKUP(4.19, A2:A6, B2:B6)
+        </p>
+       </td>
+       <td>
+        <p>
+         Looks up 4.19 in column A, and returns the value from column B that is in the same row.
+        </p>
+       </td>
+       <td>
+        <p>
+         orange
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         =LOOKUP(5.75, A2:A6, B2:B6)
+        </p>
+       </td>
+       <td>
+        <p>
+         Looks up 5.75 in column A, matches the nearest smaller value (5.17), and returns the value from column B that is in the same row.
+        </p>
+       </td>
+       <td>
+        <p>
+         yellow
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         =LOOKUP(7.66, A2:A6, B2:B6)
+        </p>
+       </td>
+       <td>
+        <p>
+         Looks up 7.66 in column A, matches the nearest smaller value (6.39), and returns the value from column B that is in the same row.
+        </p>
+       </td>
+       <td>
+        <p>
+         blue
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         =LOOKUP(0, A2:A6, B2:B6)
+        </p>
+       </td>
+       <td>
+        <p>
+         Looks up 0 in column A, and returns an error because 0 is less than the smallest value (4.14) in column A.
+        </p>
+       </td>
+       <td>
+        <p>
+         #N/A
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </li>
+   <li>
+    <p>
+     For these formulas to show results, you may need to select them in your Excel worksheet, press F2, and then press Enter. If you need to, adjust the column widths to see all the data.
+    </p>
+   </li>
+  </ol>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection" data-bi-id="bmarray_form" id="bmarray_form">
+  <h2 class="" id="ID0EFD">
+   Array form
+  </h2>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpTip">
+     Tip:
+    </b>
+    We strongly recommend using
+    <b class="ocpLegacyBold">
+     <a class="ocpArticleLink" data-bi-area="bmarray_form" data-bi-type="anchor" href="/en-us/office/vlookup-function-0bbc8083-26fe-4963-8ab8-93a18ad188a1">
+      VLOOKUP
+     </a>
+    </b>
+    or
+    <b class="ocpLegacyBold">
+     <a class="ocpArticleLink" data-bi-area="bmarray_form" data-bi-type="anchor" href="/en-us/office/hlookup-function-a3034eec-b719-4ba3-bb65-e1ad662ed95f">
+      HLOOKUP
+     </a>
+    </b>
+    instead of the array form.
+    <b class="ocpLegacyBold">
+     <a class="ocpArticleLink" data-bi-area="bmarray_form" data-bi-type="anchor" href="/en-us/excel">
+      See this video about VLOOKUP; it provides examples
+     </a>
+    </b>
+    . The array form of
+    <b class="ocpLegacyBold">
+     LOOKUP
+    </b>
+    is provided for compatibility with other spreadsheet programs, but its functionality is limited.
+   </p>
+  </div>
+  <p>
+   The array form of
+   <b class="ocpLegacyBold">
+    LOOKUP
+   </b>
+   looks in the first row or column of an array for the specified value and returns a value from the same position in the last row or column of the array. Use this form of
+   <b class="ocpLegacyBold">
+    LOOKUP
+   </b>
+   when the values that you want to match are in the first row or column of the array.
+  </p>
+  <section aria-labelledby="ID0EDBBD" class="ocpSection">
+   <h3 class="" id="ID0EDBBD">
+    Syntax
+   </h3>
+   <p>
+    LOOKUP(lookup_value, array)
+   </p>
+   <p>
+    The
+    <b class="ocpLegacyBold">
+     LOOKUP
+    </b>
+    function array form syntax has these arguments:
+   </p>
+   <ul>
+    <li>
+     <p>
+      <b class="ocpRunInHead">
+       lookup_value
+      </b>
+      Required. A value that
+      <b class="ocpLegacyBold">
+       LOOKUP
+      </b>
+      searches for in an array. The
+      <b class="ocpLegacyBold">
+       <i class="ocpItalic">
+        lookup_value
+       </i>
+      </b>
+      argument can be a number, text, a logical value, or a name or reference that refers to a value.
+     </p>
+     <ul>
+      <li>
+       <p>
+        If
+        <b class="ocpLegacyBold">
+         LOOKUP
+        </b>
+        can't find the value of
+        <b class="ocpLegacyBold">
+         <i class="ocpItalic">
+          lookup_value
+         </i>
+        </b>
+        , it uses the largest value in the array that is less than or equal to
+        <b class="ocpLegacyBold">
+         <i class="ocpItalic">
+          lookup_value
+         </i>
+        </b>
+        .
+       </p>
+      </li>
+      <li>
+       <p>
+        If the value of
+        <b class="ocpLegacyBold">
+         <i class="ocpItalic">
+          lookup_value
+         </i>
+        </b>
+        is smaller than the smallest value in the first row or column (depending on the array dimensions),
+        <b class="ocpLegacyBold">
+         LOOKUP
+        </b>
+        returns the #N/A error value.
+       </p>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <p>
+      <b class="ocpRunInHead">
+       array
+      </b>
+      Required. A range of cells that contains text, numbers, or logical values that you want to compare with lookup_value.
+     </p>
+     <p>
+      The array form of
+      <b class="ocpLegacyBold">
+       LOOKUP
+      </b>
+      is very similar to the
+      <b class="ocpLegacyBold">
+       HLOOKUP
+      </b>
+      and
+      <b class="ocpLegacyBold">
+       VLOOKUP
+      </b>
+      functions. The difference is that
+      <b class="ocpLegacyBold">
+       HLOOKUP
+      </b>
+      searches for the value of
+      <b class="ocpLegacyBold">
+       <i class="ocpItalic">
+        lookup_value
+       </i>
+      </b>
+      in the first row,
+      <b class="ocpLegacyBold">
+       VLOOKUP
+      </b>
+      searches in the first column, and
+      <b class="ocpLegacyBold">
+       LOOKUP
+      </b>
+      searches according to the dimensions of array.
+     </p>
+     <ul>
+      <li>
+       <p>
+        If array covers an area that is wider than it is tall (more columns than rows),
+        <b class="ocpLegacyBold">
+         LOOKUP
+        </b>
+        searches for the value of
+        <b class="ocpLegacyBold">
+         <i class="ocpItalic">
+          lookup_value
+         </i>
+        </b>
+        in the first row.
+       </p>
+      </li>
+      <li>
+       <p>
+        If an array is square or is taller than it is wide (more rows than columns),
+        <b class="ocpLegacyBold">
+         LOOKUP
+        </b>
+        searches in the first column.
+       </p>
+      </li>
+      <li>
+       <p>
+        With the
+        <b class="ocpLegacyBold">
+         HLOOKUP
+        </b>
+        and
+        <b class="ocpLegacyBold">
+         VLOOKUP
+        </b>
+        functions, you can index down or across, but
+        <b class="ocpLegacyBold">
+         LOOKUP
+        </b>
+        always selects the last value in the row or column.
+       </p>
+       <div class="ocpAlert">
+        <p class="ocpAlertSection">
+         <b class="ocpImportant">
+          Important:
+         </b>
+         The values in array must be placed in ascending order: ..., -2, -1, 0, 1, 2, ..., A-Z, FALSE, TRUE; otherwise,
+         <b class="ocpLegacyBold">
+          LOOKUP
+         </b>
+         might not return the correct value. Uppercase and lowercase text are equivalent.
+        </p>
+       </div>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </section>
+ </section>
+</article>

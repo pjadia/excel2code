@@ -1,0 +1,245 @@
+<article class="ocpArticleContent">
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Description
+  </h2>
+  <p>
+   Returns the reference specified by a text string. References are immediately evaluated to display their contents. Use INDIRECT when you want to change the reference to a cell within a formula without changing the formula itself.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Syntax
+  </h2>
+  <p>
+   INDIRECT(ref_text, [a1])
+  </p>
+  <p>
+   The INDIRECT function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Ref_text
+     </b>
+     Required. A reference to a cell that contains an A1-style reference, an R1C1-style reference, a name defined as a reference, or a reference to a cell as a text string. If ref_text is not a valid cell reference, INDIRECT returns the #REF! error value.
+    </p>
+    <ul>
+     <li>
+      <p>
+       If ref_text refers to another workbook (an external reference), the other workbook must be open. If the source workbook is not open, INDIRECT returns the #REF! error value.
+      </p>
+      <div class="ocpAlert">
+       <p class="ocpAlertSection">
+        <b class="ocpNote">
+         Note:
+        </b>
+        External references are not supported in Excel Web App.
+       </p>
+      </div>
+     </li>
+     <li>
+      <p>
+       If ref_text refers to a cell range outside the row limit of 1,048,576 or the column limit of 16,384 (XFD), INDIRECT returns a #REF! error.
+      </p>
+     </li>
+    </ul>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      A1
+     </b>
+     Optional. A logical value that specifies what type of reference is contained in the cell ref_text.
+    </p>
+    <ul>
+     <li>
+      <p>
+       If a1 is TRUE or omitted, ref_text is interpreted as an A1-style reference.
+      </p>
+     </li>
+     <li>
+      <p>
+       If a1 is FALSE, ref_text is interpreted as an R1C1-style reference.
+      </p>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection" data-bi-id="__example" id="__example">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </th>
+     <th>
+     </th>
+     <th>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       B2
+      </p>
+     </td>
+     <td>
+      <p>
+       1.333
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       B3
+      </p>
+     </td>
+     <td>
+      <p>
+       45
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       George
+      </p>
+     </td>
+     <td>
+      <p>
+       10
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       5
+      </p>
+     </td>
+     <td>
+      <p>
+       62
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =INDIRECT(A2)
+      </p>
+     </td>
+     <td>
+      <p>
+       Value of the reference in cell A2. The reference is to cell B2, which contains the value 1.333.
+      </p>
+     </td>
+     <td>
+      <p>
+       1.333
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =INDIRECT(A3)
+      </p>
+     </td>
+     <td>
+      <p>
+       Value of the reference in cell A3. The reference is to cell B3, which contains the value 45.
+      </p>
+     </td>
+     <td>
+      <p>
+       45
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =INDIRECT(A4)
+      </p>
+     </td>
+     <td>
+      <p>
+       Because cell B4 has the defined name "George," the reference to that defined name is to cell B4, which contains the value 10.
+      </p>
+     </td>
+     <td>
+      <p>
+       10
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =INDIRECT("B"&amp;A5)
+      </p>
+     </td>
+     <td>
+      <p>
+       Combines "B" with the value in A5, which is 5. This, in turn, refers to cell B5, which contains the value 62.
+      </p>
+     </td>
+     <td>
+      <p>
+       62
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

@@ -1,0 +1,196 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    NOW
+   </b>
+   function in Microsoft Excel. Find links to more information about working with dates and times in the
+   <b class="ocpUI">
+    See Also
+   </b>
+   section.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Description
+  </h2>
+  <p>
+   Returns the serial number of the current date and time. If the cell format was
+   <b class="ocpUI">
+    General
+   </b>
+   before the function was entered, Excel changes the cell format so that it matches the date and time format of your regional settings. You can change the date and time format for the cell by using the commands in the
+   <b class="ocpUI">
+    Number
+   </b>
+   group of the
+   <b class="ocpUI">
+    Home
+   </b>
+   tab on the Ribbon.
+  </p>
+  <p>
+   The
+   <b class="ocpLegacyBold">
+    NOW
+   </b>
+   function is useful when you need to display the current date and time on a worksheet or calculate a value based on the current date and time, and have that value updated each time you open the worksheet.
+  </p>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpNote">
+     Note:
+    </b>
+    If the
+    <b class="ocpLegacyBold">
+     NOW
+    </b>
+    function does not update cell values when you expect it to, you might need to change settings that control when the workbook or worksheet recalculates. These settings can be changed in Control Panel for the Excel desktop application.
+   </p>
+  </div>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <p>
+   NOW()
+  </p>
+  <p>
+   The NOW function syntax has no arguments.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     Excel stores dates as sequential serial numbers so that they can be used in calculations. By default, January 1, 1900 is serial number 1, and January 1, 2025 is serial number 45658 because it is 45,657 days after January 1, 1900.
+    </p>
+   </li>
+   <li>
+    <p>
+     Numbers to the right of the decimal point in the serial number represent the time; numbers to the left represent the date. For example, the serial number 0.5 represents the time 12:00 noon.
+    </p>
+   </li>
+   <li>
+    <p>
+     The results of the
+     <b class="ocpLegacyBold">
+      NOW
+     </b>
+     function change only when the worksheet is calculated or when a macro that contains the function is run. It is not updated continuously.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =NOW()
+      </p>
+     </td>
+     <td>
+      <p>
+       Returns the current date and time.
+      </p>
+     </td>
+     <td>
+      <p>
+       (based on the current date/time)
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =NOW()-0.5
+      </p>
+     </td>
+     <td>
+      <p>
+       Returns the date and time 12 hours ago (-0.5 days ago).
+      </p>
+     </td>
+     <td>
+      <p>
+       (based on the current date/time)
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =NOW()+7
+      </p>
+     </td>
+     <td>
+      <p>
+       Returns the date and time 7 days in the future.
+      </p>
+     </td>
+     <td>
+      <p>
+       (based on the current date/time)
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =NOW()-2.25
+      </p>
+     </td>
+     <td>
+      <p>
+       Returns the date and time 2 days and 6 hours ago (-2.25 days ago).
+      </p>
+     </td>
+     <td>
+      <p>
+       (based on the current date/time)
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

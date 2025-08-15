@@ -1,0 +1,704 @@
+<article class="ocpArticleContent">
+ <div class="ocpSection">
+  <h2 class="ocpExpandoHead">
+   <button aria-controls="ID0EV-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EV-button" ms.interactiontype="11" type="button">
+    <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+     <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+     </i>
+    </div>
+    <div class="ocpExpandoHeadTitleContainer" role="none">
+     Release notes
+    </div>
+   </button>
+  </h2>
+  <div aria-labelledby="ID0EV-button" class="ocpebw" id="ID0EV-panel" role="region">
+   <div class="ocpExpandoBody">
+    <p>
+     <a class="ocpExternalLink" data-bi-type="anchor" href="https://learn.microsoft.com/officeupdates/current-channel" target="_blank">
+      Current Channel
+     </a>
+    </p>
+    <p>
+     <a class="ocpExternalLink" data-bi-type="anchor" href="https://learn.microsoft.com/officeupdates/monthly-enterprise-channel" target="_blank">
+      Monthly Enterprise Channel
+     </a>
+    </p>
+    <p>
+     <a class="ocpExternalLink" data-bi-type="anchor" href="https://learn.microsoft.com/officeupdates/semi-annual-enterprise-channel" target="_blank">
+      Semi-Annual Enterprise Channel
+     </a>
+    </p>
+    <p>
+     <a class="ocpExternalLink" data-bi-type="anchor" href="https://learn.microsoft.com/officeupdates/semi-annual-enterprise-channel-preview" target="_blank">
+      Semi-Annual Enterprise Channel (Preview)
+     </a>
+    </p>
+    <p>
+     <a class="ocpExternalLink" data-bi-type="anchor" href="https://learn.microsoft.com/officeupdates/release-notes-office-for-mac" target="_blank">
+      Office for Mac
+     </a>
+    </p>
+    <p>
+     Returns the array in a single row.
+    </p>
+   </div>
+  </div>
+ </div>
+ <section aria-labelledby="ID0EDT" class="ocpSection">
+  <h2 class="" id="ID0EDT">
+   Syntax
+  </h2>
+  <p>
+   =TOROW(array, [ignore], [scan_by_column])
+  </p>
+  <p>
+   The TOROW function syntax has the following arguments:
+  </p>
+  <p>
+   <b class="ocpRunInHead">
+    array
+   </b>
+   The array or reference to return as a row.
+  </p>
+  <p>
+   <b class="ocpRunInHead">
+    ignore
+   </b>
+   Whether to ignore certain types of values. By default, no values are ignored. Specify one of the following:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      0
+     </b>
+     Keep all values (default)
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      1
+     </b>
+     Ignore blanks
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      2
+     </b>
+     Ignore errors
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      3
+     </b>
+     Ignore blanks and errors
+    </p>
+   </li>
+  </ul>
+  <p>
+   <b class="ocpRunInHead">
+    scan_by_column
+   </b>
+   Scan the array by column. By default, the array is scanned by row. Scanning determines whether the values are ordered by row or by column.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDR" class="ocpSection">
+  <h2 class="" id="ID0EDR">
+   Remarks
+  </h2>
+  <p>
+   If scan_by_column is omitted or FALSE, the array is scanned by row; If TRUE, the array is scanned by column.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDP" class="ocpSection">
+  <h2 class="" id="ID0EDP">
+   Errors
+  </h2>
+  <ul>
+   <li>
+    <p>
+     Excel returns a #VALUE! when an array constant contains one or more numbers that are not a whole number.
+    </p>
+   </li>
+   <li>
+    <p>
+     Excel returns a #NUM when array is too large.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDN" class="ocpSection">
+  <h2 class="" id="ID0EDN">
+   Examples
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. If you need to, you can adjust the column widths to see all the data.
+  </p>
+ </section>
+ <div class="ocpSection">
+  <h2 class="ocpExpandoHead">
+   <button aria-controls="ID0EL-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EL-button" ms.interactiontype="11" type="button">
+    <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+     <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+     </i>
+    </div>
+    <div class="ocpExpandoHeadTitleContainer" role="none">
+     Example 1
+    </div>
+   </button>
+  </h2>
+  <div aria-labelledby="ID0EL-button" class="ocpebw" id="ID0EL-panel" role="region">
+   <div class="ocpExpandoBody">
+    <p>
+     Returns a single row from the array in range A2:D4 scanned by row which is the default.
+    </p>
+    <table aria-label="" class="banded">
+     <thead>
+      <tr>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          Data
+         </b>
+        </p>
+       </th>
+       <th>
+       </th>
+       <th>
+       </th>
+       <th>
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         Ben
+        </p>
+       </td>
+       <td>
+        <p>
+         Peter
+        </p>
+       </td>
+       <td>
+        <p>
+         Mary
+        </p>
+       </td>
+       <td>
+        <p>
+         Sam
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         John
+        </p>
+       </td>
+       <td>
+        <p>
+         Hillary
+        </p>
+       </td>
+       <td>
+        <p>
+         Jenny
+        </p>
+       </td>
+       <td>
+        <p>
+         James
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Agnes
+        </p>
+       </td>
+       <td>
+        <p>
+         Harry
+        </p>
+       </td>
+       <td>
+        <p>
+         Felicity
+        </p>
+       </td>
+       <td>
+        <p>
+         Joe
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <b class="ocpLegacyBold">
+          Formulas
+         </b>
+        </p>
+       </td>
+       <td>
+       </td>
+       <td>
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         =TOROW(A2:D4)
+        </p>
+       </td>
+       <td>
+       </td>
+       <td>
+       </td>
+       <td>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+  </div>
+ </div>
+ <div class="ocpSection">
+  <h2 class="ocpExpandoHead">
+   <button aria-controls="ID0EJ-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EJ-button" ms.interactiontype="11" type="button">
+    <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+     <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+     </i>
+    </div>
+    <div class="ocpExpandoHeadTitleContainer" role="none">
+     Example 2
+    </div>
+   </button>
+  </h2>
+  <div aria-labelledby="ID0EJ-button" class="ocpebw" id="ID0EJ-panel" role="region">
+   <div class="ocpExpandoBody">
+    <p>
+     Returns a single row from the array in range A2:D4 scanned by row which is the default. Blank values return a 0.
+    </p>
+    <table aria-label="" class="banded">
+     <thead>
+      <tr>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          Data
+         </b>
+        </p>
+       </th>
+       <th>
+       </th>
+       <th>
+       </th>
+       <th>
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         Ben
+        </p>
+       </td>
+       <td>
+        <p>
+         Peter
+        </p>
+       </td>
+       <td>
+        <p>
+         Mary
+        </p>
+       </td>
+       <td>
+        <p>
+         Sam
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         John
+        </p>
+       </td>
+       <td>
+        <p>
+         Hillary
+        </p>
+       </td>
+       <td>
+        <p>
+         Jenny
+        </p>
+       </td>
+       <td>
+        <p>
+         James
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Agnes
+        </p>
+       </td>
+       <td>
+        <p>
+         Harry
+        </p>
+       </td>
+       <td>
+        <p>
+        </p>
+       </td>
+       <td>
+        <p>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <b class="ocpLegacyBold">
+          Formulas
+         </b>
+        </p>
+       </td>
+       <td>
+       </td>
+       <td>
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         =TOROW(A2:D4)
+        </p>
+       </td>
+       <td>
+       </td>
+       <td>
+       </td>
+       <td>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+  </div>
+ </div>
+ <div class="ocpSection">
+  <h2 class="ocpExpandoHead">
+   <button aria-controls="ID0EH-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EH-button" ms.interactiontype="11" type="button">
+    <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+     <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+     </i>
+    </div>
+    <div class="ocpExpandoHeadTitleContainer" role="none">
+     Example 3
+    </div>
+   </button>
+  </h2>
+  <div aria-labelledby="ID0EH-button" class="ocpebw" id="ID0EH-panel" role="region">
+   <div class="ocpExpandoBody">
+    <p>
+     Returns a single row from the array in range A2:D4 scanned by row which is the default. Blank values are ignored.
+    </p>
+    <table aria-label="" class="banded">
+     <thead>
+      <tr>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          Data
+         </b>
+        </p>
+       </th>
+       <th>
+       </th>
+       <th>
+       </th>
+       <th>
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         Ben
+        </p>
+       </td>
+       <td>
+        <p>
+         Peter
+        </p>
+       </td>
+       <td>
+        <p>
+         Mary
+        </p>
+       </td>
+       <td>
+        <p>
+         Sam
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         John
+        </p>
+       </td>
+       <td>
+        <p>
+         Hillary
+        </p>
+       </td>
+       <td>
+        <p>
+         Jenny
+        </p>
+       </td>
+       <td>
+        <p>
+         James
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Agnes
+        </p>
+       </td>
+       <td>
+        <p>
+         Harry
+        </p>
+       </td>
+       <td>
+        <p>
+        </p>
+       </td>
+       <td>
+        <p>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <b class="ocpLegacyBold">
+          Formulas
+         </b>
+        </p>
+       </td>
+       <td>
+       </td>
+       <td>
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         =TOROW(A2:D4,1)
+        </p>
+       </td>
+       <td>
+       </td>
+       <td>
+       </td>
+       <td>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+  </div>
+ </div>
+ <div class="ocpSection">
+  <h2 class="ocpExpandoHead">
+   <button aria-controls="ID0EF-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EF-button" ms.interactiontype="11" type="button">
+    <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+     <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+     </i>
+    </div>
+    <div class="ocpExpandoHeadTitleContainer" role="none">
+     Example 4
+    </div>
+   </button>
+  </h2>
+  <div aria-labelledby="ID0EF-button" class="ocpebw" id="ID0EF-panel" role="region">
+   <div class="ocpExpandoBody">
+    <p>
+     Returns a single row from the array in range A2:D4 scanned by column.
+    </p>
+    <table aria-label="" class="banded">
+     <thead>
+      <tr>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          Data
+         </b>
+        </p>
+       </th>
+       <th>
+       </th>
+       <th>
+       </th>
+       <th>
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         Ben
+        </p>
+       </td>
+       <td>
+        <p>
+         Peter
+        </p>
+       </td>
+       <td>
+        <p>
+         Mary
+        </p>
+       </td>
+       <td>
+        <p>
+         Sam
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         John
+        </p>
+       </td>
+       <td>
+        <p>
+         Hillary
+        </p>
+       </td>
+       <td>
+        <p>
+         Jenny
+        </p>
+       </td>
+       <td>
+        <p>
+         James
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Agnes
+        </p>
+       </td>
+       <td>
+        <p>
+         Harry
+        </p>
+       </td>
+       <td>
+        <p>
+        </p>
+       </td>
+       <td>
+        <p>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <b class="ocpLegacyBold">
+          Formulas
+         </b>
+        </p>
+       </td>
+       <td>
+       </td>
+       <td>
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         =TOROW(A2:D4,1,TRUE)
+        </p>
+       </td>
+       <td>
+       </td>
+       <td>
+       </td>
+       <td>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+  </div>
+ </div>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   See Also
+  </h2>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/tocol-function-22839d9b-0b55-4fc1-b4e6-2761f8f122ed">
+    TOCOL function
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/take-function-25382ff1-5da1-4f78-ab43-f33bd2e4e003">
+    TAKE function
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/drop-function-1cb4e151-9e17-4838-abe5-9ba48d8c6a34">
+    DROP function
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/expand-function-7433fba5-4ad1-41da-a904-d5d95808bc38">
+    EXPAND Function
+   </a>
+  </p>
+  <p>
+  </p>
+ </section>
+</article>

@@ -1,0 +1,203 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p id="__goback">
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    F.INV.RT
+   </b>
+   function in Microsoft Excel.
+  </p>
+  <p>
+   Returns the inverse of the (right-tailed) F probability distribution. If p = F.DIST.RT(x,...), then F.INV.RT(p,...) = x. The F distribution can be used in an F-test that compares the degree of variability in two data sets. For example, you can analyze income distributions in the United States and Canada to determine whether the two countries have a similar degree of income diversity.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   F.INV.RT(probability,deg_freedom1,deg_freedom2)
+  </p>
+  <p>
+   The F.INV.RT function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Probability
+     </b>
+     Required. A probability associated with the F cumulative distribution.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Deg_freedom1
+     </b>
+     Required. The numerator degrees of freedom.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Deg_freedom2
+     </b>
+     Required. The denominator degrees of freedom.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If any argument is non-numeric, F.INV.RT returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If Probability is &lt; 0 or probability is &gt; 1, F.INV.RT returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If Deg_freedom1 or Deg_freedom2 is not an integer, it is truncated.
+    </p>
+   </li>
+   <li>
+    <p>
+     If Deg_freedom1 is &lt; 1, or Deg_freedom2 is &lt; 1, F.INV.RT returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If Deg_freedom2 is &lt; 1 or Deg_freedom2 is ≥ 10^10, F.INV.RT returns the #NUM! error value.
+    </p>
+   </li>
+  </ul>
+  <p>
+   F.INV.RT can be used to return critical values from the F distribution. For example, the output of an ANOVA calculation often includes data for the F statistic, F probability, and F critical value at the 0.05 significance level. To return the critical value of F, use the significance level as the probability argument to F.INV.RT.
+  </p>
+  <p>
+   Given a value for probability, F.INV.RT seeks that value x such that F.DIST.RT(x, deg_freedom1, deg_freedom2) = probability. Thus, precision of F.INV.RT depends on precision of F.DIST.RT. F.INV.RT uses an iterative search technique. If the search has not converged after 64 iterations, the function returns the #N/A error value.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       0.01
+      </p>
+     </td>
+     <td>
+      <p>
+       Probability associated with the F cumulative distribution
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       6
+      </p>
+     </td>
+     <td>
+      <p>
+       Numerator degrees of freedom
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+     <td>
+      <p>
+       Denominator degrees of freedom
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =F.INV.RT(A2,A3,A4)
+      </p>
+     </td>
+     <td>
+      <p>
+       Inverse of the F probability distribution for the terms above
+      </p>
+     </td>
+     <td>
+      <p>
+       15.20686
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

@@ -1,0 +1,1654 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    LINEST
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDL" class="ocpSection">
+  <h2 class="" id="ID0EDL">
+   Description
+  </h2>
+  <p>
+   The
+   <b class="ocpLegacyBold">
+    LINEST
+   </b>
+   function calculates the statistics for a line by using the "least squares" method to calculate a straight line that best fits your data, and then returns an array that describes the line. You can also combine
+   <b class="ocpLegacyBold">
+    LINEST
+   </b>
+   with other functions to calculate the statistics for other types of models that are linear in the unknown parameters, including polynomial, logarithmic, exponential, and power series. Because this function returns an array of values, it must be entered as an array formula. Instructions follow the examples in this article.
+  </p>
+  <p>
+   The equation for the line is:
+  </p>
+  <p>
+   y = mx + b
+  </p>
+  <p>
+   –or–
+  </p>
+  <p>
+   y = m1x1 + m2x2 + ... + b
+  </p>
+  <p>
+   if there are multiple ranges of x-values, where the dependent y-values are a function of the independent x-values. The m-values are coefficients corresponding to each x-value, and b is a constant value. Note that y, x, and m can be vectors. The array that the
+   <b class="ocpLegacyBold">
+    LINEST
+   </b>
+   function returns is {mn,mn-1,...,m1,b}.
+   <b class="ocpLegacyBold">
+    LINEST
+   </b>
+   can also return additional regression statistics.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Syntax
+  </h2>
+  <p>
+   LINEST(known_y's, [known_x's], [const], [stats])
+  </p>
+  <p>
+   The LINEST function syntax has the following arguments:
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      known_y's
+     </b>
+     Required. The set of y-values that you already know in the relationship y = mx + b.
+    </p>
+    <ul>
+     <li>
+      <p>
+       If the range of
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         known_y's
+        </i>
+       </b>
+       is in a single column, each column of
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         known_x's
+        </i>
+       </b>
+       is interpreted as a separate variable.
+      </p>
+     </li>
+     <li>
+      <p>
+       If the range of
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         known_y's
+        </i>
+       </b>
+       is contained in a single row, each row of
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         known_x's
+        </i>
+       </b>
+       is interpreted as a separate variable.
+      </p>
+     </li>
+    </ul>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      known_x's
+     </b>
+     Optional. A set of x-values that you may already know in the relationship y = mx + b.
+    </p>
+    <ul>
+     <li>
+      <p>
+       The range of
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         known_x's
+        </i>
+       </b>
+       can include one or more sets of variables. If only one variable is used,
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         known_y's
+        </i>
+       </b>
+       and
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         known_x's
+        </i>
+       </b>
+       can be ranges of any shape, as long as they have equal dimensions. If more than one variable is used,
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         known_y's
+        </i>
+       </b>
+       must be a vector (that is, a range with a height of one row or a width of one column).
+      </p>
+     </li>
+     <li>
+      <p>
+       If
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         known_x's
+        </i>
+       </b>
+       is omitted, it is assumed to be the array {1,2,3,...} that is the same size as
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         known_y's
+        </i>
+       </b>
+       .
+      </p>
+     </li>
+    </ul>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      const
+     </b>
+     Optional. A logical value specifying whether to force the constant b to equal 0.
+    </p>
+    <ul>
+     <li>
+      <p>
+       If
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         const
+        </i>
+       </b>
+       is TRUE or omitted, b is calculated normally.
+      </p>
+     </li>
+     <li>
+      <p>
+       If
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         const
+        </i>
+       </b>
+       is FALSE, b is set equal to 0 and the m-values are adjusted to fit y = mx.
+      </p>
+     </li>
+    </ul>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      stats
+     </b>
+     Optional. A logical value specifying whether to return additional regression statistics.
+    </p>
+    <ul>
+     <li>
+      <p>
+       If
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         stats
+        </i>
+       </b>
+       is TRUE,
+       <b class="ocpLegacyBold">
+        LINEST
+       </b>
+       returns the additional regression statistics; as a result, the returned array is
+       <b class="ocpLegacyBold">
+        {mn,mn-1,...,m1,b;sen,sen-1,...,se1,seb;r
+        <sup class="ocpSup">
+         2
+        </sup>
+        ,sey;F,df;ssreg,ssresid}
+       </b>
+       .
+      </p>
+     </li>
+     <li>
+      <p>
+       If
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         stats
+        </i>
+       </b>
+       is FALSE or omitted,
+       <b class="ocpLegacyBold">
+        LINEST
+       </b>
+       returns only the m-coefficients and the constant b.
+      </p>
+      <p>
+       The additional regression statistics are as follows.
+      </p>
+     </li>
+    </ul>
+   </li>
+  </ul>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Statistic
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       se1,se2,...,sen
+      </p>
+     </td>
+     <td>
+      <p>
+       The standard error values for the coefficients m1,m2,...,mn.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       seb
+      </p>
+     </td>
+     <td>
+      <p>
+       The standard error value for the constant b (seb = #N/A when
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         const
+        </i>
+       </b>
+       is FALSE).
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       r
+       <sup class="ocpSup">
+        2
+       </sup>
+      </p>
+     </td>
+     <td>
+      <p>
+       The coefficient of determination. Compares estimated and actual y-values, and ranges in value from 0 to 1. If it is 1, there is a perfect correlation in the sample — there is no difference between the estimated y-value and the actual y-value. At the other extreme, if the coefficient of determination is 0, the regression equation is not helpful in predicting a y-value. For information about how r
+       <sup class="ocpSup">
+        2
+       </sup>
+       is calculated, see "Remarks," later in this topic.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       sey
+      </p>
+     </td>
+     <td>
+      <p>
+       The standard error for the y estimate.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       F
+      </p>
+     </td>
+     <td>
+      <p>
+       The F statistic, or the F-observed value. Use the F statistic to determine whether the observed relationship between the dependent and independent variables occurs by chance.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       df
+      </p>
+     </td>
+     <td>
+      <p>
+       The degrees of freedom. Use the degrees of freedom to help you find F-critical values in a statistical table. Compare the values you find in the table to the F statistic returned by
+       <b class="ocpLegacyBold">
+        LINEST
+       </b>
+       to determine a confidence level for the model. For information about how df is calculated, see "Remarks," later in this topic.
+       <a aria-label=" Example 4" class="ocpInlineLink" data-bi-type="anchor" href="#bmexample4">
+        Example 4
+       </a>
+       shows use of F and df.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       ssreg
+      </p>
+     </td>
+     <td>
+      <p>
+       The regression sum of squares.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       ssresid
+      </p>
+     </td>
+     <td>
+      <p>
+       The residual sum of squares. For information about how ssreg and ssresid are calculated, see "Remarks," later in this topic.
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+   The following illustration shows the order in which the additional regression statistics are returned.
+  </p>
+  <p>
+   <picture>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/e0d97b28-95d9-4cb2-888c-78db54378381?format=avif&amp;w=320 320w,        /images/en-us/e0d97b28-95d9-4cb2-888c-78db54378381?format=avif&amp;w=480 480w,        /images/en-us/e0d97b28-95d9-4cb2-888c-78db54378381?format=avif&amp;w=640 640w,        /images/en-us/e0d97b28-95d9-4cb2-888c-78db54378381?format=avif&amp;w=800 800w" type="image/avif"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/e0d97b28-95d9-4cb2-888c-78db54378381?format=webp&amp;w=320 320w,        /images/en-us/e0d97b28-95d9-4cb2-888c-78db54378381?format=webp&amp;w=480 480w,        /images/en-us/e0d97b28-95d9-4cb2-888c-78db54378381?format=webp&amp;w=640 640w,        /images/en-us/e0d97b28-95d9-4cb2-888c-78db54378381?format=webp&amp;w=800 800w" type="image/webp"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/e0d97b28-95d9-4cb2-888c-78db54378381?format=jpeg&amp;w=320 320w,        /images/en-us/e0d97b28-95d9-4cb2-888c-78db54378381?format=jpeg&amp;w=480 480w,        /images/en-us/e0d97b28-95d9-4cb2-888c-78db54378381?format=jpeg&amp;w=640 640w,        /images/en-us/e0d97b28-95d9-4cb2-888c-78db54378381?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+    <img alt="A key of regression statistics" class="fluentImage" loading="lazy" src="/images/en-us/e0d97b28-95d9-4cb2-888c-78db54378381" style="aspect-ratio: 315/89" width="315"/>
+   </picture>
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     You can describe any straight line with the slope and the y-intercept:
+    </p>
+    <p>
+     Slope (m):
+     <br aria-hidden="true"/>
+     To find the slope of a line, often written as m, take two points on the line, (x1,y1) and (x2,y2); the slope is equal to (y2 - y1)/(x2 - x1).
+    </p>
+    <p>
+     Y-intercept (b):
+     <br aria-hidden="true"/>
+     The y-intercept of a line, often written as b, is the value of y at the point where the line crosses the y-axis.
+    </p>
+    <p>
+     The equation of a straight line is y = mx + b. Once you know the values of m and b, you can calculate any point on the line by plugging the y- or x-value into that equation. You can also use the
+     <b class="ocpLegacyBold">
+      TREND
+     </b>
+     function.
+    </p>
+   </li>
+   <li>
+    <p>
+     When you have only one independent x-variable, you can obtain the slope and y-intercept values directly by using the following formulas:
+    </p>
+    <p>
+     Slope:
+     <br aria-hidden="true"/>
+     =INDEX(LINEST(known_y's,known_x's),1)
+    </p>
+    <p>
+     Y-intercept:
+     <br aria-hidden="true"/>
+     =INDEX(LINEST(known_y's,known_x's),2)
+    </p>
+   </li>
+   <li>
+    <p>
+     The accuracy of the line calculated by the
+     <b class="ocpLegacyBold">
+      LINEST
+     </b>
+     function depends on the degree of scatter in your data. The more linear the data, the more accurate the
+     <b class="ocpLegacyBold">
+      LINEST
+     </b>
+     model.
+     <b class="ocpLegacyBold">
+      LINEST
+     </b>
+     uses the method of least squares for determining the best fit for the data. When you have only one independent x-variable, the calculations for m and b are based on the following formulas:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/0f08d1d3-c750-4ecc-bc1e-024fc7447de4?format=avif&amp;w=320 320w,        /images/en-us/0f08d1d3-c750-4ecc-bc1e-024fc7447de4?format=avif&amp;w=480 480w,        /images/en-us/0f08d1d3-c750-4ecc-bc1e-024fc7447de4?format=avif&amp;w=640 640w,        /images/en-us/0f08d1d3-c750-4ecc-bc1e-024fc7447de4?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/0f08d1d3-c750-4ecc-bc1e-024fc7447de4?format=webp&amp;w=320 320w,        /images/en-us/0f08d1d3-c750-4ecc-bc1e-024fc7447de4?format=webp&amp;w=480 480w,        /images/en-us/0f08d1d3-c750-4ecc-bc1e-024fc7447de4?format=webp&amp;w=640 640w,        /images/en-us/0f08d1d3-c750-4ecc-bc1e-024fc7447de4?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/0f08d1d3-c750-4ecc-bc1e-024fc7447de4?format=jpeg&amp;w=320 320w,        /images/en-us/0f08d1d3-c750-4ecc-bc1e-024fc7447de4?format=jpeg&amp;w=480 480w,        /images/en-us/0f08d1d3-c750-4ecc-bc1e-024fc7447de4?format=jpeg&amp;w=640 640w,        /images/en-us/0f08d1d3-c750-4ecc-bc1e-024fc7447de4?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/0f08d1d3-c750-4ecc-bc1e-024fc7447de4" style="aspect-ratio: 143/53" width="143"/>
+     </picture>
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/9000fa0c-aafa-4cdf-b6d5-08038da1da47?format=avif&amp;w=320 320w,        /images/en-us/9000fa0c-aafa-4cdf-b6d5-08038da1da47?format=avif&amp;w=480 480w,        /images/en-us/9000fa0c-aafa-4cdf-b6d5-08038da1da47?format=avif&amp;w=640 640w,        /images/en-us/9000fa0c-aafa-4cdf-b6d5-08038da1da47?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/9000fa0c-aafa-4cdf-b6d5-08038da1da47?format=webp&amp;w=320 320w,        /images/en-us/9000fa0c-aafa-4cdf-b6d5-08038da1da47?format=webp&amp;w=480 480w,        /images/en-us/9000fa0c-aafa-4cdf-b6d5-08038da1da47?format=webp&amp;w=640 640w,        /images/en-us/9000fa0c-aafa-4cdf-b6d5-08038da1da47?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/9000fa0c-aafa-4cdf-b6d5-08038da1da47?format=jpeg&amp;w=320 320w,        /images/en-us/9000fa0c-aafa-4cdf-b6d5-08038da1da47?format=jpeg&amp;w=480 480w,        /images/en-us/9000fa0c-aafa-4cdf-b6d5-08038da1da47?format=jpeg&amp;w=640 640w,        /images/en-us/9000fa0c-aafa-4cdf-b6d5-08038da1da47?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/9000fa0c-aafa-4cdf-b6d5-08038da1da47" style="aspect-ratio: 72/24" width="72"/>
+     </picture>
+    </p>
+    <p>
+     where x and y are sample means; that is, x =
+     <b class="ocpLegacyBold">
+      AVERAGE(known x's)
+     </b>
+     and
+     <b class="ocpLegacyBold">
+      y = AVERAGE(
+     </b>
+     <b class="ocpLegacyBold">
+      known_y's
+     </b>
+     <b class="ocpLegacyBold">
+      )
+     </b>
+     .
+    </p>
+   </li>
+   <li>
+    <p>
+     The line- and curve-fitting functions
+     <b class="ocpLegacyBold">
+      LINEST
+     </b>
+     and
+     <b class="ocpLegacyBold">
+      LOGEST
+     </b>
+     can calculate the best straight line or exponential curve that fits your data. However, you have to decide which of the two results best fits your data. You can calculate
+     <b class="ocpLegacyBold">
+      TREND(
+     </b>
+     <b class="ocpLegacyBold">
+      known_y's,known_x's
+     </b>
+     <b class="ocpLegacyBold">
+      )
+     </b>
+     for a straight line, or
+     <b class="ocpLegacyBold">
+      GROWTH(
+     </b>
+     <b class="ocpLegacyBold">
+      known_y's
+     </b>
+     <b class="ocpLegacyBold">
+      ,
+     </b>
+     <b class="ocpLegacyBold">
+      known_x's
+     </b>
+     <b class="ocpLegacyBold">
+      )
+     </b>
+     for an exponential curve. These functions, without the
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       new_x's
+      </i>
+     </b>
+     argument, return an array of y-values predicted along that line or curve at your actual data points. You can then compare the predicted values with the actual values. You may want to chart them both for a visual comparison.
+    </p>
+   </li>
+   <li>
+    <p>
+     In regression analysis, Excel calculates for each point the squared difference between the y-value estimated for that point and its actual y-value. The sum of these squared differences is called the residual sum of squares, ssresid. Excel then calculates the total sum of squares, sstotal. When the
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       const
+      </i>
+     </b>
+     argument = TRUE or is omitted, the total sum of squares is the sum of the squared differences between the actual y-values and the average of the y-values. When the
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       const
+      </i>
+     </b>
+     argument = FALSE, the total sum of squares is the sum of the squares of the actual y-values (without subtracting the average y-value from each individual y-value). Then regression sum of squares, ssreg, can be found from: ssreg = sstotal - ssresid. The smaller the residual sum of squares is, compared with the total sum of squares, the larger the value of the coefficient of determination, r
+     <sup class="ocpSup">
+      2
+     </sup>
+     , which is an indicator of how well the equation resulting from the regression analysis explains the relationship among the variables. The value of r
+     <sup class="ocpSup">
+      2
+     </sup>
+     equals ssreg/sstotal.
+    </p>
+   </li>
+   <li>
+    <p>
+     In some cases, one or more of the X columns (assume that Y’s and X’s are in columns) may have no additional predictive value in the presence of the other X columns. In other words, eliminating one or more X columns might lead to predicted Y values that are equally accurate. In that case these redundant X columns should be omitted from the regression model. This phenomenon is called “collinearity” because any redundant X column can be expressed as a sum of multiples of the non-redundant X columns. The
+     <b class="ocpLegacyBold">
+      LINEST
+     </b>
+     function checks for collinearity and removes any redundant X columns from the regression model when it identifies them. Removed X columns can be recognized in
+     <b class="ocpLegacyBold">
+      LINEST
+     </b>
+     output as having 0 coefficients in addition to 0 se values. If one or more columns are removed as redundant, df is affected because df depends on the number of X columns actually used for predictive purposes. For details on the computation of df, see
+     <a aria-label=" Example 4" class="ocpInlineLink" data-bi-type="anchor" href="#bmexample4">
+      Example 4
+     </a>
+     . If df is changed because redundant X columns are removed, values of sey and F are also affected. Collinearity should be relatively rare in practice. However, one case where it is more likely to arise is when some X columns contain only 0 and 1 values as indicators of whether a subject in an experiment is or is not a member of a particular group. If
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       const
+      </i>
+     </b>
+     = TRUE or is omitted, the
+     <b class="ocpLegacyBold">
+      LINEST
+     </b>
+     function effectively inserts an additional X column of all 1 values to model the intercept. If you have a column with a 1 for each subject if male, or 0 if not, and you also have a column with a 1 for each subject if female, or 0 if not, this latter column is redundant because entries in it can be obtained from subtracting the entry in the “male indicator” column from the entry in the additional column of all 1 values added by the
+     <b class="ocpLegacyBold">
+      LINEST
+     </b>
+     function.
+    </p>
+   </li>
+   <li>
+    <p>
+     The value of df is calculated as follows, when no X columns are removed from the model due to collinearity: if there are k columns of
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       known_x’s
+      </i>
+     </b>
+     and
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       const
+      </i>
+     </b>
+     = TRUE or is omitted, df = n – k – 1. If
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       const
+      </i>
+     </b>
+     = FALSE, df = n - k. In both cases, each X column that was removed due to collinearity increases the value of df by 1.
+    </p>
+   </li>
+   <li>
+    <p>
+     When entering an array constant (such as
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       known_x's
+      </i>
+     </b>
+     ) as an argument, use commas to separate values that are contained in the same row and semicolons to separate rows. Separator characters may be different depending on your regional settings.
+    </p>
+   </li>
+   <li>
+    <p>
+     Note that the y-values predicted by the regression equation may not be valid if they are outside the range of the y-values you used to determine the equation.
+    </p>
+   </li>
+   <li>
+    <p>
+     The underlying algorithm used in the
+     <b class="ocpLegacyBold">
+      LINEST
+     </b>
+     function is different than the underlying algorithm used in the
+     <b class="ocpLegacyBold">
+      SLOPE
+     </b>
+     and
+     <b class="ocpLegacyBold">
+      INTERCEPT
+     </b>
+     functions. The difference between these algorithms can lead to different results when data is undetermined and collinear. For example, if the data points of the
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       known_y's
+      </i>
+     </b>
+     argument are 0 and the data points of the
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       known_x's
+      </i>
+     </b>
+     argument are 1:
+    </p>
+    <ul>
+     <li>
+      <p>
+       <b class="ocpLegacyBold">
+        LINEST
+       </b>
+       returns a value of 0. The algorithm of the
+       <b class="ocpLegacyBold">
+        LINEST
+       </b>
+       function is designed to return reasonable results for collinear data and, in this case, at least one answer can be found.
+      </p>
+     </li>
+     <li>
+      <p>
+       <b class="ocpLegacyBold">
+        SLOPE
+       </b>
+       and
+       <b class="ocpLegacyBold">
+        INTERCEPT
+       </b>
+       return a #DIV/0! error. The algorithm of the
+       <b class="ocpLegacyBold">
+        SLOPE
+       </b>
+       and
+       <b class="ocpLegacyBold">
+        INTERCEPT
+       </b>
+       functions is designed to look for only one answer, and in this case there can be more than one answer.
+      </p>
+     </li>
+    </ul>
+   </li>
+   <li>
+    <p>
+     In addition to using
+     <b class="ocpLegacyBold">
+      LOGEST
+     </b>
+     to calculate statistics for other regression types, you can use
+     <b class="ocpLegacyBold">
+      LINEST
+     </b>
+     to calculate a range of other regression types by entering functions of the x and y variables as the x and y series for
+     <b class="ocpLegacyBold">
+      LINEST
+     </b>
+     . For example, the following formula:
+    </p>
+    <p>
+     =LINEST(yvalues, xvalues^COLUMN($A:$C))
+    </p>
+    <p>
+     works when you have a single column of y-values and a single column of x-values to calculate the cubic (polynomial of order 3) approximation of the form:
+    </p>
+    <p>
+     y = m1*x + m2*x^2 + m3*x^3 + b
+    </p>
+    <p>
+     You can adjust this formula to calculate other types of regression, but in some cases it requires the adjustment of the output values and other statistics.
+    </p>
+   </li>
+   <li>
+    <p>
+     The F-test value that is returned by the LINEST function differs from the F-test value that is returned by the
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/ftest-function-4c9e1202-53fe-428c-a737-976f6fc3f9fd">
+      FTEST function
+     </a>
+     . LINEST returns the F statistic, whereas FTEST returns the probability.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Examples
+  </h2>
+  <section aria-labelledby="ID0EDJBD" class="ocpSection">
+   <h3 class="" id="ID0EDJBD">
+    Example 1 - Slope and Y-Intercept
+   </h3>
+   <p>
+    Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+   </p>
+   <table aria-label="" class="banded">
+    <thead>
+     <tr>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         Known y
+        </b>
+       </p>
+      </th>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         Known x
+        </b>
+       </p>
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <p>
+        1
+       </p>
+      </td>
+      <td>
+       <p>
+        0
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        9
+       </p>
+      </td>
+      <td>
+       <p>
+        4
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        5
+       </p>
+      </td>
+      <td>
+       <p>
+        2
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        7
+       </p>
+      </td>
+      <td>
+       <p>
+        3
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        <b class="ocpLegacyBold">
+         Result (slope)
+        </b>
+       </p>
+      </td>
+      <td>
+       <p>
+        <b class="ocpLegacyBold">
+         Result (y-intercept)
+        </b>
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        2
+       </p>
+      </td>
+      <td>
+       <p>
+        1
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        <b class="ocpLegacyBold">
+         Formula (array formula in cells A7:B7)
+        </b>
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        =LINEST(A2:A5,B2:B5,,FALSE)
+       </p>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section aria-labelledby="ID0EDHBD" class="ocpSection">
+   <h3 class="" id="ID0EDHBD">
+    Example 2 - Simple Linear Regression
+   </h3>
+   <p>
+    Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+   </p>
+   <table aria-label="" class="banded">
+    <thead>
+     <tr>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         Month
+        </b>
+       </p>
+      </th>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         Sales
+        </b>
+       </p>
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <p>
+        1
+       </p>
+      </td>
+      <td>
+       <p>
+        $3,100
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        2
+       </p>
+      </td>
+      <td>
+       <p>
+        $4,500
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        3
+       </p>
+      </td>
+      <td>
+       <p>
+        $4,400
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        4
+       </p>
+      </td>
+      <td>
+       <p>
+        $5,400
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        5
+       </p>
+      </td>
+      <td>
+       <p>
+        $7,500
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        6
+       </p>
+      </td>
+      <td>
+       <p>
+        $8,100
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        <b class="ocpLegacyBold">
+         Formula
+        </b>
+       </p>
+      </td>
+      <td>
+       <p>
+        <b class="ocpLegacyBold">
+         Result
+        </b>
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        =SUM(LINEST(B1:B6, A1:A6)*{9,1})
+       </p>
+      </td>
+      <td>
+       <p>
+        $11,000
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+      </td>
+      <td>
+       <p>
+        Calculates the estimate of the sales in the ninth month, based on sales in months 1 through 6.
+       </p>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section aria-labelledby="ID0EDFBD" class="ocpSection" data-bi-id="bmexample3" id="bmexample3">
+   <h3 class="" id="ID0EDFBD">
+    Example 3 - Multiple Linear Regression
+   </h3>
+   <p>
+    Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+   </p>
+   <table aria-label="" class="banded">
+    <thead>
+     <tr>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         Floor space (x1)
+        </b>
+       </p>
+      </th>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         Offices (x2)
+        </b>
+       </p>
+      </th>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         Entrances (x3)
+        </b>
+       </p>
+      </th>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         Age (x4)
+        </b>
+       </p>
+      </th>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         Assessed value (y)
+        </b>
+       </p>
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <p>
+        2310
+       </p>
+      </td>
+      <td>
+       <p>
+        2
+       </p>
+      </td>
+      <td>
+       <p>
+        2
+       </p>
+      </td>
+      <td>
+       <p>
+        20
+       </p>
+      </td>
+      <td>
+       <p>
+        $142,000
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        2333
+       </p>
+      </td>
+      <td>
+       <p>
+        2
+       </p>
+      </td>
+      <td>
+       <p>
+        2
+       </p>
+      </td>
+      <td>
+       <p>
+        12
+       </p>
+      </td>
+      <td>
+       <p>
+        $144,000
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        2356
+       </p>
+      </td>
+      <td>
+       <p>
+        3
+       </p>
+      </td>
+      <td>
+       <p>
+        1.5
+       </p>
+      </td>
+      <td>
+       <p>
+        33
+       </p>
+      </td>
+      <td>
+       <p>
+        $151,000
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        2379
+       </p>
+      </td>
+      <td>
+       <p>
+        3
+       </p>
+      </td>
+      <td>
+       <p>
+        2
+       </p>
+      </td>
+      <td>
+       <p>
+        43
+       </p>
+      </td>
+      <td>
+       <p>
+        $150,000
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        2402
+       </p>
+      </td>
+      <td>
+       <p>
+        2
+       </p>
+      </td>
+      <td>
+       <p>
+        3
+       </p>
+      </td>
+      <td>
+       <p>
+        53
+       </p>
+      </td>
+      <td>
+       <p>
+        $139,000
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        2425
+       </p>
+      </td>
+      <td>
+       <p>
+        4
+       </p>
+      </td>
+      <td>
+       <p>
+        2
+       </p>
+      </td>
+      <td>
+       <p>
+        23
+       </p>
+      </td>
+      <td>
+       <p>
+        $169,000
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        2448
+       </p>
+      </td>
+      <td>
+       <p>
+        2
+       </p>
+      </td>
+      <td>
+       <p>
+        1.5
+       </p>
+      </td>
+      <td>
+       <p>
+        99
+       </p>
+      </td>
+      <td>
+       <p>
+        $126,000
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        2471
+       </p>
+      </td>
+      <td>
+       <p>
+        2
+       </p>
+      </td>
+      <td>
+       <p>
+        2
+       </p>
+      </td>
+      <td>
+       <p>
+        34
+       </p>
+      </td>
+      <td>
+       <p>
+        $142,900
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        2494
+       </p>
+      </td>
+      <td>
+       <p>
+        3
+       </p>
+      </td>
+      <td>
+       <p>
+        3
+       </p>
+      </td>
+      <td>
+       <p>
+        23
+       </p>
+      </td>
+      <td>
+       <p>
+        $163,000
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        2517
+       </p>
+      </td>
+      <td>
+       <p>
+        4
+       </p>
+      </td>
+      <td>
+       <p>
+        4
+       </p>
+      </td>
+      <td>
+       <p>
+        55
+       </p>
+      </td>
+      <td>
+       <p>
+        $169,000
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        2540
+       </p>
+      </td>
+      <td>
+       <p>
+        2
+       </p>
+      </td>
+      <td>
+       <p>
+        3
+       </p>
+      </td>
+      <td>
+       <p>
+        22
+       </p>
+      </td>
+      <td>
+       <p>
+        $149,000
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        -234.2371645
+       </p>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        13.26801148
+       </p>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        0.996747993
+       </p>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        459.7536742
+       </p>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        1732393319
+       </p>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        <b class="ocpLegacyBold">
+         Formula (dynamic array formula entered in A19)
+        </b>
+       </p>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        =LINEST(E2:E12,A2:D12,TRUE,TRUE)
+       </p>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section aria-labelledby="ID0EDDBD" class="ocpSection" data-bi-id="bmexample4" id="bmexample4">
+   <h3 class="" id="ID0EDDBD">
+    Example 4 - Using the F and r
+    <sup class="ocpSup">
+     2
+    </sup>
+    Statistics
+   </h3>
+   <p>
+    In the preceding example, the coefficient of determination, or r
+    <sup class="ocpSup">
+     2
+    </sup>
+    , is 0.99675 (see cell A17 in the output for
+    <b class="ocpLegacyBold">
+     LINEST
+    </b>
+    ), which would indicate a strong relationship between the independent variables and the sale price. You can use the F statistic to determine whether these results, with such a high r2 value, occurred by chance.
+   </p>
+   <p>
+    Assume for the moment that in fact there is no relationship among the variables, but that you have drawn a rare sample of 11 office buildings that causes the statistical analysis to demonstrate a strong relationship. The term "Alpha" is used for the probability of erroneously concluding that there is a relationship.
+   </p>
+   <p>
+    The F and df values in output from the
+    <b class="ocpLegacyBold">
+     LINEST
+    </b>
+    function can be used to assess the likelihood of a higher F value occurring by chance. F can be compared with critical values in published F-distribution tables or the
+    <b class="ocpLegacyBold">
+     FDIST
+    </b>
+    function in Excel can be used to calculate the probability of a larger F value occurring by chance. The appropriate F distribution has v1 and v2 degrees of freedom. If n is the number of data points and const = TRUE or omitted, then v1 = n – df – 1 and v2 = df. (If const = FALSE, then v1 = n – df and v2 = df.) The
+    <b class="ocpLegacyBold">
+     FDIST
+    </b>
+    function — with the syntax
+    <b class="ocpLegacyBold">
+     FDIST
+    </b>
+    (F,v1,v2) — will return the probability of a higher F value occurring by chance. In this example, df = 6 (cell B18) and F = 459.753674 (cell A18).
+   </p>
+   <p>
+    Assuming an Alpha value of 0.05, v1 = 11 – 6 – 1 = 4 and v2 = 6, the critical level of F is 4.53. Since F = 459.753674 is much higher than 4.53, it is extremely unlikely that an F value this high occurred by chance. (With Alpha = 0.05, the hypothesis that there is no relationship between
+    <b class="ocpLegacyBold">
+     <i class="ocpItalic">
+      known_y’s
+     </i>
+    </b>
+    and
+    <b class="ocpLegacyBold">
+     <i class="ocpItalic">
+      known_x’s
+     </i>
+    </b>
+    is to be rejected when F exceeds the critical level, 4.53.) You can use the
+    <b class="ocpLegacyBold">
+     FDIST
+    </b>
+    function in Excel to obtain the probability that an F value this high occurred by chance. For example,
+    <b class="ocpLegacyBold">
+     FDIST
+    </b>
+    (459.753674, 4, 6) = 1.37E-7, an extremely small probability. You can conclude, either by finding the critical level of F in a table or by using the
+    <b class="ocpLegacyBold">
+     FDIST
+    </b>
+    function, that the regression equation is useful in predicting the assessed value of office buildings in this area. Remember that it is critical to use the correct values of v1 and v2 that were computed in the preceding paragraph.
+   </p>
+  </section>
+  <section aria-labelledby="ID0EDBBD" class="ocpSection">
+   <h3 class="" id="ID0EDBBD">
+    Example 5 - Calculating the t-Statistics
+   </h3>
+   <p>
+    Another hypothesis test will determine whether each slope coefficient is useful in estimating the assessed value of an office building in
+    <a aria-label=" Example 3" class="ocpInlineLink" data-bi-type="anchor" href="#bmexample3">
+     Example 3
+    </a>
+    . For example, to test the age coefficient for statistical significance, divide -234.24 (age slope coefficient) by 13.268 (the estimated standard error of age coefficients in cell A15). The following is the t-observed value:
+   </p>
+   <p>
+    t = m4 ÷ se4 = -234.24 ÷ 13.268 = -17.7
+   </p>
+   <p>
+    If the absolute value of t is sufficiently high, it can be concluded that the slope coefficient is useful in estimating the assessed value of an office building in
+    <a aria-label=" Example 3" class="ocpInlineLink" data-bi-type="anchor" href="#bmexample3">
+     Example 3
+    </a>
+    . The following table shows the absolute values of the 4 t-observed values.
+   </p>
+   <p>
+    If you consult a table in a statistics manual, you will find that t-critical, two tailed, with 6 degrees of freedom and Alpha = 0.05 is 2.447. This critical value can also be found by using the
+    <b class="ocpLegacyBold">
+     TINV
+    </b>
+    function in Excel.
+    <b class="ocpLegacyBold">
+     TINV
+    </b>
+    (0.05,6) = 2.447. Because the absolute value of t (17.7) is greater than 2.447, age is an important variable when estimating the assessed value of an office building. Each of the other independent variables can be tested for statistical significance in a similar manner. The following are the t-observed values for each of the independent variables.
+   </p>
+   <table aria-label="" class="banded">
+    <thead>
+     <tr>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         Variable
+        </b>
+       </p>
+      </th>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         t-observed value
+        </b>
+       </p>
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <p>
+        Floor space
+       </p>
+      </td>
+      <td>
+       <p>
+        5.1
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        Number of offices
+       </p>
+      </td>
+      <td>
+       <p>
+        31.3
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        Number of entrances
+       </p>
+      </td>
+      <td>
+       <p>
+        4.8
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        Age
+       </p>
+      </td>
+      <td>
+       <p>
+        17.7
+       </p>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <p>
+    These values all have an absolute value greater than 2.447; therefore, all the variables used in the regression equation are useful in predicting the assessed value of office buildings in this area.
+   </p>
+  </section>
+ </section>
+</article>

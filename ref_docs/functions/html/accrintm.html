@@ -1,0 +1,364 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    ACCRINTM
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Returns the accrued interest for a security that pays interest at maturity.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   ACCRINTM(issue, settlement, rate, par, [basis])
+  </p>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpImportant">
+     Important:
+    </b>
+    Dates should be entered by using the DATE function, or as results of other formulas or functions. For example, use DATE(2008,5,23) for the 23rd day of May, 2008. Problems can occur if dates are entered as text.
+   </p>
+  </div>
+  <p>
+   The ACCRINTM function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Issue
+     </b>
+     Required. The security's issue date.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Settlement
+     </b>
+     Required. The security's maturity date.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Rate
+     </b>
+     Required. The security's annual coupon rate.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Par
+     </b>
+     Required. The security's par value. If you omit par, ACCRINTM uses $1,000.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Basis
+     </b>
+     Optional. The type of day count basis to use.
+    </p>
+   </li>
+  </ul>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Basis
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Day count basis
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       0 or omitted
+      </p>
+     </td>
+     <td>
+      <p>
+       US (NASD) 30/360
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+      <p>
+       Actual/actual
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+     <td>
+      <p>
+       Actual/360
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+     <td>
+      <p>
+       Actual/365
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+     <td>
+      <p>
+       European 30/360
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     Microsoft Excel stores dates as sequential serial numbers so they can be used in calculations. By default, January 1, 1900 is serial number 1, and January 1, 2008 is serial number 39448 because it is 39,448 days after January 1, 1900.
+    </p>
+   </li>
+   <li>
+    <p>
+     Issue, settlement, and basis are truncated to integers.
+    </p>
+   </li>
+   <li>
+    <p>
+     If issue or settlement is not a valid date, ACCRINTM returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If rate ≤ 0 or if par ≤ 0, ACCRINTM returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If basis &lt; 0 or if basis &gt; 4, ACCRINTM returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If issue ≥ settlement, ACCRINTM returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     ACCRINTM is calculated as follows:
+    </p>
+    <p>
+     ACCRINTM = par x rate x A/D
+    </p>
+    <p>
+     where:
+    </p>
+    <ul>
+     <li>
+      <p>
+       A = Number of accrued days counted according to a monthly basis. For interest at maturity items, the number of days from the issue date to the maturity date is used.
+      </p>
+     </li>
+     <li>
+      <p>
+       D = Annual Year Basis.
+      </p>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       39539
+      </p>
+     </td>
+     <td>
+      <p>
+       Issue date
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       39614
+      </p>
+     </td>
+     <td>
+      <p>
+       Maturity date
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       0.1
+      </p>
+     </td>
+     <td>
+      <p>
+       Percent coupon
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1000
+      </p>
+     </td>
+     <td>
+      <p>
+       Par value
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+     <td>
+      <p>
+       Actual/365 basis (see above)
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =ACCRINTM(A2,A3,A4,A5,A6)
+      </p>
+     </td>
+     <td>
+      <p>
+       The accrued interest for the terms above.
+      </p>
+     </td>
+     <td>
+      <p>
+       20.54794521
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

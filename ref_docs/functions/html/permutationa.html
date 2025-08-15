@@ -1,0 +1,308 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    PERMUTATIONA
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Returns the number of permutations for a given number of objects (with repetitions) that can be selected from the total objects.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   PERMUTATIONA(number, number-chosen)
+  </p>
+  <p>
+   The PERMUTATIONA function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Number
+     </b>
+     Required. An integer that describes the total number of objects.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Number_chosen
+     </b>
+     Required. An integer that describes the number of objects in each permutation.
+    </p>
+   </li>
+  </ul>
+  <p>
+   PERMUTATIONA uses the following equation:
+  </p>
+  <p>
+   <picture>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/f5572cab-31f0-484e-8304-e91a9461078f?format=avif&amp;w=320 320w,        /images/en-us/f5572cab-31f0-484e-8304-e91a9461078f?format=avif&amp;w=480 480w,        /images/en-us/f5572cab-31f0-484e-8304-e91a9461078f?format=avif&amp;w=640 640w,        /images/en-us/f5572cab-31f0-484e-8304-e91a9461078f?format=avif&amp;w=800 800w" type="image/avif"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/f5572cab-31f0-484e-8304-e91a9461078f?format=webp&amp;w=320 320w,        /images/en-us/f5572cab-31f0-484e-8304-e91a9461078f?format=webp&amp;w=480 480w,        /images/en-us/f5572cab-31f0-484e-8304-e91a9461078f?format=webp&amp;w=640 640w,        /images/en-us/f5572cab-31f0-484e-8304-e91a9461078f?format=webp&amp;w=800 800w" type="image/webp"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/f5572cab-31f0-484e-8304-e91a9461078f?format=jpeg&amp;w=320 320w,        /images/en-us/f5572cab-31f0-484e-8304-e91a9461078f?format=jpeg&amp;w=480 480w,        /images/en-us/f5572cab-31f0-484e-8304-e91a9461078f?format=jpeg&amp;w=640 640w,        /images/en-us/f5572cab-31f0-484e-8304-e91a9461078f?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+    <img alt="PERMUTATIONA equation" class="fluentImage" loading="lazy" src="/images/en-us/f5572cab-31f0-484e-8304-e91a9461078f" style="aspect-ratio: 176/35" width="176"/>
+   </picture>
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     Both arguments are truncated to integers.
+    </p>
+   </li>
+   <li>
+    <p>
+     If numeric arguments are values that are not valid, for example, when the total number is zero (0) and the chosen number is larger than zero (0), PERMUTATIONA returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If numeric arguments use data types that are nonnumeric, PERMUTATIONA returns the #VALUE! error value.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =PERMUTATIONA(3,2)
+      </p>
+     </td>
+     <td>
+      <p>
+       Suppose there are 3 objects in the group, [4,5,6]. Using PERMUTATIONA with 2 of the 3 objects, there are 9 ways the numbers can be arranged with repetition:
+      </p>
+     </td>
+     <td>
+      <p>
+       9
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+      <p>
+       4,4
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+      <p>
+       4,5
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+      <p>
+       4,6
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+      <p>
+       5,4
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+      <p>
+       5,5
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+      <p>
+       5,6
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+      <p>
+       6,4
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+      <p>
+       6,5
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+      <p>
+       6,6
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =PERMUTATIONA(2,2)
+      </p>
+     </td>
+     <td>
+      <p>
+       Suppose there are 2 objects in the group, [3,5]. Using PERMUTATIONA with both of the objects, there are 4 ways the numbers can be arranged with repetition:
+      </p>
+     </td>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+      <p>
+       3,3
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+      <p>
+       3,5
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+      <p>
+       5,3
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+      <p>
+       5,5
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+   <a class="ocpTopOfPage" data-bi-type="anchor" href="#">
+    Top of Page
+   </a>
+  </p>
+ </section>
+</article>

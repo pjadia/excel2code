@@ -1,0 +1,588 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   Use COUNTIF, one of the
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/statistical-functions-reference-624dac86-a375-4435-bc25-76d659719ffd">
+    statistical functions
+   </a>
+   , to count the number of cells that meet a criterion; for example, to count the number of times a particular city appears in a customer list.
+  </p>
+  <p>
+   In its simplest form, COUNTIF says:
+  </p>
+  <ul>
+   <li>
+    <p>
+     =COUNTIF(Where do you want to look?, What do you want to look for?)
+    </p>
+   </li>
+  </ul>
+  <p>
+   For example:
+  </p>
+  <ul>
+   <li>
+    <p>
+     =COUNTIF(A2:A5,"London")
+    </p>
+   </li>
+   <li>
+    <p>
+     =COUNTIF(A2:A5,A4)
+    </p>
+   </li>
+  </ul>
+  <div class="ocpVideo" data-channel="ALTENUS_MS_OFFICE" data-llcc="en-us" data-player="ocvideo" data-videoid="RE4GSoN" data-videotitle="COUNTIF Function" data-videotype="single" id="ocpVideo1">
+   <universal-media-player options='{"partnerName":"SupportService","autoplay":false,"reporting":false,"language":"en-us","title":"COUNTIF Function","poster":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-1b0e68d7-8624-4fef-b24c-2f1995e05c83/thumbnail_w800.jpeg","sources":[{"type":"MP4","quality":"HQ","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-1b0e68d7-8624-4fef-b24c-2f1995e05c83/video_1001_1730111788284_1920x1080.mp4"},{"type":"MP4","quality":"HD","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-1b0e68d7-8624-4fef-b24c-2f1995e05c83/video_1001_1730111788284_1280x720.mp4"},{"type":"MP4","quality":"LO","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-1b0e68d7-8624-4fef-b24c-2f1995e05c83/video_1001_1730111788284_640x360.mp4"},{"type":"DASH","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-1b0e68d7-8624-4fef-b24c-2f1995e05c83/video_1001_1730111788284.mpd"},{"type":"HLS","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-1b0e68d7-8624-4fef-b24c-2f1995e05c83/video_1001_1730111788284_master.m3u8"}],"ccFiles":[{"url":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-1b0e68d7-8624-4fef-b24c-2f1995e05c83/en_us_en-us.vtt","locale":"en-us","ccType":"VTT"}]}'>
+    <picture>
+     <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=avif&amp;w=320 320w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=avif&amp;w=480 480w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=avif&amp;w=640 640w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=avif&amp;w=800 800w" type="image/avif"/>
+     <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=webp&amp;w=320 320w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=webp&amp;w=480 480w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=webp&amp;w=640 640w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=webp&amp;w=800 800w" type="image/webp"/>
+     <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=jpeg&amp;w=320 320w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=jpeg&amp;w=480 480w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=jpeg&amp;w=640 640w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+     <img alt="Your browser does not support video. Install Microsoft Silverlight, Adobe Flash Player, or Internet Explorer 9." class="fluentImage" loading="lazy" src="/images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7" style="aspect-ratio: 960/540" width="960"/>
+    </picture>
+   </universal-media-player>
+  </div>
+ </section>
+ <div class="ocpSection">
+  <h2 class="ocpExpandoHead">
+   <button aria-controls="ID0EP-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EP-button" ms.interactiontype="11" type="button">
+    <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+     <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+     </i>
+    </div>
+    <div class="ocpExpandoHeadTitleContainer" role="none">
+     Syntax
+    </div>
+   </button>
+  </h2>
+  <div aria-labelledby="ID0EP-button" class="ocpebw" id="ID0EP-panel" role="region">
+   <div class="ocpExpandoBody">
+    <p>
+     <b class="ocpLegacyBold">
+      COUNTIF(range, criteria)
+     </b>
+    </p>
+    <table aria-label="" class="banded">
+     <thead>
+      <tr>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          Argument name
+         </b>
+        </p>
+       </th>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          Description
+         </b>
+        </p>
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         <b class="ocpRunInHead">
+          range
+         </b>
+         (required)
+        </p>
+       </td>
+       <td>
+        <p>
+         The group of cells you want to count.
+         <b class="ocpLegacyBold">
+          <i class="ocpItalic">
+           Range
+          </i>
+         </b>
+         can contain numbers, arrays, a named range, or references that contain numbers. Blank and text values are ignored.
+        </p>
+        <p>
+         Learn how to
+         <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/select-cell-contents-in-excel-23f64223-2b6b-453a-8688-248355f10fa9">
+          select ranges in a worksheet
+         </a>
+         .
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <b class="ocpRunInHead">
+          criteria
+         </b>
+         (required)
+        </p>
+       </td>
+       <td>
+        <p>
+         A number, expression, cell reference, or text string that determines which cells will be counted.
+        </p>
+        <p>
+         For example, you can use a number like 32, a comparison like "&gt;32", a cell like B4, or a word like "apples".
+        </p>
+        <p>
+         COUNTIF uses only a single criteria. Use
+         <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/countifs-function-dda3dc6e-f74e-4aee-88bc-aa8c2a866842">
+          COUNTIFS
+         </a>
+         if you want to use multiple criteria.
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+  </div>
+ </div>
+ <section aria-labelledby="ID0EDN" class="ocpSection" data-bi-id="__example" id="__example">
+  <h2 class="" id="ID0EDN">
+   Examples
+  </h2>
+  <p>
+   To use these examples in Excel, copy the data in the table below, and paste it in cell A1 of a new worksheet.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       apples
+      </p>
+     </td>
+     <td>
+      <p>
+       32
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       oranges
+      </p>
+     </td>
+     <td>
+      <p>
+       54
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       peaches
+      </p>
+     </td>
+     <td>
+      <p>
+       75
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       apples
+      </p>
+     </td>
+     <td>
+      <p>
+       86
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =COUNTIF(A2:A5,"apples")
+      </p>
+     </td>
+     <td>
+      <p>
+       Counts the number of cells with apples in cells A2 through A5. The result is 2.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =COUNTIF(A2:A5,A4)
+      </p>
+     </td>
+     <td>
+      <p>
+       Counts the number of cells with peaches (the value in A4) in cells A2 through A5. The result is 1.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =COUNTIF(A2:A5,A2)+COUNTIF(A2:A5,A3)
+      </p>
+     </td>
+     <td>
+      <p>
+       Counts the number of apples (the value in A2), and oranges (the value in A3) in cells A2 through A5. The result is 3. This formula uses COUNTIF twice to specify multiple criteria, one criteria per expression. You could also use the
+       <a class="ocpArticleLink" data-bi-area="__example" data-bi-type="anchor" href="/en-us/office/countifs-function-dda3dc6e-f74e-4aee-88bc-aa8c2a866842">
+        COUNTIFS
+       </a>
+       function.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =COUNTIF(B2:B5,"&gt;55")
+      </p>
+     </td>
+     <td>
+      <p>
+       Counts the number of cells with a value greater than 55 in cells B2 through B5. The result is 2.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =COUNTIF(B2:B5,"&lt;&gt;"&amp;B4)
+      </p>
+     </td>
+     <td>
+      <p>
+       Counts the number of cells with a value not equal to 75 in cells B2 through B5. The ampersand (&amp;) merges the comparison operator for not equal to (&lt;&gt;) and the value in B4 to read =COUNTIF(B2:B5,"&lt;&gt;75"). The result is 3.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =COUNTIF(B2:B5,"&gt;=32")-COUNTIF(B2:B5,"&lt;=85")
+      </p>
+     </td>
+     <td>
+      <p>
+       Counts the number of cells with a value greater than (&gt;) or equal to (=) 32 and less than (&lt;) or equal to (=) 85 in cells B2 through B5. The result is 1.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =COUNTIF(A2:A5,"*")
+      </p>
+     </td>
+     <td>
+      <p>
+       Counts the number of cells containing any text in cells A2 through A5. The asterisk (*) is used as the wildcard character to match any character. The result is 4.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =COUNTIF(A2:A5,"?????es")
+      </p>
+     </td>
+     <td>
+      <p>
+       Counts the number of cells that have exactly 7 characters, and end with the letters "es" in cells A2 through A5. The question mark (?) is used as the wildcard character to match individual characters. The result is 2.
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+ <section aria-labelledby="ID0EDL" class="ocpSection">
+  <h2 class="" id="ID0EDL">
+   Common Problems
+  </h2>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Problem
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        What went wrong
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       Wrong value returned for long strings.
+      </p>
+     </td>
+     <td>
+      <p>
+       The COUNTIF function returns incorrect results when you use it to match strings longer than 255 characters.
+      </p>
+      <p>
+       To match strings longer than 255 characters, use the
+       <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/concatenate-function-8f8ae884-2ca8-4f7a-b093-75d702bea31d">
+        CONCATENATE function
+       </a>
+       or the concatenate operator &amp;. For example, =COUNTIF(A2:A5,"long string"&amp;"another long string").
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       No value returned when you expect a value.
+      </p>
+     </td>
+     <td>
+      <p>
+       Be sure to enclose the
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         criteria
+        </i>
+       </b>
+       argument in quotes.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       A COUNTIF formula receives a #VALUE! error when referring to another worksheet.
+      </p>
+     </td>
+     <td>
+      <p>
+       This error occurs when the formula that contains the function refers to cells or a range in a closed workbook and the cells are calculated. For this feature to work, the other workbook must be open.
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Best practices
+  </h2>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Do this
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Why
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       Be aware that COUNTIF ignores upper and lower case in text strings.
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         Criteria
+        </i>
+       </b>
+       aren't case sensitive. In other words, the string "apples" and the string "APPLES" will match the same cells.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Use wildcard characters.
+      </p>
+     </td>
+     <td>
+      <p>
+       Wildcard characters —the question mark (?) and asterisk (*)—can be used in
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         criteria
+        </i>
+       </b>
+       . A question mark matches any single character. An asterisk matches any sequence of characters. If you want to find an actual question mark or asterisk, type a tilde (~) in front of the character.
+      </p>
+      <p>
+       For example, =COUNTIF(A2:A5,"apple?") will count all instances of "apple" with a last letter that could vary.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Make sure your data doesn't contain erroneous characters.
+      </p>
+     </td>
+     <td>
+      <p>
+       When counting text values, make sure the data doesn't contain leading spaces, trailing spaces, inconsistent use of straight and curly quotation marks, or nonprinting characters. In these cases, COUNTIF might return an unexpected value.
+      </p>
+      <p>
+       Try using the
+       <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/clean-function-26f3d7c5-475f-4a9c-90e5-4b8ba987ba41">
+        CLEAN function
+       </a>
+       or the
+       <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/trim-function-410388fa-c5df-49c6-b16c-9e5630b479f9">
+        TRIM function
+       </a>
+       .
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       For convenience, use named ranges
+      </p>
+     </td>
+     <td>
+      <p>
+       COUNTIF supports named ranges in a formula (such as =COUNTIF(
+       <b class="ocpLegacyBold">
+        fruit
+       </b>
+       ,"&gt;=32")-COUNTIF(
+       <b class="ocpLegacyBold">
+        fruit
+       </b>
+       ,"&gt;85"). The named range can be in the current worksheet, another worksheet in the same workbook, or from a different workbook. To reference from another workbook, that second workbook also must be open.
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+ <section aria-labelledby="" class="ocpSection">
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpNote">
+     Note:
+    </b>
+    The COUNTIF function will not count cells based on cell background or font color. However, Excel supports User-Defined Functions (UDFs) using the Microsoft Visual Basic for Applications (VBA) operations on cells based on background or font color. Here is an example of how you can
+    <a class="ocpExternalLink" data-bi-type="anchor" href="https://support.microsoft.com/en-us/kb/2815384" target="_blank">
+     Count the number of cells with specific cell color by using VBA
+    </a>
+    .
+   </p>
+  </div>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Need more help?
+  </h2>
+  <p>
+   You can always ask an expert in the
+   <a class="ocpExternalLink" data-bi-type="anchor" href="https://techcommunity.microsoft.com/t5/Excel/ct-p/Excel_Cat" target="_blank">
+    Excel Tech Community
+   </a>
+   or get support in
+   <a class="ocpExternalLink" data-bi-type="anchor" href="https://answers.microsoft.com/lang/msoffice/forum/msoffice_excel" target="_blank">
+    Communities
+   </a>
+   .
+  </p>
+  <p>
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   See also
+  </h2>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/countifs-function-dda3dc6e-f74e-4aee-88bc-aa8c2a866842">
+    COUNTIFS function
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/if-function-69aed7c9-4e8a-4755-a9bc-aa8bbff73be2">
+    IF function
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/counta-function-7dc98875-d5c1-46f1-9a82-53f3219e2509">
+    COUNTA function
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/overview-of-formulas-in-excel-ecfdc708-9162-49e8-b993-c311f47ca173">
+    Overview of formulas in Excel
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/topic/23c84e31-fc11-425d-ab03-5630f247b566">
+    IFS function
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/sumif-function-169b8c99-c05c-4483-a712-1697a653039b">
+    SUMIF function
+   </a>
+  </p>
+ </section>
+</article>

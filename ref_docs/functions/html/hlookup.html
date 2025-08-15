@@ -1,0 +1,323 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpTip">
+     Tip:
+    </b>
+    Try using the new
+    <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/xlookup-function-b7fd680e-6d10-43e6-84f9-88eae8bf5929">
+     XLOOKUP
+    </a>
+    function, an improved version of HLOOKUP that works in any direction and returns exact matches by default, making it easier and more convenient to use than its predecessor.
+   </p>
+  </div>
+  <p id="__goback">
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    HLOOKUP
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Searches for a value in the top row of a table or an array of values, and then returns a value in the same column from a row you specify in the table or array. Use HLOOKUP when your comparison values are located in a row across the top of a table of data, and you want to look down a specified number of rows. Use VLOOKUP when your comparison values are located in a column to the left of the data you want to find.
+  </p>
+  <p>
+   The H in HLOOKUP stands for "Horizontal."
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   HLOOKUP(lookup_value, table_array, row_index_num, [range_lookup])
+  </p>
+  <p>
+   The HLOOKUP function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Lookup_value
+     </b>
+     Required. The value to be found in the first row of the table. Lookup_value can be a value, a reference, or a text string.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Table_array
+     </b>
+     Required. A table of information in which data is looked up. Use a reference to a range or a range name.
+    </p>
+    <ul>
+     <li>
+      <p>
+       The values in the first row of table_array can be text, numbers, or logical values.
+      </p>
+     </li>
+     <li>
+      <p>
+       If range_lookup is TRUE, the values in the first row of table_array must be placed in ascending order: ...-2, -1, 0, 1, 2,... , A-Z, FALSE, TRUE; otherwise, HLOOKUP may not give the correct value. If range_lookup is FALSE, table_array does not need to be sorted.
+      </p>
+     </li>
+     <li>
+      <p>
+       Uppercase and lowercase text are equivalent.
+      </p>
+     </li>
+     <li>
+      <p>
+       Sort the values in ascending order, left to right. For more information, see
+       <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/sort-data-in-a-range-or-table-62d0b95d-2a90-4610-a6ae-2e545c4a4654">
+        Sort data in a range or table
+       </a>
+       .
+      </p>
+     </li>
+    </ul>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Row_index_num
+     </b>
+     Required. The row number in table_array from which the matching value will be returned. A row_index_num of 1 returns the first row value in table_array, a row_index_num of 2 returns the second row value in table_array, and so on. If row_index_num is less than 1, HLOOKUP returns the #VALUE! error value; if row_index_num is greater than the number of rows on table_array, HLOOKUP returns the #REF! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Range_lookup
+     </b>
+     Optional. A logical value that specifies whether you want HLOOKUP to find an exact match or an approximate match. If TRUE or omitted, an approximate match is returned. In other words, if an exact match is not found, the next largest value that is less than lookup_value is returned. If FALSE, HLOOKUP will find an exact match. If one is not found, the error value #N/A is returned.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remark
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If HLOOKUP can't find lookup_value, and range_lookup is TRUE, it uses the largest value that is less than lookup_value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If lookup_value is smaller than the smallest value in the first row of table_array, HLOOKUP returns the #N/A error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If range_lookup is FALSE and lookup_value is text, you can use the wildcard characters, question mark (?) and asterisk (*), in lookup_value. A question mark matches any single character; an asterisk matches any sequence of characters. If you want to find an actual question mark or asterisk, type a tilde (~) before the character.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection" data-bi-id="__example" id="__example">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Axles
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Bearings
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Bolts
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+     <td>
+      <p>
+       9
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       5
+      </p>
+     </td>
+     <td>
+      <p>
+       7
+      </p>
+     </td>
+     <td>
+      <p>
+       10
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       6
+      </p>
+     </td>
+     <td>
+      <p>
+       8
+      </p>
+     </td>
+     <td>
+      <p>
+       11
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =HLOOKUP("Axles", A1:C4, 2, TRUE)
+      </p>
+     </td>
+     <td>
+      <p>
+       Looks up "Axles" in row 1, and returns the value from row 2 that's in the same column (column A).
+      </p>
+     </td>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =HLOOKUP("Bearings", A1:C4, 3, FALSE)
+      </p>
+     </td>
+     <td>
+      <p>
+       Looks up "Bearings" in row 1, and returns the value from row 3 that's in the same column (column B).
+      </p>
+     </td>
+     <td>
+      <p>
+       7
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =HLOOKUP("B", A1:C4, 3, TRUE)
+      </p>
+     </td>
+     <td>
+      <p>
+       Looks up "B" in row 1, and returns the value from row 3 that's in the same column. Because an exact match for "B" is not found, the largest value in row 1 that is less than "B" is used: "Axles," in column A.
+      </p>
+     </td>
+     <td>
+      <p>
+       5
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =HLOOKUP("Bolts", A1:C4, 4)
+      </p>
+     </td>
+     <td>
+      <p>
+       Looks up "Bolts" in row 1, and returns the value from row 4 that's in the same column (column C).
+      </p>
+     </td>
+     <td>
+      <p>
+       11
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =HLOOKUP(3, {1,2,3;"a","b","c";"d","e","f"}, 2, TRUE)
+      </p>
+     </td>
+     <td>
+      <p>
+       Looks up the number 3 in the three-row array constant, and returns the value from row 2 in the same (in this case, third) column. There are three rows of values in the array constant, each row separated by a semicolon (;). Because "c" is found in row 2 and in the same column as 3, "c" is returned.
+      </p>
+     </td>
+     <td>
+      <p>
+       c
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

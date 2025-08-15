@@ -1,0 +1,409 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   You can use the IFERROR function to handle errors in a formula. IFERROR returns a value you specify if a formula evaluates to an error; otherwise, it returns the result of the formula.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Syntax
+  </h2>
+  <p>
+   <b class="ocpLegacyBold">
+    IFERROR(value, value_if_error)
+   </b>
+  </p>
+  <p>
+   The IFERROR function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      value
+     </b>
+     Required. The argument that is checked for an error.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      value_if_error
+     </b>
+     Required. The value to return if the formula evaluates to an error. The following error types are evaluated: #N/A, #VALUE!, #REF!, #DIV/0!, #NUM!, #NAME?, or #NULL!.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If value or value_if_error is an empty cell, IFERROR treats it as an empty string value ("").
+    </p>
+   </li>
+   <li>
+    <p>
+     If value is an array formula, IFERROR returns an array of results for each cell in the range specified in value. See the second example below.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Examples
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press
+   <b class="ocpUI">
+    F2
+   </b>
+   , and then press
+   <b class="ocpUI">
+    Enter
+   </b>
+   .
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Quota
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Units Sold
+       </b>
+      </p>
+     </th>
+     <th>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       210
+      </p>
+     </td>
+     <td>
+      <p>
+       35
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       55
+      </p>
+     </td>
+     <td>
+      <p>
+       0
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+      <p>
+       23
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =IFERROR(A2/B2, "Error in calculation")
+      </p>
+     </td>
+     <td>
+      <p>
+       Checks for an error in the formula in the first argument (divide 210 by 35), finds no error, and then returns the results of the formula
+      </p>
+     </td>
+     <td>
+      <p>
+       6
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =IFERROR(A3/B3, "Error in calculation")
+      </p>
+     </td>
+     <td>
+      <p>
+       Checks for an error in the formula in the first argument (divide 55 by 0), finds a division by 0 error, and then returns value_if_error
+      </p>
+     </td>
+     <td>
+      <p>
+       Error in calculation
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =IFERROR(A4/B4, "Error in calculation")
+      </p>
+     </td>
+     <td>
+      <p>
+       Checks for an error in the formula in the first argument (divide "" by 23), finds no error, and then returns the results of the formula.
+      </p>
+     </td>
+     <td>
+      <p>
+       0
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <section aria-labelledby="ID0EDBBF" class="ocpSection" data-bi-id="__goback" id="__goback">
+   <h3 class="" id="ID0EDBBF">
+    Example 2
+   </h3>
+   <table aria-label="" class="banded">
+    <thead>
+     <tr>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         Quota
+        </b>
+       </p>
+      </th>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         Units Sold
+        </b>
+       </p>
+      </th>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         Ratio
+        </b>
+       </p>
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <p>
+        210
+       </p>
+      </td>
+      <td>
+       <p>
+        35
+       </p>
+      </td>
+      <td>
+       <p>
+        6
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        55
+       </p>
+      </td>
+      <td>
+       <p>
+        0
+       </p>
+      </td>
+      <td>
+       <p>
+        Error in calculation
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+      </td>
+      <td>
+       <p>
+        23
+       </p>
+      </td>
+      <td>
+       <p>
+        0
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        <b class="ocpLegacyBold">
+         Formula
+        </b>
+       </p>
+      </td>
+      <td>
+       <p>
+        <b class="ocpLegacyBold">
+         Description
+        </b>
+       </p>
+      </td>
+      <td>
+       <p>
+        <b class="ocpLegacyBold">
+         Result
+        </b>
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        =C2
+       </p>
+      </td>
+      <td>
+       <p>
+        Checks for an error in the formula in the first argument in the first element of the array (A2/B2 or divide 210 by 35), finds no error, and then returns the result of the formula
+       </p>
+      </td>
+      <td>
+       <p>
+        6
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        =C3
+       </p>
+      </td>
+      <td>
+       <p>
+        Checks for an error in the formula in the first argument in the second element of the array (A3/B3 or divide 55 by 0), finds a division by 0 error, and then returns value_if_error
+       </p>
+      </td>
+      <td>
+       <p>
+        Error in calculation
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        =C4
+       </p>
+      </td>
+      <td>
+       <p>
+        Checks for an error in the formula in the first argument in the third element of the array (A4/B4 or divide "" by 23), finds no error, and then returns the result of the formula
+       </p>
+      </td>
+      <td>
+       <p>
+        0
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+      </td>
+      <td>
+       <p>
+        Note: If you have a current version of
+        <a class="ocpExternalLink" data-bi-area="__goback" data-bi-type="anchor" href="https://products.office.com/en-us/buy/compare-microsoft-office-products" target="_blank">
+         Microsoft 365
+        </a>
+        , then you can input the formula in the top-left-cell of the output range, then press ENTER to confirm the formula as a dynamic array formula. Otherwise, the formula must be entered as a legacy array formula by first selecting the output range, input the formula in the top-left-cell of the output range, then press CTRL+SHIFT+ENTER to confirm it. Excel inserts curly brackets at the beginning and end of the formula for you. For more information on array formulas, see
+        <a class="ocpArticleLink" data-bi-area="__goback" data-bi-type="anchor" href="/en-us/office/guidelines-and-examples-of-array-formulas-7d94a64e-3ff3-4686-9372-ecfd5caa57c7">
+         Guidelines and examples of array formulas
+        </a>
+        .
+       </p>
+      </td>
+      <td>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Need more help?
+  </h2>
+  <p>
+   You can always ask an expert in the
+   <a class="ocpExternalLink" data-bi-type="anchor" href="https://techcommunity.microsoft.com/t5/Excel/ct-p/Excel_Cat" target="_blank">
+    Excel Tech Community
+   </a>
+   or get support in
+   <a class="ocpExternalLink" data-bi-type="anchor" href="https://answers.microsoft.com/lang/msoffice/forum/msoffice_excel" target="_blank">
+    Communities
+   </a>
+   .
+  </p>
+  <p>
+  </p>
+ </section>
+</article>

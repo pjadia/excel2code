@@ -1,0 +1,171 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   The NORM.S.DIST function in Excel returns the standard normal distribution (
+   <i class="ocpItalic">
+    i.e., it has a mean of zero and a standard deviation of one
+   </i>
+   ). You can use this function in place of using a table of standard normal curve areas.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <p>
+   For a standard normal distribution, this is the syntax:
+  </p>
+  <p>
+   NORM.S.DIST(z,cumulative)
+  </p>
+  <p>
+   This function syntax uses the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      z
+     </b>
+     Required. This is the value for which you want the distribution.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      cumulative
+     </b>
+     Required. The
+     <b class="ocpLegacyBold">
+      cumulative
+     </b>
+     argument can be either
+     <b class="ocpLegacyBold">
+      TRUE
+     </b>
+     or
+     <b class="ocpLegacyBold">
+      FALSE
+     </b>
+     . This logical value determines the form of the function. If cumulative is TRUE then NORM.S.DIST returns the
+     <i class="ocpItalic">
+      cumulative
+      <i class="ocpItalic">
+       distribution
+      </i>
+     </i>
+     function. If it is FALSE, it returns the
+     <i class="ocpItalic">
+      probability mass
+     </i>
+     function.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If
+     <b class="ocpLegacyBold">
+      z
+     </b>
+     is nonnumeric, NORM.S.DIST returns the
+     <b class="ocpLegacyBold">
+      #VALUE!
+     </b>
+     error.
+    </p>
+   </li>
+   <li>
+    <p>
+     The standard normal density function is determined with this equation:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/bd99a6ad-418a-444f-aa09-533f65ec63b5?format=avif&amp;w=320 320w,        /images/en-us/bd99a6ad-418a-444f-aa09-533f65ec63b5?format=avif&amp;w=480 480w,        /images/en-us/bd99a6ad-418a-444f-aa09-533f65ec63b5?format=avif&amp;w=640 640w,        /images/en-us/bd99a6ad-418a-444f-aa09-533f65ec63b5?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/bd99a6ad-418a-444f-aa09-533f65ec63b5?format=webp&amp;w=320 320w,        /images/en-us/bd99a6ad-418a-444f-aa09-533f65ec63b5?format=webp&amp;w=480 480w,        /images/en-us/bd99a6ad-418a-444f-aa09-533f65ec63b5?format=webp&amp;w=640 640w,        /images/en-us/bd99a6ad-418a-444f-aa09-533f65ec63b5?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/bd99a6ad-418a-444f-aa09-533f65ec63b5?format=jpeg&amp;w=320 320w,        /images/en-us/bd99a6ad-418a-444f-aa09-533f65ec63b5?format=jpeg&amp;w=480 480w,        /images/en-us/bd99a6ad-418a-444f-aa09-533f65ec63b5?format=jpeg&amp;w=640 640w,        /images/en-us/bd99a6ad-418a-444f-aa09-533f65ec63b5?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/bd99a6ad-418a-444f-aa09-533f65ec63b5" style="aspect-ratio: 110/40" width="110"/>
+     </picture>
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   Copy the following entire table. Paste it into cell A1 (and adjacent cells) in a new Excel worksheet. If you do not automatically see results, select the formula, press F2 and press Enter. Adjust column widths if needed to see everything.
+   <br aria-hidden="true"/>
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =NORM.S.DIST(1.333333,TRUE)
+      </p>
+     </td>
+     <td>
+      <p>
+       Normal cumulative distribution function at 1.333333
+      </p>
+     </td>
+     <td>
+      <p>
+       0.908788726
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =NORM.S.DIST(1.333333,FALSE)
+      </p>
+     </td>
+     <td>
+      <p>
+       Normal probability distribution function at 1.333333
+      </p>
+     </td>
+     <td>
+      <p>
+       0.164010148
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

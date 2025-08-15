@@ -1,0 +1,237 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    PRODUCT
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Description
+  </h2>
+  <p>
+   The
+   <b class="ocpLegacyBold">
+    PRODUCT
+   </b>
+   function multiplies all the numbers given as arguments and returns the product. For example, if cells A1 and A2 contain numbers, you can use the formula
+   <b class="ocpLegacyBold">
+    =
+   </b>
+   <b class="ocpLegacyBold">
+    PRODUCT(
+   </b>
+   <b class="ocpLegacyBold">
+    A1, A2)
+   </b>
+   to multiply those two numbers together. You can also perform the same operation by using the multiply (
+   <b class="ocpLegacyBold">
+    *
+   </b>
+   ) mathematical operator; for example,
+   <b class="ocpLegacyBold">
+    =A1 * A2
+   </b>
+   .
+  </p>
+  <p>
+   The
+   <b class="ocpLegacyBold">
+    PRODUCT
+   </b>
+   function is useful when you need to multiply many cells together. For example, the formula
+   <b class="ocpLegacyBold">
+    =
+   </b>
+   <b class="ocpLegacyBold">
+    PRODUCT(
+   </b>
+   <b class="ocpLegacyBold">
+    A1:A3, C1:C3)
+   </b>
+   is equivalent to
+   <b class="ocpLegacyBold">
+    =A1 * A2 * A3 * C1 * C2 * C3
+   </b>
+   .
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Syntax
+  </h2>
+  <p>
+   PRODUCT(number1, [number2], ...)
+  </p>
+  <p>
+   The PRODUCT function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      number1
+     </b>
+     Required. The first number or range that you want to multiply.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      number2, ...
+     </b>
+     Optional. Additional numbers or ranges that you want to multiply, up to a maximum of 255 arguments.
+    </p>
+   </li>
+  </ul>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpNote">
+     Note:
+    </b>
+    If an argument is an array or reference, only numbers in the array or reference are multiplied. Empty cells, logical values, and text in the array or reference are ignored.
+   </p>
+  </div>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection" data-bi-id="__example" id="__example">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       5
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       15
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       30
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =PRODUCT(A2:A4)
+      </p>
+     </td>
+     <td>
+      <p>
+       Multiplies the numbers in cells A2 through A4.
+      </p>
+     </td>
+     <td>
+      <p>
+       2250
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =PRODUCT(A2:A4, 2)
+      </p>
+     </td>
+     <td>
+      <p>
+       Multiplies the numbers in cells A2 through A4, and then multiplies that result by 2.
+      </p>
+     </td>
+     <td>
+      <p>
+       4500
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =A2*A3*A4
+      </p>
+     </td>
+     <td>
+      <p>
+       Multiplies the numbers in cells A2 through A4 by using mathematical operators instead of the
+       <b class="ocpLegacyBold">
+        PRODUCT
+       </b>
+       function.
+      </p>
+     </td>
+     <td>
+      <p>
+       2250
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

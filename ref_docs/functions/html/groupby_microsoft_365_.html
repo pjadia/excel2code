@@ -1,0 +1,379 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   The
+   <b class="ocpLegacyBold">
+    GROUPBY
+   </b>
+   function allows you to create a summary of your data via a formula. It supports grouping along one axis and aggregating the associated values. For instance, if you had a table of sales data, you might generate a summary of sales by year.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Syntax
+  </h2>
+  <p>
+   The
+   <b class="ocpLegacyBold">
+    GROUPBY
+   </b>
+   function allows you to group, aggregate, sort, and filter data based on the fields you specify.
+  </p>
+  <p>
+   The syntax of the
+   <b class="ocpUI">
+    GROUPBY
+   </b>
+   function is:
+  </p>
+  <p>
+   <b class="ocpLegacyBold">
+    GROUPBY(row_fields,values,function,[field_headers],[total_depth],[sort_order],[filter_array],[field_relationship])
+   </b>
+  </p>
+  <p>
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       Argument
+      </p>
+     </th>
+     <th>
+      <p>
+       Description
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        row_fields
+       </b>
+      </p>
+      <p>
+       (required)
+      </p>
+     </td>
+     <td>
+      <p>
+       A column-oriented array or range that contains the values which are used to group rows and generate row headers.
+      </p>
+      <p>
+       The array or range may contain multiple columns. If so, the output will have multiple row group levels.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        values
+       </b>
+      </p>
+      <p>
+       (required)
+      </p>
+     </td>
+     <td>
+      <p>
+       A column-oriented array or range of the data to aggregate.
+      </p>
+      <p>
+       The array or range may contain multiple columns. If so, the output will have multiple aggregations.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        function
+       </b>
+      </p>
+      <p>
+       (required)
+      </p>
+     </td>
+     <td>
+      <p>
+       An explicit or eta reduced lambda (SUM, PERCENTOF, AVERAGE, COUNT, etc.) that is used to aggregate values.
+      </p>
+      <p>
+       A vector of lambdas can be provided. If so, the output will have multiple aggregations. The orientation of the vector will determine whether they are laid out row- or column-wise.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        field_headers
+       </b>
+      </p>
+      <p>
+      </p>
+     </td>
+     <td>
+      <p>
+       A number that specifies whether the
+       <b class="ocpLegacyBold">
+        row_fields
+       </b>
+       <b class="ocpLegacyBold">
+       </b>
+       and
+       <b class="ocpLegacyBold">
+        values
+       </b>
+       have headers and whether field headers should be returned in the results. The possible values are:
+      </p>
+      <p>
+       <b class="ocpLegacyBold">
+        Missing
+       </b>
+       : Automatic (default)
+       <br aria-hidden="true"/>
+       <b class="ocpLegacyBold">
+        0
+       </b>
+       : No
+       <br aria-hidden="true"/>
+       <b class="ocpLegacyBold">
+        1
+       </b>
+       : Yes and don't show
+       <br aria-hidden="true"/>
+       <b class="ocpLegacyBold">
+        2
+       </b>
+       : No but generate
+       <br aria-hidden="true"/>
+       <b class="ocpLegacyBold">
+        3
+       </b>
+       : Yes and show
+      </p>
+      <div class="ocpAlert">
+       <p class="ocpAlertSection">
+        <b class="ocpNote">
+         Note:
+        </b>
+        Automatic assumes the data contains headers based on the values argument. If the 1st value is text and the 2nd value is a number, then the data is assumed to have headers. Fields headers are shown if there are multiple row or column group levels.
+       </p>
+      </div>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        total_depth
+       </b>
+      </p>
+      <p>
+      </p>
+     </td>
+     <td>
+      <p>
+       Determines whether the row headers should contain totals. The possible values are:
+      </p>
+      <p>
+       <b class="ocpLegacyBold">
+        Missing
+       </b>
+       : Automatic: Grand totals and, where possible, subtotals (default)
+       <br aria-hidden="true"/>
+       <b class="ocpLegacyBold">
+        0
+       </b>
+       : No Totals
+       <br aria-hidden="true"/>
+       <b class="ocpLegacyBold">
+        1
+       </b>
+       : Grand Totals
+       <br aria-hidden="true"/>
+       <b class="ocpLegacyBold">
+        2
+       </b>
+       : Grand and Subtotals
+       <br aria-hidden="true"/>
+       <b class="ocpLegacyBold">
+        -1
+       </b>
+       : Grand Totals at Top
+       <br aria-hidden="true"/>
+       <b class="ocpLegacyBold">
+        -2
+       </b>
+       : Grand and Subtotals at Top
+      </p>
+      <div class="ocpAlert">
+       <p class="ocpAlertSection">
+        <b class="ocpNote">
+         Note:
+        </b>
+        For subtotals,
+        <b class="ocpLegacyBold">
+         fields
+        </b>
+        must have at least 2 columns. Numbers greater than 2 are supported provided
+        <b class="ocpLegacyBold">
+         field
+        </b>
+        has sufficient columns.
+       </p>
+      </div>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        sort_order
+       </b>
+      </p>
+      <p>
+      </p>
+     </td>
+     <td>
+      <p>
+       A number indicating how rows should be sorted. Numbers correspond with columns in
+       <b class="ocpLegacyBold">
+        row_fields
+       </b>
+       followed by the columns in
+       <b class="ocpLegacyBold">
+        values
+       </b>
+       . If the number is negative, the rows are sorted in descending/reverse order.
+      </p>
+      <p>
+       A vector of numbers can be provided when sorting based on only
+       <b class="ocpLegacyBold">
+        row_fields
+       </b>
+       .
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        filter_array
+       </b>
+      </p>
+      <p>
+      </p>
+     </td>
+     <td>
+      <p>
+       A column-oriented 1D array of Booleans that indicate whether the corresponding row of data should be considered.
+      </p>
+      <div class="ocpAlert">
+       <p class="ocpAlertSection">
+        <b class="ocpNote">
+         Note:
+        </b>
+        The length of the array must match the length of those provided to
+        <b class="ocpLegacyBold">
+         row_fields
+        </b>
+        .
+       </p>
+      </div>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        field_relationship
+       </b>
+      </p>
+      <p>
+      </p>
+     </td>
+     <td>
+      <p>
+       Specifies the relationship fields when
+       <i class="ocpItalic">
+        multiple
+       </i>
+       columns are provided to
+       <b class="ocpLegacyBold">
+        row_fields
+       </b>
+       . The possible values are:
+      </p>
+      <p>
+       <b class="ocpLegacyBold">
+        0
+       </b>
+       : Hierarchy (default)
+       <br aria-hidden="true"/>
+       <b class="ocpLegacyBold">
+        1
+       </b>
+       : Table
+      </p>
+      <p>
+       With a Hierarchy field relationship (0), sorting of later field columns takes into account the hierarchy of earlier columns.
+      </p>
+      <p>
+       With a Table field relationship (1), sorting of each field column is done independently. Subtotals are not supported as they rely on the data having a hierarchy.
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Examples
+  </h2>
+  <p>
+   <b class="ocpLegacyBold">
+    Example 1
+   </b>
+   : use
+   <b class="ocpUI">
+    GROUPBY
+   </b>
+   to generate a summary of total sales by year.
+  </p>
+  <p>
+   <picture>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/174c8d72-952a-4b34-b195-e0d7fca7631f?format=avif&amp;w=320 320w,        /images/en-us/174c8d72-952a-4b34-b195-e0d7fca7631f?format=avif&amp;w=480 480w,        /images/en-us/174c8d72-952a-4b34-b195-e0d7fca7631f?format=avif&amp;w=640 640w,        /images/en-us/174c8d72-952a-4b34-b195-e0d7fca7631f?format=avif&amp;w=800 800w" type="image/avif"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/174c8d72-952a-4b34-b195-e0d7fca7631f?format=webp&amp;w=320 320w,        /images/en-us/174c8d72-952a-4b34-b195-e0d7fca7631f?format=webp&amp;w=480 480w,        /images/en-us/174c8d72-952a-4b34-b195-e0d7fca7631f?format=webp&amp;w=640 640w,        /images/en-us/174c8d72-952a-4b34-b195-e0d7fca7631f?format=webp&amp;w=800 800w" type="image/webp"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/174c8d72-952a-4b34-b195-e0d7fca7631f?format=jpeg&amp;w=320 320w,        /images/en-us/174c8d72-952a-4b34-b195-e0d7fca7631f?format=jpeg&amp;w=480 480w,        /images/en-us/174c8d72-952a-4b34-b195-e0d7fca7631f?format=jpeg&amp;w=640 640w,        /images/en-us/174c8d72-952a-4b34-b195-e0d7fca7631f?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+    <img alt="Use GROUPBY to generate a summary of total sales by year. =GROUPBY(A2:A76,D2:D76,SUM)" class="fluentImage" loading="lazy" src="/images/en-us/174c8d72-952a-4b34-b195-e0d7fca7631f" style="aspect-ratio: 794/535" width="794"/>
+   </picture>
+  </p>
+  <p>
+   <b class="ocpLegacyBold">
+    Example 2
+   </b>
+   : use
+   <b class="ocpUI">
+    GROUPBY
+   </b>
+   to generate a summary of total sales by product. Sort descending by sales.
+  </p>
+  <p>
+   <picture>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/d8334975-6de4-476a-8b6c-f00973cb5843?format=avif&amp;w=320 320w,        /images/en-us/d8334975-6de4-476a-8b6c-f00973cb5843?format=avif&amp;w=480 480w,        /images/en-us/d8334975-6de4-476a-8b6c-f00973cb5843?format=avif&amp;w=640 640w,        /images/en-us/d8334975-6de4-476a-8b6c-f00973cb5843?format=avif&amp;w=800 800w" type="image/avif"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/d8334975-6de4-476a-8b6c-f00973cb5843?format=webp&amp;w=320 320w,        /images/en-us/d8334975-6de4-476a-8b6c-f00973cb5843?format=webp&amp;w=480 480w,        /images/en-us/d8334975-6de4-476a-8b6c-f00973cb5843?format=webp&amp;w=640 640w,        /images/en-us/d8334975-6de4-476a-8b6c-f00973cb5843?format=webp&amp;w=800 800w" type="image/webp"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/d8334975-6de4-476a-8b6c-f00973cb5843?format=jpeg&amp;w=320 320w,        /images/en-us/d8334975-6de4-476a-8b6c-f00973cb5843?format=jpeg&amp;w=480 480w,        /images/en-us/d8334975-6de4-476a-8b6c-f00973cb5843?format=jpeg&amp;w=640 640w,        /images/en-us/d8334975-6de4-476a-8b6c-f00973cb5843?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+    <img alt="Use GROUPBY to generate a summary of total sales by product. Sort descending by sales. =GROUPBY(C2:C76,D2:D76,SUM,,,-2)" class="fluentImage" loading="lazy" src="/images/en-us/d8334975-6de4-476a-8b6c-f00973cb5843" style="aspect-ratio: 755/620" width="755"/>
+   </picture>
+  </p>
+ </section>
+</article>

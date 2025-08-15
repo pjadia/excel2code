@@ -1,0 +1,283 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    SUMX2PY2
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Returns the sum of the sum of squares of corresponding values in two arrays. The sum of the sum of squares is a common term in many statistical calculations.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   SUMX2PY2(array_x, array_y)
+  </p>
+  <p>
+   The SUMX2PY2 function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Array_x
+     </b>
+     Required. The first array or range of values.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Array_y
+     </b>
+     Required. The second array or range of values.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     The arguments should be either numbers or names, arrays, or references that contain numbers.
+    </p>
+   </li>
+   <li>
+    <p>
+     If an array or reference argument contains text, logical values, or empty cells, those values are ignored; however, cells with the value zero are included.
+    </p>
+   </li>
+   <li>
+    <p>
+     If array_x and array_y have a different number of values, SUMX2PY2 returns the #N/A error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     The equation for the sum of the sum of squares is:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/3b95eb64-83a6-4a05-a6ff-730632a3b6e2?format=avif&amp;w=320 320w,        /images/en-us/3b95eb64-83a6-4a05-a6ff-730632a3b6e2?format=avif&amp;w=480 480w,        /images/en-us/3b95eb64-83a6-4a05-a6ff-730632a3b6e2?format=avif&amp;w=640 640w,        /images/en-us/3b95eb64-83a6-4a05-a6ff-730632a3b6e2?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/3b95eb64-83a6-4a05-a6ff-730632a3b6e2?format=webp&amp;w=320 320w,        /images/en-us/3b95eb64-83a6-4a05-a6ff-730632a3b6e2?format=webp&amp;w=480 480w,        /images/en-us/3b95eb64-83a6-4a05-a6ff-730632a3b6e2?format=webp&amp;w=640 640w,        /images/en-us/3b95eb64-83a6-4a05-a6ff-730632a3b6e2?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/3b95eb64-83a6-4a05-a6ff-730632a3b6e2?format=jpeg&amp;w=320 320w,        /images/en-us/3b95eb64-83a6-4a05-a6ff-730632a3b6e2?format=jpeg&amp;w=480 480w,        /images/en-us/3b95eb64-83a6-4a05-a6ff-730632a3b6e2?format=jpeg&amp;w=640 640w,        /images/en-us/3b95eb64-83a6-4a05-a6ff-730632a3b6e2?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/3b95eb64-83a6-4a05-a6ff-730632a3b6e2" style="aspect-ratio: 179/21" width="179"/>
+     </picture>
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        First array
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Second array
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+     <td>
+      <p>
+       6
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+     <td>
+      <p>
+       5
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       9
+      </p>
+     </td>
+     <td>
+      <p>
+       11
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+      <p>
+       7
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       8
+      </p>
+     </td>
+     <td>
+      <p>
+       5
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       7
+      </p>
+     </td>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       5
+      </p>
+     </td>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description (Result)
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =SUMX2PY2(A3:A9,B3:B9)
+      </p>
+     </td>
+     <td>
+      <p>
+       Sum of the sum of squares of the two arrays above (521)
+      </p>
+     </td>
+     <td>
+      <p>
+       521
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =SUMX2PY2({2,3,9,1,8,7,5}, {6,5,11,7,5,4,4})
+      </p>
+     </td>
+     <td>
+      <p>
+       Sum of the sum of squares of the two arrays constants (521)
+      </p>
+     </td>
+     <td>
+      <p>
+       521
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

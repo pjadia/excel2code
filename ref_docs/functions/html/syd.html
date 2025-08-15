@@ -1,0 +1,211 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    SYD
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Returns the sum-of-years' digits depreciation of an asset for a specified period.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   SYD(cost, salvage, life, per)
+  </p>
+  <p>
+   The SYD function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Cost
+     </b>
+     Required. The initial cost of the asset.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Salvage
+     </b>
+     Required. The value at the end of the depreciation (sometimes called the salvage value of the asset).
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Life
+     </b>
+     Required. The number of periods over which the asset is depreciated (sometimes called the useful life of the asset).
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Per
+     </b>
+     Required. The period and must use the same units as life.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <p>
+   SYD is calculated as follows:
+  </p>
+  <p>
+   <picture>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/29e82d3b-8c1d-4236-b6ab-97f210c3b47b?format=avif&amp;w=320 320w,        /images/en-us/29e82d3b-8c1d-4236-b6ab-97f210c3b47b?format=avif&amp;w=480 480w,        /images/en-us/29e82d3b-8c1d-4236-b6ab-97f210c3b47b?format=avif&amp;w=640 640w,        /images/en-us/29e82d3b-8c1d-4236-b6ab-97f210c3b47b?format=avif&amp;w=800 800w" type="image/avif"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/29e82d3b-8c1d-4236-b6ab-97f210c3b47b?format=webp&amp;w=320 320w,        /images/en-us/29e82d3b-8c1d-4236-b6ab-97f210c3b47b?format=webp&amp;w=480 480w,        /images/en-us/29e82d3b-8c1d-4236-b6ab-97f210c3b47b?format=webp&amp;w=640 640w,        /images/en-us/29e82d3b-8c1d-4236-b6ab-97f210c3b47b?format=webp&amp;w=800 800w" type="image/webp"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/29e82d3b-8c1d-4236-b6ab-97f210c3b47b?format=jpeg&amp;w=320 320w,        /images/en-us/29e82d3b-8c1d-4236-b6ab-97f210c3b47b?format=jpeg&amp;w=480 480w,        /images/en-us/29e82d3b-8c1d-4236-b6ab-97f210c3b47b?format=jpeg&amp;w=640 640w,        /images/en-us/29e82d3b-8c1d-4236-b6ab-97f210c3b47b?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+    <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/29e82d3b-8c1d-4236-b6ab-97f210c3b47b" style="aspect-ratio: 290/40" width="290"/>
+   </picture>
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       $            30,000.00
+      </p>
+     </td>
+     <td>
+      <p>
+       Initial cost
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       $              7,500.00
+      </p>
+     </td>
+     <td>
+      <p>
+       Salvage value
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       10
+      </p>
+     </td>
+     <td>
+      <p>
+       Lifespan in years
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description (Result)
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =SYD(A2,A3,A4,1)
+      </p>
+     </td>
+     <td>
+      <p>
+       Yearly depreciation allowance for the first year (4,090.91)
+      </p>
+     </td>
+     <td>
+      <p>
+       $4,090.91
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =SYD(A2,A3,A4,10)
+      </p>
+     </td>
+     <td>
+      <p>
+       Yearly depreciation allowance for the tenth year (409.09)
+      </p>
+     </td>
+     <td>
+      <p>
+       $409.09
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

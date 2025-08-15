@@ -1,0 +1,324 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    MDETERM
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Returns the matrix determinant of an array.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   MDETERM(array)
+  </p>
+  <p>
+   The MDETERM function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Array
+     </b>
+     Required. A numeric array with an equal number of rows and columns.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     Array can be given as a cell range, for example, A1:C3; as an array constant, such as {1,2,3;4,5,6;7,8,9}; or as a name to either of these.
+    </p>
+   </li>
+   <li>
+    <p>
+     MDETERM returns the #VALUE! error when:
+    </p>
+    <ul>
+     <li>
+      <p>
+       Any cells in array are empty or contain text.
+      </p>
+     </li>
+     <li>
+      <p>
+       Array does not have an equal number of rows and columns.
+      </p>
+     </li>
+    </ul>
+   </li>
+   <li>
+    <p>
+     The matrix determinant is a number derived from the values in array. For a three-row, three-column array, A1:C3, the determinant is defined as:
+    </p>
+   </li>
+  </ul>
+  <p>
+   MDETERM(A1:C3)
+   <br aria-hidden="true"/>
+   equals A1*(B2*C3-B3*C2) + A2*(B3*C1-B1*C3) + A3*(B1*C2-B2*C1)
+  </p>
+  <ul>
+   <li>
+    <p>
+     Matrix determinants are generally used for solving systems of mathematical equations that involve several variables.
+    </p>
+   </li>
+   <li>
+    <p>
+     MDETERM is calculated with an accuracy of approximately 16 digits, which may lead to a small numeric error when the calculation is not complete. For example, the determinant of a singular matrix may differ from zero by 1E-16.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+     <td>
+      <p>
+       8
+      </p>
+     </td>
+     <td>
+      <p>
+       5
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+     <td>
+      <p>
+       6
+      </p>
+     </td>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+      <p>
+       0
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       7
+      </p>
+     </td>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+     <td>
+      <p>
+       10
+      </p>
+     </td>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =MDETERM(A2:D5)
+      </p>
+     </td>
+     <td>
+      <p>
+       Determinant of the matrix above
+      </p>
+     </td>
+     <td>
+      <p>
+       88
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =MDETERM({3,6,1;1,1,0;3,10,2})
+      </p>
+     </td>
+     <td>
+      <p>
+       Determinant of the matrix as an array constant
+      </p>
+     </td>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =MDETERM({3,6;1,1})
+      </p>
+     </td>
+     <td>
+      <p>
+       Determinant of the matrix in the array constant
+      </p>
+     </td>
+     <td>
+      <p>
+       -3
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =MDETERM({1,3,8,5;1,3,6,1})
+      </p>
+     </td>
+     <td>
+      <p>
+       Returns an error because the array does not have an equal number of rows and columns.
+      </p>
+     </td>
+     <td>
+      <p>
+       #VALUE!
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

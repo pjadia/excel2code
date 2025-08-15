@@ -1,0 +1,1148 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   The
+   <b class="ocpLegacyBold">
+    TEXT
+   </b>
+   function lets you change the way a number appears by applying formatting to it with
+   <b class="ocpLegacyBold">
+    format codes
+   </b>
+   . It's useful in situations where you want to display numbers in a more readable format, or you want to combine numbers with text or symbols.
+  </p>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpNote">
+     Note:
+    </b>
+    The TEXT function converts numbers to text, which may make it difficult to reference in later calculations. It’s best to keep your original value in one cell, and then use the TEXT function in another cell. Then, if you need to build other formulas, always reference the original value and not the TEXT function result.
+   </p>
+  </div>
+ </section>
+ <div class="ocpSection">
+  <h2 class="ocpExpandoHead">
+   <button aria-controls="ID0ER-panel" aria-expanded="false" class="expandoButtonLink" id="ID0ER-button" ms.interactiontype="11" type="button">
+    <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+     <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+     </i>
+    </div>
+    <div class="ocpExpandoHeadTitleContainer" role="none">
+     Technical Details
+    </div>
+   </button>
+  </h2>
+  <div aria-labelledby="ID0ER-button" class="ocpebw" id="ID0ER-panel" role="region">
+   <div class="ocpExpandoBody">
+    <p>
+     <b class="ocpLegacyBold">
+      Syntax
+     </b>
+    </p>
+    <p>
+     <b class="ocpLegacyBold">
+      TEXT
+     </b>
+     (value, format_text)
+    </p>
+    <p>
+     The
+     <b class="ocpLegacyBold">
+      TEXT
+     </b>
+     function syntax has the following arguments:
+    </p>
+    <table aria-label="" class="banded">
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         <b class="ocpLegacyBold">
+          Argument Name
+         </b>
+        </p>
+       </td>
+       <td>
+        <p>
+         <b class="ocpLegacyBold">
+          Description
+         </b>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <b class="ocpLegacyBold">
+          value
+         </b>
+        </p>
+       </td>
+       <td>
+        <p>
+         A numeric value that you want to be converted into text.
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <b class="ocpLegacyBold">
+          format_text
+         </b>
+        </p>
+       </td>
+       <td>
+        <p>
+         A text string that defines the formatting that you want to be applied to the supplied value.
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+  </div>
+ </div>
+ <section aria-labelledby="ID0EDP" class="ocpSection">
+  <h2 class="" id="ID0EDP">
+   Overview
+  </h2>
+  <p>
+   In its simplest form, the TEXT function says:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpLegacyBold">
+      =TEXT(Value you want to format, "Format code you want to apply")
+     </b>
+    </p>
+   </li>
+  </ul>
+  <p>
+   Here are some popular examples, which you can copy directly into Excel to experiment with on your own. Notice the format codes within quotation marks.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =TEXT(1234.567,
+       <b class="ocpLegacyBold">
+        "$#,##0.00"
+       </b>
+       )
+      </p>
+     </td>
+     <td>
+      <p>
+       Currency with a thousands separator and 2 decimals, like $1,234.57. Note that Excel rounds the value to 2 decimal places.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =TEXT(TODAY(),
+       <b class="ocpLegacyBold">
+        "MM/DD/YY"
+       </b>
+       )
+      </p>
+     </td>
+     <td>
+      <p>
+       Today’s date in MM/DD/YY format, like 03/14/12
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =TEXT(TODAY(),
+       <b class="ocpLegacyBold">
+        "DDDD"
+       </b>
+       )
+      </p>
+     </td>
+     <td>
+      <p>
+       Today’s day of the week, like Monday
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =TEXT(NOW(),
+       <b class="ocpLegacyBold">
+        "H:MM AM/PM"
+       </b>
+       )
+      </p>
+     </td>
+     <td>
+      <p>
+       Current time, like 1:29 PM
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =TEXT(0.285,
+       <b class="ocpLegacyBold">
+        "0.0%"
+       </b>
+       )
+      </p>
+     </td>
+     <td>
+      <p>
+       Percentage, like 28.5%
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =TEXT(4.34 ,
+       <b class="ocpLegacyBold">
+        "# ?/?"
+       </b>
+       )
+      </p>
+     </td>
+     <td>
+      <p>
+       Fraction, like 4 1/3
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =TRIM(TEXT(0.34,
+       <b class="ocpLegacyBold">
+        "# ?/?"
+       </b>
+       ))
+      </p>
+     </td>
+     <td>
+      <p>
+       Fraction, like 1/3. Note this uses the TRIM function to remove the leading space with a decimal value.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =TEXT(12200000,
+       <b class="ocpLegacyBold">
+        "0.00E+00"
+       </b>
+       )
+      </p>
+     </td>
+     <td>
+      <p>
+       Scientific notation, like 1.22E+07
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =TEXT(1234567898,
+       <b class="ocpLegacyBold">
+        "[&lt;=9999999]###-####;(###) ###-####"
+       </b>
+       )
+      </p>
+     </td>
+     <td>
+      <p>
+       Special (Phone number), like (123) 456-7898
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =TEXT(1234,
+       <b class="ocpLegacyBold">
+        "0000000"
+       </b>
+       )
+      </p>
+     </td>
+     <td>
+      <p>
+       Add leading zeros (0), like 0001234
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =TEXT(123456,
+       <b class="ocpLegacyBold">
+        "##0° 00' 00''"
+       </b>
+       )
+      </p>
+     </td>
+     <td>
+      <p>
+       Custom - Latitude/Longitude
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpNote">
+     Note:
+    </b>
+    Although you can use the TEXT function to change formatting, it’s not the only way. You can change the format without a formula by pressing
+    <b class="ocpUI">
+     CTRL+1
+    </b>
+    (or
+    <picture>
+     <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049?format=avif&amp;w=320 320w,        /images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049?format=avif&amp;w=480 480w,        /images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049?format=avif&amp;w=640 640w,        /images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049?format=avif&amp;w=800 800w" type="image/avif"/>
+     <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049?format=webp&amp;w=320 320w,        /images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049?format=webp&amp;w=480 480w,        /images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049?format=webp&amp;w=640 640w,        /images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049?format=webp&amp;w=800 800w" type="image/webp"/>
+     <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049?format=jpeg&amp;w=320 320w,        /images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049?format=jpeg&amp;w=480 480w,        /images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049?format=jpeg&amp;w=640 640w,        /images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+     <img alt="Image of the MAC Command button icon" class="fluentImage" loading="lazy" src="/images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049" style="aspect-ratio: 16/16" width="16"/>
+    </picture>
+    <b class="ocpUI">
+     +1
+    </b>
+    on the Mac), then pick the format you want from the
+    <b class="ocpUI">
+     Format Cells
+    </b>
+    &gt;
+    <b class="ocpUI">
+     Number
+    </b>
+    dialog box.
+   </p>
+  </div>
+ </section>
+ <section aria-labelledby="ID0EDN" class="ocpSection">
+  <h2 class="" id="ID0EDN">
+   Download our examples
+  </h2>
+  <p>
+   You can download an example workbook with all of the TEXT function examples you'll find in this article, plus some extras. You can follow along, or create your own TEXT function format codes.
+   <br aria-hidden="true"/>
+   <br aria-hidden="true"/>
+   <a class="ocpExternalLink" data-bi-type="anchor" href="http://download.microsoft.com/download/6/A/8/6A818B0B-06F4-4E41-80DE-D383A3B89865/TEXT function examples.xlsx" target="_blank">
+    Download Excel TEXT function examples
+   </a>
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDL" class="ocpSection">
+  <h2 class="" id="ID0EDL">
+   Other format codes that are available
+  </h2>
+  <p>
+   You can use the
+   <b class="ocpUI">
+    Format Cells
+   </b>
+   dialog box to find the other available format codes:
+  </p>
+  <ol type="1">
+   <li>
+    <p>
+     Press
+     <b class="ocpUI">
+      Ctrl+1
+     </b>
+     (
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049?format=avif&amp;w=320 320w,        /images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049?format=avif&amp;w=480 480w,        /images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049?format=avif&amp;w=640 640w,        /images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049?format=webp&amp;w=320 320w,        /images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049?format=webp&amp;w=480 480w,        /images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049?format=webp&amp;w=640 640w,        /images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049?format=jpeg&amp;w=320 320w,        /images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049?format=jpeg&amp;w=480 480w,        /images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049?format=jpeg&amp;w=640 640w,        /images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Image of the MAC Command button icon" class="fluentImage" loading="lazy" src="/images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049" style="aspect-ratio: 16/16" width="16"/>
+     </picture>
+     <b class="ocpUI">
+      +1
+     </b>
+     on the Mac) to bring up the
+     <b class="ocpUI">
+      Format Cells
+     </b>
+     dialog box.
+    </p>
+   </li>
+   <li>
+    <p>
+     Select the format you want from the
+     <b class="ocpUI">
+      Number
+     </b>
+     tab.
+    </p>
+   </li>
+   <li>
+    <p>
+     Select the
+     <b class="ocpUI">
+      Custom
+     </b>
+     option.
+    </p>
+   </li>
+   <li>
+    <p>
+     The format code you want is now shown in the
+     <b class="ocpUI">
+      Type
+     </b>
+     box. In this case, select everything from the
+     <b class="ocpUI">
+      Type
+     </b>
+     box except the semicolon (;) and @ symbol. In the example below, we selected and copied just mm/dd/yy.
+    </p>
+   </li>
+   <li>
+    <p>
+     Press
+     <b class="ocpUI">
+      Ctrl+C
+     </b>
+     to copy the format code, and then press
+     <b class="ocpUI">
+      Cancel
+     </b>
+     to dismiss the
+     <b class="ocpUI">
+      Format Cells
+     </b>
+     dialog box.
+    </p>
+   </li>
+   <li>
+    <p>
+     Now, all you need to do is press
+     <b class="ocpUI">
+      Ctrl+V
+     </b>
+     to paste the format code into your TEXT formula, like: =TEXT(B2,"
+     <b class="ocpLegacyBold">
+      mm/dd/yy
+     </b>
+     "). Make sure that you paste the format code within quotes ("format code"), otherwise Excel will give you an error message.
+    </p>
+   </li>
+  </ol>
+  <picture>
+   <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/d78cc429-4d0d-4495-98b4-0d7643f7b207?format=avif&amp;w=320 320w,        /images/en-us/d78cc429-4d0d-4495-98b4-0d7643f7b207?format=avif&amp;w=480 480w,        /images/en-us/d78cc429-4d0d-4495-98b4-0d7643f7b207?format=avif&amp;w=640 640w,        /images/en-us/d78cc429-4d0d-4495-98b4-0d7643f7b207?format=avif&amp;w=800 800w" type="image/avif"/>
+   <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/d78cc429-4d0d-4495-98b4-0d7643f7b207?format=webp&amp;w=320 320w,        /images/en-us/d78cc429-4d0d-4495-98b4-0d7643f7b207?format=webp&amp;w=480 480w,        /images/en-us/d78cc429-4d0d-4495-98b4-0d7643f7b207?format=webp&amp;w=640 640w,        /images/en-us/d78cc429-4d0d-4495-98b4-0d7643f7b207?format=webp&amp;w=800 800w" type="image/webp"/>
+   <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/d78cc429-4d0d-4495-98b4-0d7643f7b207?format=jpeg&amp;w=320 320w,        /images/en-us/d78cc429-4d0d-4495-98b4-0d7643f7b207?format=jpeg&amp;w=480 480w,        /images/en-us/d78cc429-4d0d-4495-98b4-0d7643f7b207?format=jpeg&amp;w=640 640w,        /images/en-us/d78cc429-4d0d-4495-98b4-0d7643f7b207?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+   <img alt="Example of using the Format &gt; Cells &gt; Number &gt; Custom dialog to have Excel create format strings for you." class="fluentImage" loading="lazy" src="/images/en-us/d78cc429-4d0d-4495-98b4-0d7643f7b207" style="aspect-ratio: 402/269" width="402"/>
+  </picture>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Format codes by category
+  </h2>
+  <p>
+   Following are some examples of how you can apply different number formats to your values by using the
+   <b class="ocpUI">
+    Format Cells
+   </b>
+   dialog box, and then use the
+   <b class="ocpUI">
+    Custom
+   </b>
+   option to copy those
+   <b class="ocpUI">
+    format codes
+   </b>
+   to your
+   <b class="ocpLegacyBold">
+    TEXT
+   </b>
+   function.
+  </p>
+  <div class="selectable-content-options__content-container">
+   <label class="selectable-content-options__label" for="dropdown-ID0EBBJ">
+    Select a number format
+   </label>
+   <select aria-controls="dropdown-content-ID0EBBJ" class="selectable-content-options__element" id="dropdown-ID0EBBJ">
+    <option selected="" value="ID0ERBBJ">
+     Leading zero's (0's)
+    </option>
+    <option value="ID0EPBBJ">
+     Display a thousands separator
+    </option>
+    <option value="ID0ENBBJ">
+     Number, currency and accounting formats
+    </option>
+    <option value="ID0ELBBJ">
+     Dates
+    </option>
+    <option value="ID0EJBBJ">
+     Times
+    </option>
+    <option value="ID0EHBBJ">
+     Percentages
+    </option>
+    <option value="ID0EFBBJ">
+     Fractions
+    </option>
+    <option value="ID0EDBBJ">
+     Scientific notation
+    </option>
+    <option value="ID0EBBBJ">
+     Special formats
+    </option>
+   </select>
+   <div class="selectable-content-options__options-container" id="dropdown-content-ID0EBBJ">
+    <div class="selectable-content-options__option-content" id="ID0ERBBJ">
+     <p>
+      Why does Excel delete my leading 0’s?
+     </p>
+     <p>
+      Excel is trained to look for numbers being entered in cells, not numbers that look like text, like part numbers or SKU's. To retain leading zeros, format the input range as Text before you paste or enter values. Select the column, or range where you'll be putting the values, then use
+      <b class="ocpUI">
+       CTRL+1
+      </b>
+      to bring up the
+      <b class="ocpUI">
+       Format &gt; Cells
+      </b>
+      dialog and on the
+      <b class="ocpUI">
+       Number tab
+      </b>
+      select
+      <b class="ocpUI">
+       Text
+      </b>
+      . Now Excel will keep your leading 0's.
+     </p>
+     <p>
+      If you’ve already entered data and Excel has removed your leading 0's, you can use the
+      <b class="ocpLegacyBold">
+       TEXT
+      </b>
+      function to add them back. You can reference the top cell with the values and use
+      <b class="ocpLegacyBold">
+       =TEXT(value,"00000")
+      </b>
+      , where the number of 0’s in the formula represents the total number of characters you want, then copy and paste to the rest of your range.
+     </p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/ec46583b-0ba9-4f60-ad17-457fe4b71774?format=avif&amp;w=320 320w,        /images/en-us/ec46583b-0ba9-4f60-ad17-457fe4b71774?format=avif&amp;w=480 480w,        /images/en-us/ec46583b-0ba9-4f60-ad17-457fe4b71774?format=avif&amp;w=640 640w,        /images/en-us/ec46583b-0ba9-4f60-ad17-457fe4b71774?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/ec46583b-0ba9-4f60-ad17-457fe4b71774?format=webp&amp;w=320 320w,        /images/en-us/ec46583b-0ba9-4f60-ad17-457fe4b71774?format=webp&amp;w=480 480w,        /images/en-us/ec46583b-0ba9-4f60-ad17-457fe4b71774?format=webp&amp;w=640 640w,        /images/en-us/ec46583b-0ba9-4f60-ad17-457fe4b71774?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/ec46583b-0ba9-4f60-ad17-457fe4b71774?format=jpeg&amp;w=320 320w,        /images/en-us/ec46583b-0ba9-4f60-ad17-457fe4b71774?format=jpeg&amp;w=480 480w,        /images/en-us/ec46583b-0ba9-4f60-ad17-457fe4b71774?format=jpeg&amp;w=640 640w,        /images/en-us/ec46583b-0ba9-4f60-ad17-457fe4b71774?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt='Examples of using TEXT to format leading zeros.  =TEXT(A2,"00000")' class="fluentImage" loading="lazy" src="/images/en-us/ec46583b-0ba9-4f60-ad17-457fe4b71774" style="aspect-ratio: 372/229" width="372"/>
+     </picture>
+     <p>
+      If for some reason you need to convert text values back to numbers you can multiply by 1, like
+      <b class="ocpLegacyBold">
+       =D4*1
+      </b>
+      , or use the double-unary operator (--), like
+      <b class="ocpLegacyBold">
+       =--D4
+      </b>
+      .
+     </p>
+    </div>
+    <div class="selectable-content-options__option-content ocHidden" id="ID0EPBBJ">
+     <p>
+      Excel separates thousands by commas if the format contains a comma (,) that is enclosed by number signs (#) or by zeros. For example, if the format string is
+      <b class="ocpLegacyBold">
+       "#,###"
+      </b>
+      , Excel displays the number 12200000 as 12,200,000.
+     </p>
+     <p>
+      A comma that follows a digit placeholder scales the number by 1,000. For example, if the format string is
+      <b class="ocpLegacyBold">
+       "#,###.0,"
+      </b>
+      , Excel displays the number 12200000 as 12,200.0.
+     </p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/ddcdb92d-47b1-406d-b916-6871aafec199?format=avif&amp;w=320 320w,        /images/en-us/ddcdb92d-47b1-406d-b916-6871aafec199?format=avif&amp;w=480 480w,        /images/en-us/ddcdb92d-47b1-406d-b916-6871aafec199?format=avif&amp;w=640 640w,        /images/en-us/ddcdb92d-47b1-406d-b916-6871aafec199?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/ddcdb92d-47b1-406d-b916-6871aafec199?format=webp&amp;w=320 320w,        /images/en-us/ddcdb92d-47b1-406d-b916-6871aafec199?format=webp&amp;w=480 480w,        /images/en-us/ddcdb92d-47b1-406d-b916-6871aafec199?format=webp&amp;w=640 640w,        /images/en-us/ddcdb92d-47b1-406d-b916-6871aafec199?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/ddcdb92d-47b1-406d-b916-6871aafec199?format=jpeg&amp;w=320 320w,        /images/en-us/ddcdb92d-47b1-406d-b916-6871aafec199?format=jpeg&amp;w=480 480w,        /images/en-us/ddcdb92d-47b1-406d-b916-6871aafec199?format=jpeg&amp;w=640 640w,        /images/en-us/ddcdb92d-47b1-406d-b916-6871aafec199?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Examples of the TEXT function using the Thousands separator" class="fluentImage" loading="lazy" src="/images/en-us/ddcdb92d-47b1-406d-b916-6871aafec199" style="aspect-ratio: 405/174" width="405"/>
+     </picture>
+     <div class="ocpAlert">
+      <p class="ocpAlertSection">
+       <b class="ocpNote">
+        Notes:
+       </b>
+      </p>
+      <ul class="ocpAlertSectionListContainer">
+       <li>
+        <p>
+         The thousands separator is dependent on your regional settings. In the US it's a comma, but in other locales it might be a period (.).
+        </p>
+       </li>
+       <li>
+        <p>
+         The thousands separator is available for the number, currency and accounting formats.
+        </p>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="selectable-content-options__option-content ocHidden" id="ID0ENBBJ">
+     <p>
+      Following are examples of standard number (thousands separator and decimals only), currency and accounting formats. Currency format allows you to insert the currency symbol of your choice and aligns it next to your value, while accounting format will align the currency symbol to the left of the cell and the value to the right. Note the difference between the currency and accounting format codes below, where accounting uses an asterisk (*) to create separation between the symbol and the value.
+     </p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/0b2452f4-6aba-4858-b17a-25b153fbe08f?format=avif&amp;w=320 320w,        /images/en-us/0b2452f4-6aba-4858-b17a-25b153fbe08f?format=avif&amp;w=480 480w,        /images/en-us/0b2452f4-6aba-4858-b17a-25b153fbe08f?format=avif&amp;w=640 640w,        /images/en-us/0b2452f4-6aba-4858-b17a-25b153fbe08f?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/0b2452f4-6aba-4858-b17a-25b153fbe08f?format=webp&amp;w=320 320w,        /images/en-us/0b2452f4-6aba-4858-b17a-25b153fbe08f?format=webp&amp;w=480 480w,        /images/en-us/0b2452f4-6aba-4858-b17a-25b153fbe08f?format=webp&amp;w=640 640w,        /images/en-us/0b2452f4-6aba-4858-b17a-25b153fbe08f?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/0b2452f4-6aba-4858-b17a-25b153fbe08f?format=jpeg&amp;w=320 320w,        /images/en-us/0b2452f4-6aba-4858-b17a-25b153fbe08f?format=jpeg&amp;w=480 480w,        /images/en-us/0b2452f4-6aba-4858-b17a-25b153fbe08f?format=jpeg&amp;w=640 640w,        /images/en-us/0b2452f4-6aba-4858-b17a-25b153fbe08f?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Examples of the TEXT function with Number, Currency and Accounting formats" class="fluentImage" loading="lazy" src="/images/en-us/0b2452f4-6aba-4858-b17a-25b153fbe08f" style="aspect-ratio: 502/250" width="502"/>
+     </picture>
+     <p>
+      To find the format code for a currency symbol, first press
+      <b class="ocpUI">
+       Ctrl+1
+      </b>
+      (or
+      <picture>
+       <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049?format=avif&amp;w=320 320w,        /images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049?format=avif&amp;w=480 480w,        /images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049?format=avif&amp;w=640 640w,        /images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049?format=avif&amp;w=800 800w" type="image/avif"/>
+       <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049?format=webp&amp;w=320 320w,        /images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049?format=webp&amp;w=480 480w,        /images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049?format=webp&amp;w=640 640w,        /images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049?format=webp&amp;w=800 800w" type="image/webp"/>
+       <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049?format=jpeg&amp;w=320 320w,        /images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049?format=jpeg&amp;w=480 480w,        /images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049?format=jpeg&amp;w=640 640w,        /images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+       <img alt="Image of the MAC Command button icon" class="fluentImage" loading="lazy" src="/images/en-us/b7f18703-a23f-4d8c-81e4-4488ea64c049" style="aspect-ratio: 16/16" width="16"/>
+      </picture>
+      <b class="ocpUI">
+       +1
+      </b>
+      on the Mac), select the format you want, then choose a symbol from the
+      <b class="ocpUI">
+       Symbol
+      </b>
+      drop-down:
+     </p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/80ff1fa6-dc29-4704-876a-6cb2fab6f9cc?format=avif&amp;w=320 320w,        /images/en-us/80ff1fa6-dc29-4704-876a-6cb2fab6f9cc?format=avif&amp;w=480 480w,        /images/en-us/80ff1fa6-dc29-4704-876a-6cb2fab6f9cc?format=avif&amp;w=640 640w,        /images/en-us/80ff1fa6-dc29-4704-876a-6cb2fab6f9cc?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/80ff1fa6-dc29-4704-876a-6cb2fab6f9cc?format=webp&amp;w=320 320w,        /images/en-us/80ff1fa6-dc29-4704-876a-6cb2fab6f9cc?format=webp&amp;w=480 480w,        /images/en-us/80ff1fa6-dc29-4704-876a-6cb2fab6f9cc?format=webp&amp;w=640 640w,        /images/en-us/80ff1fa6-dc29-4704-876a-6cb2fab6f9cc?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/80ff1fa6-dc29-4704-876a-6cb2fab6f9cc?format=jpeg&amp;w=320 320w,        /images/en-us/80ff1fa6-dc29-4704-876a-6cb2fab6f9cc?format=jpeg&amp;w=480 480w,        /images/en-us/80ff1fa6-dc29-4704-876a-6cb2fab6f9cc?format=jpeg&amp;w=640 640w,        /images/en-us/80ff1fa6-dc29-4704-876a-6cb2fab6f9cc?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Currency Symbol selection from the Format Cells dialog" class="fluentImage" loading="lazy" src="/images/en-us/80ff1fa6-dc29-4704-876a-6cb2fab6f9cc" style="aspect-ratio: 525/461" width="525"/>
+     </picture>
+     <p>
+      Then click
+      <b class="ocpUI">
+       Custom
+      </b>
+      on the left from the
+      <b class="ocpUI">
+       Category
+      </b>
+      section, and copy the format code, including the currency symbol.
+     </p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/75ad5ea8-a249-4958-ba42-67ab75c20f9c?format=avif&amp;w=320 320w,        /images/en-us/75ad5ea8-a249-4958-ba42-67ab75c20f9c?format=avif&amp;w=480 480w,        /images/en-us/75ad5ea8-a249-4958-ba42-67ab75c20f9c?format=avif&amp;w=640 640w,        /images/en-us/75ad5ea8-a249-4958-ba42-67ab75c20f9c?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/75ad5ea8-a249-4958-ba42-67ab75c20f9c?format=webp&amp;w=320 320w,        /images/en-us/75ad5ea8-a249-4958-ba42-67ab75c20f9c?format=webp&amp;w=480 480w,        /images/en-us/75ad5ea8-a249-4958-ba42-67ab75c20f9c?format=webp&amp;w=640 640w,        /images/en-us/75ad5ea8-a249-4958-ba42-67ab75c20f9c?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/75ad5ea8-a249-4958-ba42-67ab75c20f9c?format=jpeg&amp;w=320 320w,        /images/en-us/75ad5ea8-a249-4958-ba42-67ab75c20f9c?format=jpeg&amp;w=480 480w,        /images/en-us/75ad5ea8-a249-4958-ba42-67ab75c20f9c?format=jpeg&amp;w=640 640w,        /images/en-us/75ad5ea8-a249-4958-ba42-67ab75c20f9c?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="TEXT function - Custom currency with symbol" class="fluentImage" loading="lazy" src="/images/en-us/75ad5ea8-a249-4958-ba42-67ab75c20f9c" style="aspect-ratio: 386/281" width="386"/>
+     </picture>
+     <div class="ocpAlert">
+      <p class="ocpAlertSection">
+       <b class="ocpNote">
+        Note:
+       </b>
+       The TEXT function does not support color formatting, so if you copy a number format code from the Format Cells dialog that includes a color, like this: $#,##0.00_);
+       <b class="ocpLegacyBold">
+        [Red]
+       </b>
+       ($#,##0.00), the TEXT function will accept the format code, but it won't display the color.
+      </p>
+     </div>
+    </div>
+    <div class="selectable-content-options__option-content ocHidden" id="ID0ELBBJ">
+     <p>
+      You can alter the way a date displays by using a mix of "M" for month, "D" for days, and "Y" for years.
+     </p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/07461353-b0fe-405d-a521-68d02e984ee8?format=avif&amp;w=320 320w,        /images/en-us/07461353-b0fe-405d-a521-68d02e984ee8?format=avif&amp;w=480 480w,        /images/en-us/07461353-b0fe-405d-a521-68d02e984ee8?format=avif&amp;w=640 640w,        /images/en-us/07461353-b0fe-405d-a521-68d02e984ee8?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/07461353-b0fe-405d-a521-68d02e984ee8?format=webp&amp;w=320 320w,        /images/en-us/07461353-b0fe-405d-a521-68d02e984ee8?format=webp&amp;w=480 480w,        /images/en-us/07461353-b0fe-405d-a521-68d02e984ee8?format=webp&amp;w=640 640w,        /images/en-us/07461353-b0fe-405d-a521-68d02e984ee8?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/07461353-b0fe-405d-a521-68d02e984ee8?format=jpeg&amp;w=320 320w,        /images/en-us/07461353-b0fe-405d-a521-68d02e984ee8?format=jpeg&amp;w=480 480w,        /images/en-us/07461353-b0fe-405d-a521-68d02e984ee8?format=jpeg&amp;w=640 640w,        /images/en-us/07461353-b0fe-405d-a521-68d02e984ee8?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Month, Day and Year format codes" class="fluentImage" loading="lazy" src="/images/en-us/07461353-b0fe-405d-a521-68d02e984ee8" style="aspect-ratio: 520/334" width="520"/>
+     </picture>
+     <p>
+      Format codes in the TEXT function aren't case sensitive, so you can use either "M" or "m", "D" or "d", "Y" or "y".
+     </p>
+     <table aria-label="" class="banded">
+      <tbody>
+       <tr>
+        <td>
+         <p>
+          <a class="ocpExternalLink" href="https://www.linkedin.com/in/myndatreacy/" target="_blank" title="">
+           <picture>
+            <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/f58d1e68-f3c5-4fcb-8245-d93677f91828?format=avif&amp;w=320 320w,        /images/en-us/f58d1e68-f3c5-4fcb-8245-d93677f91828?format=avif&amp;w=480 480w,        /images/en-us/f58d1e68-f3c5-4fcb-8245-d93677f91828?format=avif&amp;w=640 640w,        /images/en-us/f58d1e68-f3c5-4fcb-8245-d93677f91828?format=avif&amp;w=800 800w" type="image/avif"/>
+            <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/f58d1e68-f3c5-4fcb-8245-d93677f91828?format=webp&amp;w=320 320w,        /images/en-us/f58d1e68-f3c5-4fcb-8245-d93677f91828?format=webp&amp;w=480 480w,        /images/en-us/f58d1e68-f3c5-4fcb-8245-d93677f91828?format=webp&amp;w=640 640w,        /images/en-us/f58d1e68-f3c5-4fcb-8245-d93677f91828?format=webp&amp;w=800 800w" type="image/webp"/>
+            <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/f58d1e68-f3c5-4fcb-8245-d93677f91828?format=jpeg&amp;w=320 320w,        /images/en-us/f58d1e68-f3c5-4fcb-8245-d93677f91828?format=jpeg&amp;w=480 480w,        /images/en-us/f58d1e68-f3c5-4fcb-8245-d93677f91828?format=jpeg&amp;w=640 640w,        /images/en-us/f58d1e68-f3c5-4fcb-8245-d93677f91828?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+            <img alt="Excel MVP Mynda Treacy" class="fluentImage" loading="lazy" src="/images/en-us/f58d1e68-f3c5-4fcb-8245-d93677f91828" style="aspect-ratio: 100/107" width="100"/>
+           </picture>
+          </a>
+         </p>
+        </td>
+        <td>
+         <p>
+          <b class="ocpLegacyBold">
+           Mynda Recommends...
+          </b>
+         </p>
+         <p>
+         </p>
+         <p>
+          If you share Excel files and reports with users from different countries, then you might want to give them a report in their language.
+          <a class="ocpExternalLink" data-bi-type="anchor" href="https://www.linkedin.com/in/myndatreacy/" target="_blank">
+           Excel MVP, Mynda Treacy
+          </a>
+          has a great solution in this
+          <a class="ocpExternalLink" data-bi-type="anchor" href="http://www.myonlinetraininghub.com/excel-dates-displayed-in-different-languages" target="_blank">
+           Excel Dates Displayed in Different Languages
+          </a>
+          article. It also includes a sample workbook you can download.
+         </p>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <div class="selectable-content-options__option-content ocHidden" id="ID0EJBBJ">
+     <p>
+      You can alter the way time displays by using a mix of "H" for hours, "M" for minutes, or "S" for seconds, and "AM/PM" for a 12-hour clock.
+     </p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/fdc6debf-4d3f-4b71-9c1d-12d4bbe40800?format=avif&amp;w=320 320w,        /images/en-us/fdc6debf-4d3f-4b71-9c1d-12d4bbe40800?format=avif&amp;w=480 480w,        /images/en-us/fdc6debf-4d3f-4b71-9c1d-12d4bbe40800?format=avif&amp;w=640 640w,        /images/en-us/fdc6debf-4d3f-4b71-9c1d-12d4bbe40800?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/fdc6debf-4d3f-4b71-9c1d-12d4bbe40800?format=webp&amp;w=320 320w,        /images/en-us/fdc6debf-4d3f-4b71-9c1d-12d4bbe40800?format=webp&amp;w=480 480w,        /images/en-us/fdc6debf-4d3f-4b71-9c1d-12d4bbe40800?format=webp&amp;w=640 640w,        /images/en-us/fdc6debf-4d3f-4b71-9c1d-12d4bbe40800?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/fdc6debf-4d3f-4b71-9c1d-12d4bbe40800?format=jpeg&amp;w=320 320w,        /images/en-us/fdc6debf-4d3f-4b71-9c1d-12d4bbe40800?format=jpeg&amp;w=480 480w,        /images/en-us/fdc6debf-4d3f-4b71-9c1d-12d4bbe40800?format=jpeg&amp;w=640 640w,        /images/en-us/fdc6debf-4d3f-4b71-9c1d-12d4bbe40800?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Time formats for hours, minutes and seconds" class="fluentImage" loading="lazy" src="/images/en-us/fdc6debf-4d3f-4b71-9c1d-12d4bbe40800" style="aspect-ratio: 520/393" width="520"/>
+     </picture>
+     <p>
+      If you leave out the "AM/PM" or "A/P", then time will display based on a 24-hour clock.
+     </p>
+     <p>
+      Format codes in the TEXT function aren't case sensitive, so you can use either "H" or "h", "M" or "m", "S" or "s", "AM/PM" or "am/pm".
+     </p>
+    </div>
+    <div class="selectable-content-options__option-content ocHidden" id="ID0EHBBJ">
+     <p>
+      You can alter the way decimal values display with percentage (%) formats.
+     </p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/2d1dbfed-2c0b-4b99-8874-3bfbe15e1de5?format=avif&amp;w=320 320w,        /images/en-us/2d1dbfed-2c0b-4b99-8874-3bfbe15e1de5?format=avif&amp;w=480 480w,        /images/en-us/2d1dbfed-2c0b-4b99-8874-3bfbe15e1de5?format=avif&amp;w=640 640w,        /images/en-us/2d1dbfed-2c0b-4b99-8874-3bfbe15e1de5?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/2d1dbfed-2c0b-4b99-8874-3bfbe15e1de5?format=webp&amp;w=320 320w,        /images/en-us/2d1dbfed-2c0b-4b99-8874-3bfbe15e1de5?format=webp&amp;w=480 480w,        /images/en-us/2d1dbfed-2c0b-4b99-8874-3bfbe15e1de5?format=webp&amp;w=640 640w,        /images/en-us/2d1dbfed-2c0b-4b99-8874-3bfbe15e1de5?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/2d1dbfed-2c0b-4b99-8874-3bfbe15e1de5?format=jpeg&amp;w=320 320w,        /images/en-us/2d1dbfed-2c0b-4b99-8874-3bfbe15e1de5?format=jpeg&amp;w=480 480w,        /images/en-us/2d1dbfed-2c0b-4b99-8874-3bfbe15e1de5?format=jpeg&amp;w=640 640w,        /images/en-us/2d1dbfed-2c0b-4b99-8874-3bfbe15e1de5?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Format codes for Percent" class="fluentImage" loading="lazy" src="/images/en-us/2d1dbfed-2c0b-4b99-8874-3bfbe15e1de5" style="aspect-ratio: 430/129" width="430"/>
+     </picture>
+    </div>
+    <div class="selectable-content-options__option-content ocHidden" id="ID0EFBBJ">
+     <p>
+      You can alter the way decimal values display with fraction (?/?) formats.
+     </p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/39c2fc9e-383f-4bb0-aa88-17e195bd2545?format=avif&amp;w=320 320w,        /images/en-us/39c2fc9e-383f-4bb0-aa88-17e195bd2545?format=avif&amp;w=480 480w,        /images/en-us/39c2fc9e-383f-4bb0-aa88-17e195bd2545?format=avif&amp;w=640 640w,        /images/en-us/39c2fc9e-383f-4bb0-aa88-17e195bd2545?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/39c2fc9e-383f-4bb0-aa88-17e195bd2545?format=webp&amp;w=320 320w,        /images/en-us/39c2fc9e-383f-4bb0-aa88-17e195bd2545?format=webp&amp;w=480 480w,        /images/en-us/39c2fc9e-383f-4bb0-aa88-17e195bd2545?format=webp&amp;w=640 640w,        /images/en-us/39c2fc9e-383f-4bb0-aa88-17e195bd2545?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/39c2fc9e-383f-4bb0-aa88-17e195bd2545?format=jpeg&amp;w=320 320w,        /images/en-us/39c2fc9e-383f-4bb0-aa88-17e195bd2545?format=jpeg&amp;w=480 480w,        /images/en-us/39c2fc9e-383f-4bb0-aa88-17e195bd2545?format=jpeg&amp;w=640 640w,        /images/en-us/39c2fc9e-383f-4bb0-aa88-17e195bd2545?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Format codes for Fractions" class="fluentImage" loading="lazy" src="/images/en-us/39c2fc9e-383f-4bb0-aa88-17e195bd2545" style="aspect-ratio: 520/225" width="520"/>
+     </picture>
+    </div>
+    <div class="selectable-content-options__option-content ocHidden" id="ID0EDBBJ">
+     <p>
+      <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/display-numbers-in-scientific-exponential-notation-f85a96c0-18a1-4249-81c3-e934cd2aae25">
+       Scientific notation
+      </a>
+      is a way of displaying numbers in terms of a decimal between 1 and 10, multiplied by a power of 10. It is often used to shorten the way that large numbers display.
+     </p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/f56b722d-66ee-4130-9e12-f5c37b60463f?format=avif&amp;w=320 320w,        /images/en-us/f56b722d-66ee-4130-9e12-f5c37b60463f?format=avif&amp;w=480 480w,        /images/en-us/f56b722d-66ee-4130-9e12-f5c37b60463f?format=avif&amp;w=640 640w,        /images/en-us/f56b722d-66ee-4130-9e12-f5c37b60463f?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/f56b722d-66ee-4130-9e12-f5c37b60463f?format=webp&amp;w=320 320w,        /images/en-us/f56b722d-66ee-4130-9e12-f5c37b60463f?format=webp&amp;w=480 480w,        /images/en-us/f56b722d-66ee-4130-9e12-f5c37b60463f?format=webp&amp;w=640 640w,        /images/en-us/f56b722d-66ee-4130-9e12-f5c37b60463f?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/f56b722d-66ee-4130-9e12-f5c37b60463f?format=jpeg&amp;w=320 320w,        /images/en-us/f56b722d-66ee-4130-9e12-f5c37b60463f?format=jpeg&amp;w=480 480w,        /images/en-us/f56b722d-66ee-4130-9e12-f5c37b60463f?format=jpeg&amp;w=640 640w,        /images/en-us/f56b722d-66ee-4130-9e12-f5c37b60463f?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Format codes for Scientific notation" class="fluentImage" loading="lazy" src="/images/en-us/f56b722d-66ee-4130-9e12-f5c37b60463f" style="aspect-ratio: 499/98" width="499"/>
+     </picture>
+    </div>
+    <div class="selectable-content-options__option-content ocHidden" id="ID0EBBBJ">
+     <p>
+      Excel provides 4 special formats:
+     </p>
+     <ul>
+      <li>
+       <p>
+        Zip Code - "00000"
+       </p>
+      </li>
+      <li>
+       <p>
+        Zip Code + 4 - "00000-0000"
+       </p>
+      </li>
+      <li>
+       <p>
+        Phone Number - "[&lt;=9999999]###-####;(###) ###-####"
+       </p>
+      </li>
+      <li>
+       <p>
+        Social Security Number - "000-00-0000"
+       </p>
+      </li>
+     </ul>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/9ec97bed-4e9e-428e-82cb-a6abba0bc3a1?format=avif&amp;w=320 320w,        /images/en-us/9ec97bed-4e9e-428e-82cb-a6abba0bc3a1?format=avif&amp;w=480 480w,        /images/en-us/9ec97bed-4e9e-428e-82cb-a6abba0bc3a1?format=avif&amp;w=640 640w,        /images/en-us/9ec97bed-4e9e-428e-82cb-a6abba0bc3a1?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/9ec97bed-4e9e-428e-82cb-a6abba0bc3a1?format=webp&amp;w=320 320w,        /images/en-us/9ec97bed-4e9e-428e-82cb-a6abba0bc3a1?format=webp&amp;w=480 480w,        /images/en-us/9ec97bed-4e9e-428e-82cb-a6abba0bc3a1?format=webp&amp;w=640 640w,        /images/en-us/9ec97bed-4e9e-428e-82cb-a6abba0bc3a1?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/9ec97bed-4e9e-428e-82cb-a6abba0bc3a1?format=jpeg&amp;w=320 320w,        /images/en-us/9ec97bed-4e9e-428e-82cb-a6abba0bc3a1?format=jpeg&amp;w=480 480w,        /images/en-us/9ec97bed-4e9e-428e-82cb-a6abba0bc3a1?format=jpeg&amp;w=640 640w,        /images/en-us/9ec97bed-4e9e-428e-82cb-a6abba0bc3a1?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Special formats for the TEXT function" class="fluentImage" loading="lazy" src="/images/en-us/9ec97bed-4e9e-428e-82cb-a6abba0bc3a1" style="aspect-ratio: 520/97" width="520"/>
+     </picture>
+     <p>
+      Special formats will be different depending on locale, but if there aren't any special formats for your locale, or if these don't meet your needs then you can create your own through the
+      <b class="ocpUI">
+       Format Cells
+      </b>
+      &gt;
+      <b class="ocpUI">
+       Custom
+      </b>
+      dialog.
+     </p>
+    </div>
+   </div>
+  </div>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Common scenario
+  </h2>
+  <p>
+   The
+   <b class="ocpLegacyBold">
+    TEXT
+   </b>
+   function is rarely used by itself, and is most often used in conjunction with something else. Let’s say you want to combine text and a number value, like “Report Printed on: 03/14/12”, or “Weekly Revenue: $66,348.72”. You could type that into Excel manually, but that defeats the purpose of having Excel do it for you. Unfortunately, when you combine text and formatted numbers, like dates, times, currency, etc., Excel doesn’t know how you want to display them, so it drops the number formatting. This is where the
+   <b class="ocpLegacyBold">
+    TEXT
+   </b>
+   function is invaluable, because it allows you to force Excel to format the values the way you want by using a
+   <b class="ocpLegacyBold">
+    format code
+   </b>
+   , like
+   <b class="ocpLegacyBold">
+    "MM/DD/YY"
+   </b>
+   for date format.
+  </p>
+  <p>
+   In the following example, you’ll see what happens if you try to join text and a number without using the
+   <b class="ocpLegacyBold">
+    TEXT
+   </b>
+   function. In this case, we’re using the
+   <b class="ocpLegacyBold">
+    ampersand
+   </b>
+   (
+   <b class="ocpLegacyBold">
+    &amp;
+   </b>
+   ) to concatenate a text string, a space (" "), and a value with
+   <b class="ocpLegacyBold">
+    =A2&amp;" "&amp;B2
+   </b>
+   .
+  </p>
+  <picture>
+   <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/fdb9a8ad-ce27-43a4-a18e-755549abd484?format=avif&amp;w=320 320w,        /images/en-us/fdb9a8ad-ce27-43a4-a18e-755549abd484?format=avif&amp;w=480 480w,        /images/en-us/fdb9a8ad-ce27-43a4-a18e-755549abd484?format=avif&amp;w=640 640w,        /images/en-us/fdb9a8ad-ce27-43a4-a18e-755549abd484?format=avif&amp;w=800 800w" type="image/avif"/>
+   <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/fdb9a8ad-ce27-43a4-a18e-755549abd484?format=webp&amp;w=320 320w,        /images/en-us/fdb9a8ad-ce27-43a4-a18e-755549abd484?format=webp&amp;w=480 480w,        /images/en-us/fdb9a8ad-ce27-43a4-a18e-755549abd484?format=webp&amp;w=640 640w,        /images/en-us/fdb9a8ad-ce27-43a4-a18e-755549abd484?format=webp&amp;w=800 800w" type="image/webp"/>
+   <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/fdb9a8ad-ce27-43a4-a18e-755549abd484?format=jpeg&amp;w=320 320w,        /images/en-us/fdb9a8ad-ce27-43a4-a18e-755549abd484?format=jpeg&amp;w=480 480w,        /images/en-us/fdb9a8ad-ce27-43a4-a18e-755549abd484?format=jpeg&amp;w=640 640w,        /images/en-us/fdb9a8ad-ce27-43a4-a18e-755549abd484?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+   <img alt="Example of joining text without the TEXT function" class="fluentImage" loading="lazy" src="/images/en-us/fdb9a8ad-ce27-43a4-a18e-755549abd484" style="aspect-ratio: 487/118" width="487"/>
+  </picture>
+  <p>
+   As you can see, Excel removed the formatting from the date in cell B2. In the next example, you'll see how the TEXT function lets you apply the format you want.
+  </p>
+  <picture>
+   <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/abca5d84-b81f-45b7-b0c1-c469cb5bcc26?format=avif&amp;w=320 320w,        /images/en-us/abca5d84-b81f-45b7-b0c1-c469cb5bcc26?format=avif&amp;w=480 480w,        /images/en-us/abca5d84-b81f-45b7-b0c1-c469cb5bcc26?format=avif&amp;w=640 640w,        /images/en-us/abca5d84-b81f-45b7-b0c1-c469cb5bcc26?format=avif&amp;w=800 800w" type="image/avif"/>
+   <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/abca5d84-b81f-45b7-b0c1-c469cb5bcc26?format=webp&amp;w=320 320w,        /images/en-us/abca5d84-b81f-45b7-b0c1-c469cb5bcc26?format=webp&amp;w=480 480w,        /images/en-us/abca5d84-b81f-45b7-b0c1-c469cb5bcc26?format=webp&amp;w=640 640w,        /images/en-us/abca5d84-b81f-45b7-b0c1-c469cb5bcc26?format=webp&amp;w=800 800w" type="image/webp"/>
+   <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/abca5d84-b81f-45b7-b0c1-c469cb5bcc26?format=jpeg&amp;w=320 320w,        /images/en-us/abca5d84-b81f-45b7-b0c1-c469cb5bcc26?format=jpeg&amp;w=480 480w,        /images/en-us/abca5d84-b81f-45b7-b0c1-c469cb5bcc26?format=jpeg&amp;w=640 640w,        /images/en-us/abca5d84-b81f-45b7-b0c1-c469cb5bcc26?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+   <img alt="Example of joining text with the TEXT function" class="fluentImage" loading="lazy" src="/images/en-us/abca5d84-b81f-45b7-b0c1-c469cb5bcc26" style="aspect-ratio: 488/120" width="488"/>
+  </picture>
+  <p>
+   Our updated formula is:
+  </p>
+  <ul>
+   <li>
+    <p>
+     Cell C2:
+     <b class="ocpLegacyBold">
+      =A2&amp;" "&amp;TEXT(B2,"mm/dd/yy")
+     </b>
+     - Date format
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Frequently Asked Questions
+  </h2>
+  <div class="ocpSection">
+   <h3 class="ocpExpandoHead">
+    <button aria-controls="ID0EJBF-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EJBF-button" ms.interactiontype="11" type="button">
+     <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+      <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+      </i>
+     </div>
+     <div class="ocpExpandoHeadTitleContainer" role="none">
+      How can I convert numbers to text, like 123 to One Hundred Twenty-Three?
+     </div>
+    </button>
+   </h3>
+   <div aria-labelledby="ID0EJBF-button" class="ocpebw" id="ID0EJBF-panel" role="region">
+    <div class="ocpExpandoBody">
+     <p>
+      Unfortunately, you can’t do that with the
+      <b class="ocpLegacyBold">
+       TEXT
+      </b>
+      function; you need to use Visual Basic for Applications (VBA) code. The following link has a method:
+      <a class="ocpExternalLink" data-bi-type="anchor" href="https://support.microsoft.com/en-us/kb/213360" target="_blank">
+       How to convert a numeric value into English words in Excel.
+      </a>
+     </p>
+    </div>
+   </div>
+  </div>
+  <div class="ocpSection">
+   <h3 class="ocpExpandoHead">
+    <button aria-controls="ID0EHBF-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EHBF-button" ms.interactiontype="11" type="button">
+     <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+      <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+      </i>
+     </div>
+     <div class="ocpExpandoHeadTitleContainer" role="none">
+      Can I change the case of text?
+     </div>
+    </button>
+   </h3>
+   <div aria-labelledby="ID0EHBF-button" class="ocpebw" id="ID0EHBF-panel" role="region">
+    <div class="ocpExpandoBody">
+     <p>
+      Yes, you can use the
+      <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/upper-function-c11f29b3-d1a3-4537-8df6-04d0049963d6">
+       UPPER
+      </a>
+      ,
+      <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/lower-function-3f21df02-a80c-44b2-afaf-81358f9fdeb4">
+       LOWER
+      </a>
+      and
+      <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/proper-function-52a5a283-e8b2-49be-8506-b2887b889f94">
+       PROPER
+      </a>
+      functions. For example, =UPPER("hello") would return "HELLO".
+     </p>
+    </div>
+   </div>
+  </div>
+  <div class="ocpSection">
+   <h3 class="ocpExpandoHead">
+    <button aria-controls="ID0EFBF-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EFBF-button" ms.interactiontype="11" type="button">
+     <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+      <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+      </i>
+     </div>
+     <div class="ocpExpandoHeadTitleContainer" role="none">
+      Can I add a new line (line break) with the TEXT function, like I can with Alt+Enter in a cell?
+     </div>
+    </button>
+   </h3>
+   <div aria-labelledby="ID0EFBF-button" class="ocpebw" id="ID0EFBF-panel" role="region">
+    <div class="ocpExpandoBody">
+     <p>
+      Yes, but it takes a few steps. First, select the cell or cells where you want this to happen and use
+      <b class="ocpUI">
+       Ctrl+1
+      </b>
+      to bring up the
+      <b class="ocpUI">
+       Format &gt; Cells
+      </b>
+      dialog box, then
+      <b class="ocpUI">
+       Alignment &gt; Text control
+      </b>
+      &gt; check the
+      <b class="ocpUI">
+       Wrap Text
+      </b>
+      option. Next, adjust your completed
+      <b class="ocpLegacyBold">
+       TEXT
+      </b>
+      function to include the ASCII function
+      <b class="ocpLegacyBold">
+       CHAR(10)
+      </b>
+      where you want the line break. You might need to adjust your column width depending on how the final result aligns.
+     </p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/38f8e0f1-99d8-4c4f-979a-dfd1bcde1bf7?format=avif&amp;w=320 320w,        /images/en-us/38f8e0f1-99d8-4c4f-979a-dfd1bcde1bf7?format=avif&amp;w=480 480w,        /images/en-us/38f8e0f1-99d8-4c4f-979a-dfd1bcde1bf7?format=avif&amp;w=640 640w,        /images/en-us/38f8e0f1-99d8-4c4f-979a-dfd1bcde1bf7?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/38f8e0f1-99d8-4c4f-979a-dfd1bcde1bf7?format=webp&amp;w=320 320w,        /images/en-us/38f8e0f1-99d8-4c4f-979a-dfd1bcde1bf7?format=webp&amp;w=480 480w,        /images/en-us/38f8e0f1-99d8-4c4f-979a-dfd1bcde1bf7?format=webp&amp;w=640 640w,        /images/en-us/38f8e0f1-99d8-4c4f-979a-dfd1bcde1bf7?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/38f8e0f1-99d8-4c4f-979a-dfd1bcde1bf7?format=jpeg&amp;w=320 320w,        /images/en-us/38f8e0f1-99d8-4c4f-979a-dfd1bcde1bf7?format=jpeg&amp;w=480 480w,        /images/en-us/38f8e0f1-99d8-4c4f-979a-dfd1bcde1bf7?format=jpeg&amp;w=640 640w,        /images/en-us/38f8e0f1-99d8-4c4f-979a-dfd1bcde1bf7?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="" class="fluentImage" loading="lazy" src="/images/en-us/38f8e0f1-99d8-4c4f-979a-dfd1bcde1bf7" style="aspect-ratio: 300/140" width="300"/>
+     </picture>
+     <p>
+      ​​​​​​​
+     </p>
+     <p>
+      In this case, we used:
+      <b class="ocpLegacyBold">
+       ="Today is: "&amp;CHAR(10)&amp;TEXT(TODAY(),"mm/dd/yy")
+      </b>
+     </p>
+     <p>
+     </p>
+    </div>
+   </div>
+  </div>
+  <div class="ocpSection">
+   <h3 class="ocpExpandoHead">
+    <button aria-controls="ID0EDBF-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EDBF-button" ms.interactiontype="11" type="button">
+     <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+      <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+      </i>
+     </div>
+     <div class="ocpExpandoHeadTitleContainer" role="none">
+      Why does Excel convert my number entries to something like this: 1.22E+07
+     </div>
+    </button>
+   </h3>
+   <div aria-labelledby="ID0EDBF-button" class="ocpebw" id="ID0EDBF-panel" role="region">
+    <div class="ocpExpandoBody">
+     <p>
+      This is called
+      <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/display-numbers-in-scientific-exponential-notation-f85a96c0-18a1-4249-81c3-e934cd2aae25">
+       Scientific Notation
+      </a>
+      , and Excel automatically converts numbers longer than 12 digits if a cell(s) is formatted as
+      <b class="ocpUI">
+       General
+      </b>
+      , and 15 digits if a cell(s) is formatted as a
+      <b class="ocpUI">
+       Number
+      </b>
+      . If you need to enter long numeric strings, but don't want them converted, format the cells in question as
+      <b class="ocpUI">
+       Text
+      </b>
+      before you input or paste your values into Excel.
+     </p>
+    </div>
+   </div>
+  </div>
+  <div class="ocpSection">
+   <h3 class="ocpExpandoHead">
+    <button aria-controls="ID0EBBF-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EBBF-button" ms.interactiontype="11" type="button">
+     <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+      <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+      </i>
+     </div>
+     <div class="ocpExpandoHeadTitleContainer" role="none">
+      Dates Displayed in Different Languages
+     </div>
+    </button>
+   </h3>
+   <div aria-labelledby="ID0EBBF-button" class="ocpebw" id="ID0EBBF-panel" role="region">
+    <div class="ocpExpandoBody">
+     <table aria-label="" class="banded">
+      <tbody>
+       <tr>
+        <td>
+         <p>
+          <a class="ocpExternalLink" href="https://www.linkedin.com/in/myndatreacy/" target="_blank" title="">
+           <picture>
+            <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/f58d1e68-f3c5-4fcb-8245-d93677f91828?format=avif&amp;w=320 320w,        /images/en-us/f58d1e68-f3c5-4fcb-8245-d93677f91828?format=avif&amp;w=480 480w,        /images/en-us/f58d1e68-f3c5-4fcb-8245-d93677f91828?format=avif&amp;w=640 640w,        /images/en-us/f58d1e68-f3c5-4fcb-8245-d93677f91828?format=avif&amp;w=800 800w" type="image/avif"/>
+            <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/f58d1e68-f3c5-4fcb-8245-d93677f91828?format=webp&amp;w=320 320w,        /images/en-us/f58d1e68-f3c5-4fcb-8245-d93677f91828?format=webp&amp;w=480 480w,        /images/en-us/f58d1e68-f3c5-4fcb-8245-d93677f91828?format=webp&amp;w=640 640w,        /images/en-us/f58d1e68-f3c5-4fcb-8245-d93677f91828?format=webp&amp;w=800 800w" type="image/webp"/>
+            <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/f58d1e68-f3c5-4fcb-8245-d93677f91828?format=jpeg&amp;w=320 320w,        /images/en-us/f58d1e68-f3c5-4fcb-8245-d93677f91828?format=jpeg&amp;w=480 480w,        /images/en-us/f58d1e68-f3c5-4fcb-8245-d93677f91828?format=jpeg&amp;w=640 640w,        /images/en-us/f58d1e68-f3c5-4fcb-8245-d93677f91828?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+            <img alt="Excel MVP Mynda Treacy" class="fluentImage" loading="lazy" src="/images/en-us/f58d1e68-f3c5-4fcb-8245-d93677f91828" style="aspect-ratio: 100/107" width="100"/>
+           </picture>
+          </a>
+         </p>
+        </td>
+        <td>
+         <p>
+          <b class="ocpLegacyBold">
+           Mynda Recommends...
+          </b>
+         </p>
+         <p>
+         </p>
+         <p>
+          If you share Excel files and reports with users from different countries, then you might want to give them a report in their language.
+          <a class="ocpExternalLink" data-bi-type="anchor" href="https://www.linkedin.com/in/myndatreacy/" target="_blank">
+           Excel MVP, Mynda Treacy
+          </a>
+          has a great solution in this
+          <a class="ocpExternalLink" data-bi-type="anchor" href="http://www.myonlinetraininghub.com/excel-dates-displayed-in-different-languages" target="_blank">
+           Excel Dates Displayed in Different Languages
+          </a>
+          article. It also includes a sample workbook you can download.
+         </p>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+   </div>
+  </div>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   See Also
+  </h2>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/create-a-custom-number-format-78f2a361-936b-4c03-8772-09fab54be7f4">
+    Create or delete a custom number format
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/convert-numbers-stored-as-text-to-numbers-in-excel-40105f2a-fe79-4477-a171-c5bad0f0a885">
+    Convert numbers stored as text to numbers
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/excel-functions-by-category-5f91f4e9-7b42-46d2-9bd1-63f26a86c0eb">
+    All Excel functions (by category)
+   </a>
+  </p>
+ </section>
+</article>

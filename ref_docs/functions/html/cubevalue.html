@@ -1,0 +1,166 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p id="__goback">
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    CUBEVALUE
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Returns an aggregated value from the cube.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   CUBEVALUE(connection, [member_expression1], [member_expression2], …)
+  </p>
+  <p>
+   The CUBEVALUE function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Connection
+     </b>
+     Required. A text string of the name of the connection to the cube.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Member_expression
+     </b>
+     Optional. A text string of a multidimensional expression (MDX) that evaluates to a member or tuple within the cube. Alternatively, member_expression can be a set defined with the CUBESET function. Use member_expression as a slicer to define the portion of the cube for which the aggregated value is returned. If no measure is specified in member_expression, the default measure for that cube is used.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     When the CUBEVALUE function evaluates, it temporarily displays a "#GETTING_DATA…" message in the cell before all of the data is retrieved.
+    </p>
+   </li>
+   <li>
+    <p>
+     If a cell reference is used for member_expression, and that cell reference contains a CUBE function, then member_expression uses the MDX expression for the item in the referenced cell, and not the value displayed in that referenced cell.
+    </p>
+   </li>
+   <li>
+    <p>
+     If the connection name is not a valid workbook connection stored in the workbook, CUBEVALUE returns a #NAME? error value. If the Online Analytical Processing (OLAP) server is not running, not available, or returns an error message, CUBEVALUE returns a #NAME? error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If at least one element within the tuple is invalid, CUBEVALUE returns a #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     CUBEVALUE returns a #N/A error value when:
+    </p>
+    <ul>
+     <li>
+      <p>
+       The member_expression syntax is incorrect.
+      </p>
+     </li>
+     <li>
+      <p>
+       The member specified by member_expression doesn't exist in the cube.
+      </p>
+     </li>
+     <li>
+      <p>
+       The tuple is invalid because there is no intersection for the specified values. (This can occur with multiple elements from the same hierarchy.)
+      </p>
+     </li>
+     <li>
+      <p>
+       The set contains at least one member with a different dimension than the other members.
+      </p>
+     </li>
+     <li>
+      <p>
+       CUBEVALUE may return a #N/A error value if you reference a session-based object, such as a calculated member or named set, in a PivotTable when sharing a connection, and that PivotTable is deleted or you convert the PivotTable to formulas. (On the
+       <b class="ocpUI">
+        Options
+       </b>
+       tab, in the
+       <b class="ocpUI">
+        Tools
+       </b>
+       group, click
+       <b class="ocpUI">
+        OLAP Tools
+       </b>
+       , and then click
+       <b class="ocpUI">
+        Convert to Formulas
+       </b>
+       .)
+      </p>
+     </li>
+    </ul>
+   </li>
+  </ul>
+  <p>
+   <b class="ocpLegacyBold">
+    Issue: Null values are converted to zero-length strings
+   </b>
+  </p>
+  <p>
+   In Excel, if a cell has no data because you never changed it or you deleted the contents, the cell contains an empty value. In many database systems, an empty value is called a Null value. An empty or Null value literally means "No value." However, a formula can never return an empty string or Null value. A formula always returns one of three values: a number value; a text value, which may be a zero-length string, or an error value, such as #NUM! or #VALUE.
+  </p>
+  <p>
+   If a formula contains a CUBEVALUE function connected to an Online Analytical Processing (OLAP) database and a query to this database results in a Null value, Excel converts this Null value to a zero-length string, even if the formula would otherwise return a number value. This can lead to a situation where a range of cells contain a combination of numeric and zero-length string values, and this situation can affect the results of other formulas that reference that range of cells. For example, if A1 and A3 contain numbers, and A2 contains a formula with a CUBEVALUE function that returns a zero-length string, the following formula would return a #VALUE! error:
+  </p>
+  <p>
+   =A1+A2+A3
+  </p>
+  <p>
+   To prevent this, you can test for a zero-length string by using the ISTEXT function and by using the IF function to replace the zero-length with a 0 (zero) as the following example shows:
+  </p>
+  <p>
+   =IF(ISTEXT(A1),0,A1)+IF(ISTEXT(A2),0,A2)+IF(ISTEXT(A3),0,A3)
+  </p>
+  <p>
+   Alternatively, you can nest the CUBEVALUE function in an IF condition that returns a 0 value if the CUBEVALUE function evaluates to a zero-length string as the following example shows:
+  </p>
+  <p>
+   =IF (CUBEVALUE("Sales","[Measures].[Profit]","[Time].[2004]","[All Product].[Beverages]")="", 0, CUBEVALUE("Sales","[Measures].[Profit]","[Time].[2004]","[All Product].[Beverages]"))
+  </p>
+  <p>
+   Note that the SUM function does not require this test for a zero-length string because it automatically ignores zero-length strings when calculating its return value.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Examples
+  </h2>
+  <p>
+   =CUBEVALUE("Sales","[Measures].[Profit]","[Time].[2004]","[All Product].[Beverages]")
+  </p>
+  <p>
+   =CUBEVALUE($A$1,"[Measures].[Profit]",D$12,$A23)
+  </p>
+  <p>
+   =CUBEVALUE("Sales",$B$7,D$12,$A23)
+  </p>
+ </section>
+</article>

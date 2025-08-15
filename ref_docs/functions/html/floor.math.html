@@ -1,0 +1,222 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p id="__goback">
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    FLOOR.MATH
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Round a number down to the nearest integer or to the nearest multiple of significance.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   FLOOR.MATH(number, significance, mode)
+  </p>
+  <p>
+   The FLOOR.MATH function syntax has the following arguments.
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Number
+     </b>
+     Required. The number to be rounded down.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Significance
+     </b>
+     Optional. The multiple to which you want to round.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Mode
+     </b>
+     Optional. The direction (toward or away from 0) to round negative numbers.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     By default, positive numbers with decimal portions are rounded down to the nearest integer. For example, 6.3 is rounded down to 6, using the default Significance (1).
+    </p>
+   </li>
+   <li>
+    <p>
+     By default, negative numbers with decimal portions are rounded away from 0 to the nearest integer. For example, -6.7 is rounded to -7.
+    </p>
+   </li>
+   <li>
+    <p>
+     By using 0 or a negative number as the Mode argument, you can change the direction of the rounding for negative numbers. For example, rounding -6.3 with a Significance of 1 and a Mode of -1 rounds toward 0, to -6.
+    </p>
+   </li>
+   <li>
+    <p>
+     The Significance argument rounds the number down to the nearest integer that is a multiple of the significance specified. The exception is where the number to be rounded is an integer. For example, for a Significance of 3, the number is rounded down to the next integer that is a multiple of 3.
+    </p>
+   </li>
+   <li>
+    <p>
+     If Number divided by a Significance of 2 or greater results in a remainder, the result is rounded down.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description (result)
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =FLOOR.MATH(24.3,5)
+      </p>
+     </td>
+     <td>
+      <p>
+       Rounds 24.3 down to the nearest integer that is a multiple of 5 (20).
+      </p>
+     </td>
+     <td>
+      <p>
+       20
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =FLOOR.MATH(6.7)
+      </p>
+     </td>
+     <td>
+      <p>
+       Rounds 6.7 down to the nearest integer (6).
+      </p>
+     </td>
+     <td>
+      <p>
+       6
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =FLOOR.MATH(-8.1,2)
+      </p>
+     </td>
+     <td>
+      <p>
+       Rounds -8.1 down (away from 0) to the nearest integer that is a multiple of 2 (-10).
+      </p>
+     </td>
+     <td>
+      <p>
+       -10
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =FLOOR.MATH(-5.5,2,-1)
+      </p>
+     </td>
+     <td>
+      <p>
+       Rounds -5.5 toward 0 to the nearest integer that is a multiple of 2, using a non-zero Mode, which reverses rounding direction (-4).
+      </p>
+     </td>
+     <td>
+      <p>
+       -4
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+   <a class="ocpTopOfPage" data-bi-type="anchor" href="#">
+    Top of Page
+   </a>
+  </p>
+ </section>
+</article>

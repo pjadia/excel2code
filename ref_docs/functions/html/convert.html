@@ -1,0 +1,2621 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   Converts a number from one measurement system to another. For example, CONVERT can translate a table of distances in miles to a table of distances in kilometers.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Syntax
+  </h2>
+  <p>
+   <b class="ocpLegacyBold">
+    CONVERT
+   </b>
+   (
+   <b class="ocpLegacyBold">
+    number
+   </b>
+   ,
+   <b class="ocpLegacyBold">
+    from_unit
+   </b>
+   ,
+   <b class="ocpLegacyBold">
+    to_unit
+   </b>
+   )
+  </p>
+  <p>
+   <b class="ocpRunInHead">
+    Number
+   </b>
+   is the value in from_units to convert.
+  </p>
+  <p>
+   <b class="ocpRunInHead">
+    From_unit
+   </b>
+   is the units for number.
+  </p>
+  <p>
+   <b class="ocpRunInHead">
+    To_unit
+   </b>
+   is the units for the result. CONVERT accepts the following text values (in quotation marks) for from_unit and to_unit.
+  </p>
+ </section>
+ <div class="ocpSection">
+  <h2 class="ocpExpandoHead">
+   <button aria-controls="ID0EH-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EH-button" ms.interactiontype="11" type="button">
+    <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+     <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+     </i>
+    </div>
+    <div class="ocpExpandoHeadTitleContainer" role="none">
+     Measurement systems
+    </div>
+   </button>
+  </h2>
+  <div aria-labelledby="ID0EH-button" class="ocpebw" id="ID0EH-panel" role="region">
+   <div class="ocpExpandoBody">
+    <p>
+     <b class="ocpLegacyBold">
+      Weight and Mass
+     </b>
+    </p>
+    <table aria-label="" class="banded">
+     <thead>
+      <tr>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          Weight and mass
+         </b>
+        </p>
+       </th>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          From_unit
+         </b>
+         <b class="ocpLegacyBold">
+          or
+         </b>
+         <b class="ocpLegacyBold">
+          to_unit
+         </b>
+        </p>
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         Gram
+        </p>
+       </td>
+       <td>
+        <p>
+         "g"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Slug
+        </p>
+       </td>
+       <td>
+        <p>
+         "sg"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Pound mass (avoirdupois)
+        </p>
+       </td>
+       <td>
+        <p>
+         "lbm"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         U (atomic mass unit)
+        </p>
+       </td>
+       <td>
+        <p>
+         "u"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Ounce mass (avoirdupois)
+        </p>
+       </td>
+       <td>
+        <p>
+         "ozm"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Grain
+        </p>
+       </td>
+       <td>
+        <p>
+         "grain"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         U.S. (short) hundredweight
+        </p>
+       </td>
+       <td>
+        <p>
+         "cwt" or "shweight"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Imperial hundredweight
+        </p>
+       </td>
+       <td>
+        <p>
+         "uk_cwt" or "lcwt" ("hweight")
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Stone
+        </p>
+       </td>
+       <td>
+        <p>
+         "stone"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Ton
+        </p>
+       </td>
+       <td>
+        <p>
+         "ton"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Imperial ton
+        </p>
+       </td>
+       <td>
+        <p>
+         "uk_ton" or "LTON" ("brton")
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     <b class="ocpLegacyBold">
+      Distance
+     </b>
+    </p>
+    <table aria-label="" class="banded">
+     <thead>
+      <tr>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          Distance
+         </b>
+        </p>
+       </th>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          From_unit
+         </b>
+         <b class="ocpLegacyBold">
+          or
+         </b>
+         <b class="ocpLegacyBold">
+          to_unit
+         </b>
+        </p>
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         Meter
+        </p>
+       </td>
+       <td>
+        <p>
+         "m"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Statute mile
+        </p>
+       </td>
+       <td>
+        <p>
+         "mi"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Nautical mile
+        </p>
+       </td>
+       <td>
+        <p>
+         "Nmi"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Inch
+        </p>
+       </td>
+       <td>
+        <p>
+         "in"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Foot
+        </p>
+       </td>
+       <td>
+        <p>
+         "ft"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Yard
+        </p>
+       </td>
+       <td>
+        <p>
+         "yd"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Angstrom
+        </p>
+       </td>
+       <td>
+        <p>
+         "ang"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Ell
+        </p>
+       </td>
+       <td>
+        <p>
+         "ell"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Light-year
+        </p>
+       </td>
+       <td>
+        <p>
+         "ly"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Parsec
+        </p>
+       </td>
+       <td>
+        <p>
+         "parsec" or "pc"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Pica (1/72 inch)
+        </p>
+       </td>
+       <td>
+        <p>
+         "Picapt" or "Pica"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Pica (1/6 inch)
+        </p>
+       </td>
+       <td>
+        <p>
+         "pica"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         U.S survey mile (statute mile)
+        </p>
+       </td>
+       <td>
+        <p>
+         "survey_mi"
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     <b class="ocpLegacyBold">
+      Time
+     </b>
+    </p>
+    <table aria-label="" class="banded">
+     <thead>
+      <tr>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          Time
+         </b>
+        </p>
+       </th>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          From_unit
+         </b>
+         <b class="ocpLegacyBold">
+          or
+         </b>
+         <b class="ocpLegacyBold">
+          to_unit
+         </b>
+        </p>
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         Year
+        </p>
+       </td>
+       <td>
+        <p>
+         "yr"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Day
+        </p>
+       </td>
+       <td>
+        <p>
+         "day" or "d"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Hour
+        </p>
+       </td>
+       <td>
+        <p>
+         "hr"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Minute
+        </p>
+       </td>
+       <td>
+        <p>
+         "mn" or "min"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Second
+        </p>
+       </td>
+       <td>
+        <p>
+         "sec" or "s"
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     <b class="ocpLegacyBold">
+      Pressure
+     </b>
+    </p>
+    <table aria-label="" class="banded">
+     <thead>
+      <tr>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          Pressure
+         </b>
+        </p>
+       </th>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          From_unit
+         </b>
+         <b class="ocpLegacyBold">
+          or
+         </b>
+         <b class="ocpLegacyBold">
+          to_unit
+         </b>
+        </p>
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         Pascal
+        </p>
+       </td>
+       <td>
+        <p>
+         "Pa" (or "p")
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Atmosphere
+        </p>
+       </td>
+       <td>
+        <p>
+         "atm" (or "at")
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         mm of Mercury
+        </p>
+       </td>
+       <td>
+        <p>
+         "mmHg"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         PSI
+        </p>
+       </td>
+       <td>
+        <p>
+         "psi"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Torr
+        </p>
+       </td>
+       <td>
+        <p>
+         "Torr"
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     <b class="ocpLegacyBold">
+      Force
+     </b>
+    </p>
+    <table aria-label="" class="banded">
+     <thead>
+      <tr>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          Force
+         </b>
+        </p>
+       </th>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          From_unit
+         </b>
+         <b class="ocpLegacyBold">
+          or
+         </b>
+         <b class="ocpLegacyBold">
+          to_unit
+         </b>
+        </p>
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         Newton
+        </p>
+       </td>
+       <td>
+        <p>
+         "N"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Dyne
+        </p>
+       </td>
+       <td>
+        <p>
+         "dyn" (or "dy")
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Pound force
+        </p>
+       </td>
+       <td>
+        <p>
+         "lbf"
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     <b class="ocpLegacyBold">
+      Energy
+     </b>
+    </p>
+    <table aria-label="" class="banded">
+     <thead>
+      <tr>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          Energy
+         </b>
+        </p>
+       </th>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          From_unit
+         </b>
+         <b class="ocpLegacyBold">
+          or
+         </b>
+         <b class="ocpLegacyBold">
+          to_unit
+         </b>
+        </p>
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         Joule
+        </p>
+       </td>
+       <td>
+        <p>
+         "J"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Erg
+        </p>
+       </td>
+       <td>
+        <p>
+         "e"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Thermodynamic calorie
+        </p>
+       </td>
+       <td>
+        <p>
+         "c"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         IT calorie
+        </p>
+       </td>
+       <td>
+        <p>
+         "cal"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Electron volt
+        </p>
+       </td>
+       <td>
+        <p>
+         "eV" (or "ev")
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Horsepower-hour
+        </p>
+       </td>
+       <td>
+        <p>
+         "HPh" (or "hh")
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Watt-hour
+        </p>
+       </td>
+       <td>
+        <p>
+         "Wh" (or "wh")
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Foot-pound
+        </p>
+       </td>
+       <td>
+        <p>
+         "flb"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         BTU
+        </p>
+       </td>
+       <td>
+        <p>
+         "BTU" (or "btu")
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     <b class="ocpLegacyBold">
+      Power
+     </b>
+    </p>
+    <table aria-label="" class="banded">
+     <thead>
+      <tr>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          Power
+         </b>
+        </p>
+       </th>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          From_unit
+         </b>
+         <b class="ocpLegacyBold">
+          or
+         </b>
+         <b class="ocpLegacyBold">
+          to_unit
+         </b>
+        </p>
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         Horsepower
+        </p>
+       </td>
+       <td>
+        <p>
+         "HP" (or "h")
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Pferdestärke
+        </p>
+       </td>
+       <td>
+        <p>
+         "PS"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Watt
+        </p>
+       </td>
+       <td>
+        <p>
+         "W" (or "w")
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     <b class="ocpLegacyBold">
+      Magnetism
+     </b>
+    </p>
+    <table aria-label="" class="banded">
+     <thead>
+      <tr>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          Magnetism
+         </b>
+        </p>
+       </th>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          From_unit
+         </b>
+         <b class="ocpLegacyBold">
+          or
+         </b>
+         <b class="ocpLegacyBold">
+          to_unit
+         </b>
+        </p>
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         Tesla
+        </p>
+       </td>
+       <td>
+        <p>
+         "T"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Gauss
+        </p>
+       </td>
+       <td>
+        <p>
+         "ga"
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     <b class="ocpLegacyBold">
+      Temperature
+     </b>
+    </p>
+    <table aria-label="" class="banded">
+     <thead>
+      <tr>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          Temperature
+         </b>
+        </p>
+       </th>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          From_unit
+         </b>
+         <b class="ocpLegacyBold">
+          or
+         </b>
+         <b class="ocpLegacyBold">
+          to_unit
+         </b>
+        </p>
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         Degree Celsius
+        </p>
+       </td>
+       <td>
+        <p>
+         "C" (or "cel")
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Degree Fahrenheit
+        </p>
+       </td>
+       <td>
+        <p>
+         "F" (or "fah")
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Kelvin
+        </p>
+       </td>
+       <td>
+        <p>
+         "K" (or "kel")
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Degrees Rankine
+        </p>
+       </td>
+       <td>
+        <p>
+         "Rank"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Degrees Réaumur
+        </p>
+       </td>
+       <td>
+        <p>
+         "Reau"
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     <b class="ocpLegacyBold">
+      Volume
+     </b>
+    </p>
+    <table aria-label="" class="banded">
+     <thead>
+      <tr>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          Volume (or liquid measure)
+         </b>
+        </p>
+       </th>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          From_unit
+         </b>
+         <b class="ocpLegacyBold">
+          or
+         </b>
+         <b class="ocpLegacyBold">
+          to_unit
+         </b>
+        </p>
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         Teaspoon
+        </p>
+       </td>
+       <td>
+        <p>
+         "tsp"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Modern teaspoon
+        </p>
+       </td>
+       <td>
+        <p>
+         "tspm"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Tablespoon
+        </p>
+       </td>
+       <td>
+        <p>
+         "tbs"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Fluid ounce
+        </p>
+       </td>
+       <td>
+        <p>
+         "oz"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Cup
+        </p>
+       </td>
+       <td>
+        <p>
+         "cup"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         U.S. pint
+        </p>
+       </td>
+       <td>
+        <p>
+         "pt" (or "us_pt")
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         U.K. pint
+        </p>
+       </td>
+       <td>
+        <p>
+         "uk_pt"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Quart
+        </p>
+       </td>
+       <td>
+        <p>
+         "qt"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Imperial quart (U.K.)
+        </p>
+       </td>
+       <td>
+        <p>
+         "uk_qt"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Gallon
+        </p>
+       </td>
+       <td>
+        <p>
+         "gal"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Imperial gallon (U.K.)
+        </p>
+       </td>
+       <td>
+        <p>
+         "uk_gal"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Liter
+        </p>
+       </td>
+       <td>
+        <p>
+         "l" or "L" ("lt")
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Cubic angstrom
+        </p>
+       </td>
+       <td>
+        <p>
+         "ang3" or "ang^3"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         U.S. oil barrel
+        </p>
+       </td>
+       <td>
+        <p>
+         "barrel"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         U.S. bushel
+        </p>
+       </td>
+       <td>
+        <p>
+         "bushel"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Cubic feet
+        </p>
+       </td>
+       <td>
+        <p>
+         "ft3" or "ft^3"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Cubic inch
+        </p>
+       </td>
+       <td>
+        <p>
+         "in3" or "in^3"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Cubic light-year
+        </p>
+       </td>
+       <td>
+        <p>
+         "ly3" or "ly^3"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Cubic meter
+        </p>
+       </td>
+       <td>
+        <p>
+         "m3" or "m^3"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Cubic Mile
+        </p>
+       </td>
+       <td>
+        <p>
+         "mi3" or "mi^3"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Cubic yard
+        </p>
+       </td>
+       <td>
+        <p>
+         "yd3" or "yd^3"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Cubic nautical mile
+        </p>
+       </td>
+       <td>
+        <p>
+         "Nmi3" or "Nmi^3"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Cubic Pica
+        </p>
+       </td>
+       <td>
+        <p>
+         "Picapt3", "Picapt^3", "Pica3" or "Pica^3"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Gross Registered Ton
+        </p>
+       </td>
+       <td>
+        <p>
+         "GRT" ("regton")
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Measurement ton (freight ton)
+        </p>
+       </td>
+       <td>
+        <p>
+         "MTON"
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     <b class="ocpLegacyBold">
+      Area
+     </b>
+    </p>
+    <table aria-label="" class="banded">
+     <thead>
+      <tr>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          Area
+         </b>
+        </p>
+       </th>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          From_unit
+         </b>
+         <b class="ocpLegacyBold">
+          or
+         </b>
+         <b class="ocpLegacyBold">
+          to_unit
+         </b>
+        </p>
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         International acre
+        </p>
+       </td>
+       <td>
+        <p>
+         "uk_acre"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         U.S. survey/statute acre
+        </p>
+       </td>
+       <td>
+        <p>
+         "us_acre"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Square angstrom
+        </p>
+       </td>
+       <td>
+        <p>
+         "ang2" or “ang^2"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Are
+        </p>
+       </td>
+       <td>
+        <p>
+         "ar"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Square feet
+        </p>
+       </td>
+       <td>
+        <p>
+         "ft2" or "ft^2"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Hectare
+        </p>
+       </td>
+       <td>
+        <p>
+         "ha"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Square inches
+        </p>
+       </td>
+       <td>
+        <p>
+         "in2" or "in^2"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Square light-year
+        </p>
+       </td>
+       <td>
+        <p>
+         "ly2" or "ly^2"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Square meters
+        </p>
+       </td>
+       <td>
+        <p>
+         "m2" or "m^2"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Morgen
+        </p>
+       </td>
+       <td>
+        <p>
+         "Morgen"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Square miles
+        </p>
+       </td>
+       <td>
+        <p>
+         "mi2" or "mi^2"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Square nautical miles
+        </p>
+       </td>
+       <td>
+        <p>
+         "Nmi2" or "Nmi^2"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Square Pica
+        </p>
+       </td>
+       <td>
+        <p>
+         "Picapt2", "Pica2", "Pica^2" or "Picapt^2"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Square yards
+        </p>
+       </td>
+       <td>
+        <p>
+         "yd2" or "yd^2"
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     <b class="ocpLegacyBold">
+      Information
+     </b>
+    </p>
+    <table aria-label="" class="banded">
+     <thead>
+      <tr>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          Information
+         </b>
+        </p>
+       </th>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          From_unit
+         </b>
+         <b class="ocpLegacyBold">
+          or
+         </b>
+         <b class="ocpLegacyBold">
+          to_unit
+         </b>
+        </p>
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         Bit
+        </p>
+       </td>
+       <td>
+        <p>
+         "bit"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Byte
+        </p>
+       </td>
+       <td>
+        <p>
+         "byte"
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     <b class="ocpLegacyBold">
+      Speed
+     </b>
+    </p>
+    <table aria-label="" class="banded">
+     <thead>
+      <tr>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          Speed
+         </b>
+        </p>
+       </th>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          From_unit
+         </b>
+         <b class="ocpLegacyBold">
+          or
+         </b>
+         <b class="ocpLegacyBold">
+          to_unit
+         </b>
+        </p>
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         Admiralty knot
+        </p>
+       </td>
+       <td>
+        <p>
+         "admkn"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Knot
+        </p>
+       </td>
+       <td>
+        <p>
+         "kn"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Meters per hour
+        </p>
+       </td>
+       <td>
+        <p>
+         "m/h" or "m/hr"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Meters per second
+        </p>
+       </td>
+       <td>
+        <p>
+         "m/s" or "m/sec"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Miles per hour
+        </p>
+       </td>
+       <td>
+        <p>
+         "mph"
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     The following abbreviated unit prefixes can be prepended to any metric from_unit or to_unit.
+    </p>
+    <table aria-label="" class="banded">
+     <thead>
+      <tr>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          Prefix
+         </b>
+        </p>
+       </th>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          Multiplier
+         </b>
+        </p>
+       </th>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          Abbreviation
+         </b>
+        </p>
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         yotta
+        </p>
+       </td>
+       <td>
+        <p>
+         1E+24
+        </p>
+       </td>
+       <td>
+        <p>
+         "Y"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         zetta
+        </p>
+       </td>
+       <td>
+        <p>
+         1E+21
+        </p>
+       </td>
+       <td>
+        <p>
+         "Z"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         exa
+        </p>
+       </td>
+       <td>
+        <p>
+         1E+18
+        </p>
+       </td>
+       <td>
+        <p>
+         "E"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         peta
+        </p>
+       </td>
+       <td>
+        <p>
+         1E+15
+        </p>
+       </td>
+       <td>
+        <p>
+         "P"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         tera
+        </p>
+       </td>
+       <td>
+        <p>
+         1E+12
+        </p>
+       </td>
+       <td>
+        <p>
+         "T"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         giga
+        </p>
+       </td>
+       <td>
+        <p>
+         1E+09
+        </p>
+       </td>
+       <td>
+        <p>
+         "G"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         mega
+        </p>
+       </td>
+       <td>
+        <p>
+         1E+06
+        </p>
+       </td>
+       <td>
+        <p>
+         "M"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         kilo
+        </p>
+       </td>
+       <td>
+        <p>
+         1E+03
+        </p>
+       </td>
+       <td>
+        <p>
+         "k"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         hecto
+        </p>
+       </td>
+       <td>
+        <p>
+         1E+02
+        </p>
+       </td>
+       <td>
+        <p>
+         "h"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         dekao
+        </p>
+       </td>
+       <td>
+        <p>
+         1E+01
+        </p>
+       </td>
+       <td>
+        <p>
+         "da" or "e"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         deci
+        </p>
+       </td>
+       <td>
+        <p>
+         1E-01
+        </p>
+       </td>
+       <td>
+        <p>
+         "d"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         centi
+        </p>
+       </td>
+       <td>
+        <p>
+         1E-02
+        </p>
+       </td>
+       <td>
+        <p>
+         "c"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         milli
+        </p>
+       </td>
+       <td>
+        <p>
+         1E-03
+        </p>
+       </td>
+       <td>
+        <p>
+         "m"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         micro
+        </p>
+       </td>
+       <td>
+        <p>
+         1E-06
+        </p>
+       </td>
+       <td>
+        <p>
+         "u"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         nano
+        </p>
+       </td>
+       <td>
+        <p>
+         1E-09
+        </p>
+       </td>
+       <td>
+        <p>
+         "n"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         pico
+        </p>
+       </td>
+       <td>
+        <p>
+         1E-12
+        </p>
+       </td>
+       <td>
+        <p>
+         "p"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         femto
+        </p>
+       </td>
+       <td>
+        <p>
+         1E-15
+        </p>
+       </td>
+       <td>
+        <p>
+         "f"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         atto
+        </p>
+       </td>
+       <td>
+        <p>
+         1E-18
+        </p>
+       </td>
+       <td>
+        <p>
+         "a"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         zepto
+        </p>
+       </td>
+       <td>
+        <p>
+         1E-21
+        </p>
+       </td>
+       <td>
+        <p>
+         "z"
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         yocto
+        </p>
+       </td>
+       <td>
+        <p>
+         1E-24
+        </p>
+       </td>
+       <td>
+        <p>
+         "y"
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <table aria-label="" class="banded">
+     <thead>
+      <tr>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          Binary Prefix
+         </b>
+        </p>
+       </th>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          Prefix Value
+         </b>
+        </p>
+       </th>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          Abbreviation
+         </b>
+        </p>
+       </th>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          Derived from
+         </b>
+        </p>
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         yobi
+        </p>
+       </td>
+       <td>
+        <p>
+         2^80 = 1 208 925 819 614 629 174 706 176
+        </p>
+       </td>
+       <td>
+        <p>
+         "Yi"
+        </p>
+       </td>
+       <td>
+        <p>
+         yotta
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         zebi
+        </p>
+       </td>
+       <td>
+        <p>
+         2^70 = 1 180 591 620 717 411 303 424
+        </p>
+       </td>
+       <td>
+        <p>
+         "Zi"
+        </p>
+       </td>
+       <td>
+        <p>
+         zetta
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         exbi
+        </p>
+       </td>
+       <td>
+        <p>
+         2^60 = 1 152 921 504 606 846 976
+        </p>
+       </td>
+       <td>
+        <p>
+         "Ei"
+        </p>
+       </td>
+       <td>
+        <p>
+         exa
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         pebi
+        </p>
+       </td>
+       <td>
+        <p>
+         2^50 = 1 125 899 906 842 624
+        </p>
+       </td>
+       <td>
+        <p>
+         "Pi"
+        </p>
+       </td>
+       <td>
+        <p>
+         peta
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         tebi
+        </p>
+       </td>
+       <td>
+        <p>
+         2^40 = 1 099 511 627 776
+        </p>
+       </td>
+       <td>
+        <p>
+         "Ti"
+        </p>
+       </td>
+       <td>
+        <p>
+         tera
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         gibi
+        </p>
+       </td>
+       <td>
+        <p>
+         2^30 = 1 073 741 824
+        </p>
+       </td>
+       <td>
+        <p>
+         "Gi"
+        </p>
+       </td>
+       <td>
+        <p>
+         giga
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         mebi
+        </p>
+       </td>
+       <td>
+        <p>
+         2^20 = 1 048 576
+        </p>
+       </td>
+       <td>
+        <p>
+         "Mi"
+        </p>
+       </td>
+       <td>
+        <p>
+         mega
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         kibi
+        </p>
+       </td>
+       <td>
+        <p>
+         2^10 = 1024
+        </p>
+       </td>
+       <td>
+        <p>
+         "ki"
+        </p>
+       </td>
+       <td>
+        <p>
+         kilo
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+  </div>
+ </div>
+ <div class="ocpSection">
+  <h2 class="ocpExpandoHead">
+   <button aria-controls="ID0EF-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EF-button" ms.interactiontype="11" type="button">
+    <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+     <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+     </i>
+    </div>
+    <div class="ocpExpandoHeadTitleContainer" role="none">
+     Remarks
+    </div>
+   </button>
+  </h2>
+  <div aria-labelledby="ID0EF-button" class="ocpebw" id="ID0EF-panel" role="region">
+   <div class="ocpExpandoBody">
+    <ul>
+     <li>
+      <p>
+       If the input data types are incorrect, CONVERT returns the #VALUE! error value.
+      </p>
+     </li>
+     <li>
+      <p>
+       If the unit does not exist, CONVERT returns the #N/A error value.
+      </p>
+     </li>
+     <li>
+      <p>
+       If the unit does not support a binary prefix, CONVERT returns the #N/A error value.
+      </p>
+     </li>
+     <li>
+      <p>
+       If the units are in different groups, CONVERT returns the #N/A error value.
+      </p>
+     </li>
+     <li>
+      <p>
+       Unit names and prefixes are case-sensitive.
+      </p>
+     </li>
+    </ul>
+   </div>
+  </div>
+ </div>
+ <div class="ocpSection">
+  <h2 class="ocpExpandoHead">
+   <button aria-controls="ID0ED-panel" aria-expanded="false" class="expandoButtonLink" id="ID0ED-button" ms.interactiontype="11" type="button">
+    <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+     <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+     </i>
+    </div>
+    <div class="ocpExpandoHeadTitleContainer" role="none">
+     Examples
+    </div>
+   </button>
+  </h2>
+  <div aria-labelledby="ID0ED-button" class="ocpebw" id="ID0ED-panel" role="region">
+   <div class="ocpExpandoBody">
+    <p>
+     This is an example of how a formula uses CONVERT.
+    </p>
+    <table aria-label="" class="banded">
+     <thead>
+      <tr>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          Formula
+         </b>
+        </p>
+       </th>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          Description
+         </b>
+        </p>
+       </th>
+       <th>
+        <p>
+         <b class="ocpLegacyBold">
+          Result
+         </b>
+        </p>
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         =CONVERT(1, "lbm", "kg")
+        </p>
+       </td>
+       <td>
+        <p>
+         Converts 1 pound mass to kilograms.
+        </p>
+       </td>
+       <td>
+        <p>
+         0.4535924
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         =CONVERT(68, "F", "C")
+        </p>
+       </td>
+       <td>
+        <p>
+         Converts 68 degrees Fahrenheit to Celsius.
+        </p>
+       </td>
+       <td>
+        <p>
+         20
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         =CONVERT(2.5, "ft", "sec")
+        </p>
+       </td>
+       <td>
+        <p>
+         Data types are not the same, so an error is returned.
+        </p>
+       </td>
+       <td>
+        <p>
+         #N/A
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         =CONVERT(CONVERT(100,"ft","m"),"ft","m")
+        </p>
+       </td>
+       <td>
+        <p>
+         Converts 100 square feet into square meters.
+        </p>
+       </td>
+       <td>
+        <p>
+         9.290304
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+       </td>
+       <td>
+       </td>
+       <td>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <p>
+     You can see how CONVERT works in Excel. Copy the following table (starting with the "6") and paste it to a blank Excel worksheet, placing the "6" in cell A1.
+    </p>
+    <table aria-label="" class="banded">
+     <tbody>
+      <tr>
+       <td>
+       </td>
+       <td>
+        <table aria-label="" class="banded">
+         <tbody>
+          <tr>
+           <td>
+           </td>
+           <td>
+            <p>
+            </p>
+           </td>
+          </tr>
+          <tr>
+           <td>
+           </td>
+           <td>
+            <p>
+             6
+            </p>
+           </td>
+          </tr>
+          <tr>
+           <td>
+           </td>
+           <td>
+            <p>
+             <b class="ocpLegacyBold">
+              Formula
+             </b>
+            </p>
+           </td>
+           <td>
+            <p>
+             <b class="ocpLegacyBold">
+              Description (Result)
+             </b>
+            </p>
+           </td>
+          </tr>
+          <tr>
+           <td>
+           </td>
+           <td>
+            <p>
+             =CONVERT(A1,"C","F")
+            </p>
+           </td>
+           <td>
+            <p>
+             Convert 6 degrees Celsius to Fahrenheit (42.8)
+            </p>
+           </td>
+          </tr>
+          <tr>
+           <td>
+           </td>
+           <td>
+            <p>
+             =CONVERT(A1,"tsp","tbs")
+            </p>
+           </td>
+           <td>
+            <p>
+             Convert 6 teaspoons to tablespoons (2)
+            </p>
+           </td>
+          </tr>
+          <tr>
+           <td>
+           </td>
+           <td>
+            <p>
+             =CONVERT(A1,"gal","l")
+            </p>
+           </td>
+           <td>
+            <p>
+             Convert 6 gallons to liters (22.71741274)
+            </p>
+           </td>
+          </tr>
+          <tr>
+           <td>
+           </td>
+           <td>
+            <p>
+             =CONVERT(A1,"mi","km")
+            </p>
+           </td>
+           <td>
+            <p>
+             Convert 6 miles to kilometers (9.656064)
+            </p>
+           </td>
+          </tr>
+          <tr>
+           <td>
+           </td>
+           <td>
+            <p>
+             =CONVERT(A1,"km","mi")
+            </p>
+           </td>
+           <td>
+            <p>
+             Convert 6 kilometers to miles (3.728227153)
+            </p>
+           </td>
+          </tr>
+          <tr>
+           <td>
+           </td>
+           <td>
+            <p>
+             =CONVERT(A1,"in","ft")
+            </p>
+           </td>
+           <td>
+            <p>
+             Convert 6 inches to feet (0.5)
+            </p>
+           </td>
+          </tr>
+          <tr>
+           <td>
+           </td>
+           <td>
+            <p>
+             =CONVERT(A1,"cm","in")
+            </p>
+           </td>
+           <td>
+            <p>
+             Convert 6 centimeters to inches (2.362204724)
+            </p>
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+  </div>
+ </div>
+</article>

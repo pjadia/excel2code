@@ -1,0 +1,183 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p id="__goback">
+   This article describes the formula syntax and usage of the FORMULATEXT function  in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Returns a formula as a string.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   FORMULATEXT(reference)
+  </p>
+  <p>
+   The FORMULATEXT function syntax has the following arguments.
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Reference
+     </b>
+     Required. A reference to a cell or range of cells.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     The FORMULATEXT function returns what is displayed in the formula bar if you select the referenced cell.
+    </p>
+   </li>
+   <li>
+    <p>
+     The Reference argument can be to another worksheet or workbook.
+    </p>
+   </li>
+   <li>
+    <p>
+     If the Reference argument is to another workbook that is not open, FORMULATEXT returns the #N/A error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If the Reference argument is to an entire row or column, or to a range or defined name containing more than one cell, FORMULATEXT returns the value in the upper leftmost cell of the row, column, or range.
+    </p>
+   </li>
+   <li>
+    <p>
+     In the following cases, FORMULATEXT returns the #N/A error value:
+    </p>
+    <ul>
+     <li>
+      <p>
+       The cell used as the Reference argument does not contain a formula.
+      </p>
+     </li>
+     <li>
+      <p>
+       The formula in the cell is longer than 8192 characters.
+      </p>
+     </li>
+     <li>
+      <p>
+       The formula can't be displayed in the worksheet; for example, due to worksheet protection.
+      </p>
+     </li>
+     <li>
+      <p>
+       An external workbook that contains the formula is not open in Excel.
+      </p>
+     </li>
+    </ul>
+   </li>
+   <li>
+    <p>
+     Invalid data types used as inputs will produce a #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     Entering a reference to the cell in which you are entering the function as the argument won't result in a circular reference warning. FORMULATEXT will successfully return the formula as text in the cell.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =TODAY()
+      </p>
+     </td>
+     <td>
+      <p>
+       The formula in C2 returns the formula it finds in cell A2 as a text string so that you can easily inspect its structure. The formula entered in A2 is =TODAY(), and will return the current day in A2. The formula =TODAY() should appear as text in C2.
+      </p>
+     </td>
+     <td>
+      <p>
+       =FORMULATEXT(A2)
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+   <a class="ocpTopOfPage" data-bi-type="anchor" href="#">
+    Top of Page
+   </a>
+  </p>
+ </section>
+</article>

@@ -1,0 +1,156 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the UNICHAR function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Returns the Unicode character that is referenced by the given numeric value.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   UNICHAR(number)
+  </p>
+  <p>
+   The UNICHAR function syntax has the following arguments.
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Number
+     </b>
+     Required. Number is the Unicode number that represents the character.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     The Unicode character that is returned can be a string of characters, for example in UTF-8 or UTF-16 codes.
+    </p>
+   </li>
+   <li>
+    <p>
+     If Unicode numbers are partial surrogates and data types that are not valid, UNICHAR returns the #N/A error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If numbers are numeric values that fall outside the allowable range, UNICHAR returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If number is zero (0), UNICHAR returns the #VALUE! error value.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =UNICHAR(66)
+      </p>
+     </td>
+     <td>
+      <p>
+       Returns the character represented by the unicode number 66 (uppercase B).
+      </p>
+     </td>
+     <td>
+      <p>
+       B
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =UNICHAR(32)
+      </p>
+     </td>
+     <td>
+      <p>
+       Returns the character represented by the unicode number 32 (space character).
+      </p>
+     </td>
+     <td>
+      <p>
+       Space character
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =UNICHAR(0)
+      </p>
+     </td>
+     <td>
+      <p>
+       The unicode number 0 returns the error value #VALUE!
+      </p>
+     </td>
+     <td>
+      <p>
+       #VALUE!
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+   <a class="ocpTopOfPage" data-bi-type="anchor" href="#">
+    Top of Page
+   </a>
+  </p>
+ </section>
+</article>

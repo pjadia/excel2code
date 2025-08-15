@@ -1,0 +1,304 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    AVERAGEA
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Calculates the average (arithmetic mean) of the values in the list of arguments.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   AVERAGEA(value1, [value2], ...)
+  </p>
+  <p>
+   The AVERAGEA function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Value1, value2, ...
+     </b>
+     Value1 is required, subsequent values are optional. 1 to 255 cells, ranges of cells, or values for which you want the average.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     Arguments can be the following: numbers; names, arrays, or references that contain numbers; text representations of numbers; or logical values, such as TRUE and FALSE, in a reference.
+    </p>
+   </li>
+   <li>
+    <p>
+     Logical values and text representations of numbers that you type directly into the list of arguments are counted.
+    </p>
+   </li>
+   <li>
+    <p>
+     Arguments that contain TRUE evaluate as 1; arguments that contain FALSE evaluate as 0 (zero).
+    </p>
+   </li>
+   <li>
+    <p>
+     Array or reference arguments that contain text evaluate as 0 (zero). Empty text ("") evaluates as 0 (zero).
+    </p>
+   </li>
+   <li>
+    <p>
+     If an argument is an array or reference, only values in that array or reference are used. Empty cells and text values in the array or reference are ignored.
+    </p>
+   </li>
+   <li>
+    <p>
+     Arguments that are error values or text that cannot be translated into numbers cause errors.
+    </p>
+   </li>
+   <li>
+    <p>
+     If you do not want to include logical values and text representations of numbers in a reference as part of the calculation, use the AVERAGE function.
+    </p>
+   </li>
+  </ul>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpNote">
+     Note:
+    </b>
+    The AVERAGEA function measures central tendency, which is the location of the center of a group of numbers in a statistical distribution. The three most common measures of central tendency are:
+   </p>
+  </div>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Average
+     </b>
+     which is the arithmetic mean, and is calculated by adding a group of numbers and then dividing by the count of those numbers. For example, the average of 2, 3, 3, 5, 7, and 10 is 30 divided by 6, which is 5.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Median
+     </b>
+     which is the middle number of a group of numbers; that is, half the numbers have values that are greater than the median, and half the numbers have values that are less than the median. For example, the median of 2, 3, 3, 5, 7, and 10 is 4.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Mode
+     </b>
+     which is the most frequently occurring number in a group of numbers. For example, the mode of 2, 3, 3, 5, 7, and 10 is 3.
+    </p>
+   </li>
+  </ul>
+  <p>
+   For a symmetrical distribution of a group of numbers, these three measures of central tendency are all the same. For a skewed distribution of a group of numbers, they can be different.
+  </p>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpTip">
+     Tip:
+    </b>
+    When you average cells, keep in mind the difference between empty cells and those containing the value zero, especially if you have cleared the
+    <b class="ocpUI">
+     Show a zero in cells that have a zero value
+    </b>
+    check box in the
+    <b class="ocpUI">
+     Excel Options
+    </b>
+    dialog box in the Excel desktop application. When this option is selected, empty cells are not counted, but zero values are.
+   </p>
+  </div>
+  <p>
+   To locate the
+   <b class="ocpUI">
+    Show a zero in cells that have a zero value
+   </b>
+   check box:
+  </p>
+  <ul>
+   <li>
+    <p>
+     On the
+     <b class="ocpUI">
+      File
+     </b>
+     tab, click
+     <b class="ocpUI">
+      Options
+     </b>
+     , and then, in the
+     <b class="ocpUI">
+      Advanced
+     </b>
+     category, look under
+     <b class="ocpUI">
+      Display options for this worksheet
+     </b>
+     .
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       10
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       7
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       9
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Not available
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =AVERAGEA(A2:A6)
+      </p>
+     </td>
+     <td>
+      <p>
+       Average of the numbers above, and the text "Not Available". The cell with the text "Not available" is used in the calculation.
+      </p>
+     </td>
+     <td>
+      <p>
+       5.6
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =AVERAGEA(A2:A5,A7)
+      </p>
+     </td>
+     <td>
+      <p>
+       Average of the numbers above, and the empty cell.
+      </p>
+     </td>
+     <td>
+      <p>
+       5.6
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

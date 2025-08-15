@@ -1,0 +1,738 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   The SUMIFS function, one of the
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/math-and-trigonometry-functions-reference-ee158fd6-33be-42c9-9ae5-d635c3ae8c16">
+    math and trig functions
+   </a>
+   , adds all of its arguments that meet multiple criteria. For example, you would use SUMIFS to sum the number of retailers in the country who (1) reside in a single zip code and (2) whose profits exceed a specific dollar value.
+  </p>
+  <div class="ocpVideo" data-channel="ALTENUS_MS_OFFICE" data-llcc="en-us" data-player="ocvideo" data-videoid="RE2cfS2" data-videotitle="SUMIFs function" data-videotype="single" id="ocpVideo1">
+   <universal-media-player options='{"partnerName":"SupportService","autoplay":false,"reporting":false,"language":"en-us","title":"SUMIFs function","poster":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-5f59fb85-8058-403e-8388-7eddcf0f0439/thumbnail_w800.png","sources":[{"type":"MP4","quality":"HQ","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-5f59fb85-8058-403e-8388-7eddcf0f0439/video_1001_1730102433173_1920x1080.mp4"},{"type":"MP4","quality":"HD","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-5f59fb85-8058-403e-8388-7eddcf0f0439/video_1001_1730102433173_1280x720.mp4"},{"type":"MP4","quality":"LO","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-5f59fb85-8058-403e-8388-7eddcf0f0439/video_1001_1730102433173_640x360.mp4"},{"type":"DASH","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-5f59fb85-8058-403e-8388-7eddcf0f0439/video_1001_1730102433173.mpd"},{"type":"HLS","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-5f59fb85-8058-403e-8388-7eddcf0f0439/video_1001_1730102433173_master.m3u8"}],"ccFiles":[{"url":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-5f59fb85-8058-403e-8388-7eddcf0f0439/en_us_en-us.vtt","locale":"en-us","ccType":"VTT"}]}'>
+    <picture>
+     <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=avif&amp;w=320 320w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=avif&amp;w=480 480w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=avif&amp;w=640 640w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=avif&amp;w=800 800w" type="image/avif"/>
+     <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=webp&amp;w=320 320w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=webp&amp;w=480 480w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=webp&amp;w=640 640w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=webp&amp;w=800 800w" type="image/webp"/>
+     <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=jpeg&amp;w=320 320w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=jpeg&amp;w=480 480w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=jpeg&amp;w=640 640w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+     <img alt="Your browser does not support video. Install Microsoft Silverlight, Adobe Flash Player, or Internet Explorer 9." class="fluentImage" loading="lazy" src="/images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7" style="aspect-ratio: 960/540" width="960"/>
+    </picture>
+   </universal-media-player>
+  </div>
+ </section>
+ <section aria-labelledby="ID0EDP" class="ocpSection">
+  <h2 class="" id="ID0EDP">
+   Syntax
+  </h2>
+  <p>
+   <b class="ocpLegacyBold">
+    SUMIFS(sum_range, criteria_range1, criteria1, [criteria_range2, criteria2], ...)
+   </b>
+  </p>
+  <ul>
+   <li>
+    <p>
+     =SUMIFS(A2:A9,B2:B9,"=A*",C2:C9,"Tom")
+    </p>
+   </li>
+   <li>
+    <p>
+     =SUMIFS(A2:A9,B2:B9,"&lt;&gt;Bananas",C2:C9,"Tom")
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="" class="ocpSection">
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Argument name
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpRunInHead">
+        Sum_range
+       </b>
+       (required)
+      </p>
+     </td>
+     <td>
+      <p>
+       The range of cells to sum.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpRunInHead">
+        Criteria_range1
+       </b>
+       (required)
+      </p>
+     </td>
+     <td>
+      <p>
+       The range that is tested using
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         Criteria1
+        </i>
+       </b>
+       .
+      </p>
+      <p>
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         Criteria_range1
+        </i>
+       </b>
+       and
+       <i class="ocpItalic">
+        <b class="ocpLegacyBold">
+         Criteria1
+        </b>
+       </i>
+       set up a search pair whereby a range is searched for specific criteria. Once items in the range are found, their corresponding values in
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         Sum_range
+        </i>
+       </b>
+       are added.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpRunInHead">
+        Criteria1
+       </b>
+       (required)
+      </p>
+     </td>
+     <td>
+      <p>
+       The criteria that defines which cells in
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         Criteria_range1
+        </i>
+       </b>
+       will be added. For example, criteria can be entered as
+       <b class="ocpLiteral">
+        32
+       </b>
+       ,
+       <b class="ocpLiteral">
+        "&gt;32"
+       </b>
+       ,
+       <b class="ocpLiteral">
+        B4
+       </b>
+       ,
+       <b class="ocpLiteral">
+        "apples"
+       </b>
+       , or
+       <b class="ocpLiteral">
+        "32"
+       </b>
+       .
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpRunInHead">
+        Criteria_range2, criteria2, …
+       </b>
+       (optional)
+      </p>
+     </td>
+     <td>
+      <p>
+       Additional ranges and their associated criteria. You can enter up to 127 range/criteria pairs.
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+ <section aria-labelledby="ID0EDL" class="ocpSection">
+  <h2 class="" id="ID0EDL">
+   Examples
+  </h2>
+  <p>
+   To use these examples in Excel, drag to select the data in the table, right-click the selection, and pick
+   <b class="ocpUI">
+    Copy
+   </b>
+   . In a new worksheet, right-click cell A1 and pick
+   <b class="ocpUI">
+    Match Destination Formatting
+   </b>
+   under
+   <b class="ocpUI">
+    Paste Options
+   </b>
+   .
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Quantity Sold
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Product
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Salesperson
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       5
+      </p>
+     </td>
+     <td>
+      <p>
+       Apples
+      </p>
+     </td>
+     <td>
+      <p>
+       Tom
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+     <td>
+      <p>
+       Apples
+      </p>
+     </td>
+     <td>
+      <p>
+       Sarah
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       15
+      </p>
+     </td>
+     <td>
+      <p>
+       Artichokes
+      </p>
+     </td>
+     <td>
+      <p>
+       Tom
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+     <td>
+      <p>
+       Artichokes
+      </p>
+     </td>
+     <td>
+      <p>
+       Sarah
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       22
+      </p>
+     </td>
+     <td>
+      <p>
+       Bananas
+      </p>
+     </td>
+     <td>
+      <p>
+       Tom
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       12
+      </p>
+     </td>
+     <td>
+      <p>
+       Bananas
+      </p>
+     </td>
+     <td>
+      <p>
+       Sarah
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       10
+      </p>
+     </td>
+     <td>
+      <p>
+       Carrots
+      </p>
+     </td>
+     <td>
+      <p>
+       Tom
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       33
+      </p>
+     </td>
+     <td>
+      <p>
+       Carrots
+      </p>
+     </td>
+     <td>
+      <p>
+       Sarah
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =SUMIFS(A2:A9, B2:B9, "=A*", C2:C9, "Tom")
+      </p>
+     </td>
+     <td>
+      <p>
+       Adds the number of products that begin with
+       <b class="ocpLiteral">
+        A
+       </b>
+       and were sold by
+       <b class="ocpLiteral">
+        Tom
+       </b>
+       . It uses the wildcard character * in
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         Criteria1
+        </i>
+       </b>
+       ,
+       <b class="ocpLiteral">
+        "=A*"
+       </b>
+       to look for matching product names in
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         Criteria_range1
+        </i>
+       </b>
+       B2:B9, and looks for the name
+       <b class="ocpLiteral">
+        "Tom"
+       </b>
+       in
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         Criteria_range2
+        </i>
+       </b>
+       C2:C9. It then adds the numbers in
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         Sum_range
+        </i>
+       </b>
+       A2:A9 that meet both conditions. The result is 20.
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =SUMIFS(A2:A9, B2:B9, "&lt;&gt;Bananas", C2:C9, "Tom")
+      </p>
+     </td>
+     <td>
+      <p>
+       Adds the number of products that aren't bananas and are sold by Tom. It excludes bananas by using
+       <b class="ocpLiteral">
+        &lt;&gt;
+       </b>
+       in the
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         Criteria1
+        </i>
+       </b>
+       ,
+       <b class="ocpLiteral">
+        "&lt;&gt;Bananas"
+       </b>
+       , and looks for the name
+       <b class="ocpLiteral">
+        "Tom"
+       </b>
+       in
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         Criteria_range2
+        </i>
+       </b>
+       C2:C9. It then adds the numbers in
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         Sum_range
+        </i>
+       </b>
+       A2:A9 that meet both conditions. The result is 30.
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Common Problems
+  </h2>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Problem
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       0 (Zero) is shown instead of the expected result.
+      </p>
+     </td>
+     <td>
+      <p>
+       Make sure
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         Criteria1,2
+        </i>
+       </b>
+       are in quotation marks if you are testing for text values, like a person's name.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       The result is incorrect when
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         Sum_range
+        </i>
+       </b>
+       has TRUE or FALSE values.
+      </p>
+     </td>
+     <td>
+      <p>
+       TRUE and FALSE values for
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         Sum_range
+        </i>
+       </b>
+       are evaluated differently, which may cause unexpected results when they're added.
+      </p>
+      <p>
+       Cells in
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         Sum_range
+        </i>
+       </b>
+       that contain TRUE evaluate to 1. Those that contain FALSE evaluate to 0 (zero).
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Best practices
+  </h2>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Do this
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       Use wildcard characters.
+      </p>
+     </td>
+     <td>
+      <p>
+       Using wildcard characters like the question mark (?) and asterisk (*) in
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         criteria1,2
+        </i>
+       </b>
+       can help you find matches that are similar but not exact.
+      </p>
+      <p>
+       A question mark matches any single character. An asterisk matches any sequence of characters. If you want to find an actual question mark or asterisk, type a tilde (~) in front of the question mark.
+      </p>
+      <p>
+       For example, =SUMIFS(A2:A9, B2:B9, "=A*", C2:C9, "To?") will add all instances with name that begin with "To" and ends with a last letter that could vary.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Understand the difference between SUMIF and SUMIFS.
+      </p>
+     </td>
+     <td>
+      <p>
+       The order of arguments differ between SUMIFS and SUMIF. In particular, the
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         sum_range
+        </i>
+       </b>
+       argument is the first argument in SUMIFS, but it is the third argument in SUMIF. This is a common source of problems using these functions.
+      </p>
+      <p>
+       If you're copying and editing these similar functions, make sure you put the arguments in the correct order.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Use the same number of rows and columns for range arguments.
+      </p>
+     </td>
+     <td>
+      <p>
+       The
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         Criteria_range
+        </i>
+       </b>
+       argument must contain the same number of rows and columns as the
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         Sum_range
+        </i>
+       </b>
+       argument.
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+   <a class="ocpTopOfPage" data-bi-type="anchor" href="#">
+    Top of Page
+   </a>
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Need more help?
+  </h2>
+  <p>
+   You can always ask an expert in the
+   <a class="ocpExternalLink" data-bi-type="anchor" href="https://techcommunity.microsoft.com/t5/Excel/ct-p/Excel_Cat" target="_blank">
+    Excel Tech Community
+   </a>
+   or get support in
+   <a class="ocpExternalLink" data-bi-type="anchor" href="https://answers.microsoft.com/lang/msoffice/forum/msoffice_excel" target="_blank">
+    Communities
+   </a>
+   .
+  </p>
+  <p>
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   See Also
+  </h2>
+  <p>
+   ​​​​​​​
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/sumif-function-169b8c99-c05c-4483-a712-1697a653039b">
+    The SUMIF function adds only the values that meet a single criteria
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/sumsq-function-e3313c02-51cc-4963-aae6-31442d9ec307">
+    The SUMSQ function sums multiple values after it performs a mathematical square operation on each of them
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/countif-function-e0de10c6-f885-4e71-abb4-1f464816df34">
+    The COUNTIF function counts only the values that meet a single criteria
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/countifs-function-dda3dc6e-f74e-4aee-88bc-aa8c2a866842">
+    The COUNTIFS function counts only the values that meet multiple criteria
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/ifs-function-36329a26-37b2-467c-972b-4a39bd951d45">
+    IFS function (Microsoft 365, Excel 2016 and later)
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/overview-of-formulas-in-excel-ecfdc708-9162-49e8-b993-c311f47ca173">
+    Overview of formulas in Excel
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/how-to-avoid-broken-formulas-in-excel-8309381d-33e8-42f6-b889-84ef6df1d586">
+    How to avoid broken formulas
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/detect-formula-errors-in-excel-3a8acca5-1d61-4702-80e0-99a36a2822c1">
+    Detect errors in formulas
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/math-and-trigonometry-functions-reference-ee158fd6-33be-42c9-9ae5-d635c3ae8c16">
+    Math &amp; Trig functions
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/excel-functions-alphabetical-b3944572-255d-4efb-bb96-c6d90033e188">
+    Excel functions (alphabetical)
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/excel-functions-by-category-5f91f4e9-7b42-46d2-9bd1-63f26a86c0eb">
+    Excel functions (by Category)
+   </a>
+  </p>
+ </section>
+</article>

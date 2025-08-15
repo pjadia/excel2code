@@ -1,0 +1,298 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   The
+   <b class="ocpLegacyBold">
+    COUNT
+   </b>
+   function counts the number of cells that contain numbers, and counts numbers within the list of arguments. Use the
+   <b class="ocpLegacyBold">
+    COUNT
+   </b>
+   function to get the number of entries in a number field that is in a range or array of numbers. For example, you can enter the following formula to count the numbers in the range A1:A20:
+   <b class="ocpLiteral">
+    =COUNT(A1:A20)
+   </b>
+   . In this example, if five of the cells in the range contain numbers, the result is
+   <b class="ocpLegacyBold">
+    5
+   </b>
+   .
+  </p>
+  <div class="ocpVideo" data-channel="ALTENUS_MS_OFFICE" data-llcc="en-us" data-player="ocvideo" data-videoid="RWeWqL" data-videotitle="Video: COUNT function" data-videotype="single" id="ocpVideo1">
+   <universal-media-player options='{"partnerName":"SupportService","autoplay":false,"reporting":false,"language":"en-us","title":"Video: COUNT function","poster":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-ab285f79-c755-44aa-b7af-a1e4adefa5ce/thumbnail_w800.jpeg","sources":[{"type":"MP4","quality":"HQ","src":""},{"type":"MP4","quality":"HD","src":""},{"type":"MP4","quality":"LO","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-ab285f79-c755-44aa-b7af-a1e4adefa5ce/video_1001_1731426579002_640x360.mp4"},{"type":"DASH","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-ab285f79-c755-44aa-b7af-a1e4adefa5ce/video_1001_1731426579002.mpd"},{"type":"HLS","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-ab285f79-c755-44aa-b7af-a1e4adefa5ce/video_1001_1731426579002_master.m3u8"}],"ccFiles":[{"url":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-ab285f79-c755-44aa-b7af-a1e4adefa5ce/en_us_en-us.vtt","locale":"en-us","ccType":"VTT"}]}'>
+    <picture>
+     <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=avif&amp;w=320 320w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=avif&amp;w=480 480w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=avif&amp;w=640 640w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=avif&amp;w=800 800w" type="image/avif"/>
+     <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=webp&amp;w=320 320w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=webp&amp;w=480 480w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=webp&amp;w=640 640w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=webp&amp;w=800 800w" type="image/webp"/>
+     <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=jpeg&amp;w=320 320w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=jpeg&amp;w=480 480w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=jpeg&amp;w=640 640w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+     <img alt="Your browser does not support video. Install Microsoft Silverlight, Adobe Flash Player, or Internet Explorer 9." class="fluentImage" loading="lazy" src="/images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7" style="aspect-ratio: 960/540" width="960"/>
+    </picture>
+   </universal-media-player>
+  </div>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Syntax
+  </h2>
+  <p>
+   COUNT(value1, [value2], ...)
+  </p>
+  <p>
+   The COUNT function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      value1
+     </b>
+     Required. The first item, cell reference, or range within which you want to count numbers.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      value2, ...
+     </b>
+     Optional. Up to 255 additional items, cell references, or ranges within which you want to count numbers.
+    </p>
+   </li>
+  </ul>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpNote">
+     Note:
+    </b>
+    The arguments can contain or refer to a variety of different types of data, but only numbers are counted.
+   </p>
+  </div>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     Arguments that are numbers, dates, or a text representation of numbers (for example, a number enclosed in quotation marks, such as "1") are counted.
+    </p>
+   </li>
+   <li>
+    <p>
+     Logical values and text representations of numbers that you type directly into the list of arguments are counted.
+    </p>
+   </li>
+   <li>
+    <p>
+     Arguments that are error values or text that cannot be translated into numbers are not counted.
+    </p>
+   </li>
+   <li>
+    <p>
+     If an argument is an array or reference, only numbers in that array or reference are counted. Empty cells, logical values, text, or error values in the array or reference are not counted.
+    </p>
+   </li>
+   <li>
+    <p>
+     If you want to count logical values, text, or error values, use the
+     <b class="ocpLegacyBold">
+      COUNTA
+     </b>
+     function.
+    </p>
+   </li>
+   <li>
+    <p>
+     If you want to count only numbers that meet certain criteria, use the
+     <b class="ocpLegacyBold">
+      COUNTIF
+     </b>
+     function or the
+     <b class="ocpLegacyBold">
+      COUNTIFS
+     </b>
+     function.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection" data-bi-id="__example" id="__example">
+  <h2 class="" id="ID0EDF">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </th>
+     <th>
+     </th>
+     <th>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       12/8/08
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       19
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       22.24
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       TRUE
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       #DIV/0!
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p id="__goback">
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =COUNT(A2:A6)
+      </p>
+     </td>
+     <td>
+      <p>
+       Counts the number of cells that contain numbers in cells A2 through A7.
+      </p>
+     </td>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =COUNT(A5:A6)
+      </p>
+     </td>
+     <td>
+      <p>
+       Counts the number of cells that contain numbers in cells A5 through A7.
+      </p>
+     </td>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =COUNT(A2:A6,2)
+      </p>
+     </td>
+     <td>
+      <p>
+       Counts the number of cells that contain numbers in cells A2 through A7, and the value 2
+      </p>
+     </td>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   See Also
+  </h2>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/countif-function-e0de10c6-f885-4e71-abb4-1f464816df34">
+    COUNTIF function (counts the number of cells that meet a criterion)
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/counta-function-7dc98875-d5c1-46f1-9a82-53f3219e2509">
+    COUNTA function (counts the number of cells that are not empty in a range)
+   </a>
+  </p>
+ </section>
+</article>

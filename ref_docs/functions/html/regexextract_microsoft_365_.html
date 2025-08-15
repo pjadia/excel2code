@@ -1,0 +1,398 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   The
+   <b class="ocpLegacyBold">
+    REGEXEXTRACT
+   </b>
+   function allows you to extract text from a string based on a supplied regular expression. You can extract the first match, all matches or capturing groups from the first match.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Syntax
+  </h2>
+  <p>
+   The
+   <b class="ocpLegacyBold">
+    REGEXEXTRACT
+   </b>
+   function extracts strings within the provided
+   <i class="ocpItalic">
+    text
+   </i>
+   that matches the
+   <i class="ocpItalic">
+    pattern
+   </i>
+   .
+   <i class="ocpItalic">
+   </i>
+  </p>
+  <p>
+   The syntax of the REGEXEXTRACT function is:
+  </p>
+  <p>
+   <b class="ocpLegacyBold">
+    REGEXEXTRACT(text, pattern, [return_mode], [case_sensitivity])
+   </b>
+  </p>
+  <p>
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       Argument
+      </p>
+     </th>
+     <th>
+      <p>
+       Description
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        text
+       </b>
+      </p>
+      <p>
+       (required)
+      </p>
+     </td>
+     <td>
+      <p>
+       The text or the reference to a cell containing the text you want to extract strings from.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        pattern
+       </b>
+      </p>
+      <p>
+       (required)
+      </p>
+     </td>
+     <td>
+      <p>
+       The regular expression ("regex") that describes the pattern of text you want to extract.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        return_mode
+       </b>
+      </p>
+      <p>
+      </p>
+     </td>
+     <td>
+      <p>
+       A number that specifies what strings you want to extract. By default, return mode is 0. The possible values are:
+      </p>
+      <p>
+       <b class="ocpLegacyBold">
+        0:
+       </b>
+       Return the first string that matches the pattern
+      </p>
+      <p>
+       <b class="ocpLegacyBold">
+        1:
+       </b>
+       Return all strings that match the pattern as an array
+      </p>
+      <p>
+       <b class="ocpLegacyBold">
+        2:
+       </b>
+       Return capturing groups from the first match as an array
+      </p>
+      <p>
+       <b class="ocpLegacyBold">
+        Note:
+       </b>
+       Capturing groups are parts of a regex pattern surrounded by parentheses "(...)". They allow you to return separate parts of a single match individually.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+      </p>
+      <p>
+       <b class="ocpLegacyBold">
+        case_sensitivity
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       Determines whether the match is case-sensitive. By default, the match is case-sensitive. Enter one of the following:
+      </p>
+      <p>
+       <b class="ocpLegacyBold">
+        0:
+       </b>
+       Case sensitive
+      </p>
+      <p>
+       <b class="ocpLegacyBold">
+        1:
+       </b>
+       Case insensitive
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+  </p>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpNote">
+     Notes:
+    </b>
+   </p>
+   <ul class="ocpAlertSectionListContainer">
+    <li>
+     <p>
+      When writing regex patterns, symbols called ‘tokens’ can be used that match with a variety of characters. These are some simple tokens for reference:
+     </p>
+    </li>
+    <li>
+     <p>
+     </p>
+    </li>
+   </ul>
+   <ul class="ocpAlertSectionListContainer">
+    <li>
+     <p>
+      “[0-9]”: any numerical digit
+     </p>
+    </li>
+    <li>
+     <p>
+      “[a-z]”: a character in the range of a to z
+     </p>
+    </li>
+    <li>
+     <p>
+      “.”: any character
+     </p>
+    </li>
+    <li>
+     <p>
+      “a”: the “a” character
+     </p>
+    </li>
+    <li>
+     <p>
+      “a*”: zero or more “a”
+     </p>
+    </li>
+    <li>
+     <p>
+      “a+”: one or more “a”
+     </p>
+    </li>
+    <li>
+     <p>
+      All regular expressions for this function, as well as
+      <a class="ocpExternalLink" data-bi-type="anchor" href="https://prod.support.services.microsoft.com/en-us/topic/7d38200b-5e5c-4196-b4e6-9bff73afbd31" target="_blank">
+       REGEXTEST
+      </a>
+      and
+      <a class="ocpExternalLink" data-bi-type="anchor" href="https://prod.support.services.microsoft.com/en-us/topic/9c030bb2-5e47-4efc-bad5-4582d7100897" target="_blank">
+       REGEXREPLACE
+      </a>
+      use the PCRE2 'flavor' of regex.
+     </p>
+    </li>
+    <li>
+     <p>
+      REGEXEXTRACT always return text values. You can convert these results back to a number with the VALUE function.
+     </p>
+    </li>
+   </ul>
+  </div>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Examples
+  </h2>
+  <p>
+   Copy the example data and paste it in cell A1 of a new Excel worksheet. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <div class="ocpSection">
+   <h3 class="ocpExpandoHead">
+    <button aria-controls="ID0EDBD-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EDBD-button" ms.interactiontype="11" type="button">
+     <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+      <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+      </i>
+     </div>
+     <div class="ocpExpandoHeadTitleContainer" role="none">
+      Example 1
+     </div>
+    </button>
+   </h3>
+   <div aria-labelledby="ID0EDBD-button" class="ocpebw" id="ID0EDBD-panel" role="region">
+    <div class="ocpExpandoBody">
+     <p>
+      Extract names based on capital letters with pattern "[A-Z][a-z]+"
+     </p>
+     <table aria-label="" class="banded">
+      <tbody>
+       <tr>
+        <td>
+         <p>
+          <b class="ocpLegacyBold">
+           Data
+          </b>
+         </p>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          DylanWilliams
+         </p>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          <b class="ocpLegacyBold">
+           Formulas
+          </b>
+         </p>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          =REGEXEXTRACT(A2,"[A-Z][a-z]+")
+         </p>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          =REGEXEXTRACT(A2,"[A-Z][a-z]+",1)
+         </p>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p>
+      The following illustration shows the results.
+     </p>
+     <p>
+      <picture>
+       <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/1ee855b3-28a8-40de-a35a-47c9e948e881?format=avif&amp;w=320 320w,        /images/en-us/1ee855b3-28a8-40de-a35a-47c9e948e881?format=avif&amp;w=480 480w,        /images/en-us/1ee855b3-28a8-40de-a35a-47c9e948e881?format=avif&amp;w=640 640w,        /images/en-us/1ee855b3-28a8-40de-a35a-47c9e948e881?format=avif&amp;w=800 800w" type="image/avif"/>
+       <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/1ee855b3-28a8-40de-a35a-47c9e948e881?format=webp&amp;w=320 320w,        /images/en-us/1ee855b3-28a8-40de-a35a-47c9e948e881?format=webp&amp;w=480 480w,        /images/en-us/1ee855b3-28a8-40de-a35a-47c9e948e881?format=webp&amp;w=640 640w,        /images/en-us/1ee855b3-28a8-40de-a35a-47c9e948e881?format=webp&amp;w=800 800w" type="image/webp"/>
+       <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/1ee855b3-28a8-40de-a35a-47c9e948e881?format=jpeg&amp;w=320 320w,        /images/en-us/1ee855b3-28a8-40de-a35a-47c9e948e881?format=jpeg&amp;w=480 480w,        /images/en-us/1ee855b3-28a8-40de-a35a-47c9e948e881?format=jpeg&amp;w=640 640w,        /images/en-us/1ee855b3-28a8-40de-a35a-47c9e948e881?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+       <img alt='REGEXEXTRACT is used to extract name data using the pattern "[A-Z][a-z]+"' class="fluentImage" loading="lazy" src="/images/en-us/1ee855b3-28a8-40de-a35a-47c9e948e881" style="aspect-ratio: 125/149" width="125"/>
+      </picture>
+     </p>
+    </div>
+   </div>
+  </div>
+  <div class="ocpSection">
+   <h3 class="ocpExpandoHead">
+    <button aria-controls="ID0EBBD-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EBBD-button" ms.interactiontype="11" type="button">
+     <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+      <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+      </i>
+     </div>
+     <div class="ocpExpandoHeadTitleContainer" role="none">
+      Example 2
+     </div>
+    </button>
+   </h3>
+   <div aria-labelledby="ID0EBBD-button" class="ocpebw" id="ID0EBBD-panel" role="region">
+    <div class="ocpExpandoBody">
+     <p>
+      Extract phone numbers based on their structure with pattern "[0-9()]+ [0-9-]+"
+     </p>
+     <table aria-label="" class="banded">
+      <tbody>
+       <tr>
+        <td>
+         <p>
+          <b class="ocpLegacyBold">
+           Data
+          </b>
+         </p>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          Sonia Rees    (378) 555-4195
+          <br aria-hidden="true"/>
+          Angel Brown    (878) 555-8622
+          <br aria-hidden="true"/>
+          Blake Martin    (437) 555-8987
+          <br aria-hidden="true"/>
+          William Kirby    (619) 555-4212
+          <br aria-hidden="true"/>
+          Avery Smith    (579) 555-5658
+          <br aria-hidden="true"/>
+          Parker Jones    (346) 555-0925
+          <br aria-hidden="true"/>
+          Liam Small    (405) 555-0887
+          <br aria-hidden="true"/>
+          Hollie Rees    (666) 555-1872
+         </p>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          <b class="ocpLegacyBold">
+           Formulas
+          </b>
+         </p>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          =REGEXEXTRACT(A2,"[0-9()]+ [0-9-]+",1)
+         </p>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p>
+      The following illustration shows the result.
+     </p>
+     <p>
+      <picture>
+       <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/57355548-590d-4e4c-86dd-95fb63afaf69?format=avif&amp;w=320 320w,        /images/en-us/57355548-590d-4e4c-86dd-95fb63afaf69?format=avif&amp;w=480 480w,        /images/en-us/57355548-590d-4e4c-86dd-95fb63afaf69?format=avif&amp;w=640 640w,        /images/en-us/57355548-590d-4e4c-86dd-95fb63afaf69?format=avif&amp;w=800 800w" type="image/avif"/>
+       <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/57355548-590d-4e4c-86dd-95fb63afaf69?format=webp&amp;w=320 320w,        /images/en-us/57355548-590d-4e4c-86dd-95fb63afaf69?format=webp&amp;w=480 480w,        /images/en-us/57355548-590d-4e4c-86dd-95fb63afaf69?format=webp&amp;w=640 640w,        /images/en-us/57355548-590d-4e4c-86dd-95fb63afaf69?format=webp&amp;w=800 800w" type="image/webp"/>
+       <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/57355548-590d-4e4c-86dd-95fb63afaf69?format=jpeg&amp;w=320 320w,        /images/en-us/57355548-590d-4e4c-86dd-95fb63afaf69?format=jpeg&amp;w=480 480w,        /images/en-us/57355548-590d-4e4c-86dd-95fb63afaf69?format=jpeg&amp;w=640 640w,        /images/en-us/57355548-590d-4e4c-86dd-95fb63afaf69?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+       <img alt='REGEXEXTRACT is used to extract multiple phone numbers of a specific format from mixed text, using the pattern "[0-9()]+ [0-9-]+"' class="fluentImage" loading="lazy" src="/images/en-us/57355548-590d-4e4c-86dd-95fb63afaf69" style="aspect-ratio: 255/374" width="255"/>
+      </picture>
+     </p>
+     <p>
+     </p>
+    </div>
+   </div>
+  </div>
+ </section>
+</article>

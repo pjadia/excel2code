@@ -1,0 +1,187 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p id="__goback">
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    BINOM.DIST.RANGE
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Returns the probability of a trial result using a binomial distribution.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   BINOM.DIST.RANGE(trials,probability_s,number_s,[number_s2])
+  </p>
+  <p>
+   The BINOM.DIST.RANGE function syntax has the following arguments.
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Trials
+     </b>
+     Required. The number of independent trials. Must be greater than or equal to 0.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Probability_s
+     </b>
+     Required. The probability of success in each trial. Must be greater than or equal to 0 and less than or equal to 1.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Number_s
+     </b>
+     Required. The number of successes in trials. Must be greater than or equal to 0 and less than or equal to Trials.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Number_s2
+     </b>
+     Optional. If provided, returns the probability that the number of successful trials will fall between Number_s and number_s2. Must be greater than or equal to Number_s and less than or equal to Trials.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If any arguments are outside of their constraints, BINOM.DIST.RANGE returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If any arguments are non-numeric values, BINOM.DIST.RANGE returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     The following equation is used:
+     <br aria-hidden="true"/>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/922955f8-2196-4638-b8e6-af0b50eb987f?format=avif&amp;w=320 320w,        /images/en-us/922955f8-2196-4638-b8e6-af0b50eb987f?format=avif&amp;w=480 480w,        /images/en-us/922955f8-2196-4638-b8e6-af0b50eb987f?format=avif&amp;w=640 640w,        /images/en-us/922955f8-2196-4638-b8e6-af0b50eb987f?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/922955f8-2196-4638-b8e6-af0b50eb987f?format=webp&amp;w=320 320w,        /images/en-us/922955f8-2196-4638-b8e6-af0b50eb987f?format=webp&amp;w=480 480w,        /images/en-us/922955f8-2196-4638-b8e6-af0b50eb987f?format=webp&amp;w=640 640w,        /images/en-us/922955f8-2196-4638-b8e6-af0b50eb987f?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/922955f8-2196-4638-b8e6-af0b50eb987f?format=jpeg&amp;w=320 320w,        /images/en-us/922955f8-2196-4638-b8e6-af0b50eb987f?format=jpeg&amp;w=480 480w,        /images/en-us/922955f8-2196-4638-b8e6-af0b50eb987f?format=jpeg&amp;w=640 640w,        /images/en-us/922955f8-2196-4638-b8e6-af0b50eb987f?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="BINOM.DIST.RANGE equation" class="fluentImage" loading="lazy" src="/images/en-us/922955f8-2196-4638-b8e6-af0b50eb987f" style="aspect-ratio: 148/66" width="148"/>
+     </picture>
+    </p>
+   </li>
+   <li>
+    <p>
+     In the equation above, N is Trials, p is Probability_s, s is Number_s, s2 is Number_s2, and k is the iteration variable.
+    </p>
+   </li>
+   <li>
+    <p>
+     Numeric arguments are truncated to integers.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =BINOM.DIST.RANGE(60,0.75,48)
+      </p>
+     </td>
+     <td>
+      <p>
+       Returns the binomial distribution based on the probability of 48 successes in 60 trials and a 75% probability of success (0.084, or 8.4%).
+      </p>
+     </td>
+     <td>
+      <p>
+       0.084
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =BINOM.DIST.RANGE(60,0.75,45,50)
+      </p>
+     </td>
+     <td>
+      <p>
+       Returns the binomial distribution based on the probability of between 45 and 50 successes (inclusive) in 60 trials and a 75% probability of success (0.524, or 52.4%).
+      </p>
+     </td>
+     <td>
+      <p>
+       0.524
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+   <a class="ocpTopOfPage" data-bi-type="anchor" href="#">
+    Top of Page
+   </a>
+  </p>
+ </section>
+</article>

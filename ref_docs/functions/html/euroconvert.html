@@ -1,0 +1,1038 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   Some of the content in this topic may not be applicable to some languages.
+  </p>
+  <p id="__goback">
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    EUROCONVERT
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Description
+  </h2>
+  <p>
+   Converts a number to euros, converts a number from euros to a euro member currency, or converts a number from one euro member currency to another by using the euro as an intermediary (triangulation). The currencies available for conversion are those of European Union (EU) members that have adopted the euro. The function uses fixed conversion rates that are established by the EU.
+  </p>
+  <p>
+   If this function is not available, and returns the #NAME? error, install and load the Euro Currency Tools Add-in.
+  </p>
+  <p>
+   <b class="ocpLegacyBold">
+    Install and load the Euro Currency Tools Add-in add-in
+   </b>
+  </p>
+  <ol type="1">
+   <li>
+    <p>
+     On the
+     <b class="ocpUI">
+      File
+     </b>
+     tab, click
+     <b class="ocpUI">
+      Options
+     </b>
+     , and then click
+     <b class="ocpUI">
+      Add-Ins.
+     </b>
+    </p>
+   </li>
+   <li>
+    <p>
+     In the
+     <b class="ocpUI">
+      Manage
+     </b>
+     list box, select
+     <b class="ocpUI">
+      Excel Add-ins
+     </b>
+     , and then click
+     <b class="ocpUI">
+      Go
+     </b>
+     .
+    </p>
+   </li>
+   <li>
+    <p>
+     In the
+     <b class="ocpLegacyBold">
+      Add-Ins Available
+     </b>
+     list, select the
+     <b class="ocpLegacyBold">
+      Euro Currency Tools
+     </b>
+     box, and then click
+     <b class="ocpLegacyBold">
+      OK
+     </b>
+     .
+    </p>
+   </li>
+   <li>
+    <p>
+     If necessary, follow the instructions in the setup program.
+    </p>
+   </li>
+  </ol>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <p>
+   EUROCONVERT(number,source,target,full_precision,triangulation_precision)
+  </p>
+  <p>
+   The EUROCONVERT function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Number
+     </b>
+     Required. The currency value you want to convert, or a reference to a cell containing the value.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Source
+     </b>
+     Required. A three-letter string, or reference to a cell containing the string, corresponding to the ISO code for the source currency. The following currency codes are available in the EUROCONVERT function:
+    </p>
+   </li>
+  </ul>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Country/Region
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Basic unit of currency
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        ISO code
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       Belgium
+      </p>
+     </td>
+     <td>
+      <p>
+       franc
+      </p>
+     </td>
+     <td>
+      <p>
+       BEF
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Luxembourg
+      </p>
+     </td>
+     <td>
+      <p>
+       franc
+      </p>
+     </td>
+     <td>
+      <p>
+       LUF
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Germany
+      </p>
+     </td>
+     <td>
+      <p>
+       deutsche mark
+      </p>
+     </td>
+     <td>
+      <p>
+       DEM
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Spain
+      </p>
+     </td>
+     <td>
+      <p>
+       peseta
+      </p>
+     </td>
+     <td>
+      <p>
+       ESP
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       France
+      </p>
+     </td>
+     <td>
+      <p>
+       franc
+      </p>
+     </td>
+     <td>
+      <p>
+       FRF
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Ireland
+      </p>
+     </td>
+     <td>
+      <p>
+       pound
+      </p>
+     </td>
+     <td>
+      <p>
+       IEP
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Italy
+      </p>
+     </td>
+     <td>
+      <p>
+       lira
+      </p>
+     </td>
+     <td>
+      <p>
+       ITL
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Netherlands
+      </p>
+     </td>
+     <td>
+      <p>
+       guilder
+      </p>
+     </td>
+     <td>
+      <p>
+       NLG
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Austria
+      </p>
+     </td>
+     <td>
+      <p>
+       schilling
+      </p>
+     </td>
+     <td>
+      <p>
+       ATS
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Portugal
+      </p>
+     </td>
+     <td>
+      <p>
+       escudo
+      </p>
+     </td>
+     <td>
+      <p>
+       PTE
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Finland
+      </p>
+     </td>
+     <td>
+      <p>
+       markka
+      </p>
+     </td>
+     <td>
+      <p>
+       FIM
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Greece
+      </p>
+     </td>
+     <td>
+      <p>
+       drachma
+      </p>
+     </td>
+     <td>
+      <p>
+       GRD
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Slovenia
+      </p>
+     </td>
+     <td>
+      <p>
+       tolar
+      </p>
+     </td>
+     <td>
+      <p>
+       SIT
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Euro member states
+      </p>
+     </td>
+     <td>
+      <p>
+       euro
+      </p>
+     </td>
+     <td>
+      <p>
+       EUR
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Target
+     </b>
+     Required. A three-letter string, or cell reference, corresponding to the ISO code of the currency to which you want to convert the number. See the previous Source table for the ISO codes.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Full_precision
+     </b>
+     Required. A logical value (TRUE or FALSE), or an expression that evaluates to a value of TRUE or FALSE, that specifies how to display the result.
+    </p>
+   </li>
+  </ul>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Use
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        If you want Excel to
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       FALSE
+      </p>
+     </td>
+     <td>
+      <p>
+       Display the result with the currency-specific rounding rules, see the table that follows. Excel uses the calculation precision value to calculate the result and the display precision value to display the result. FALSE is the default if the full_precision argument is omitted.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       TRUE
+      </p>
+     </td>
+     <td>
+      <p>
+       Display the result with all significant digits resulting from the calculation.
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <ul>
+   <li>
+    <p>
+     The following table shows the currency specific rounding rules, that is, how many decimal places Excel uses to calculate a currency's conversion and display the result.
+    </p>
+   </li>
+  </ul>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        ISO code
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Calculation precision
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Display precision
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       BEF
+      </p>
+     </td>
+     <td>
+      <p>
+       0
+      </p>
+     </td>
+     <td>
+      <p>
+       0
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       LUF
+      </p>
+     </td>
+     <td>
+      <p>
+       0
+      </p>
+     </td>
+     <td>
+      <p>
+       0
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       DEM
+      </p>
+     </td>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       ESP
+      </p>
+     </td>
+     <td>
+      <p>
+       0
+      </p>
+     </td>
+     <td>
+      <p>
+       0
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       FRF
+      </p>
+     </td>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       IEP
+      </p>
+     </td>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       ITL
+      </p>
+     </td>
+     <td>
+      <p>
+       0
+      </p>
+     </td>
+     <td>
+      <p>
+       0
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       NLG
+      </p>
+     </td>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       ATS
+      </p>
+     </td>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       PTE
+      </p>
+     </td>
+     <td>
+      <p>
+       0
+      </p>
+     </td>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       FIM
+      </p>
+     </td>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       GRD
+      </p>
+     </td>
+     <td>
+      <p>
+       0
+      </p>
+     </td>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       SIT
+      </p>
+     </td>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       EUR
+      </p>
+     </td>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Triangulation_precision
+     </b>
+     Required. An integer equal to or greater than 3 that specifies the number of significant digits to be used for the intermediate euro value when converting between two euro member currencies. If you omit this argument, Excel does not round the intermediate euro value. If you include this argument when converting from a euro member currency to the euro, Excel calculates the intermediate euro value that could then be converted to a euro member currency.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     Excel truncates any trailing zeros in the return value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If the source ISO code is the same as the target ISO code, Excel returns the original value of the number.
+    </p>
+   </li>
+   <li>
+    <p>
+     Invalid parameters return #VALUE.
+    </p>
+   </li>
+   <li>
+    <p>
+     This function does not apply a number format.
+    </p>
+   </li>
+   <li>
+    <p>
+     This function cannot be used in array formulas.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Amount
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Source
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Target
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       1.20
+      </p>
+     </td>
+     <td>
+      <p>
+       DEM
+      </p>
+     </td>
+     <td>
+      <p>
+       EUR
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1.00
+      </p>
+     </td>
+     <td>
+      <p>
+       FRF
+      </p>
+     </td>
+     <td>
+      <p>
+       EUR
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1.00
+      </p>
+     </td>
+     <td>
+      <p>
+       FRF
+      </p>
+     </td>
+     <td>
+      <p>
+       EUR
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1.00
+      </p>
+     </td>
+     <td>
+      <p>
+       FRF
+      </p>
+     </td>
+     <td>
+      <p>
+       DEM
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1.00
+      </p>
+     </td>
+     <td>
+      <p>
+       FRF
+      </p>
+     </td>
+     <td>
+      <p>
+       DEM
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description (Result)
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =EUROCONVERT(A2,B2,C2)
+      </p>
+     </td>
+     <td>
+      <p>
+       Converts 1.2 deutsche marks to the equivalent in euros by using a calculation and display precision of 2 decimal places (0.61)
+      </p>
+     </td>
+     <td>
+      <p>
+       0.61
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =EUROCONVERT(A3,B3,C3,TRUE,3)
+      </p>
+     </td>
+     <td>
+      <p>
+       Converts 1 franc to the equivalent in euros by using a calculation and display precision of 3 decimal places (0.152)
+      </p>
+     </td>
+     <td>
+      <p>
+       0.152
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =EUROCONVERT(A4,B4,C4,FALSE,3)
+      </p>
+     </td>
+     <td>
+      <p>
+       Converts 1 franc to the equivalent in euros by using a calculation and display precision of 2 decimal places (0.15)
+      </p>
+     </td>
+     <td>
+      <p>
+       0.15
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =EUROCONVERT(A5,B5,C5,TRUE,3)
+      </p>
+     </td>
+     <td>
+      <p>
+       Converts 1 franc to the equivalent in deutsche marks by using an intermediate calculation precision of 3 and displaying all significant digits (0.29728616)
+      </p>
+     </td>
+     <td>
+      <p>
+       0.29728616
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Note
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       In order to use the EUROCONVERT function, you first need to activate the Euro Currency Tools add-in. To learn how to add and activate Excel add-ins, see the link below:
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/add-or-remove-add-ins-in-excel-0af570c4-5cf3-4fa9-9b88-403625a0b460">
+        Add or remove add-ins
+       </a>
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpNote">
+     Notes:
+    </b>
+   </p>
+   <ul class="ocpAlertSectionListContainer">
+    <li>
+     <p>
+      These examples assume conversion rates of 1 euro = 6.55957 French francs and 1.95583 deutsche marks. The EUROCONVERT function uses the current rates established by the EU. Microsoft will update the function if the rates change. To get full information about the rules and the rates currently in effect, see the European Commission publications about the euro.
+     </p>
+    </li>
+    <li>
+     <p>
+      The examples show the resulting value stored in the cell, not the formatted value.
+     </p>
+    </li>
+    <li>
+     <p>
+      In the sample spreadsheet, trailing zeroes are truncated.
+     </p>
+    </li>
+   </ul>
+  </div>
+ </section>
+</article>

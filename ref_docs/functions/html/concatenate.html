@@ -1,0 +1,460 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   Use
+   <b class="ocpLegacyBold">
+    CONCATENATE
+   </b>
+   , one of the
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/text-functions-reference-cccd86ad-547d-4ea9-a065-7bb697c2a56e">
+    text functions
+   </a>
+   , to join two or more text strings into one string.
+  </p>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpImportant">
+     Important:
+    </b>
+    In Excel 2016, Excel Mobile, and Excel for the web, this function has been replaced with the
+    <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/concat-function-9b1a9a3f-94ff-41af-9736-694cbd6b4ca2">
+     CONCAT function
+    </a>
+    . Although the CONCATENATE function is still available for backward compatibility, you should consider using
+    <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/concat-function-9b1a9a3f-94ff-41af-9736-694cbd6b4ca2">
+     CONCAT
+    </a>
+    from now on. This is because CONCATENATE may not be available in future versions of Excel.
+   </p>
+  </div>
+ </section>
+ <section aria-labelledby="" class="ocpSection">
+  <p>
+   Syntax:
+   <b class="ocpLegacyBold">
+    CONCATENATE(text1, [text2], ...)
+   </b>
+  </p>
+  <p>
+   For example:
+  </p>
+  <ul>
+   <li>
+    <p>
+     =CONCATENATE("Stream population for ", A2, " ", A3, " is ", A4, "/mile.")
+    </p>
+   </li>
+   <li>
+    <p>
+     =CONCATENATE(B2, " ",C2)
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="" class="ocpSection">
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Argument name
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpRunInHead">
+        text1
+       </b>
+       (required)
+      </p>
+     </td>
+     <td>
+      <p>
+       The first item to join. The item can be a text value, number, or cell reference.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpRunInHead">
+        Text2, ...
+       </b>
+       (optional)
+      </p>
+     </td>
+     <td>
+      <p>
+       Additional text items to join. You can have up to 255 items, up to a total of 8,192 characters.
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection" data-bi-id="__example" id="__example">
+  <h2 class="" id="ID0EDJ">
+   Examples
+  </h2>
+  <p>
+   To use these examples in Excel, copy the data in the table below including the Data header, and paste it in cell A1 of a new worksheet.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </th>
+     <th>
+     </th>
+     <th>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       brook trout
+      </p>
+     </td>
+     <td>
+      <p>
+       Andreas
+      </p>
+     </td>
+     <td>
+      <p>
+       Hauser
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       species
+      </p>
+     </td>
+     <td>
+      <p>
+       Fourth
+      </p>
+     </td>
+     <td>
+      <p>
+       Pine
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       32
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =CONCATENATE("Stream population for ", A2, " ", A3, " is ", A4, "/mile.")
+      </p>
+     </td>
+     <td>
+      <p>
+       Creates a sentence by joining the data in column A with other text. The result is Stream population for brook trout species is 32/mile.
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =CONCATENATE(B2, " ", C2)
+      </p>
+     </td>
+     <td>
+      <p>
+       Joins three things: the string in cell B2, a space character, and the value in cell C2. The result is Andreas Hauser.
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =CONCATENATE(C2, ", ", B2)
+      </p>
+     </td>
+     <td>
+      <p>
+       Joins three things: the string in cell C2, a string with a comma and a space character, and the value in cell B2. The result is Andreas, Hauser.
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =CONCATENATE(B3, " &amp; ", C3)
+      </p>
+     </td>
+     <td>
+      <p>
+       Joins three things: the string in cell B3, a string consisting of a space with ampersand and another space, and the value in cell C3. The result is Fourth &amp; Pine.
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =B3 &amp; " &amp; " &amp; C3
+      </p>
+     </td>
+     <td>
+      <p>
+       Joins the same items as the previous example, but by using the ampersand (
+       <b class="ocpLegacyBold">
+        &amp;
+       </b>
+       ) calculation operator instead of the CONCATENATE function. The result is Fourth &amp; Pine.
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Common Problems
+  </h2>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Problem
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       Quotation marks appear in result string.
+      </p>
+     </td>
+     <td>
+      <p>
+       Use commas to separate adjoining text items. For example: Excel will display =CONCATENATE("Hello ""World") as Hello"World with an extra quote mark because a comma between the text arguments was omitted.
+      </p>
+      <p>
+       Numbers don't need to have quotation marks.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Words are jumbled together.
+      </p>
+     </td>
+     <td>
+      <p>
+       Without designated spaces between separate text entries, the text entries will run together. Add extra spaces as part of the CONCATENATE formula. There are two ways to do this:
+      </p>
+      <ul>
+       <li>
+        <p>
+         Add double quotation marks with a space between them " ". For example: =CONCATENATE("Hello", " ", "World!").
+        </p>
+       </li>
+       <li>
+        <p>
+         Add a space after the
+         <b class="ocpLegacyBold">
+          <i class="ocpItalic">
+           Text
+          </i>
+         </b>
+         argument. For example: =CONCATENATE("Hello ", "World!"). The string "Hello " has an extra space added.
+        </p>
+       </li>
+      </ul>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       The #NAME? error appears instead of the expected result.
+      </p>
+     </td>
+     <td>
+      <p>
+       #NAME? usually means there are quotation marks missing from a
+       <b class="ocpLegacyBold">
+        <i class="ocpItalic">
+         Text
+        </i>
+       </b>
+       argument.
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Best practices
+  </h2>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Do this
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       Use the ampersand &amp; character instead of the CONCATENATE function.
+      </p>
+     </td>
+     <td>
+      <p>
+       The ampersand (&amp;) calculation operator lets you join text items without having to use a function.
+      </p>
+      <p>
+       For example, =A1 &amp; B1 returns the same value as =CONCATENATE(A1,B1). In many cases, using the ampersand operator is quicker and simpler than using CONCATENATE to create strings.
+      </p>
+      <p>
+       Learn more about
+       <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/calculation-operators-and-precedence-in-excel-48be406d-4975-4d31-b2b8-7af9e0e2878a">
+        using operation calculators.
+       </a>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Use the TEXT function to combine and format strings.
+      </p>
+     </td>
+     <td>
+      <p>
+       The
+       <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/text-function-20d5ac4d-7b94-49fd-bb38-93d29371225c">
+        TEXT function
+       </a>
+       converts a numeric value to text and combines numbers with text or symbols.
+      </p>
+      <p>
+       For example, if cell A1 contains the number 23.5, you can use the following formula to format the number as a dollar amount:
+      </p>
+      <p>
+       =TEXT(A1,"$0.00")
+      </p>
+      <p>
+       Result: $23.50
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Related
+  </h2>
+  <ul>
+   <li>
+    <p>
+     Use the
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/text-function-20d5ac4d-7b94-49fd-bb38-93d29371225c">
+      TEXT function
+     </a>
+     to combine and format strings.
+    </p>
+   </li>
+   <li>
+    <p>
+     Learn more about
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/calculation-operators-and-precedence-in-excel-48be406d-4975-4d31-b2b8-7af9e0e2878a">
+      using operation calculators
+     </a>
+     .
+    </p>
+   </li>
+  </ul>
+ </section>
+</article>

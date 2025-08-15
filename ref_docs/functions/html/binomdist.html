@@ -1,0 +1,248 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   Returns the individual term binomial distribution probability. Use BINOMDIST in problems with a fixed number of tests or trials, when the outcomes of any trial are only success or failure, when trials are independent, and when the probability of success is constant throughout the experiment. For example, BINOMDIST can calculate the probability that two of the next three babies born are male.
+  </p>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpImportant">
+     Important:
+    </b>
+    This function has been replaced with one or more new functions that may provide improved accuracy and whose names better reflect their usage. Although this function is still available for backward compatibility, you should consider using the new functions from now on, because this function may not be available in future versions of Excel.
+   </p>
+  </div>
+  <p>
+   For more information about the new function, see
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/binom-dist-function-c5ae37b6-f39c-4be2-94c2-509a1480770c">
+    BINOM.DIST function
+   </a>
+   .
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   BINOMDIST(number_s,trials,probability_s,cumulative)
+  </p>
+  <p>
+   The BINOMDIST function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Number_s
+     </b>
+     Required. The number of successes in trials.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Trials
+     </b>
+     Required. The number of independent trials.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Probability_s
+     </b>
+     Required. The probability of success on each trial.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Cumulative
+     </b>
+     Required. A logical value that determines the form of the function. If cumulative is TRUE, then BINOMDIST returns the cumulative distribution function, which is the probability that there are at most number_s successes; if FALSE, it returns the probability mass function, which is the probability that there are number_s successes.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     Number_s and trials are truncated to integers.
+    </p>
+   </li>
+   <li>
+    <p>
+     If number_s, trials, or probability_s is nonnumeric, BINOMDIST returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If number_s &lt; 0 or number_s &gt; trials, BINOMDIST returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If probability_s &lt; 0 or probability_s &gt; 1, BINOMDIST returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If x = number_s, n = trials, and p = probability_s, then the binomial probability mass function is:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/4e081461-63a0-4e47-8a68-1b499765ea54?format=avif&amp;w=320 320w,        /images/en-us/4e081461-63a0-4e47-8a68-1b499765ea54?format=avif&amp;w=480 480w,        /images/en-us/4e081461-63a0-4e47-8a68-1b499765ea54?format=avif&amp;w=640 640w,        /images/en-us/4e081461-63a0-4e47-8a68-1b499765ea54?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/4e081461-63a0-4e47-8a68-1b499765ea54?format=webp&amp;w=320 320w,        /images/en-us/4e081461-63a0-4e47-8a68-1b499765ea54?format=webp&amp;w=480 480w,        /images/en-us/4e081461-63a0-4e47-8a68-1b499765ea54?format=webp&amp;w=640 640w,        /images/en-us/4e081461-63a0-4e47-8a68-1b499765ea54?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/4e081461-63a0-4e47-8a68-1b499765ea54?format=jpeg&amp;w=320 320w,        /images/en-us/4e081461-63a0-4e47-8a68-1b499765ea54?format=jpeg&amp;w=480 480w,        /images/en-us/4e081461-63a0-4e47-8a68-1b499765ea54?format=jpeg&amp;w=640 640w,        /images/en-us/4e081461-63a0-4e47-8a68-1b499765ea54?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/4e081461-63a0-4e47-8a68-1b499765ea54" style="aspect-ratio: 178/42" width="178"/>
+     </picture>
+    </p>
+    <p>
+     where:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/e9d294ff-190a-4435-946b-a86958958454?format=avif&amp;w=320 320w,        /images/en-us/e9d294ff-190a-4435-946b-a86958958454?format=avif&amp;w=480 480w,        /images/en-us/e9d294ff-190a-4435-946b-a86958958454?format=avif&amp;w=640 640w,        /images/en-us/e9d294ff-190a-4435-946b-a86958958454?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/e9d294ff-190a-4435-946b-a86958958454?format=webp&amp;w=320 320w,        /images/en-us/e9d294ff-190a-4435-946b-a86958958454?format=webp&amp;w=480 480w,        /images/en-us/e9d294ff-190a-4435-946b-a86958958454?format=webp&amp;w=640 640w,        /images/en-us/e9d294ff-190a-4435-946b-a86958958454?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/e9d294ff-190a-4435-946b-a86958958454?format=jpeg&amp;w=320 320w,        /images/en-us/e9d294ff-190a-4435-946b-a86958958454?format=jpeg&amp;w=480 480w,        /images/en-us/e9d294ff-190a-4435-946b-a86958958454?format=jpeg&amp;w=640 640w,        /images/en-us/e9d294ff-190a-4435-946b-a86958958454?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/e9d294ff-190a-4435-946b-a86958958454" style="aspect-ratio: 23/42" width="23"/>
+     </picture>
+    </p>
+    <p>
+     is COMBIN(n,x).
+    </p>
+   </li>
+   <li>
+    <p>
+     If x = number_s, n = trials, and p = probability_s, then the cumulative binomial distribution is:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/d30e06e3-27be-4617-aad4-35f14fae6baa?format=avif&amp;w=320 320w,        /images/en-us/d30e06e3-27be-4617-aad4-35f14fae6baa?format=avif&amp;w=480 480w,        /images/en-us/d30e06e3-27be-4617-aad4-35f14fae6baa?format=avif&amp;w=640 640w,        /images/en-us/d30e06e3-27be-4617-aad4-35f14fae6baa?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/d30e06e3-27be-4617-aad4-35f14fae6baa?format=webp&amp;w=320 320w,        /images/en-us/d30e06e3-27be-4617-aad4-35f14fae6baa?format=webp&amp;w=480 480w,        /images/en-us/d30e06e3-27be-4617-aad4-35f14fae6baa?format=webp&amp;w=640 640w,        /images/en-us/d30e06e3-27be-4617-aad4-35f14fae6baa?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/d30e06e3-27be-4617-aad4-35f14fae6baa?format=jpeg&amp;w=320 320w,        /images/en-us/d30e06e3-27be-4617-aad4-35f14fae6baa?format=jpeg&amp;w=480 480w,        /images/en-us/d30e06e3-27be-4617-aad4-35f14fae6baa?format=jpeg&amp;w=640 640w,        /images/en-us/d30e06e3-27be-4617-aad4-35f14fae6baa?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/d30e06e3-27be-4617-aad4-35f14fae6baa" style="aspect-ratio: 154/39" width="154"/>
+     </picture>
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       6
+      </p>
+     </td>
+     <td>
+      <p>
+       Number of successes in trials
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       10
+      </p>
+     </td>
+     <td>
+      <p>
+       Number of independent trials
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       0.5
+      </p>
+     </td>
+     <td>
+      <p>
+       Probability of success on each trial
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =BINOMDIST(A2,A3,A4,FALSE)
+      </p>
+     </td>
+     <td>
+      <p>
+       Probability of exactly 6 of 10 trials being successful.
+      </p>
+     </td>
+     <td>
+      <p>
+       0.2050781
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

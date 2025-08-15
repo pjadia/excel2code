@@ -1,0 +1,128 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    ROW
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Description
+  </h2>
+  <p>
+   Returns the row number of a reference.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Syntax
+  </h2>
+  <p>
+   ROW([reference])
+  </p>
+  <p>
+   The ROW function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Reference
+     </b>
+     Optional. The cell or range of cells for which you want the row number.
+    </p>
+    <ul>
+     <li>
+      <p>
+       If reference is omitted, it is assumed to be the reference of the cell in which the ROW function appears.
+      </p>
+     </li>
+     <li>
+      <p>
+       If reference is a range of cells, and if ROW is entered as a vertical array, ROW returns the row numbers of reference as a vertical array.
+      </p>
+     </li>
+     <li>
+      <p>
+       Reference cannot refer to multiple areas.
+      </p>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Examples
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =ROW()
+      </p>
+     </td>
+     <td>
+      <p>
+       Row in which the formula appears
+      </p>
+     </td>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =ROW(C10)
+      </p>
+     </td>
+     <td>
+      <p>
+       Row of the reference
+      </p>
+     </td>
+     <td>
+      <p>
+       10
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

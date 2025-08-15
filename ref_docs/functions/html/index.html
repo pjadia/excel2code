@@ -1,0 +1,822 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   The INDEX function returns a value or the reference to a value from within a table or range.
+  </p>
+  <div class="ocpVideo" data-channel="ALTENUS_MS_OFFICE" data-llcc="en-us" data-player="ocvideo" data-videoid="RWeTLf" data-videotitle="INDEX function" data-videotype="single" id="ocpVideo1">
+   <universal-media-player options='{"partnerName":"SupportService","autoplay":false,"reporting":false,"language":"en-us","title":"INDEX function","poster":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-d9478528-9704-49f1-b667-3bcd083c4aee/thumbnail_w800.png","sources":[{"type":"MP4","quality":"HQ","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-d9478528-9704-49f1-b667-3bcd083c4aee/video_1001_1730378166788_1920x1080.mp4"},{"type":"MP4","quality":"HD","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-d9478528-9704-49f1-b667-3bcd083c4aee/video_1001_1730378166788_1280x720.mp4"},{"type":"MP4","quality":"LO","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-d9478528-9704-49f1-b667-3bcd083c4aee/video_1001_1730378166788_640x360.mp4"},{"type":"DASH","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-d9478528-9704-49f1-b667-3bcd083c4aee/video_1001_1730378166788.mpd"},{"type":"HLS","src":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-d9478528-9704-49f1-b667-3bcd083c4aee/video_1001_1730378166788_master.m3u8"}],"ccFiles":[{"url":"https://videoencodingpublic-hgeaeyeba8gycee3.b01.azurefd.net/public-d9478528-9704-49f1-b667-3bcd083c4aee/en_us_en-us.vtt","locale":"en-us","ccType":"VTT"}]}'>
+    <picture>
+     <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=avif&amp;w=320 320w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=avif&amp;w=480 480w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=avif&amp;w=640 640w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=avif&amp;w=800 800w" type="image/avif"/>
+     <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=webp&amp;w=320 320w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=webp&amp;w=480 480w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=webp&amp;w=640 640w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=webp&amp;w=800 800w" type="image/webp"/>
+     <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=jpeg&amp;w=320 320w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=jpeg&amp;w=480 480w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=jpeg&amp;w=640 640w,        /images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+     <img alt="Your browser does not support video. Install Microsoft Silverlight, Adobe Flash Player, or Internet Explorer 9." class="fluentImage" loading="lazy" src="/images/en-us/4873755a-8b1e-497e-bc54-101d1e75d3e7" style="aspect-ratio: 960/540" width="960"/>
+    </picture>
+   </universal-media-player>
+  </div>
+  <p>
+   There are two ways to use the INDEX function:
+  </p>
+  <ul>
+   <li>
+    <p>
+     If you want to return the value of a specified cell or array of cells, see
+     <a aria-label=" Array form" class="ocpInlineLink" data-bi-type="anchor" href="#bmarray_form">
+      Array form
+     </a>
+     .
+    </p>
+   </li>
+   <li>
+    <p>
+     If you want to return a reference to specified cells, see
+     <a aria-label=" Reference form" class="ocpInlineLink" data-bi-type="anchor" href="#__reference_form">
+      Reference form
+     </a>
+     .
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFL" class="ocpSection" data-bi-id="bmarray_form" id="bmarray_form">
+  <h2 class="" id="ID0EFL">
+   Array form
+  </h2>
+  <section aria-labelledby="ID0EDFBL" class="ocpSection">
+   <h3 class="" id="ID0EDFBL">
+    Description
+   </h3>
+   <p>
+    Returns the value of an element in a table or an array, selected by the row and column number indexes.
+   </p>
+   <p>
+    Use the array form if the first argument to INDEX is an array constant.
+   </p>
+  </section>
+  <section aria-labelledby="ID0EDDBL" class="ocpSection">
+   <h3 class="" id="ID0EDDBL">
+    Syntax
+   </h3>
+   <p>
+    <b class="ocpLegacyBold">
+     INDEX(array, row_num, [column_num])
+    </b>
+   </p>
+   <p>
+    The array form of the INDEX function has the following arguments:
+   </p>
+   <ul>
+    <li>
+     <p>
+      <b class="ocpRunInHead">
+       array
+      </b>
+      Required. A range of cells or an array constant.
+     </p>
+     <ul>
+      <li>
+       <p>
+        If array contains only one row or column, the corresponding row_num or column_num argument is optional.
+       </p>
+      </li>
+      <li>
+       <p>
+        If array has more than one row and more than one column, and only row_num or column_num is used, INDEX returns an array of the entire row or column in array.
+       </p>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <p>
+      <b class="ocpRunInHead">
+       row_num
+      </b>
+      Required, unless column_num is present. Selects the row in array from which to return a value. If row_num is omitted, column_num is required.
+     </p>
+    </li>
+    <li>
+     <p>
+      <b class="ocpRunInHead">
+       column_num
+      </b>
+      Optional. Selects the column in array from which to return a value. If column_num is omitted, row_num is required.
+     </p>
+    </li>
+   </ul>
+  </section>
+  <section aria-labelledby="ID0EDBBL" class="ocpSection">
+   <h3 class="" id="ID0EDBBL">
+    Remarks
+   </h3>
+   <ul>
+    <li>
+     <p>
+      If both the row_num and column_num arguments are used, INDEX returns the value in the cell at the intersection of row_num and column_num.
+     </p>
+    </li>
+    <li>
+     <p>
+      row_num and column_num must point to a cell within array; otherwise, INDEX returns a #REF! error.
+     </p>
+    </li>
+    <li>
+     <p>
+      If you set row_num or column_num to 0 (zero), INDEX returns the array of values for the entire column or row, respectively. To use values returned as an array, enter the INDEX function as an array formula.
+     </p>
+     <div class="ocpAlert">
+      <p class="ocpAlertSection">
+       <b class="ocpNote">
+        Note:
+       </b>
+       If you have a current version of
+       <a class="ocpExternalLink" data-bi-area="bmarray_form" data-bi-type="anchor" href="https://products.office.com/en-us/buy/compare-microsoft-office-products" target="_blank">
+        Microsoft 365
+       </a>
+       , then you can input the formula in the top-left-cell of the output range, then press
+       <b class="ocpUI">
+        ENTER
+       </b>
+       to confirm the formula as a dynamic array formula. Otherwise, the formula must be entered as a legacy array formula by first selecting the output range, input the formula in the top-left-cell of the output range, then press
+       <b class="ocpUI">
+        CTRL+SHIFT+ENTER
+       </b>
+       to confirm it. Excel inserts curly brackets at the beginning and end of the formula for you. For more information on array formulas, see
+       <a class="ocpArticleLink" data-bi-area="bmarray_form" data-bi-type="anchor" href="/en-us/office/guidelines-and-examples-of-array-formulas-7d94a64e-3ff3-4686-9372-ecfd5caa57c7">
+        Guidelines and examples of array formulas
+       </a>
+       .
+      </p>
+     </div>
+    </li>
+   </ul>
+  </section>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection" data-bi-id="__examples" id="__examples">
+  <h2 class="" id="ID0EFJ">
+   Examples
+  </h2>
+  <section aria-labelledby="ID0EDDBJ" class="ocpSection">
+   <h3 class="" id="ID0EDDBJ">
+    Example 1
+   </h3>
+   <p>
+    These examples use the INDEX function to find the value in the intersecting cell where a row and a column meet.
+   </p>
+   <p>
+    Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press
+    <b class="ocpUI">
+     F2
+    </b>
+    , and then press
+    <b class="ocpUI">
+     Enter
+    </b>
+    .
+   </p>
+   <table aria-label="" class="banded">
+    <thead>
+     <tr>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         Data
+        </b>
+       </p>
+      </th>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         Data
+        </b>
+       </p>
+      </th>
+      <th>
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <p>
+        Apples
+       </p>
+      </td>
+      <td>
+       <p>
+        Lemons
+       </p>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        Bananas
+       </p>
+      </td>
+      <td>
+       <p>
+        Pears
+       </p>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        <b class="ocpLegacyBold">
+         Formula
+        </b>
+       </p>
+      </td>
+      <td>
+       <p>
+        <b class="ocpLegacyBold">
+         Description
+        </b>
+       </p>
+      </td>
+      <td>
+       <p>
+        <b class="ocpLegacyBold">
+         Result
+        </b>
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        =INDEX(A2:B3,2,2)
+       </p>
+      </td>
+      <td>
+       <p>
+        Value at the intersection of the second row and second column in the range A2:B3.
+       </p>
+      </td>
+      <td>
+       <p>
+        Pears
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        =INDEX(A2:B3,2,1)
+       </p>
+      </td>
+      <td>
+       <p>
+        Value at the intersection of the second row and first column in the range A2:B3.
+       </p>
+      </td>
+      <td>
+       <p>
+        Bananas
+       </p>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+  <section aria-labelledby="ID0EDBBJ" class="ocpSection">
+   <h3 class="" id="ID0EDBBJ">
+    Example 2
+   </h3>
+   <p>
+    This example uses the INDEX function in an array formula to find the values in two cells specified in a 2x2 array.
+   </p>
+   <div class="ocpAlert">
+    <p class="ocpAlertSection">
+     <b class="ocpNote">
+      Note:
+     </b>
+     If you have a current version of
+     <a class="ocpExternalLink" data-bi-area="__examples" data-bi-type="anchor" href="https://products.office.com/en-us/buy/compare-microsoft-office-products" target="_blank">
+      Microsoft 365
+     </a>
+     , then you can input the formula in the top-left-cell of the output range, then press
+     <b class="ocpUI">
+      ENTER
+     </b>
+     to confirm the formula as a dynamic array formula. Otherwise, the formula must be entered as a legacy array formula by first selecting two blank cells, input the formula in the top-left-cell of the output range, then press
+     <b class="ocpUI">
+      CTRL+SHIFT+ENTER
+     </b>
+     to confirm it. Excel inserts curly brackets at the beginning and end of the formula for you. For more information on array formulas, see
+     <a class="ocpArticleLink" data-bi-area="__examples" data-bi-type="anchor" href="/en-us/office/guidelines-and-examples-of-array-formulas-7d94a64e-3ff3-4686-9372-ecfd5caa57c7">
+      Guidelines and examples of array formulas
+     </a>
+     .
+    </p>
+   </div>
+   <table aria-label="" class="banded">
+    <thead>
+     <tr>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         Formula
+        </b>
+       </p>
+      </th>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         Description
+        </b>
+       </p>
+      </th>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         Result
+        </b>
+       </p>
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <p>
+        =INDEX({1,2
+        <b class="ocpLegacyBold">
+         ;
+        </b>
+        3,4},0,2)
+       </p>
+      </td>
+      <td>
+       <p>
+        Value found in the first row, second column in the array. The array contains 1 and 2 in the first row and 3 and 4 in the second row.
+       </p>
+      </td>
+      <td>
+       <p>
+        2
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+      </td>
+      <td>
+       <p>
+        Value found in the second row, second column in the array (same array as above).
+       </p>
+      </td>
+      <td>
+       <p>
+        4
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <p>
+    <a class="ocpTopOfPage" data-bi-area="__examples" data-bi-type="anchor" href="#">
+     Top of Page
+    </a>
+   </p>
+  </section>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection" data-bi-id="__reference_form" id="__reference_form">
+  <h2 class="" id="ID0EFH">
+   <br aria-hidden="true"/>
+   Reference form
+  </h2>
+  <section aria-labelledby="ID0EDFBH" class="ocpSection">
+   <h3 class="" id="ID0EDFBH">
+    Description
+   </h3>
+   <p>
+    Returns the reference of the cell at the intersection of a particular row and column. If the reference is made up of non-adjacent selections, you can pick the selection to look in.
+   </p>
+  </section>
+  <section aria-labelledby="ID0EDDBH" class="ocpSection">
+   <h3 class="" id="ID0EDDBH">
+    Syntax
+   </h3>
+   <p>
+    <b class="ocpLegacyBold">
+     INDEX(reference, row_num, [column_num], [area_num])
+    </b>
+   </p>
+   <p>
+    The reference form of the INDEX function has the following arguments:
+   </p>
+   <ul>
+    <li>
+     <p>
+      <b class="ocpRunInHead">
+       reference
+      </b>
+      Required. A reference to one or more cell ranges.
+     </p>
+     <ul>
+      <li>
+       <p>
+        If you are entering a non-adjacent range for the reference, enclose reference in parentheses.
+       </p>
+      </li>
+      <li>
+       <p>
+        If each area in reference contains only one row or column, the row_num or column_num argument, respectively, is optional. For example, for a single row reference, use INDEX(reference,,column_num).
+       </p>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <p>
+      <b class="ocpRunInHead">
+       row_num
+      </b>
+      Required. The number of the row in reference from which to return a reference.
+     </p>
+    </li>
+    <li>
+     <p>
+      <b class="ocpRunInHead">
+       column_num
+      </b>
+      Optional. The number of the column in reference from which to return a reference.
+     </p>
+    </li>
+    <li>
+     <p>
+      <b class="ocpRunInHead">
+       area_num
+      </b>
+      Optional. Selects a range in reference from which to return the intersection of row_num and column_num. The first area selected or entered is numbered 1, the second is 2, and so on. If area_num is omitted, INDEX uses area 1.  The areas listed here must all be located on one sheet.  If you specify areas that are not on the same sheet as each other, it will cause a #VALUE! error.  If you need to use ranges that are located on different sheets from each other, it is recommended that you use the array form of the INDEX function, and use another function to calculate the range that makes up the array.  For example, you could use the CHOOSE function to calculate which range will be used.
+     </p>
+    </li>
+   </ul>
+   <p>
+    For example, if Reference describes the cells (A1:B4,D1:E4,G1:H4), area_num 1 is the range A1:B4, area_num 2 is the range D1:E4, and area_num 3 is the range G1:H4.
+   </p>
+  </section>
+  <section aria-labelledby="ID0EDBBH" class="ocpSection">
+   <h3 class="" id="ID0EDBBH">
+    Remarks
+   </h3>
+   <ul>
+    <li>
+     <p>
+      After reference and area_num have selected a particular range, row_num and column_num select a particular cell: row_num 1 is the first row in the range, column_num 1 is the first column, and so on. The reference returned by INDEX is the intersection of row_num and column_num.
+     </p>
+    </li>
+    <li>
+     <p>
+      If you set row_num or column_num to 0 (zero), INDEX returns the reference for the entire column or row, respectively.
+     </p>
+    </li>
+    <li>
+     <p>
+      row_num, column_num, and area_num must point to a cell within reference; otherwise, INDEX returns a #REF! error. If row_num and column_num are omitted, INDEX returns the area in reference specified by area_num.
+     </p>
+    </li>
+    <li>
+     <p>
+      The result of the INDEX function is a reference and is interpreted as such by other formulas. Depending on the formula, the return value of INDEX may be used as a reference or as a value. For example, the formula CELL("width",INDEX(A1:B2,1,2)) is equivalent to CELL("width",B1). The CELL function uses the return value of INDEX as a cell reference. On the other hand, a formula such as 2*INDEX(A1:B2,1,2) translates the return value of INDEX into the number in cell B1.
+     </p>
+    </li>
+   </ul>
+  </section>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Examples
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Fruit
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Price
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Count
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       Apples
+      </p>
+     </td>
+     <td>
+      <p>
+       $0.69
+      </p>
+     </td>
+     <td>
+      <p>
+       40
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Bananas
+      </p>
+     </td>
+     <td>
+      <p>
+       $0.34
+      </p>
+     </td>
+     <td>
+      <p>
+       38
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Lemons
+      </p>
+     </td>
+     <td>
+      <p>
+       $0.55
+      </p>
+     </td>
+     <td>
+      <p>
+       15
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Oranges
+      </p>
+     </td>
+     <td>
+      <p>
+       $0.25
+      </p>
+     </td>
+     <td>
+      <p>
+       25
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Pears
+      </p>
+     </td>
+     <td>
+      <p>
+       $0.59
+      </p>
+     </td>
+     <td>
+      <p>
+       40
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Almonds
+      </p>
+     </td>
+     <td>
+      <p>
+       $2.80
+      </p>
+     </td>
+     <td>
+      <p>
+       10
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Cashews
+      </p>
+     </td>
+     <td>
+      <p>
+       $3.55
+      </p>
+     </td>
+     <td>
+      <p>
+       16
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Peanuts
+      </p>
+     </td>
+     <td>
+      <p>
+       $1.25
+      </p>
+     </td>
+     <td>
+      <p>
+       20
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Walnuts
+      </p>
+     </td>
+     <td>
+      <p>
+       $1.75
+      </p>
+     </td>
+     <td>
+      <p>
+       12
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =INDEX(A2:C6, 2, 3)
+      </p>
+     </td>
+     <td>
+      <p>
+       The intersection of the second row and third column in the range A2:C6, which is the contents of cell C3.
+      </p>
+     </td>
+     <td>
+      <p>
+       38
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =INDEX((A1:C6, A8:C11), 2, 2, 2)
+      </p>
+     </td>
+     <td>
+      <p>
+       The intersection of the second row and second column in the second area of A8:C11, which is the contents of cell B9.
+      </p>
+     </td>
+     <td>
+      <p>
+       1.25
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =SUM(INDEX(A1:C11, 0, 3, 1))
+      </p>
+     </td>
+     <td>
+      <p>
+       The sum of the third column in the first area of the range A1:C11, which is the sum of C1:C11.
+      </p>
+     </td>
+     <td>
+      <p>
+       216
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =SUM(B2:INDEX(A2:C6, 5, 2))
+      </p>
+     </td>
+     <td>
+      <p>
+       The sum of the range starting at B2, and ending at the intersection of the fifth row and the second column of the range A2:A6, which is the sum of B2:B6.
+      </p>
+     </td>
+     <td>
+      <p>
+       2.42
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+   <a class="ocpTopOfPage" data-bi-type="anchor" href="#">
+    Top of Page
+   </a>
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   See Also
+  </h2>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/vlookup-function-0bbc8083-26fe-4963-8ab8-93a18ad188a1">
+    VLOOKUP function
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/match-function-e8dffd45-c762-47d6-bf89-533f4a37673a">
+    MATCH function
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/indirect-function-474b3a3a-8a26-4f44-b491-92b6306fa261">
+    INDIRECT function
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/guidelines-and-examples-of-array-formulas-7d94a64e-3ff3-4686-9372-ecfd5caa57c7">
+    Guidelines and examples of array formulas
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/lookup-and-reference-functions-reference-8aa21a3a-b56a-4055-8257-3ec89df2b23e">
+    Lookup and reference functions (reference)
+   </a>
+  </p>
+ </section>
+</article>

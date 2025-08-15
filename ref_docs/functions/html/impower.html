@@ -1,0 +1,170 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p id="__goback">
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    IMPOWER
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Returns a complex number in x + yi or x + yj text format raised to a power.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   IMPOWER(inumber, number)
+  </p>
+  <p>
+   The IMPOWER function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Inumber
+     </b>
+     Required. A complex number you want to raise to a power.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Number
+     </b>
+     Required. The power to which you want to raise the complex number.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     Use COMPLEX to convert real and imaginary coefficients into a complex number.
+    </p>
+   </li>
+   <li>
+    <p>
+     If number is nonnumeric, IMPOWER returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     Number can be an integer, fractional, or negative.
+    </p>
+   </li>
+   <li>
+    <p>
+     A complex number raised to a power is calculated as follows:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/ff630834-b163-4dfa-8305-e71376c2e123?format=avif&amp;w=320 320w,        /images/en-us/ff630834-b163-4dfa-8305-e71376c2e123?format=avif&amp;w=480 480w,        /images/en-us/ff630834-b163-4dfa-8305-e71376c2e123?format=avif&amp;w=640 640w,        /images/en-us/ff630834-b163-4dfa-8305-e71376c2e123?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/ff630834-b163-4dfa-8305-e71376c2e123?format=webp&amp;w=320 320w,        /images/en-us/ff630834-b163-4dfa-8305-e71376c2e123?format=webp&amp;w=480 480w,        /images/en-us/ff630834-b163-4dfa-8305-e71376c2e123?format=webp&amp;w=640 640w,        /images/en-us/ff630834-b163-4dfa-8305-e71376c2e123?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/ff630834-b163-4dfa-8305-e71376c2e123?format=jpeg&amp;w=320 320w,        /images/en-us/ff630834-b163-4dfa-8305-e71376c2e123?format=jpeg&amp;w=480 480w,        /images/en-us/ff630834-b163-4dfa-8305-e71376c2e123?format=jpeg&amp;w=640 640w,        /images/en-us/ff630834-b163-4dfa-8305-e71376c2e123?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/ff630834-b163-4dfa-8305-e71376c2e123" style="aspect-ratio: 274/17" width="274"/>
+     </picture>
+    </p>
+    <p>
+     where:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/93c68e1f-3923-4b16-9df9-d9cf599d47fa?format=avif&amp;w=320 320w,        /images/en-us/93c68e1f-3923-4b16-9df9-d9cf599d47fa?format=avif&amp;w=480 480w,        /images/en-us/93c68e1f-3923-4b16-9df9-d9cf599d47fa?format=avif&amp;w=640 640w,        /images/en-us/93c68e1f-3923-4b16-9df9-d9cf599d47fa?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/93c68e1f-3923-4b16-9df9-d9cf599d47fa?format=webp&amp;w=320 320w,        /images/en-us/93c68e1f-3923-4b16-9df9-d9cf599d47fa?format=webp&amp;w=480 480w,        /images/en-us/93c68e1f-3923-4b16-9df9-d9cf599d47fa?format=webp&amp;w=640 640w,        /images/en-us/93c68e1f-3923-4b16-9df9-d9cf599d47fa?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/93c68e1f-3923-4b16-9df9-d9cf599d47fa?format=jpeg&amp;w=320 320w,        /images/en-us/93c68e1f-3923-4b16-9df9-d9cf599d47fa?format=jpeg&amp;w=480 480w,        /images/en-us/93c68e1f-3923-4b16-9df9-d9cf599d47fa?format=jpeg&amp;w=640 640w,        /images/en-us/93c68e1f-3923-4b16-9df9-d9cf599d47fa?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/93c68e1f-3923-4b16-9df9-d9cf599d47fa" style="aspect-ratio: 82/21" width="82"/>
+     </picture>
+    </p>
+    <p>
+     and:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/bf29af5c-3f8f-4dc2-9a0a-fe9e97f3f4fd?format=avif&amp;w=320 320w,        /images/en-us/bf29af5c-3f8f-4dc2-9a0a-fe9e97f3f4fd?format=avif&amp;w=480 480w,        /images/en-us/bf29af5c-3f8f-4dc2-9a0a-fe9e97f3f4fd?format=avif&amp;w=640 640w,        /images/en-us/bf29af5c-3f8f-4dc2-9a0a-fe9e97f3f4fd?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/bf29af5c-3f8f-4dc2-9a0a-fe9e97f3f4fd?format=webp&amp;w=320 320w,        /images/en-us/bf29af5c-3f8f-4dc2-9a0a-fe9e97f3f4fd?format=webp&amp;w=480 480w,        /images/en-us/bf29af5c-3f8f-4dc2-9a0a-fe9e97f3f4fd?format=webp&amp;w=640 640w,        /images/en-us/bf29af5c-3f8f-4dc2-9a0a-fe9e97f3f4fd?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/bf29af5c-3f8f-4dc2-9a0a-fe9e97f3f4fd?format=jpeg&amp;w=320 320w,        /images/en-us/bf29af5c-3f8f-4dc2-9a0a-fe9e97f3f4fd?format=jpeg&amp;w=480 480w,        /images/en-us/bf29af5c-3f8f-4dc2-9a0a-fe9e97f3f4fd?format=jpeg&amp;w=640 640w,        /images/en-us/bf29af5c-3f8f-4dc2-9a0a-fe9e97f3f4fd?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/bf29af5c-3f8f-4dc2-9a0a-fe9e97f3f4fd" style="aspect-ratio: 86/38" width="86"/>
+     </picture>
+    </p>
+    <p>
+     and:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/5b4f2924-7e4b-447f-b70c-698a03f95123?format=avif&amp;w=320 320w,        /images/en-us/5b4f2924-7e4b-447f-b70c-698a03f95123?format=avif&amp;w=480 480w,        /images/en-us/5b4f2924-7e4b-447f-b70c-698a03f95123?format=avif&amp;w=640 640w,        /images/en-us/5b4f2924-7e4b-447f-b70c-698a03f95123?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/5b4f2924-7e4b-447f-b70c-698a03f95123?format=webp&amp;w=320 320w,        /images/en-us/5b4f2924-7e4b-447f-b70c-698a03f95123?format=webp&amp;w=480 480w,        /images/en-us/5b4f2924-7e4b-447f-b70c-698a03f95123?format=webp&amp;w=640 640w,        /images/en-us/5b4f2924-7e4b-447f-b70c-698a03f95123?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/5b4f2924-7e4b-447f-b70c-698a03f95123?format=jpeg&amp;w=320 320w,        /images/en-us/5b4f2924-7e4b-447f-b70c-698a03f95123?format=jpeg&amp;w=480 480w,        /images/en-us/5b4f2924-7e4b-447f-b70c-698a03f95123?format=jpeg&amp;w=640 640w,        /images/en-us/5b4f2924-7e4b-447f-b70c-698a03f95123?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/5b4f2924-7e4b-447f-b70c-698a03f95123" style="aspect-ratio: 66/15" width="66"/>
+     </picture>
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =IMPOWER("2+3i", 3)
+      </p>
+     </td>
+     <td>
+      <p>
+       2+3i raised to the power of 3 (-46 + 9i)
+      </p>
+     </td>
+     <td>
+      <p>
+       -46+9.00000000000001i
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

@@ -1,0 +1,178 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    BIN2OCT
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Converts a binary number to octal.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   BIN2OCT(number, [places])
+  </p>
+  <p>
+   The BIN2OCT function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Number
+     </b>
+     Required. The binary number you want to convert. Number cannot contain more than 10 characters (10 bits). The most significant bit of number is the sign bit. The remaining 9 bits are magnitude bits. Negative numbers are represented using two's-complement notation.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Places
+     </b>
+     Optional. The number of characters to use. If places is omitted, BIN2OCT uses the minimum number of characters necessary. Places is useful for padding the return value with leading 0s (zeros).
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If number is not a valid binary number, or if number contains more than 10 characters (10 bits), BIN2OCT returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If number is negative, BIN2OCT ignores places and returns a 10-character octal number.
+    </p>
+   </li>
+   <li>
+    <p>
+     If BIN2OCT requires more than places characters, it returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If places is not an integer, it is truncated.
+    </p>
+   </li>
+   <li>
+    <p>
+     If places is nonnumeric, BIN2OCT returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If places is negative, BIN2OCT returns the #NUM! error value.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =BIN2OCT(1001, 3)
+      </p>
+     </td>
+     <td>
+      <p>
+       Converts binary 1001 to octal with 3 characters
+      </p>
+     </td>
+     <td>
+      <p>
+       011
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =BIN2OCT(1100100)
+      </p>
+     </td>
+     <td>
+      <p>
+       Converts binary 1100100 to octal
+      </p>
+     </td>
+     <td>
+      <p>
+       144
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =BIN2OCT(1111111111)
+      </p>
+     </td>
+     <td>
+      <p>
+       Converts binary 1111111111 to octal
+      </p>
+     </td>
+     <td>
+      <p>
+       7777777777
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+   <a class="ocpTopOfPage" data-bi-type="anchor" href="#">
+    Top of Page
+   </a>
+  </p>
+ </section>
+</article>

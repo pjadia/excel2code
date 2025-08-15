@@ -1,0 +1,642 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <div class="supARG" data-bi-view="Grid 1x2">
+   <div class="supARG-row">
+    <div class="supARG-column-1-2" data-bi-compnm="row-1,col-1" data-bi-view="Grid 1x2">
+     <div class="ocpSection">
+      <h2 class="ocpExpandoHead">
+       <button aria-controls="ID0EBBDBDL-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EBBDBDL-button" ms.interactiontype="11" type="button">
+        <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+         <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+         </i>
+        </div>
+        <div class="ocpExpandoHeadTitleContainer" role="none">
+         Release notes
+        </div>
+       </button>
+      </h2>
+      <div aria-labelledby="ID0EBBDBDL-button" class="ocpebw" id="ID0EBBDBDL-panel" role="region">
+       <div class="ocpExpandoBody">
+        <p>
+         <a class="ocpExternalLink" data-bi-type="anchor" href="https://learn.microsoft.com/officeupdates/current-channel" target="_blank">
+          Current Channel
+         </a>
+        </p>
+        <p>
+         <a class="ocpExternalLink" data-bi-type="anchor" href="https://learn.microsoft.com/officeupdates/monthly-enterprise-channel" target="_blank">
+          Monthly Enterprise Channel
+         </a>
+        </p>
+        <p>
+         <a class="ocpExternalLink" data-bi-type="anchor" href="https://learn.microsoft.com/officeupdates/semi-annual-enterprise-channel" target="_blank">
+          Semi-Annual Enterprise Channel
+         </a>
+        </p>
+        <p>
+         <a class="ocpExternalLink" data-bi-type="anchor" href="https://learn.microsoft.com/officeupdates/semi-annual-enterprise-channel-preview" target="_blank">
+          Semi-Annual Enterprise Channel (Preview)
+         </a>
+        </p>
+        <p>
+         <a class="ocpExternalLink" data-bi-type="anchor" href="https://learn.microsoft.com/officeupdates/release-notes-office-for-mac" target="_blank">
+          Office for Mac
+         </a>
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="supARG-column-1-2" data-bi-compnm="row-1,col-2" data-bi-view="Grid 1x2">
+     <p>
+     </p>
+    </div>
+   </div>
+  </div>
+  <p>
+   Returns the specified rows from an array.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Syntax
+  </h2>
+  <p>
+   =CHOOSEROWS(array,row_num1,[row_num2],…)
+  </p>
+  <p>
+   The CHOOSEROWS function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      array
+     </b>
+     The array containing the columns to be returned in the new array. Required.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      row_num1
+     </b>
+     The first row number to be returned. Required.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      [row_num2]
+     </b>
+     Additional row numbers to be returned. Optional.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Errors
+  </h2>
+  <p>
+   Excel returns a #VALUE error if the absolute value of any of the row_num arguments is zero or exceeds the number of rows in the array.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Examples
+  </h2>
+  <p>
+   Copy the example data in the following table and paste it in cell A1 of a new Excel worksheet. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <div class="ocpSection">
+   <h3 class="ocpExpandoHead">
+    <button aria-controls="ID0EFBF-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EFBF-button" ms.interactiontype="11" type="button">
+     <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+      <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+      </i>
+     </div>
+     <div class="ocpExpandoHeadTitleContainer" role="none">
+      Example 1
+     </div>
+    </button>
+   </h3>
+   <div aria-labelledby="ID0EFBF-button" class="ocpebw" id="ID0EFBF-panel" role="region">
+    <div class="ocpExpandoBody">
+     <p>
+      Returns an array of rows 1, 3, 5, and 1 again from the array in the range A2:B7.
+     </p>
+     <table aria-label="" class="banded">
+      <tbody>
+       <tr>
+        <td>
+         <p>
+          <b class="ocpLegacyBold">
+           Data
+          </b>
+         </p>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          1
+         </p>
+        </td>
+        <td>
+         <p>
+          2
+         </p>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          3
+         </p>
+        </td>
+        <td>
+         <p>
+          4
+         </p>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          5
+         </p>
+        </td>
+        <td>
+         <p>
+          6
+         </p>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          7
+         </p>
+        </td>
+        <td>
+         <p>
+          8
+         </p>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          9
+         </p>
+        </td>
+        <td>
+         <p>
+          10
+         </p>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          11
+         </p>
+        </td>
+        <td>
+         <p>
+          12
+         </p>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          <b class="ocpLegacyBold">
+           Formulas
+          </b>
+         </p>
+        </td>
+        <td>
+         <p>
+         </p>
+        </td>
+        <td>
+         <p>
+         </p>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          =CHOOSEROWS(A2:B7,1,3,5,1)
+         </p>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+   </div>
+  </div>
+  <div class="ocpSection">
+   <h3 class="ocpExpandoHead">
+    <button aria-controls="ID0EDBF-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EDBF-button" ms.interactiontype="11" type="button">
+     <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+      <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+      </i>
+     </div>
+     <div class="ocpExpandoHeadTitleContainer" role="none">
+      Example 2
+     </div>
+    </button>
+   </h3>
+   <div aria-labelledby="ID0EDBF-button" class="ocpebw" id="ID0EDBF-panel" role="region">
+    <div class="ocpExpandoBody">
+     <p>
+      Returns an array of rows 1, 3, 5, and 1 again from the array in the range A2:B7 using
+      <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/use-array-constants-in-array-formulas-477443ea-5e71-4242-877d-fcae47454eb8">
+       array constants
+      </a>
+      .
+     </p>
+     <table aria-label="" class="banded">
+      <tbody>
+       <tr>
+        <td>
+         <p>
+          <b class="ocpLegacyBold">
+           Data
+          </b>
+         </p>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          1
+         </p>
+        </td>
+        <td>
+         <p>
+          2
+         </p>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          3
+         </p>
+        </td>
+        <td>
+         <p>
+          4
+         </p>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          5
+         </p>
+        </td>
+        <td>
+         <p>
+          6
+         </p>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          7
+         </p>
+        </td>
+        <td>
+         <p>
+          8
+         </p>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          9
+         </p>
+        </td>
+        <td>
+         <p>
+          10
+         </p>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          11
+         </p>
+        </td>
+        <td>
+         <p>
+          12
+         </p>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          <b class="ocpLegacyBold">
+           Formulas
+          </b>
+         </p>
+        </td>
+        <td>
+         <p>
+         </p>
+        </td>
+        <td>
+         <p>
+         </p>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          =CHOOSEROWS(A2:B7,{1,3},5,1)
+         </p>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+   </div>
+  </div>
+  <div class="ocpSection">
+   <h3 class="ocpExpandoHead">
+    <button aria-controls="ID0EBBF-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EBBF-button" ms.interactiontype="11" type="button">
+     <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+      <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+      </i>
+     </div>
+     <div class="ocpExpandoHeadTitleContainer" role="none">
+      Example 3
+     </div>
+    </button>
+   </h3>
+   <div aria-labelledby="ID0EBBF-button" class="ocpebw" id="ID0EBBF-panel" role="region">
+    <div class="ocpExpandoBody">
+     <p>
+      Returns an array of the last two rows from the array in the range A2:B7 in the order of row four and then row three.
+     </p>
+     <table aria-label="" class="banded">
+      <tbody>
+       <tr>
+        <td>
+         <p>
+          <b class="ocpLegacyBold">
+           Data
+          </b>
+         </p>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          1
+         </p>
+        </td>
+        <td>
+         <p>
+          2
+         </p>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          3
+         </p>
+        </td>
+        <td>
+         <p>
+          4
+         </p>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          5
+         </p>
+        </td>
+        <td>
+         <p>
+          6
+         </p>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          7
+         </p>
+        </td>
+        <td>
+         <p>
+          8
+         </p>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          9
+         </p>
+        </td>
+        <td>
+         <p>
+          10
+         </p>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          11
+         </p>
+        </td>
+        <td>
+         <p>
+          12
+         </p>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          <b class="ocpLegacyBold">
+           Formulas
+          </b>
+         </p>
+        </td>
+        <td>
+         <p>
+         </p>
+        </td>
+        <td>
+         <p>
+         </p>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          =CHOOSEROWS(A2:B7,-1,-2)
+         </p>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+   </div>
+  </div>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   See Also
+  </h2>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/guidelines-and-examples-of-array-formulas-7d94a64e-3ff3-4686-9372-ecfd5caa57c7">
+    Guidelines and examples of array formulas
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/vstack-function-a4b86897-be0f-48fc-adca-fcc10d795a9c">
+    VSTACK function
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/hstack-function-98c4ab76-10fe-4b4f-8d5f-af1c125fe8c2">
+    HSTACK function
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/choosecols-function-bf117976-2722-4466-9b9a-1c01ed9aebff">
+    CHOOSECOLS function
+   </a>
+  </p>
+ </section>
+</article>

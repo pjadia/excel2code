@@ -1,0 +1,101 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    ASC
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Description
+  </h2>
+  <p>
+   For Double-byte character set (DBCS) languages, the function changes full-width (double-byte) characters to half-width (single-byte) characters.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Syntax
+  </h2>
+  <p>
+   ASC(text)
+  </p>
+  <p>
+   The ASC function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Text
+     </b>
+     Required. The text or a reference to a cell that contains the text you want to change. If text does not contain any full-width letters, text is not changed.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   =ASC("EXCEL") equals "EXCEL"
+  </p>
+  <p>
+   =ASC("
+   <picture>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/5d89cf34-1570-49a8-ac96-6d86246cc6de?format=avif&amp;w=320 320w,        /images/en-us/5d89cf34-1570-49a8-ac96-6d86246cc6de?format=avif&amp;w=480 480w,        /images/en-us/5d89cf34-1570-49a8-ac96-6d86246cc6de?format=avif&amp;w=640 640w,        /images/en-us/5d89cf34-1570-49a8-ac96-6d86246cc6de?format=avif&amp;w=800 800w" type="image/avif"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/5d89cf34-1570-49a8-ac96-6d86246cc6de?format=webp&amp;w=320 320w,        /images/en-us/5d89cf34-1570-49a8-ac96-6d86246cc6de?format=webp&amp;w=480 480w,        /images/en-us/5d89cf34-1570-49a8-ac96-6d86246cc6de?format=webp&amp;w=640 640w,        /images/en-us/5d89cf34-1570-49a8-ac96-6d86246cc6de?format=webp&amp;w=800 800w" type="image/webp"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/5d89cf34-1570-49a8-ac96-6d86246cc6de?format=jpeg&amp;w=320 320w,        /images/en-us/5d89cf34-1570-49a8-ac96-6d86246cc6de?format=jpeg&amp;w=480 480w,        /images/en-us/5d89cf34-1570-49a8-ac96-6d86246cc6de?format=jpeg&amp;w=640 640w,        /images/en-us/5d89cf34-1570-49a8-ac96-6d86246cc6de?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+    <img alt="excel" class="fluentImage" loading="lazy" src="/images/en-us/5d89cf34-1570-49a8-ac96-6d86246cc6de" style="aspect-ratio: 15/15" width="15"/>
+   </picture>
+   <picture>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/32bc5687-d658-4f27-8c22-17c5ba2d18e3?format=avif&amp;w=320 320w,        /images/en-us/32bc5687-d658-4f27-8c22-17c5ba2d18e3?format=avif&amp;w=480 480w,        /images/en-us/32bc5687-d658-4f27-8c22-17c5ba2d18e3?format=avif&amp;w=640 640w,        /images/en-us/32bc5687-d658-4f27-8c22-17c5ba2d18e3?format=avif&amp;w=800 800w" type="image/avif"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/32bc5687-d658-4f27-8c22-17c5ba2d18e3?format=webp&amp;w=320 320w,        /images/en-us/32bc5687-d658-4f27-8c22-17c5ba2d18e3?format=webp&amp;w=480 480w,        /images/en-us/32bc5687-d658-4f27-8c22-17c5ba2d18e3?format=webp&amp;w=640 640w,        /images/en-us/32bc5687-d658-4f27-8c22-17c5ba2d18e3?format=webp&amp;w=800 800w" type="image/webp"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/32bc5687-d658-4f27-8c22-17c5ba2d18e3?format=jpeg&amp;w=320 320w,        /images/en-us/32bc5687-d658-4f27-8c22-17c5ba2d18e3?format=jpeg&amp;w=480 480w,        /images/en-us/32bc5687-d658-4f27-8c22-17c5ba2d18e3?format=jpeg&amp;w=640 640w,        /images/en-us/32bc5687-d658-4f27-8c22-17c5ba2d18e3?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+    <img alt="excel" class="fluentImage" loading="lazy" src="/images/en-us/32bc5687-d658-4f27-8c22-17c5ba2d18e3" style="aspect-ratio: 13/15" width="13"/>
+   </picture>
+   <picture>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/4b53e7b5-56a3-477d-a493-acc6dfefa55b?format=avif&amp;w=320 320w,        /images/en-us/4b53e7b5-56a3-477d-a493-acc6dfefa55b?format=avif&amp;w=480 480w,        /images/en-us/4b53e7b5-56a3-477d-a493-acc6dfefa55b?format=avif&amp;w=640 640w,        /images/en-us/4b53e7b5-56a3-477d-a493-acc6dfefa55b?format=avif&amp;w=800 800w" type="image/avif"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/4b53e7b5-56a3-477d-a493-acc6dfefa55b?format=webp&amp;w=320 320w,        /images/en-us/4b53e7b5-56a3-477d-a493-acc6dfefa55b?format=webp&amp;w=480 480w,        /images/en-us/4b53e7b5-56a3-477d-a493-acc6dfefa55b?format=webp&amp;w=640 640w,        /images/en-us/4b53e7b5-56a3-477d-a493-acc6dfefa55b?format=webp&amp;w=800 800w" type="image/webp"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/4b53e7b5-56a3-477d-a493-acc6dfefa55b?format=jpeg&amp;w=320 320w,        /images/en-us/4b53e7b5-56a3-477d-a493-acc6dfefa55b?format=jpeg&amp;w=480 480w,        /images/en-us/4b53e7b5-56a3-477d-a493-acc6dfefa55b?format=jpeg&amp;w=640 640w,        /images/en-us/4b53e7b5-56a3-477d-a493-acc6dfefa55b?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+    <img alt="excel" class="fluentImage" loading="lazy" src="/images/en-us/4b53e7b5-56a3-477d-a493-acc6dfefa55b" style="aspect-ratio: 15/15" width="15"/>
+   </picture>
+   <picture>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/de3aa005-e173-490b-9fd7-00cc7cda839f?format=avif&amp;w=320 320w,        /images/en-us/de3aa005-e173-490b-9fd7-00cc7cda839f?format=avif&amp;w=480 480w,        /images/en-us/de3aa005-e173-490b-9fd7-00cc7cda839f?format=avif&amp;w=640 640w,        /images/en-us/de3aa005-e173-490b-9fd7-00cc7cda839f?format=avif&amp;w=800 800w" type="image/avif"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/de3aa005-e173-490b-9fd7-00cc7cda839f?format=webp&amp;w=320 320w,        /images/en-us/de3aa005-e173-490b-9fd7-00cc7cda839f?format=webp&amp;w=480 480w,        /images/en-us/de3aa005-e173-490b-9fd7-00cc7cda839f?format=webp&amp;w=640 640w,        /images/en-us/de3aa005-e173-490b-9fd7-00cc7cda839f?format=webp&amp;w=800 800w" type="image/webp"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/de3aa005-e173-490b-9fd7-00cc7cda839f?format=jpeg&amp;w=320 320w,        /images/en-us/de3aa005-e173-490b-9fd7-00cc7cda839f?format=jpeg&amp;w=480 480w,        /images/en-us/de3aa005-e173-490b-9fd7-00cc7cda839f?format=jpeg&amp;w=640 640w,        /images/en-us/de3aa005-e173-490b-9fd7-00cc7cda839f?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+    <img alt="excel" class="fluentImage" loading="lazy" src="/images/en-us/de3aa005-e173-490b-9fd7-00cc7cda839f" style="aspect-ratio: 15/15" width="15"/>
+   </picture>
+   ") equals "
+   <picture>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/b81f0162-858f-4645-ac4c-24428c72d354?format=avif&amp;w=320 320w,        /images/en-us/b81f0162-858f-4645-ac4c-24428c72d354?format=avif&amp;w=480 480w,        /images/en-us/b81f0162-858f-4645-ac4c-24428c72d354?format=avif&amp;w=640 640w,        /images/en-us/b81f0162-858f-4645-ac4c-24428c72d354?format=avif&amp;w=800 800w" type="image/avif"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/b81f0162-858f-4645-ac4c-24428c72d354?format=webp&amp;w=320 320w,        /images/en-us/b81f0162-858f-4645-ac4c-24428c72d354?format=webp&amp;w=480 480w,        /images/en-us/b81f0162-858f-4645-ac4c-24428c72d354?format=webp&amp;w=640 640w,        /images/en-us/b81f0162-858f-4645-ac4c-24428c72d354?format=webp&amp;w=800 800w" type="image/webp"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/b81f0162-858f-4645-ac4c-24428c72d354?format=jpeg&amp;w=320 320w,        /images/en-us/b81f0162-858f-4645-ac4c-24428c72d354?format=jpeg&amp;w=480 480w,        /images/en-us/b81f0162-858f-4645-ac4c-24428c72d354?format=jpeg&amp;w=640 640w,        /images/en-us/b81f0162-858f-4645-ac4c-24428c72d354?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+    <img alt="excel" class="fluentImage" loading="lazy" src="/images/en-us/b81f0162-858f-4645-ac4c-24428c72d354" style="aspect-ratio: 7/13" width="7"/>
+   </picture>
+   <picture>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/3a7fdc8d-9734-40f6-8e76-52d442a24ca5?format=avif&amp;w=320 320w,        /images/en-us/3a7fdc8d-9734-40f6-8e76-52d442a24ca5?format=avif&amp;w=480 480w,        /images/en-us/3a7fdc8d-9734-40f6-8e76-52d442a24ca5?format=avif&amp;w=640 640w,        /images/en-us/3a7fdc8d-9734-40f6-8e76-52d442a24ca5?format=avif&amp;w=800 800w" type="image/avif"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/3a7fdc8d-9734-40f6-8e76-52d442a24ca5?format=webp&amp;w=320 320w,        /images/en-us/3a7fdc8d-9734-40f6-8e76-52d442a24ca5?format=webp&amp;w=480 480w,        /images/en-us/3a7fdc8d-9734-40f6-8e76-52d442a24ca5?format=webp&amp;w=640 640w,        /images/en-us/3a7fdc8d-9734-40f6-8e76-52d442a24ca5?format=webp&amp;w=800 800w" type="image/webp"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/3a7fdc8d-9734-40f6-8e76-52d442a24ca5?format=jpeg&amp;w=320 320w,        /images/en-us/3a7fdc8d-9734-40f6-8e76-52d442a24ca5?format=jpeg&amp;w=480 480w,        /images/en-us/3a7fdc8d-9734-40f6-8e76-52d442a24ca5?format=jpeg&amp;w=640 640w,        /images/en-us/3a7fdc8d-9734-40f6-8e76-52d442a24ca5?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+    <img alt="excel" class="fluentImage" loading="lazy" src="/images/en-us/3a7fdc8d-9734-40f6-8e76-52d442a24ca5" style="aspect-ratio: 7/13" width="7"/>
+   </picture>
+   <picture>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/caf93614-b6c7-47af-8d44-d78f326c138a?format=avif&amp;w=320 320w,        /images/en-us/caf93614-b6c7-47af-8d44-d78f326c138a?format=avif&amp;w=480 480w,        /images/en-us/caf93614-b6c7-47af-8d44-d78f326c138a?format=avif&amp;w=640 640w,        /images/en-us/caf93614-b6c7-47af-8d44-d78f326c138a?format=avif&amp;w=800 800w" type="image/avif"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/caf93614-b6c7-47af-8d44-d78f326c138a?format=webp&amp;w=320 320w,        /images/en-us/caf93614-b6c7-47af-8d44-d78f326c138a?format=webp&amp;w=480 480w,        /images/en-us/caf93614-b6c7-47af-8d44-d78f326c138a?format=webp&amp;w=640 640w,        /images/en-us/caf93614-b6c7-47af-8d44-d78f326c138a?format=webp&amp;w=800 800w" type="image/webp"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/caf93614-b6c7-47af-8d44-d78f326c138a?format=jpeg&amp;w=320 320w,        /images/en-us/caf93614-b6c7-47af-8d44-d78f326c138a?format=jpeg&amp;w=480 480w,        /images/en-us/caf93614-b6c7-47af-8d44-d78f326c138a?format=jpeg&amp;w=640 640w,        /images/en-us/caf93614-b6c7-47af-8d44-d78f326c138a?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+    <img alt="excel" class="fluentImage" loading="lazy" src="/images/en-us/caf93614-b6c7-47af-8d44-d78f326c138a" style="aspect-ratio: 7/13" width="7"/>
+   </picture>
+   <picture>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/96e06e61-fca5-4d73-8a4c-a647d17af233?format=avif&amp;w=320 320w,        /images/en-us/96e06e61-fca5-4d73-8a4c-a647d17af233?format=avif&amp;w=480 480w,        /images/en-us/96e06e61-fca5-4d73-8a4c-a647d17af233?format=avif&amp;w=640 640w,        /images/en-us/96e06e61-fca5-4d73-8a4c-a647d17af233?format=avif&amp;w=800 800w" type="image/avif"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/96e06e61-fca5-4d73-8a4c-a647d17af233?format=webp&amp;w=320 320w,        /images/en-us/96e06e61-fca5-4d73-8a4c-a647d17af233?format=webp&amp;w=480 480w,        /images/en-us/96e06e61-fca5-4d73-8a4c-a647d17af233?format=webp&amp;w=640 640w,        /images/en-us/96e06e61-fca5-4d73-8a4c-a647d17af233?format=webp&amp;w=800 800w" type="image/webp"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/96e06e61-fca5-4d73-8a4c-a647d17af233?format=jpeg&amp;w=320 320w,        /images/en-us/96e06e61-fca5-4d73-8a4c-a647d17af233?format=jpeg&amp;w=480 480w,        /images/en-us/96e06e61-fca5-4d73-8a4c-a647d17af233?format=jpeg&amp;w=640 640w,        /images/en-us/96e06e61-fca5-4d73-8a4c-a647d17af233?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+    <img alt="excel" class="fluentImage" loading="lazy" src="/images/en-us/96e06e61-fca5-4d73-8a4c-a647d17af233" style="aspect-ratio: 7/13" width="7"/>
+   </picture>
+   "
+  </p>
+ </section>
+</article>

@@ -1,0 +1,223 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p id="__goback">
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    BITOR
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Returns a bitwise 'OR' of two numbers.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   BITOR(number1, number2)
+  </p>
+  <p>
+   The BITOR function syntax has the following arguments.
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Number1
+     </b>
+     Required. Must be in decimal form and greater than or equal to 0.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Number2
+     </b>
+     Required. Must be in decimal form and greater than or equal to 0.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     The result is a bitwise 'OR' of its parameters.
+    </p>
+   </li>
+   <li>
+    <p>
+     In the result, each bit position is 1 if any of the parameter's bits at that position are 1.
+    </p>
+   </li>
+   <li>
+    <p>
+     The values returned from the bit positions progress from right to left as powers of 2. The rightmost bit returns 1 (2^0), the bit to the left returns 2 (2^1), and so on.
+    </p>
+   </li>
+   <li>
+    <p>
+     If either argument is outside their constraints, BITOR returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If either argument is greater than (2^48)-1, BITOR returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If either argument is a non-numeric value, BITOR returns the #VALUE! error value.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        How it works
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =BITOR(23,10)
+      </p>
+     </td>
+     <td>
+      <p>
+       Compares the bit positions for the binary representations of the two numbers, and if either position contains 1, returns 2 raised to a power, depending on bit position. Then, those numbers are summed.
+      </p>
+     </td>
+     <td>
+      <p>
+       31
+      </p>
+     </td>
+     <td>
+      <p>
+       The number 23 is 10111 in binary, and 10 is 1010. The value 1 is found in either position at all 5 positions of either of the two numbers. You can express 1010 as 01010 so that both numbers have the same number of digits. The numbers 2^0, 2^1, 2^2, 2^3, and 2^4 are summed, for a total of 31.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      <p>
+       23 = 10111
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      <p>
+       10 = 01010
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Test: Is 1 found at any of the 5 positions?
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      <p>
+       yyyyy
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      <p>
+       1+2+4+8+16=31
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+   <a class="ocpTopOfPage" data-bi-type="anchor" href="#">
+    Top of Page
+   </a>
+  </p>
+ </section>
+</article>

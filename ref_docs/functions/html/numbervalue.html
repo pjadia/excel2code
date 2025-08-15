@@ -1,0 +1,188 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the NUMBERVALUE function  in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Description
+  </h2>
+  <p>
+   Converts text to a number, in a locale-independent way.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <p>
+   NUMBERVALUE(Text, [Decimal_separator], [Group_separator ])
+  </p>
+  <p>
+   The NUMBERVALUE function syntax has the following arguments.
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Text
+     </b>
+     Required. The text to convert to a number.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Decimal_separator
+     </b>
+     Optional. The character used to separate the integer and fractional part of the result.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Group_separator
+     </b>
+     Optional. The character used to separate groupings of numbers, such as thousands from hundreds and millions from thousands.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If the Decimal_separator and Group_separator arguments are not specified, separators from the current locale are used.
+    </p>
+   </li>
+   <li>
+    <p>
+     If multiple characters are used in the Decimal_separator or Group_separator arguments, only the first character is used.
+    </p>
+   </li>
+   <li>
+    <p>
+     If an empty string ("") is specified as the Text argument, the result is 0.
+    </p>
+   </li>
+   <li>
+    <p>
+     Empty spaces in the Text argument are ignored, even in the middle of the argument. For example, " 3 000  " is returned as 3000.
+    </p>
+   </li>
+   <li>
+    <p>
+     If a decimal separator is used more than once in the Text argument, NUMBERVALUE returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If the group separator occurs before the decimal separator in the Text argument , the group separator is ignored.
+    </p>
+   </li>
+   <li>
+    <p>
+     If the group separator occurs after the decimal separator in the Text argument, NUMBERVALUE returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If any of the arguments are not valid, NUMBERVALUE returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If the Text argument ends in one or more percent signs (%), they are used in the calculation of the result. Multiple percent signs are additive if they are used in the Text argument just as they are if they are used in a formula. For example, =NUMBERVALUE("9%%") returns the same result (0.0009) as the formula =9%%.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =NUMBERVALUE("2.500,27",",",".")
+      </p>
+     </td>
+     <td>
+      <p>
+       Returns 2,500.27. The decimal separator of the text argument in the example is specified in the second argument as a comma, and the group separator is specified in the third argument as a period.
+      </p>
+     </td>
+     <td>
+      <p>
+       2500.27
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =NUMBERVALUE("3.5%")
+      </p>
+     </td>
+     <td>
+      <p>
+       Returns 0.035. Because no optional arguments are specified, the decimal and group separators of the current locale are used. The % symbol is not shown, although the percentage is calculated.
+      </p>
+     </td>
+     <td>
+      <p>
+       0.035
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p id="__goback">
+   <a class="ocpTopOfPage" data-bi-type="anchor" href="#">
+    Top of Page
+   </a>
+  </p>
+ </section>
+</article>

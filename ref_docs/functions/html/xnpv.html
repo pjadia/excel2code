@@ -1,0 +1,268 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p id="__goback">
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    XNPV
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Returns the net present value for a schedule of cash flows that is not necessarily periodic. To calculate the net present value for a series of cash flows that is periodic, use the NPV function.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   XNPV(rate, values, dates)
+  </p>
+  <p>
+   The XNPV function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Rate
+     </b>
+     Required. The discount rate to apply to the cash flows.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Values
+     </b>
+     Required. A series of cash flows that corresponds to a schedule of payments in dates. The first payment is optional and corresponds to a cost or payment that occurs at the beginning of the investment. If the first value is a cost or payment, it must be a negative value. All succeeding payments are discounted based on a 365-day year. The series of values must contain at least one positive value and one negative value.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Dates
+     </b>
+     Required. A schedule of payment dates that corresponds to the cash flow payments. The first payment date indicates the beginning of the schedule of payments. All other dates must be later than this date, but they may occur in any order.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     Microsoft Excel stores dates as sequential serial numbers so they can be used in calculations. By default, January 1, 1900 is serial number 1, and January 1, 2008 is serial number 39448 because it is 39,448 days after January 1, 1900.
+    </p>
+   </li>
+   <li>
+    <p>
+     Numbers in dates are truncated to integers.
+    </p>
+   </li>
+   <li>
+    <p>
+     If any argument is nonnumeric, XNPV returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If any number in dates is not a valid date, XNPV returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If any number in dates precedes the starting date, XNPV returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If values and dates contain a different number of values, XNPV returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     XNPV is calculated as follows:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/e1c49983-0cc1-4a65-a77b-cd030adf3b76?format=avif&amp;w=320 320w,        /images/en-us/e1c49983-0cc1-4a65-a77b-cd030adf3b76?format=avif&amp;w=480 480w,        /images/en-us/e1c49983-0cc1-4a65-a77b-cd030adf3b76?format=avif&amp;w=640 640w,        /images/en-us/e1c49983-0cc1-4a65-a77b-cd030adf3b76?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/e1c49983-0cc1-4a65-a77b-cd030adf3b76?format=webp&amp;w=320 320w,        /images/en-us/e1c49983-0cc1-4a65-a77b-cd030adf3b76?format=webp&amp;w=480 480w,        /images/en-us/e1c49983-0cc1-4a65-a77b-cd030adf3b76?format=webp&amp;w=640 640w,        /images/en-us/e1c49983-0cc1-4a65-a77b-cd030adf3b76?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/e1c49983-0cc1-4a65-a77b-cd030adf3b76?format=jpeg&amp;w=320 320w,        /images/en-us/e1c49983-0cc1-4a65-a77b-cd030adf3b76?format=jpeg&amp;w=480 480w,        /images/en-us/e1c49983-0cc1-4a65-a77b-cd030adf3b76?format=jpeg&amp;w=640 640w,        /images/en-us/e1c49983-0cc1-4a65-a77b-cd030adf3b76?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/e1c49983-0cc1-4a65-a77b-cd030adf3b76" style="aspect-ratio: 177/47" width="177"/>
+     </picture>
+    </p>
+    <p>
+     where:
+    </p>
+    <ul>
+     <li>
+      <p>
+       di = the ith, or last, payment date.
+      </p>
+     </li>
+     <li>
+      <p>
+       d1 = the 0th payment date.
+      </p>
+     </li>
+     <li>
+      <p>
+       Pi = the ith, or last, payment.
+      </p>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Values
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Dates
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       -$10,000
+      </p>
+     </td>
+     <td>
+      <p>
+       1/1/2008
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       $2,750
+      </p>
+     </td>
+     <td>
+      <p>
+       3/1/2008
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       $4,250
+      </p>
+     </td>
+     <td>
+      <p>
+       10/30/2008
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       $3,250
+      </p>
+     </td>
+     <td>
+      <p>
+       2/15/2009
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       $2,750
+      </p>
+     </td>
+     <td>
+      <p>
+       4/1/2009
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =XNPV(.09, A2:A6, B2:B6)
+      </p>
+     </td>
+     <td>
+      <p>
+       The net present value for an investment with the above cost and returns. The cash flows are discounted at 9 percent.
+      </p>
+     </td>
+     <td>
+      <p>
+       $2,086.65
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

@@ -1,0 +1,102 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   Returns the inverse of the standard normal cumulative distribution. The distribution has a mean of zero and a standard deviation of one.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   NORM.S.INV(probability)
+  </p>
+  <p>
+   The NORM.S.INV function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Probability
+     </b>
+     Required. A probability corresponding to the normal distribution.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If probability is nonnumeric, NORMS.INV returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If probability &lt;= 0 or if probability &gt;= 1, NORMS.INV returns the #NUM! error value.
+    </p>
+   </li>
+  </ul>
+  <p>
+   Given a value for probability, NORM.S.INV seeks that value z such that NORM.S.DIST(z,TRUE) = probability. Thus, precision of NORM.S.INV depends on precision of NORM.S.DIST. NORM.S.INV uses an iterative search technique.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Live Result
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =NORM.S.INV(0.908789)
+      </p>
+     </td>
+     <td>
+      <p>
+       Inverse of the standard normal cumulative distribution, with a probability of 0.908789
+      </p>
+     </td>
+     <td>
+      <p>
+       1.3333347
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

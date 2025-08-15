@@ -1,0 +1,409 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    PRICEMAT
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Returns the price per $100 face value of a security that pays interest at maturity.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   PRICEMAT(settlement, maturity, issue, rate, yld, [basis])
+  </p>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpImportant">
+     Important:
+    </b>
+    Dates should be entered by using the DATE function, or as results of other formulas or functions. For example, use DATE(2008,5,23) for the 23rd day of May, 2008. Problems can occur if dates are entered as text.
+   </p>
+  </div>
+  <p>
+   The PRICEMAT function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Settlement
+     </b>
+     Required. The security's settlement date. The security settlement date is the date after the issue date when the security is traded to the buyer.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Maturity
+     </b>
+     Required. The security's maturity date. The maturity date is the date when the security expires.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Issue
+     </b>
+     Required. The security's issue date, expressed as a serial date number.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Rate
+     </b>
+     Required. The security's interest rate at date of issue.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Yld
+     </b>
+     Required. The security's annual yield.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Basis
+     </b>
+     Optional. The type of day count basis to use.
+    </p>
+   </li>
+  </ul>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Basis
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Day count basis
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       0 (zero) or omitted
+      </p>
+     </td>
+     <td>
+      <p>
+       US (NASD) 30/360
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+      <p>
+       Actual/actual
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+     <td>
+      <p>
+       Actual/360
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+     <td>
+      <p>
+       Actual/365
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+     <td>
+      <p>
+       European 30/360
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     Microsoft Excel stores dates as sequential serial numbers so they can be used in calculations. By default, January 1, 1900 is serial number 1, and January 1, 2008 is serial number 39448 because it is 39,448 days after January 1, 1900.
+    </p>
+   </li>
+   <li>
+    <p>
+     The settlement date is the date a buyer purchases a coupon, such as a bond. The maturity date is the date when a coupon expires. For example, suppose a 30-year bond is issued on January 1, 2008, and is purchased by a buyer six months later. The issue date would be January 1, 2008, the settlement date would be July 1, 2008, and the maturity date would be January 1, 2038, which is 30 years after the January 1, 2008, issue date.
+    </p>
+   </li>
+   <li>
+    <p>
+     Settlement, maturity, issue, and basis are truncated to integers.
+    </p>
+   </li>
+   <li>
+    <p>
+     If settlement, maturity, or issue is not a valid date, PRICEMAT returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If rate &lt; 0 or if yld &lt; 0, PRICEMAT returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If basis &lt; 0 or if basis &gt; 4, PRICEMAT returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If settlement ≥ maturity, PRICEMAT returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     PRICEMAT is calculated as follows:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/f9359f4e-69b1-4d59-9d0e-efb0a9993fd5?format=avif&amp;w=320 320w,        /images/en-us/f9359f4e-69b1-4d59-9d0e-efb0a9993fd5?format=avif&amp;w=480 480w,        /images/en-us/f9359f4e-69b1-4d59-9d0e-efb0a9993fd5?format=avif&amp;w=640 640w,        /images/en-us/f9359f4e-69b1-4d59-9d0e-efb0a9993fd5?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/f9359f4e-69b1-4d59-9d0e-efb0a9993fd5?format=webp&amp;w=320 320w,        /images/en-us/f9359f4e-69b1-4d59-9d0e-efb0a9993fd5?format=webp&amp;w=480 480w,        /images/en-us/f9359f4e-69b1-4d59-9d0e-efb0a9993fd5?format=webp&amp;w=640 640w,        /images/en-us/f9359f4e-69b1-4d59-9d0e-efb0a9993fd5?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/f9359f4e-69b1-4d59-9d0e-efb0a9993fd5?format=jpeg&amp;w=320 320w,        /images/en-us/f9359f4e-69b1-4d59-9d0e-efb0a9993fd5?format=jpeg&amp;w=480 480w,        /images/en-us/f9359f4e-69b1-4d59-9d0e-efb0a9993fd5?format=jpeg&amp;w=640 640w,        /images/en-us/f9359f4e-69b1-4d59-9d0e-efb0a9993fd5?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/f9359f4e-69b1-4d59-9d0e-efb0a9993fd5" style="aspect-ratio: 365/68" width="365"/>
+     </picture>
+    </p>
+    <p>
+     where:
+    </p>
+    <ul>
+     <li>
+      <p>
+       B = number of days in year, depending on year basis.
+      </p>
+     </li>
+     <li>
+      <p>
+       DSM = number of days from settlement to maturity.
+      </p>
+     </li>
+     <li>
+      <p>
+       DIM = number of days from issue to maturity.
+      </p>
+     </li>
+     <li>
+      <p>
+       A = number of days from issue to settlement.
+      </p>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       2/15/2008
+      </p>
+     </td>
+     <td>
+      <p>
+       Settlement date
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       4/13/2008
+      </p>
+     </td>
+     <td>
+      <p>
+       Maturity date
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       11/11/2007
+      </p>
+     </td>
+     <td>
+      <p>
+       Issue date
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       6.10%
+      </p>
+     </td>
+     <td>
+      <p>
+       Percent semiannual coupon
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       6.10%
+      </p>
+     </td>
+     <td>
+      <p>
+       Percent yield
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       0
+      </p>
+     </td>
+     <td>
+      <p>
+       30/360 basis
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        R
+       </b>
+       <b class="ocpLegacyBold">
+        esult
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =PRICEMAT(A2,A3,A4,A5,A6,A7)
+      </p>
+     </td>
+     <td>
+      <p>
+       The price for the bond, using the arguments specified in cells A2:A7.
+      </p>
+     </td>
+     <td>
+      <p>
+       $99.98
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

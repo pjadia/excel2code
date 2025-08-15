@@ -1,0 +1,671 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p id="__goback">
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    AVERAGEIFS
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Description
+  </h2>
+  <p>
+   Returns the average (arithmetic mean) of all cells that meet multiple criteria.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <p>
+   AVERAGEIFS(average_range, criteria_range1, criteria1, [criteria_range2, criteria2], ...)
+  </p>
+  <p>
+   The AVERAGEIFS function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Average_range
+     </b>
+     Required. One or more cells to average, including numbers or names, arrays, or references that contain numbers.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Criteria_range1, criteria_range2, …
+     </b>
+     Criteria_range1 is required, subsequent criteria_ranges are optional. 1 to 127 ranges in which to evaluate the associated criteria.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Criteria1, criteria2, ...
+     </b>
+     Criteria1 is required, subsequent criteria are optional. 1 to 127 criteria in the form of a number, expression, cell reference, or text that define which cells will be averaged. For example, criteria can be expressed as 32, "32", "&gt;32", "apples", or B4.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If average_range is a blank or text value, AVERAGEIFS returns the #DIV0! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If a cell in a criteria range is empty, AVERAGEIFS treats it as a 0 value.
+    </p>
+   </li>
+   <li>
+    <p>
+     Cells in range that contain TRUE evaluate as 1; cells in range that contain FALSE evaluate as 0 (zero).
+    </p>
+   </li>
+   <li>
+    <p>
+     Each cell in average_range is used in the average calculation only if all of the corresponding criteria specified are true for that cell.
+    </p>
+   </li>
+   <li>
+    <p>
+     Unlike the range and criteria arguments in the AVERAGEIF function, in AVERAGEIFS each criteria_range must be the same size and shape as average_range.
+    </p>
+   </li>
+   <li>
+    <p>
+     If cells in average_range cannot be translated into numbers, AVERAGEIFS returns the #DIV0! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If there are no cells that meet all the criteria, AVERAGEIFS returns the #DIV/0! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     You can use the wildcard characters, question mark (?) and asterisk (*), in criteria. A question mark matches any single character; an asterisk matches any sequence of characters. If you want to find an actual question mark or asterisk, type a tilde (~) before the character.
+    </p>
+   </li>
+  </ul>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpNote">
+     Note:
+    </b>
+    The AVERAGEIFS function measures central tendency, which is the location of the center of a group of numbers in a statistical distribution. The three most common measures of central tendency are:
+   </p>
+  </div>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Average
+     </b>
+     which is the arithmetic mean, and is calculated by adding a group of numbers and then dividing by the count of those numbers. For example, the average of 2, 3, 3, 5, 7, and 10 is 30 divided by 6, which is 5.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Median
+     </b>
+     which is the middle number of a group of numbers; that is, half the numbers have values that are greater than the median, and half the numbers have values that are less than the median. For example, the median of 2, 3, 3, 5, 7, and 10 is 4.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Mode
+     </b>
+     which is the most frequently occurring number in a group of numbers. For example, the mode of 2, 3, 3, 5, 7, and 10 is 3.
+    </p>
+   </li>
+  </ul>
+  <p>
+   For a symmetrical distribution of a group of numbers, these three measures of central tendency are all the same. For a skewed distribution of a group of numbers, they can be different.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Examples
+  </h2>
+  <p>
+   Copy the example data in the following table and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Student
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        First
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Second
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Final
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+     </td>
+     <td>
+      <p>
+       Quiz
+      </p>
+     </td>
+     <td>
+      <p>
+       Quiz
+      </p>
+     </td>
+     <td>
+      <p>
+       Exam
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+      <p>
+       Grade
+      </p>
+     </td>
+     <td>
+      <p>
+       Grade
+      </p>
+     </td>
+     <td>
+      <p>
+       Grade
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Emilio
+      </p>
+     </td>
+     <td>
+      <p>
+       75
+      </p>
+     </td>
+     <td>
+      <p>
+       85
+      </p>
+     </td>
+     <td>
+      <p>
+       87
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Julie
+      </p>
+     </td>
+     <td>
+      <p>
+       94
+      </p>
+     </td>
+     <td>
+      <p>
+       80
+      </p>
+     </td>
+     <td>
+      <p>
+       88
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Hans
+      </p>
+     </td>
+     <td>
+      <p>
+       86
+      </p>
+     </td>
+     <td>
+      <p>
+       93
+      </p>
+     </td>
+     <td>
+      <p>
+       Incomplete
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Frederique
+      </p>
+     </td>
+     <td>
+      <p>
+       Incomplete
+      </p>
+     </td>
+     <td>
+      <p>
+       75
+      </p>
+     </td>
+     <td>
+      <p>
+       75
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =AVERAGEIFS(B2:B5, B2:B5, "&gt;70", B2:B5, "&lt;90")
+      </p>
+     </td>
+     <td>
+      <p>
+       Average first quiz grade that falls between 70 and 90 for all students (80.5). The score marked "Incomplete" is not included in the calculation because it is not a numerical value.
+      </p>
+     </td>
+     <td>
+      <p>
+       75
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =AVERAGEIFS(C2:C5, C2:C5, "&gt;95")
+      </p>
+     </td>
+     <td>
+      <p>
+       Average second quiz grade that is greater than 95 for all students. Because there are no scores greater than 95, #DIV0! is returned.
+      </p>
+     </td>
+     <td>
+      <p>
+       #DIV/0!
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =AVERAGEIFS(D2:D5, D2:D5, "&lt;&gt;Incomplete", D2:D5, "&gt;80")
+      </p>
+     </td>
+     <td>
+      <p>
+       Average final exam grade that is greater than 80 for all students (87.5). The score marked "Incomplete" is not included in the calculation because it is not a numerical value.
+      </p>
+     </td>
+     <td>
+      <p>
+       87.5
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <section aria-labelledby="ID0EDBBD" class="ocpSection">
+   <h3 class="" id="ID0EDBBD">
+    Example 2
+   </h3>
+   <table aria-label="" class="banded">
+    <thead>
+     <tr>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         Type
+        </b>
+       </p>
+      </th>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         Price
+        </b>
+       </p>
+      </th>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         Town
+        </b>
+       </p>
+      </th>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         Number of Bedrooms
+        </b>
+       </p>
+      </th>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         Garage?
+        </b>
+       </p>
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <p>
+        Cozy Rambler
+       </p>
+      </td>
+      <td>
+       <p>
+        230000
+       </p>
+      </td>
+      <td>
+       <p>
+        Issaquah
+       </p>
+      </td>
+      <td>
+       <p>
+        3
+       </p>
+      </td>
+      <td>
+       <p>
+        No
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        Snug Bungalow
+       </p>
+      </td>
+      <td>
+       <p>
+        197000
+       </p>
+      </td>
+      <td>
+       <p>
+        Bellevue
+       </p>
+      </td>
+      <td>
+       <p>
+        2
+       </p>
+      </td>
+      <td>
+       <p>
+        Yes
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        Cool Cape Codder
+       </p>
+      </td>
+      <td>
+       <p>
+        345678
+       </p>
+      </td>
+      <td>
+       <p>
+        Bellevue
+       </p>
+      </td>
+      <td>
+       <p>
+        4
+       </p>
+      </td>
+      <td>
+       <p>
+        Yes
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        Splendid Split Level
+       </p>
+      </td>
+      <td>
+       <p>
+        321900
+       </p>
+      </td>
+      <td>
+       <p>
+        Issaquah
+       </p>
+      </td>
+      <td>
+       <p>
+        2
+       </p>
+      </td>
+      <td>
+       <p>
+        Yes
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        Exclusive Tudor
+       </p>
+      </td>
+      <td>
+       <p>
+        450000
+       </p>
+      </td>
+      <td>
+       <p>
+        Bellevue
+       </p>
+      </td>
+      <td>
+       <p>
+        5
+       </p>
+      </td>
+      <td>
+       <p>
+        Yes
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        Classy Colonial
+       </p>
+      </td>
+      <td>
+       <p>
+        395000
+       </p>
+      </td>
+      <td>
+       <p>
+        Bellevue
+       </p>
+      </td>
+      <td>
+       <p>
+        4
+       </p>
+      </td>
+      <td>
+       <p>
+        No
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        <b class="ocpLegacyBold">
+         Formula
+        </b>
+       </p>
+      </td>
+      <td>
+       <p>
+        <b class="ocpLegacyBold">
+         Description
+        </b>
+       </p>
+      </td>
+      <td>
+       <p>
+        <b class="ocpLegacyBold">
+         Result
+        </b>
+       </p>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        =AVERAGEIFS(B2:B7, C2:C7, "Bellevue", D2:D7, "&gt;2",E2:E7, "Yes")
+       </p>
+      </td>
+      <td>
+       <p>
+        Average price of a home in Bellevue that has at least 3 bedrooms and a garage
+       </p>
+      </td>
+      <td>
+       <p>
+        397839
+       </p>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        =AVERAGEIFS(B2:B7, C2:C7, "Issaquah", D2:D7, "&lt;=3",E2:E7, "No")
+       </p>
+      </td>
+      <td>
+       <p>
+        Average price of a home in Issaquah that has up to 3 bedrooms and no garage
+       </p>
+      </td>
+      <td>
+       <p>
+        230000
+       </p>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+ </section>
+</article>

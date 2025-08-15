@@ -1,0 +1,141 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   Applies a
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/lambda-function-bd212d27-1cd1-4321-a34a-ccbf254b8b67">
+    LAMBDA
+   </a>
+   to each column and returns an array of the results. For example, if the original array is 3 columns by 2 rows, the returned array is 3 columns by 1 row.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Syntax
+  </h2>
+  <p>
+   =BYCOL (array, lambda(column))
+  </p>
+  <p>
+   The BYCOL function syntax has the following arguments and parameters:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      array
+     </b>
+     An array to be separated by column.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      lambda
+     </b>
+     A LAMBDA that takes a column as a single parameter and calculates one result. The LAMBDA takes a single parameter:
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      column
+     </b>
+     A column from array.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Errors
+  </h2>
+  <p>
+   Providing an invalid LAMBDA function or an incorrect number of parameters returns a #VALUE! error called "Incorrect Parameters".
+  </p>
+  <p>
+   Not providing a LAMBDA function or anything but a single value returned from the LAMBDA function returns a #CALC error.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Examples
+  </h2>
+  <p>
+   <b class="ocpLegacyBold">
+    Example 1: Return the maximum value of each column
+   </b>
+  </p>
+  <p>
+   Enter the sample data into cells A1: C2, and then copy the formula into cell D4:
+  </p>
+  <p>
+   <span class="ocpCodeInline">
+    =BYCOL(A1:C2, LAMBDA(array, MAX(array)))
+   </span>
+  </p>
+  <p>
+   <picture>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/b940e114-a4a5-4fe6-924d-2d43ff7b89cd?format=avif&amp;w=320 320w,        /images/en-us/b940e114-a4a5-4fe6-924d-2d43ff7b89cd?format=avif&amp;w=480 480w,        /images/en-us/b940e114-a4a5-4fe6-924d-2d43ff7b89cd?format=avif&amp;w=640 640w,        /images/en-us/b940e114-a4a5-4fe6-924d-2d43ff7b89cd?format=avif&amp;w=800 800w" type="image/avif"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/b940e114-a4a5-4fe6-924d-2d43ff7b89cd?format=webp&amp;w=320 320w,        /images/en-us/b940e114-a4a5-4fe6-924d-2d43ff7b89cd?format=webp&amp;w=480 480w,        /images/en-us/b940e114-a4a5-4fe6-924d-2d43ff7b89cd?format=webp&amp;w=640 640w,        /images/en-us/b940e114-a4a5-4fe6-924d-2d43ff7b89cd?format=webp&amp;w=800 800w" type="image/webp"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/b940e114-a4a5-4fe6-924d-2d43ff7b89cd?format=jpeg&amp;w=320 320w,        /images/en-us/b940e114-a4a5-4fe6-924d-2d43ff7b89cd?format=jpeg&amp;w=480 480w,        /images/en-us/b940e114-a4a5-4fe6-924d-2d43ff7b89cd?format=jpeg&amp;w=640 640w,        /images/en-us/b940e114-a4a5-4fe6-924d-2d43ff7b89cd?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+    <img alt="First BYCOL function example" class="fluentImage" loading="lazy" src="/images/en-us/b940e114-a4a5-4fe6-924d-2d43ff7b89cd" style="aspect-ratio: 671/169" width="671"/>
+   </picture>
+  </p>
+  <p>
+   <b class="ocpLegacyBold">
+    Example 2: Return the sum of the squared value of each array element in each column
+   </b>
+  </p>
+  <p>
+   Enter the sample data into cells A1: C2, and then copy the formula into cell D4:
+  </p>
+  <p>
+   <span class="ocpCodeInline">
+    =BYCOL(A1:C2,LAMBDA(array,SUMSQ(array)))
+   </span>
+  </p>
+  <p>
+   <picture>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/a7cdd583-700b-4f52-a19b-88dc94b65f0e?format=avif&amp;w=320 320w,        /images/en-us/a7cdd583-700b-4f52-a19b-88dc94b65f0e?format=avif&amp;w=480 480w,        /images/en-us/a7cdd583-700b-4f52-a19b-88dc94b65f0e?format=avif&amp;w=640 640w,        /images/en-us/a7cdd583-700b-4f52-a19b-88dc94b65f0e?format=avif&amp;w=800 800w" type="image/avif"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/a7cdd583-700b-4f52-a19b-88dc94b65f0e?format=webp&amp;w=320 320w,        /images/en-us/a7cdd583-700b-4f52-a19b-88dc94b65f0e?format=webp&amp;w=480 480w,        /images/en-us/a7cdd583-700b-4f52-a19b-88dc94b65f0e?format=webp&amp;w=640 640w,        /images/en-us/a7cdd583-700b-4f52-a19b-88dc94b65f0e?format=webp&amp;w=800 800w" type="image/webp"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/a7cdd583-700b-4f52-a19b-88dc94b65f0e?format=jpeg&amp;w=320 320w,        /images/en-us/a7cdd583-700b-4f52-a19b-88dc94b65f0e?format=jpeg&amp;w=480 480w,        /images/en-us/a7cdd583-700b-4f52-a19b-88dc94b65f0e?format=jpeg&amp;w=640 640w,        /images/en-us/a7cdd583-700b-4f52-a19b-88dc94b65f0e?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+    <img alt="Second BYCOL function example" class="fluentImage" loading="lazy" src="/images/en-us/a7cdd583-700b-4f52-a19b-88dc94b65f0e" style="aspect-ratio: 670/171" width="670"/>
+   </picture>
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   See Also
+  </h2>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/map-function-48006093-f97c-47c1-bfcc-749263bb1f01">
+    MAP function
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/reduce-function-42e39910-b345-45f3-84b8-0642b568b7cb">
+    REDUCE function
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/scan-function-d58dfd11-9969-4439-b2dc-e7062724de29">
+    SCAN function
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/makearray-function-b80da5ad-b338-4149-a523-5b221da09097">
+    MAKEARRAY function
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/byrow-function-2e04c677-78c8-4e6b-8c10-a4602f2602bb">
+    BYROW function
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/isomitted-function-831d6fbc-0f07-40c4-9c5b-9c73fd1d60c1">
+    ISOMITTED function
+   </a>
+  </p>
+ </section>
+</article>

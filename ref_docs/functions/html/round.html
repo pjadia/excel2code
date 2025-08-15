@@ -1,0 +1,272 @@
+<article class="ocpArticleContent">
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   The
+   <b class="ocpLegacyBold">
+    ROUND
+   </b>
+   function rounds a number to a specified number of digits. For example, if cell A1 contains 23.7825, and you want to round that value to two decimal places, you can use the following formula:
+  </p>
+  <p>
+   =ROUND(A1, 2)
+  </p>
+  <p>
+   The result of this function is 23.78.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   ROUND(number, num_digits)
+  </p>
+  <p>
+   The ROUND function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      number
+     </b>
+     Required. The number that you want to round.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      num_digits
+     </b>
+     Required. The number of digits to which you want to round the number argument.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       num_digits
+      </i>
+     </b>
+     is greater than 0 (zero), then number is rounded to the specified number of decimal places.
+    </p>
+   </li>
+   <li>
+    <p>
+     If
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       num_digits
+      </i>
+     </b>
+     is 0, the number is rounded to the nearest integer.
+    </p>
+   </li>
+   <li>
+    <p>
+     If
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       num_digits
+      </i>
+     </b>
+     is less than 0, the number is rounded to the left of the decimal point.
+    </p>
+   </li>
+   <li>
+    <p>
+     To always round up (away from zero), use the
+     <b class="ocpLegacyBold">
+      ROUNDUP
+     </b>
+     function.
+    </p>
+   </li>
+   <li>
+    <p>
+     To always round down (toward zero), use the
+     <b class="ocpLegacyBold">
+      ROUNDDOWN
+     </b>
+     function.
+    </p>
+   </li>
+   <li>
+    <p>
+     To round a number to a specific multiple (for example, to round to the nearest 0.5), use the
+     <b class="ocpLegacyBold">
+      MROUND
+     </b>
+     function.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection" data-bi-id="__example" id="__example">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =ROUND(2.15, 1)
+      </p>
+     </td>
+     <td>
+      <p>
+       Rounds 2.15 to one decimal place
+      </p>
+     </td>
+     <td>
+      <p>
+       2.2
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =ROUND(2.149, 1)
+      </p>
+     </td>
+     <td>
+      <p>
+       Rounds 2.149 to one decimal place
+      </p>
+     </td>
+     <td>
+      <p>
+       2.1
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =ROUND(-1.475, 2)
+      </p>
+     </td>
+     <td>
+      <p>
+       Rounds -1.475 to two decimal places
+      </p>
+     </td>
+     <td>
+      <p>
+       -1.48
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =ROUND(21.5, -1)
+      </p>
+     </td>
+     <td>
+      <p>
+       Rounds 21.5 to one decimal place to the left of the decimal point
+      </p>
+     </td>
+     <td>
+      <p>
+       20
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =ROUND(626.3,-3)
+      </p>
+     </td>
+     <td>
+      <p>
+       Rounds 626.3 to the nearest multiple of 1000
+      </p>
+     </td>
+     <td>
+      <p>
+       1000
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =ROUND(1.98,-1)
+      </p>
+     </td>
+     <td>
+      <p>
+       Rounds 1.98 to the nearest multiple of 10
+      </p>
+     </td>
+     <td>
+      <p>
+       0
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =ROUND(-50.55,-2)
+      </p>
+     </td>
+     <td>
+      <p>
+       Rounds -50.55 to the nearest multiple of 100
+      </p>
+     </td>
+     <td>
+      <p>
+       -100
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

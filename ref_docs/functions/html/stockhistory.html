@@ -1,0 +1,404 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   The STOCKHISTORY function retrieves historical data about a financial instrument and loads it as an array, which will spill if it's the final result of a formula. This means that Excel will
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/dynamic-array-formulas-and-spilled-array-behavior-205c6b06-03ba-4151-89a1-87a7eb36e531">
+    dynamically
+   </a>
+   create the appropriate sized array range when you press ENTER.
+  </p>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpImportant">
+     Important:
+    </b>
+    The STOCKHISTORY function requires a Microsoft 365 Personal, Microsoft 365 Family, Microsoft 365 Business Standard, or Microsoft 365 Business Premium subscription.
+   </p>
+  </div>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Technical details
+  </h2>
+  <p>
+   <b class="ocpLegacyBold">
+    Syntax
+   </b>
+  </p>
+  <p>
+   <b class="ocpLegacyBold">
+    =STOCKHISTORY(stock, start_date, [end_date], [interval], [headers], [property0], [property1], [property2], [property3], [property4], [property5])
+   </b>
+  </p>
+  <p>
+   The
+   <b class="ocpLegacyBold">
+    STOCKHISTORY
+   </b>
+   function syntax has the following arguments:
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       Argument
+      </p>
+     </th>
+     <th>
+      <p>
+       Description
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        stock
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       Function returns historical price data about the financial instrument corresponding to this value. Enter a ticker symbol in double quotes (e.g., "MSFT") or a reference to a cell containing the
+       <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/excel-data-types-stocks-and-geography-61a33056-9935-484f-8ac8-f1a89e210877">
+        Stocks
+       </a>
+       data type. This will pull data from the default exchange for the instrument. You can also refer to a specific exchange by entering a 4-character ISO market identifier code (MIC), followed by a colon, followed by the ticker symbol (e.g., "XNAS:MSFT"). Learn more
+       <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/about-the-stocks-financial-data-sources-98a03e23-37f6-4776-beea-c5a6c8e787e6">
+        about our data sources.
+       </a>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        start_date
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       The earliest date for which data is retrieved. Note that if interval is not 0 (daily), the first data point may be earlier than the start_date provided - it will be the first date of the period requested.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        end_date
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       Optional. The latest date for which data will be retrieved. Default is start_date.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        interval
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       Optional. Specifies the interval each data value represents as follows:
+      </p>
+      <p>
+       0 = daily,
+       <br aria-hidden="true"/>
+       1 = weekly,
+       <br aria-hidden="true"/>
+       2 = monthly.
+      </p>
+      <p>
+       Default is 0.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        headers
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       Optional. Specifies whether to display headings as follows:
+      </p>
+      <p>
+       0 = no headers,
+       <br aria-hidden="true"/>
+       1 = show headers,
+       <br aria-hidden="true"/>
+       2 = show instrument identifier and headers.
+      </p>
+      <p>
+       Default is 1 (i.e, show headers). When included, headers are rows of text that are part of the array returned from the function.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        property0 - property5
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       Optional. The columns that are retrieved for each stock as follows:
+      </p>
+      <p>
+       0 = Date,
+       <br aria-hidden="true"/>
+       1 = Close,
+       <br aria-hidden="true"/>
+       2 = Open,
+       <br aria-hidden="true"/>
+       3 = High,
+       <br aria-hidden="true"/>
+       4 = Low,
+       <br aria-hidden="true"/>
+       5 = Volume.
+      </p>
+      <p>
+       If any of them is present, only the indicated columns are returned in the order provided. Default is 0,1 (i.e., Date and Close).
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Notes
+  </h2>
+  <ul>
+   <li>
+    <p>
+     The
+     <b class="ocpLegacyBold">
+      STOCKHISTORY
+     </b>
+     function does not stamp a format on the cells that it spills into. If you delete the formula, the cells that it filled have the General format.
+    </p>
+   </li>
+   <li>
+    <p>
+     When you enter the property arguments, you type a number for each property 0 through 5, in the order you want to see them. The value you enter for each property corresponds to the property number. For example, to include Date, Open, and Close, enter 0,2,1. These properties are defined as follows:
+    </p>
+    <table aria-label="" class="banded">
+     <thead>
+      <tr>
+       <th>
+        <p>
+         Value
+        </p>
+       </th>
+       <th>
+        <p>
+         Property
+        </p>
+       </th>
+       <th>
+        <p>
+         Definition
+        </p>
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         0
+        </p>
+       </td>
+       <td>
+        <p>
+         Date
+        </p>
+       </td>
+       <td>
+        <p>
+         If interval is daily or weekly, the first valid trading day in the period.
+         <br aria-hidden="true"/>
+         If interval is monthly, the first day of the month, regardless of if it was a trading day.
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         1
+        </p>
+       </td>
+       <td>
+        <p>
+         Close
+        </p>
+       </td>
+       <td>
+        <p>
+         Closing price on the last trading day in the period
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         2
+        </p>
+       </td>
+       <td>
+        <p>
+         Open
+        </p>
+       </td>
+       <td>
+        <p>
+         Opening price on the first trading day in the period
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         3
+        </p>
+       </td>
+       <td>
+        <p>
+         High
+        </p>
+       </td>
+       <td>
+        <p>
+         Highest day's high in the period
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         4
+        </p>
+       </td>
+       <td>
+        <p>
+         Low
+        </p>
+       </td>
+       <td>
+        <p>
+         Lowest day's low in the period
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         5
+        </p>
+       </td>
+       <td>
+        <p>
+         Volume
+        </p>
+       </td>
+       <td>
+        <p>
+         Number of shares traded during the period
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </li>
+  </ul>
+  <ul>
+   <li>
+    <p>
+     The
+     <b class="ocpLegacyBold">
+      STOCKHISTORY
+     </b>
+     function belongs to the
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/excel-functions-by-category-5f91f4e9-7b42-46d2-9bd1-63f26a86c0eb">
+      Lookup &amp; Reference family of functions.
+     </a>
+    </p>
+   </li>
+   <li>
+    <p>
+     Date arguments can be a date enclosed in double quotes (e.g. "01-01-2020") or a formula (e.g. TODAY()) or a cell reference to a cell with a date.
+    </p>
+   </li>
+   <li>
+    <p>
+     Date returned may be earlier than the date provided. For example, if December 31, 2019 is provided as the start date and interval is monthly, then December 1, 2019 will be returned as that is the start date for the period requested.
+    </p>
+   </li>
+   <li>
+    <p>
+     Please note that while some financial instruments may be available as Stocks data types, the historical information will not be available. For example, this is the case for most popular Index Funds including the S&amp;P 500.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Tips
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If you want to get the highest high over a 3-month period, it is faster to use a monthly interval than a daily or weekly interval. For example, =MAX(STOCKHISTORY("XNAS:MSFT", "1/1/2022", "3/1/2022", 2, 0, 3)) will calculate the maximum value of 3 datapoints (one for each month), data only with no headers, for the highest trading value for each month. If instead the formula used a weekly or daily interval, you would get the same result but there would be many more datapoints used in the calculation which can lead to reduced performance.
+    </p>
+   </li>
+   <li>
+    <p>
+     If you want to see a 52-week high or low, it is often faster to use a
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/excel-data-types-stocks-and-geography-61a33056-9935-484f-8ac8-f1a89e210877">
+      Stocks
+     </a>
+     data type, which has those properties readily available. For example, convert "xnas:msft" to a stock data type in cell A1, and in cell B1 you can write the formula
+     <span class="ocpCodeInline">
+      =A1.[52 week high]
+     </span>
+     to get the value. You can also configure your workbook to automatically refresh that value as described
+     <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/automatically-refresh-linked-data-types-44cd357f-4679-4c2e-bc65-1e3dcf94809f">
+      here
+     </a>
+     .
+    </p>
+   </li>
+   <li>
+    <p>
+     STOCKHISTORY, in showing historical data, generally only updates after a trading day completes. This means that you cannot use STOCKHISTORY to get data for today's trading details until after the market has closed or after the day has completed depending on the market.
+    </p>
+   </li>
+   <li>
+    <p>
+     If you use STOCKHISTORY with a function that automatically updates (like TODAY) and if your workbook has automatic calculation enabled, then STOCKHISTORY will automatically refresh the data when you open the workbook. This update will happen in the background, and you can edit your workbook as desired while this update is underway. If your workbook uses large number of STOCKHISTORY function calls, this background update will continue as long as needed to update the data. You may close your workbook at any time during this process if you wish.
+    </p>
+   </li>
+  </ul>
+  <p>
+  </p>
+ </section>
+</article>

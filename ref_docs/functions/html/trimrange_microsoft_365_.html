@@ -1,0 +1,235 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   The TRIMRANGE function excludes all empty rows and/or columns from the outer edges of a range or array.​​​​​​​​​​​​​​
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Syntax
+  </h2>
+  <p>
+   The TRIMRANGE function scans in from the edges of a range or array until it finds a non-blank cell (or value), it then excludes those blank rows or columns.
+  </p>
+  <p>
+   ​​​​​​​
+  </p>
+  <p>
+   <b class="ocpLegacyBold">
+    =TRIMRANGE(range,[trim_rows],[trim_cols])
+   </b>
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Argument
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        range
+       </b>
+      </p>
+      <p>
+       Required
+      </p>
+     </td>
+     <td>
+      <p>
+       The range (or array) to be trimmed
+      </p>
+      <p>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        trim_rows
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       Determines which rows should be trimmed
+      </p>
+      <p>
+       0 - None
+      </p>
+      <p>
+       1 - Trims leading blank rows
+      </p>
+      <p>
+       2 - Trims trailing blank rows
+      </p>
+      <p>
+       3 - Trims both leading and trailing blank rows (default)
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        trim_columns
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       Determines which columns should be trimmed
+      </p>
+      <p>
+       0 - None
+      </p>
+      <p>
+       1 - Trims leading blank columns
+      </p>
+      <p>
+       2 - Trims trailing blank columns
+      </p>
+      <p>
+       3 - Trims both leading and trailing blank columns (default)
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   <b class="ocpLegacyBold">
+    Trim References (aka Trim Refs)
+   </b>
+  </h2>
+  <p>
+   A Trim Ref can be used to achieve the same functionality as TRIMRANGE more succinctly by replacing the range's colon ":" with one of the three Trim Ref types described below:
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Type
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Example
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Equivalent TRIMRANGE
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       Trim All (.:.)
+      </p>
+     </td>
+     <td>
+      <p>
+       A1.:.E10
+      </p>
+     </td>
+     <td>
+      <p>
+       TRIMRANGE(A1:E10,3,3)
+      </p>
+     </td>
+     <td>
+      <p>
+       Trim leading and trailing blanks
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Trim Trailing (:.)
+      </p>
+     </td>
+     <td>
+      <p>
+       A1:.E10
+      </p>
+     </td>
+     <td>
+      <p>
+       TRIMRANGE(A1:E10,2,2)
+      </p>
+     </td>
+     <td>
+      <p>
+       Trim trailing blanks
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Trim Leading (.:)
+      </p>
+     </td>
+     <td>
+      <p>
+       A1.:Z10
+      </p>
+     </td>
+     <td>
+      <p>
+       TRIMRANGE(A1:E10,1,1)
+      </p>
+     </td>
+     <td>
+      <p>
+       Trim leading blanks
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+   This pattern can also be applied to full-column or -row references (eg. A:.A)
+  </p>
+  <p>
+  </p>
+ </section>
+</article>

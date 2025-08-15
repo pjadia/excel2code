@@ -1,0 +1,124 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p id="__goback">
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    MULTINOMIAL
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Returns the ratio of the factorial of a sum of values to the product of factorials.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   MULTINOMIAL(number1, [number2], ...)
+  </p>
+  <p>
+   The MULTINOMIAL function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Number1, number2, ...
+     </b>
+     Number1 is required, subsequent numbers are optional. 1 to 255 values for which you want the multinomial.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If any argument is nonnumeric, MULTINOMIAL returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If any argument is less than zero, MULTINOMIAL returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     The multinomial is:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/e8362a74-eba1-4381-ba52-cd9164325add?format=avif&amp;w=320 320w,        /images/en-us/e8362a74-eba1-4381-ba52-cd9164325add?format=avif&amp;w=480 480w,        /images/en-us/e8362a74-eba1-4381-ba52-cd9164325add?format=avif&amp;w=640 640w,        /images/en-us/e8362a74-eba1-4381-ba52-cd9164325add?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/e8362a74-eba1-4381-ba52-cd9164325add?format=webp&amp;w=320 320w,        /images/en-us/e8362a74-eba1-4381-ba52-cd9164325add?format=webp&amp;w=480 480w,        /images/en-us/e8362a74-eba1-4381-ba52-cd9164325add?format=webp&amp;w=640 640w,        /images/en-us/e8362a74-eba1-4381-ba52-cd9164325add?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/e8362a74-eba1-4381-ba52-cd9164325add?format=jpeg&amp;w=320 320w,        /images/en-us/e8362a74-eba1-4381-ba52-cd9164325add?format=jpeg&amp;w=480 480w,        /images/en-us/e8362a74-eba1-4381-ba52-cd9164325add?format=jpeg&amp;w=640 640w,        /images/en-us/e8362a74-eba1-4381-ba52-cd9164325add?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="equation" class="fluentImage" loading="lazy" src="/images/en-us/e8362a74-eba1-4381-ba52-cd9164325add" style="aspect-ratio: 352/47" width="352"/>
+     </picture>
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =MULTINOMIAL(2, 3, 4)
+      </p>
+     </td>
+     <td>
+      <p>
+       Ratio of the factorial of the sum of 2,3, and 4 (362880) to the product of the factorials of 2,3, and 4 (288).
+      </p>
+     </td>
+     <td>
+      <p>
+       1260
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

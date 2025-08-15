@@ -1,0 +1,462 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p id="bmbacktotop">
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    DVAR
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Estimates the variance of a population based on a sample by using the numbers in a field (column) of records in a list or database that match conditions that you specify.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   DVAR(database, field, criteria)
+  </p>
+  <p>
+   The DVAR function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Database
+     </b>
+     Required. The range of cells that makes up the list or database. A database is a list of related data in which rows of related information are records, and columns of data are fields. The first row of the list contains labels for each column.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Field
+     </b>
+     Required. Indicates which column is used in the function. Enter the column label enclosed between double quotation marks, such as "Age" or "Yield," or a number (without quotation marks) that represents the position of the column within the list: 1 for the first column, 2 for the second column, and so on.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Criteria
+     </b>
+     Required. The range of cells that contains the conditions that you specify. You can use any range for the criteria argument, as long as it includes at least one column label and at least one cell below the column label in which you specify a condition for the column.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     You can use any range for the criteria argument, as long as it includes at least one column label and at least one cell below the column label for specifying the condition.
+    </p>
+    <p>
+     For example, if the range G1:G2 contains the column label Income in G1 and the amount $10,000 in G2, you could define the range as MatchIncome and use that name as the criteria argument in the database functions.
+    </p>
+    <div class="ocpAlert">
+     <p class="ocpAlertSection">
+      <b class="ocpNote">
+       Note:
+      </b>
+      In Excel Web App you cannot define named ranges.
+     </p>
+    </div>
+   </li>
+   <li>
+    <p>
+     Although the criteria range can be located anywhere on the worksheet, do not place the criteria range below the list. If you add more information to the list, the new information is added to the first row below the list. If the row below the list is not blank, Microsoft Excel cannot add the new information.
+    </p>
+   </li>
+   <li>
+    <p>
+     Make sure that the criteria range does not overlap the list.
+    </p>
+   </li>
+   <li>
+    <p>
+     To perform an operation on an entire column in a database, enter a blank line below the column labels in the criteria range.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Tree
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Height
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Age
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Yield
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Profit
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Height
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       ="=Apple"
+      </p>
+     </td>
+     <td>
+      <p>
+       &gt;10
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      <p>
+       &lt;16
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       ="=Pear"
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Tree
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Height
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Age
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Yield
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Profit
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Apple
+      </p>
+     </td>
+     <td>
+      <p>
+       18
+      </p>
+     </td>
+     <td>
+      <p>
+       20
+      </p>
+     </td>
+     <td>
+      <p>
+       14
+      </p>
+     </td>
+     <td>
+      <p>
+       $105
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Pear
+      </p>
+     </td>
+     <td>
+      <p>
+       12
+      </p>
+     </td>
+     <td>
+      <p>
+       12
+      </p>
+     </td>
+     <td>
+      <p>
+       10
+      </p>
+     </td>
+     <td>
+      <p>
+       $96
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Cherry
+      </p>
+     </td>
+     <td>
+      <p>
+       13
+      </p>
+     </td>
+     <td>
+      <p>
+       14
+      </p>
+     </td>
+     <td>
+      <p>
+       9
+      </p>
+     </td>
+     <td>
+      <p>
+       $105
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Apple
+      </p>
+     </td>
+     <td>
+      <p>
+       14
+      </p>
+     </td>
+     <td>
+      <p>
+       15
+      </p>
+     </td>
+     <td>
+      <p>
+       10
+      </p>
+     </td>
+     <td>
+      <p>
+       $75
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Pear
+      </p>
+     </td>
+     <td>
+      <p>
+       9
+      </p>
+     </td>
+     <td>
+      <p>
+       8
+      </p>
+     </td>
+     <td>
+      <p>
+       8
+      </p>
+     </td>
+     <td>
+      <p>
+       $77
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Apple
+      </p>
+     </td>
+     <td>
+      <p>
+       8
+      </p>
+     </td>
+     <td>
+      <p>
+       9
+      </p>
+     </td>
+     <td>
+      <p>
+       6
+      </p>
+     </td>
+     <td>
+      <p>
+       $45
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =DVAR(A4:E10, "Yield", A1:A3)
+      </p>
+     </td>
+     <td>
+      <p>
+       The estimated variance in the yield of apple and pear trees if the data in the database is only a sample of the total orchard population.
+      </p>
+     </td>
+     <td>
+      <p>
+       8.8
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+   <a class="ocpTopOfPage" data-bi-type="anchor" href="#">
+    Top of Page
+   </a>
+  </p>
+ </section>
+</article>

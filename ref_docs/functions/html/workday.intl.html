@@ -1,0 +1,449 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p id="__goback">
+   This article describes the formula syntax and how to use the
+   <b class="ocpLegacyBold">
+    WORKDAY.INTL
+   </b>
+   function in Microsoft Excel.
+  </p>
+  <p>
+   This function returns the serial number of the date before or after a specified number of workdays with custom weekend parameters. Optional
+   <b class="ocpLegacyBold">
+    Weekend
+   </b>
+   parameters can indicate which and how many days are weekend days. Note that Weekend days and any days that are specified as holidays are not considered as workdays.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <p>
+   <b class="ocpLegacyBold">
+    WORKDAY.INTL(start_date, days, [weekend], [holidays])
+   </b>
+  </p>
+  <p>
+   The WORKDAY.INTL function syntax uses the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      start_date
+     </b>
+     Required. The start date, truncated to integer.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      days
+     </b>
+     Required. The number of workdays before or after the start_date. A positive value yields a future date; a negative value yields a past date; a zero value yields the already specified
+     <b class="ocpLegacyBold">
+      start_date. Day-offset
+     </b>
+     is truncated to an integer.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      weekend
+     </b>
+     Optional. If used, this indicates the days of the week that are weekend days and are not considered working days. The weekend argument is a weekend number or string that specifies when weekends occur.
+    </p>
+    <p>
+     The
+     <b class="ocpLegacyBold">
+      weekend
+     </b>
+     number values indicate weekend days as shown below.
+    </p>
+   </li>
+  </ul>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        weekend number
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Weekend days
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       1 (or omitted)
+      </p>
+     </td>
+     <td>
+      <p>
+       Saturday, Sunday
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+     <td>
+      <p>
+       Sunday, Monday
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+     <td>
+      <p>
+       Monday, Tuesday
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+     <td>
+      <p>
+       Tuesday, Wednesday
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       5
+      </p>
+     </td>
+     <td>
+      <p>
+       Wednesday, Thursday
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       6
+      </p>
+     </td>
+     <td>
+      <p>
+       Thursday, Friday
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       7
+      </p>
+     </td>
+     <td>
+      <p>
+       Friday, Saturday
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       11
+      </p>
+     </td>
+     <td>
+      <p>
+       Sunday only
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       12
+      </p>
+     </td>
+     <td>
+      <p>
+       Monday only
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       13
+      </p>
+     </td>
+     <td>
+      <p>
+       Tuesday only
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       14
+      </p>
+     </td>
+     <td>
+      <p>
+       Wednesday only
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       15
+      </p>
+     </td>
+     <td>
+      <p>
+       Thursday only
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       16
+      </p>
+     </td>
+     <td>
+      <p>
+       Friday only
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       17
+      </p>
+     </td>
+     <td>
+      <p>
+       Saturday only
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+   Weekend string values are seven characters long. Each character in the string represents a day of the week, starting with Monday. The character
+   <b class="ocpLegacyBold">
+    <b class="ocpLiteral">
+     1
+    </b>
+   </b>
+   represents a non-workday and
+   <b class="ocpLegacyBold">
+    <b class="ocpLiteral">
+     0
+    </b>
+   </b>
+   represents a workday. Only the characters
+   <b class="ocpLiteral">
+    1
+   </b>
+   and
+   <b class="ocpLiteral">
+    0
+   </b>
+   are permitted in the string. Also,
+   <b class="ocpLiteral">
+    1111111
+   </b>
+   is an invalid string.
+  </p>
+  <p>
+   For example,
+   <b class="ocpLiteral">
+    0000011
+   </b>
+   would result in a weekend that is Saturday and Sunday.
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Holidays
+     </b>
+     This is an optional argument at the end of the syntax. It specifies an optional set of one or more dates that are to be excluded from the working day calendar. Holidays shall be a range of cells that contain the dates -- or an array constant of the serial values that represent those dates. The ordering of dates or serial values in holidays can be arbitrary.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If
+     <b class="ocpLegacyBold">
+      start_date
+     </b>
+     is out of range for the current date base value, WORKDAY.INTL returns the
+     <b class="ocpLegacyBold">
+      #NUM!
+     </b>
+     error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If any date in holidays is out of range for the current date base value, WORKDAY.INTL returns the
+     <b class="ocpLegacyBold">
+      #NUM!
+     </b>
+     error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If
+     <b class="ocpLegacyBold">
+      start_date
+     </b>
+     plus day-offset yields an invalid date, WORKDAY.INTL returns the
+     <b class="ocpLegacyBold">
+      #NUM!
+     </b>
+     error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If a weekend string is of invalid length or contains invalid characters, WORKDAY.INTL returns the
+     <b class="ocpLegacyBold">
+      #VALUE!
+     </b>
+     error value.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   Copy the following example data (the entire table including the header). In a new Excel worksheet, paste it into cell A1 and adjacent. If you do not automatically see results, select the formula, press
+   <b class="ocpLegacyBold">
+    F2
+   </b>
+   and press
+   <b class="ocpLegacyBold">
+    Enter
+   </b>
+   . Adjust column widths if needed to see the everything.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Live Result
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =WORKDAY.INTL(DATE(2012,1,1),30,0)
+      </p>
+     </td>
+     <td>
+      <p>
+       Using a 0 for the Weekend argument results in a #NUM! error.
+      </p>
+     </td>
+     <td>
+      <p>
+       #NUM!
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =WORKDAY.INTL(DATE(2012,1,1),90,11)
+      </p>
+     </td>
+     <td>
+      <p>
+       Finds the date 90 workdays from 1/1/2012, counting only Sundays as a weekend day (Weekend argument is 11).
+      </p>
+     </td>
+     <td>
+      <p>
+       41013
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =TEXT(WORKDAY.INTL(DATE(2012,1,1),30,17),"m/dd/yyyy")
+      </p>
+     </td>
+     <td>
+      <p>
+       Uses the TEXT function to format the resulting serial number (40944) in a "m/dd/yyyy" format. Finds the date 30 workdays from 1/1/2012, counting only Saturdays as a weekend day (Weekend argument is 17).
+      </p>
+     </td>
+     <td>
+      <p>
+       2/05/2012
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

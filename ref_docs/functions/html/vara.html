@@ -1,0 +1,278 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    VARA
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Estimates variance based on a sample.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   VARA(value1, [value2], ...)
+  </p>
+  <p>
+   The VARA function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Value1, value2, ...
+     </b>
+     Value1 is required, subsequent values are optional. 1 to 255 value arguments corresponding to a sample of a population.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     VARA assumes that its arguments are a sample of the population. If your data represents the entire population, you must compute the variance by using VARPA.
+    </p>
+   </li>
+   <li>
+    <p>
+     Arguments can be the following: numbers; names, arrays, or references that contain numbers; text representations of numbers; or logical values, such as TRUE and FALSE, in a reference.
+    </p>
+   </li>
+   <li>
+    <p>
+     Logical values and text representations of numbers that you type directly into the list of arguments are counted.
+    </p>
+   </li>
+   <li>
+    <p>
+     Arguments that contain TRUE evaluate as 1; arguments that contain text or FALSE evaluate as 0 (zero).
+    </p>
+   </li>
+   <li>
+    <p>
+     If an argument is an array or reference, only values in that array or reference are used. Empty cells and text values in the array or reference are ignored.
+    </p>
+   </li>
+   <li>
+    <p>
+     Arguments that are error values or text that cannot be translated into numbers cause errors.
+    </p>
+   </li>
+   <li>
+    <p>
+     If you do not want to include logical values and text representations of numbers in a reference as part of the calculation, use the VAR function.
+    </p>
+   </li>
+   <li>
+    <p>
+     VARA uses the following formula:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/c96afb87-c05c-4d03-aca9-b24601d19661?format=avif&amp;w=320 320w,        /images/en-us/c96afb87-c05c-4d03-aca9-b24601d19661?format=avif&amp;w=480 480w,        /images/en-us/c96afb87-c05c-4d03-aca9-b24601d19661?format=avif&amp;w=640 640w,        /images/en-us/c96afb87-c05c-4d03-aca9-b24601d19661?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/c96afb87-c05c-4d03-aca9-b24601d19661?format=webp&amp;w=320 320w,        /images/en-us/c96afb87-c05c-4d03-aca9-b24601d19661?format=webp&amp;w=480 480w,        /images/en-us/c96afb87-c05c-4d03-aca9-b24601d19661?format=webp&amp;w=640 640w,        /images/en-us/c96afb87-c05c-4d03-aca9-b24601d19661?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/c96afb87-c05c-4d03-aca9-b24601d19661?format=jpeg&amp;w=320 320w,        /images/en-us/c96afb87-c05c-4d03-aca9-b24601d19661?format=jpeg&amp;w=480 480w,        /images/en-us/c96afb87-c05c-4d03-aca9-b24601d19661?format=jpeg&amp;w=640 640w,        /images/en-us/c96afb87-c05c-4d03-aca9-b24601d19661?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Formula" class="fluentImage" loading="lazy" src="/images/en-us/c96afb87-c05c-4d03-aca9-b24601d19661" style="aspect-ratio: 76/49" width="76"/>
+     </picture>
+    </p>
+    <p>
+     where x is the sample mean AVERAGE(value1,value2,…) and n is the sample size.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Strength
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       1345
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1301
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1368
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1322
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1310
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1370
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1318
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1350
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1303
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1299
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        R
+       </b>
+       <b class="ocpLegacyBold">
+        esult
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =VARA(A2:A11)
+      </p>
+     </td>
+     <td>
+      <p>
+       Estimates the variance for the breaking strength of the tools being tested. VARA assumes a population sample.
+      </p>
+     </td>
+     <td>
+      <p>
+       754.26667
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

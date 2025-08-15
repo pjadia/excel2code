@@ -1,0 +1,149 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p id="__goback">
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    CHISQ.INV
+   </b>
+   function in Microsoft Excel.
+  </p>
+  <p>
+   Returns the inverse of the left-tailed probability of the chi-squared distribution.
+  </p>
+  <p>
+   The chi-squared distribution is commonly used to study variation in the percentage of something across samples, such as the fraction of the day people spend watching television.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <p>
+   CHISQ.INV(probability,deg_freedom)
+  </p>
+  <p>
+   The CHISQ.INV function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Probability
+     </b>
+     Required. A probability associated with the chi-squared distribution.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Deg_freedom
+     </b>
+     Required. The number of degrees of freedom.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If argument is nonnumeric, CHISQ.INV returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If probability &lt; 0 or probability &gt; 1, CHISQ.INV returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If deg_freedom is not an integer, it is truncated.
+    </p>
+   </li>
+   <li>
+    <p>
+     If deg_freedom &lt; 1 or deg_freedom &gt; 10^10, CHISQ.INV returns the #NUM! error value.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =CHISQ.INV(0.93,1)
+      </p>
+     </td>
+     <td>
+      <p>
+       Inverse of the left-tailed probability of the chi-squared distribution for 0.93, using 1 degree of freedom.
+      </p>
+     </td>
+     <td>
+      <p>
+       3.283020286
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =CHISQ.INV(0.6,2)
+      </p>
+     </td>
+     <td>
+      <p>
+       Inverse of the left-tailed probability of the chi-squared distribution for 0.6, using 2 degrees of freedom.
+      </p>
+     </td>
+     <td>
+      <p>
+       1.832581464
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+   <a class="ocpTopOfPage" data-bi-type="anchor" href="#">
+    Top of Page
+   </a>
+  </p>
+ </section>
+</article>

@@ -1,0 +1,125 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   The COLUMN function returns the column number of the given cell reference. For example, the formula
+   <b class="ocpLegacyBold">
+    =
+   </b>
+   <b class="ocpLegacyBold">
+    COLUMN(
+   </b>
+   <b class="ocpLegacyBold">
+    D10)
+   </b>
+   returns 4, because column D is the fourth column.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Syntax
+  </h2>
+  <p>
+   <b class="ocpLegacyBold">
+    COLUMN([reference])
+   </b>
+  </p>
+  <p>
+   The COLUMN function syntax has the following argument:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      reference
+     </b>
+     Optional. The cell or range of cells for which you want to return the column number.
+    </p>
+    <ul>
+     <li>
+      <p>
+       If the reference argument is omitted or refers to a range of cells, and if the
+       <b class="ocpLegacyBold">
+        COLUMN
+       </b>
+       function is entered as a horizontal array formula, the
+       <b class="ocpLegacyBold">
+        COLUMN
+       </b>
+       function returns the column numbers of reference as a horizontal array.
+      </p>
+      <p>
+      </p>
+      <div class="ocpAlert">
+       <p class="ocpAlertSection">
+        <b class="ocpNote">
+         Notes:
+        </b>
+       </p>
+       <ul class="ocpAlertSectionListContainer">
+        <li>
+         <p>
+          If you have a current version of
+          <a class="ocpExternalLink" data-bi-type="anchor" href="https://products.office.com/en-us/buy/compare-microsoft-office-products" target="_blank">
+           Microsoft 365
+          </a>
+          , then you can simply enter the formula in the top-left-cell of the output range, then press
+          <b class="ocpUI">
+           ENTER
+          </b>
+          to confirm the formula as a dynamic array formula. Otherwise, the formula must be entered as a legacy array formula by first selecting the output range, entering the formula in the top-left-cell of the output range, and then pressing
+          <b class="ocpUI">
+           CTRL+SHIFT+ENTER
+          </b>
+          to confirm it. Excel inserts curly brackets at the beginning and end of the formula for you. For more information on array formulas, see
+          <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/guidelines-and-examples-of-array-formulas-7d94a64e-3ff3-4686-9372-ecfd5caa57c7">
+           Guidelines and examples of array formulas
+          </a>
+          .
+         </p>
+        </li>
+       </ul>
+      </div>
+     </li>
+     <li>
+      <p>
+       If the reference argument is a range of cells, and if the
+       <b class="ocpLegacyBold">
+        COLUMN
+       </b>
+       function is not entered as a horizontal array formula, the
+       <b class="ocpLegacyBold">
+        COLUMN
+       </b>
+       function returns the number of the leftmost column.
+      </p>
+     </li>
+     <li>
+      <p>
+       If the reference argument is omitted, it is assumed to be the reference of the cell in which the COLUMN
+       <b class="ocpLegacyBold">
+        function
+       </b>
+       appears.
+      </p>
+     </li>
+     <li>
+      <p>
+       The reference argument cannot refer to multiple areas.
+      </p>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <picture>
+   <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/12148224-38b1-437b-883e-02644a0a269b?format=avif&amp;w=320 320w,        /images/en-us/12148224-38b1-437b-883e-02644a0a269b?format=avif&amp;w=480 480w,        /images/en-us/12148224-38b1-437b-883e-02644a0a269b?format=avif&amp;w=640 640w,        /images/en-us/12148224-38b1-437b-883e-02644a0a269b?format=avif&amp;w=800 800w" type="image/avif"/>
+   <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/12148224-38b1-437b-883e-02644a0a269b?format=webp&amp;w=320 320w,        /images/en-us/12148224-38b1-437b-883e-02644a0a269b?format=webp&amp;w=480 480w,        /images/en-us/12148224-38b1-437b-883e-02644a0a269b?format=webp&amp;w=640 640w,        /images/en-us/12148224-38b1-437b-883e-02644a0a269b?format=webp&amp;w=800 800w" type="image/webp"/>
+   <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/12148224-38b1-437b-883e-02644a0a269b?format=jpeg&amp;w=320 320w,        /images/en-us/12148224-38b1-437b-883e-02644a0a269b?format=jpeg&amp;w=480 480w,        /images/en-us/12148224-38b1-437b-883e-02644a0a269b?format=jpeg&amp;w=640 640w,        /images/en-us/12148224-38b1-437b-883e-02644a0a269b?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+   <img alt="Examples of the COLUMN function" class="fluentImage" loading="lazy" src="/images/en-us/12148224-38b1-437b-883e-02644a0a269b" style="aspect-ratio: 518/228" width="518"/>
+  </picture>
+ </section>
+</article>

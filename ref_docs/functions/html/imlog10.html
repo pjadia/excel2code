@@ -1,0 +1,119 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p id="__goback">
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    IMLOG10
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Returns the common logarithm (base 10) of a complex number in x + yi or x + yj text format.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   IMLOG10(inumber)
+  </p>
+  <p>
+   The IMLOG10 function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Inumber
+     </b>
+     Required. A complex number for which you want the common logarithm.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     Use COMPLEX to convert real and imaginary coefficients into a complex number.
+    </p>
+   </li>
+   <li>
+    <p>
+     The common logarithm of a complex number can be calculated from the natural logarithm as follows:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/0296156a-6027-49d8-9d9d-53743c77b646?format=avif&amp;w=320 320w,        /images/en-us/0296156a-6027-49d8-9d9d-53743c77b646?format=avif&amp;w=480 480w,        /images/en-us/0296156a-6027-49d8-9d9d-53743c77b646?format=avif&amp;w=640 640w,        /images/en-us/0296156a-6027-49d8-9d9d-53743c77b646?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/0296156a-6027-49d8-9d9d-53743c77b646?format=webp&amp;w=320 320w,        /images/en-us/0296156a-6027-49d8-9d9d-53743c77b646?format=webp&amp;w=480 480w,        /images/en-us/0296156a-6027-49d8-9d9d-53743c77b646?format=webp&amp;w=640 640w,        /images/en-us/0296156a-6027-49d8-9d9d-53743c77b646?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/0296156a-6027-49d8-9d9d-53743c77b646?format=jpeg&amp;w=320 320w,        /images/en-us/0296156a-6027-49d8-9d9d-53743c77b646?format=jpeg&amp;w=480 480w,        /images/en-us/0296156a-6027-49d8-9d9d-53743c77b646?format=jpeg&amp;w=640 640w,        /images/en-us/0296156a-6027-49d8-9d9d-53743c77b646?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/0296156a-6027-49d8-9d9d-53743c77b646" style="aspect-ratio: 218/15" width="218"/>
+     </picture>
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =IMLOG10("3+4i")
+      </p>
+     </td>
+     <td>
+      <p>
+       Logarithm (base 10) of 3+4i
+      </p>
+     </td>
+     <td>
+      <p>
+       0.698970004336019+0.402719196273373i
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

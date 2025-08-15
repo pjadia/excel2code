@@ -1,0 +1,282 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p id="__goback">
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    ERROR.TYPE
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Description
+  </h2>
+  <p>
+   Returns a number corresponding to one of the error values in Microsoft Excel or returns the #N/A error if no error exists. You can use ERROR.TYPE in an IF function to test for an error value and return a text string, such as a message, instead of the error value.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Syntax
+  </h2>
+  <p>
+   ERROR.TYPE(error_val)
+  </p>
+  <p>
+   The ERROR.TYPE function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Error_val
+     </b>
+     Required. The error value whose identifying number you want to find. Although error_val can be the actual error value, it will usually be a reference to a cell containing a formula that you want to test.
+    </p>
+   </li>
+  </ul>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        If
+       </b>
+       <b class="ocpLegacyBold">
+        error_val
+       </b>
+       <b class="ocpLegacyBold">
+        is
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        ERROR.TYPE returns
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       #NULL!
+      </p>
+     </td>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       #DIV/0!
+      </p>
+     </td>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       #VALUE!
+      </p>
+     </td>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       #REF!
+      </p>
+     </td>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       #NAME?
+      </p>
+     </td>
+     <td>
+      <p>
+       5
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       #NUM!
+      </p>
+     </td>
+     <td>
+      <p>
+       6
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       #N/A
+      </p>
+     </td>
+     <td>
+      <p>
+       7
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       #GETTING_DATA
+      </p>
+     </td>
+     <td>
+      <p>
+       8
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Anything else
+      </p>
+     </td>
+     <td>
+      <p>
+       #N/A
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       #NULL!
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       #DIV/0!
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =ERROR.TYPE(A2)
+      </p>
+     </td>
+     <td>
+      <p>
+       Number of the #NULL! Error(1).
+      </p>
+     </td>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =IF(ERROR.TYPE(A3)&lt;3,CHOOSE(ERROR.TYPE(A3),"Ranges do not intersect","The divisor is zero"))
+      </p>
+     </td>
+     <td>
+      <p>
+       Checks cell A3 to see whether the cell contains either the #NULL! error value or the #DIV/0! error value. If it does, then the number for the error value is used in the CHOOSE worksheet function to display one of two messages; otherwise, the #N/A error value is returned.
+      </p>
+     </td>
+     <td>
+      <p>
+       The divisor is zero
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

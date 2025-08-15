@@ -1,0 +1,192 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    DEC2HEX
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Converts a decimal number to hexadecimal.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   DEC2HEX(number, [places])
+  </p>
+  <p>
+   The DEC2HEX function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Number
+     </b>
+     Required. The decimal integer you want to convert. If number is negative, places is ignored and DEC2HEX returns a 10-character (40-bit) hexadecimal number in which the most significant bit is the sign bit. The remaining 39 bits are magnitude bits. Negative numbers are represented using two's-complement notation.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Places
+     </b>
+     Optional. The number of characters to use. If places is omitted, DEC2HEX uses the minimum number of characters necessary. Places is useful for padding the return value with leading 0s (zeros).
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If Number  is &lt; -549,755,813,888 or if Number  is &gt; 549,755,813,887, DEC2HEX returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If Number is non-numeric, DEC2HEX returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If the result of DEC2HEX requires more than the number of specified Places characters, it returns the #NUM! error value.
+     <br aria-hidden="true"/>
+     For example, DEC2HEX(64,1) returns the error value because the result (40) requires two characters.
+    </p>
+   </li>
+   <li>
+    <p>
+     If Places is not an integer, the value of Places is truncated.
+    </p>
+   </li>
+   <li>
+    <p>
+     If Places is non-numeric, DEC2HEX returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If Places is negative, DEC2HEX returns the #NUM! error value.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p id="__goback">
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =DEC2HEX(100, 4)
+      </p>
+     </td>
+     <td>
+      <p>
+       Converts decimal value 100 to hexadecimal with 4 characters ("padded" with two leading zeros).
+      </p>
+     </td>
+     <td>
+      <p>
+       0064
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =DEC2HEX(-54)
+      </p>
+     </td>
+     <td>
+      <p>
+       Converts decimal value -54 to hexadecimal
+      </p>
+     </td>
+     <td>
+      <p>
+       FFFFFFFFCA
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =DEC2HEX(28)
+      </p>
+     </td>
+     <td>
+      <p>
+       Converts decimal value 28 to hexadecimal.
+      </p>
+     </td>
+     <td>
+      <p>
+       1C
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =DEC2HEX(64,1)
+      </p>
+     </td>
+     <td>
+      <p>
+       Returns the #NUM! error value because the result (40) requires 2 character places.
+      </p>
+     </td>
+     <td>
+      <p>
+       #NUM!
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

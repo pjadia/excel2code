@@ -1,0 +1,303 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p id="__goback">
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    CUMPRINC
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Returns the cumulative principal paid on a loan between start_period and end_period.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   CUMPRINC(rate, nper, pv, start_period, end_period, type)
+  </p>
+  <p>
+   The CUMPRINC function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Rate
+     </b>
+     Required. The interest rate.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Nper
+     </b>
+     Required. The total number of payment periods.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Pv
+     </b>
+     Required. The present value.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Start_period
+     </b>
+     Required. The first period in the calculation. Payment periods are numbered beginning with 1.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      End_period
+     </b>
+     Required. The last period in the calculation.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Type
+     </b>
+     Required. The timing of the payment.
+    </p>
+   </li>
+  </ul>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Type
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Timing
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       0 (zero)
+      </p>
+     </td>
+     <td>
+      <p>
+       Payment at the end of the period
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+      <p>
+       Payment at the beginning of the period
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     Make sure that you are consistent about the units you use for specifying rate and nper. If you make monthly payments on a four-year loan at an annual interest rate of 12 percent, use 12%/12 for rate and 4*12 for nper. If you make annual payments on the same loan, use 12% for rate and 4 for nper.
+    </p>
+   </li>
+   <li>
+    <p>
+     If rate ≤ 0, nper ≤ 0, or pv ≤ 0, CUMPRINC returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If start_period &lt; 1, end_period &lt; 1, or start_period &gt; end_period, CUMPRINC returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If type is any number other than 0 or 1, CUMPRINC returns the #NUM! error value.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       0.09
+      </p>
+     </td>
+     <td>
+      <p>
+       Interest rate per annum
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       30
+      </p>
+     </td>
+     <td>
+      <p>
+       Term in years
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       125000
+      </p>
+     </td>
+     <td>
+      <p>
+       Present value
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =CUMPRINC(A2/12,A3*12,A4,13,24,0)
+      </p>
+     </td>
+     <td>
+      <p>
+       The total principal paid in the second year of payments, periods 13 through 24
+      </p>
+     </td>
+     <td>
+      <p>
+       -934.1071234
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =CUMPRINC(A2/12,A3*12,A4,1,1,0)
+      </p>
+     </td>
+     <td>
+      <p>
+       The principal paid in a single payment in the first month (-68.27827)
+      </p>
+     </td>
+     <td>
+      <p>
+       -68.27827118
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpNote">
+     Notes:
+    </b>
+   </p>
+   <ul class="ocpAlertSectionListContainer">
+    <li>
+     <p>
+      You divide the interest rate by 12 to get a monthly rate, and you multiply the years the money is paid out by 12 to get the number of payments.
+     </p>
+    </li>
+    <li>
+     <p>
+      In Excel Web App, to view the result in its proper format, select the cell, and then on the Home tab, in the Number group, click the arrow next to Number Format, and click General.
+     </p>
+    </li>
+   </ul>
+  </div>
+ </section>
+</article>

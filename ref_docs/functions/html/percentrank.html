@@ -1,0 +1,322 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   The PERCENTRANK function returns the rank of a value in a dataset as a percentage of the dataset -- essentially, the relative standing of a value within the whole dataset. For example, you could use PERCENTRANK to determine the standing of an individual's test score among the field of all scores for the same test.
+  </p>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpImportant">
+     Important:
+    </b>
+    This function has been replaced along with other functions that may provide improved accuracy and whose names better reflect their purpose. This function remains available for backward compatibility but may not be available in future versions of Excel. Consider now using the newer functions.
+   </p>
+  </div>
+  <p>
+   To learn more about the new functions, see
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/percentrank-exc-function-d8afee96-b7e2-4a2f-8c01-8fcdedaa6314">
+    PERCENTRANK.EXC function
+   </a>
+   and
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/percentrank-inc-function-149592c9-00c0-49ba-86c1-c1f45b80463a">
+    PERCENTRANK.INC function
+   </a>
+   .
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <p>
+   PERCENTRANK(array,x,[significance])
+  </p>
+  <p>
+   The PERCENTRANK function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Array
+     </b>
+     Required.
+     <br aria-hidden="true"/>
+     The range of data (or pre-defined array) of numeric values within which percent rank is determined.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      X
+     </b>
+     Required. The value for which you want to know the rank within the array.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Significance
+     </b>
+     Optional. A value that identifies the number of significant digits for the returned percentage value. If omitted, PERCENTRANK uses three digits (0.xxx).
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If the array is empty, PERCENTRANK returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If significance &lt; 1, PERCENTRANK returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If X does not specifically match one of the values in the array (e.g., a list of specific student test scores) PERCENTRANK interpolates to return a percentage rank for X.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   From the following table, copy the example data (from the word
+   <b class="ocpLegacyBold">
+    Data
+   </b>
+   on through all of the formulas, etc.). Then, in a new Excel worksheet, paste all of it into cell A1 and below.
+   <br aria-hidden="true"/>
+   <br aria-hidden="true"/>
+   To show a formula's results select it, press F2, and press Enter. Adjust column widths if needed for visibility.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </th>
+     <th>
+     </th>
+     <th>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       13
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       12
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       11
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       8
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description (Result)
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =PERCENTRANK(A2:A11,2)
+      </p>
+     </td>
+     <td>
+      <p>
+       Percent rank of 2 in the range A2:A11. Result is 0.333 because three values in the set are less than 2, and six are greater than 2. Because 2 is found in the range (cell A8), the number of values less than 2 is divided by the sum of the number of values less than 2 and the number of values greater than 2. That is, 3/(3+6)=0.333.
+      </p>
+     </td>
+     <td>
+      <p>
+       0.333
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =PERCENTRANK(A2:A11,4)
+      </p>
+     </td>
+     <td>
+      <p>
+       Percent rank of 4 in the range A2:A11. Five values are less than 4, and four are greater. Following the example above, 5/(4+5)=0.555.
+      </p>
+     </td>
+     <td>
+      <p>
+       0.555
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =PERCENTRANK(A2:A11,8)
+      </p>
+     </td>
+     <td>
+      <p>
+       Percent rank of 8 in the range A2:A11. Six values are less than 8, and 3 are greater. Following the example above, 6/(6+3) =0.666.
+      </p>
+     </td>
+     <td>
+      <p>
+       0.666
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =PERCENTRANK(A2:A11,5)
+      </p>
+     </td>
+     <td>
+      <p>
+       Percent rank of 5 in the range A2:A11. Unlike the examples above, 5 is not found in the range. The PERCENTRANK of 5 is calculated by finding the one-quarter mark between the PERCENTRANK of 4 and the PERCENTRANK of 8. This is (0.555)+(0.25*(0.666-0.555)), or 0.583.
+      </p>
+     </td>
+     <td>
+      <p>
+       0.583
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

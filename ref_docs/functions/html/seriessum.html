@@ -1,0 +1,238 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    SERIESSUM
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Many functions can be approximated by a power series expansion.
+  </p>
+  <p>
+   Returns the sum of a power series based on the formula:
+  </p>
+  <p>
+   <picture>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/dbf8edd3-a26e-4b89-8f32-32595657c89b?format=avif&amp;w=320 320w,        /images/en-us/dbf8edd3-a26e-4b89-8f32-32595657c89b?format=avif&amp;w=480 480w,        /images/en-us/dbf8edd3-a26e-4b89-8f32-32595657c89b?format=avif&amp;w=640 640w,        /images/en-us/dbf8edd3-a26e-4b89-8f32-32595657c89b?format=avif&amp;w=800 800w" type="image/avif"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/dbf8edd3-a26e-4b89-8f32-32595657c89b?format=webp&amp;w=320 320w,        /images/en-us/dbf8edd3-a26e-4b89-8f32-32595657c89b?format=webp&amp;w=480 480w,        /images/en-us/dbf8edd3-a26e-4b89-8f32-32595657c89b?format=webp&amp;w=640 640w,        /images/en-us/dbf8edd3-a26e-4b89-8f32-32595657c89b?format=webp&amp;w=800 800w" type="image/webp"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/dbf8edd3-a26e-4b89-8f32-32595657c89b?format=jpeg&amp;w=320 320w,        /images/en-us/dbf8edd3-a26e-4b89-8f32-32595657c89b?format=jpeg&amp;w=480 480w,        /images/en-us/dbf8edd3-a26e-4b89-8f32-32595657c89b?format=jpeg&amp;w=640 640w,        /images/en-us/dbf8edd3-a26e-4b89-8f32-32595657c89b?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+    <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/dbf8edd3-a26e-4b89-8f32-32595657c89b" style="aspect-ratio: 306/42" width="306"/>
+   </picture>
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   SERIESSUM(x, n, m, coefficients)
+  </p>
+  <p>
+   The SERIESSUM function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      X
+     </b>
+     Required. The input value to the power series.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      N
+     </b>
+     Required. The initial power to which you want to raise x.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      M
+     </b>
+     Required. The step by which to increase n for each term in the series.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Coefficients
+     </b>
+     Required. A set of coefficients by which each successive power of x is multiplied. The number of values in coefficients determines the number of terms in the power series. For example, if there are three values in coefficients, then there will be three terms in the power series.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remark
+  </h2>
+  <p>
+   If any argument is nonnumeric, SERIESSUM returns the #VALUE! error value.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Coefficients as numbers
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Coefficients as formulae
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       0.785398163
+      </p>
+     </td>
+     <td>
+      <p>
+       =PI()/4
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       -0.5
+      </p>
+     </td>
+     <td>
+      <p>
+       =-1/FACT(2)
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       0.041666667
+      </p>
+     </td>
+     <td>
+      <p>
+       =1/FACT(4)
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       -0.001388889
+      </p>
+     </td>
+     <td>
+      <p>
+       =-1/FACT(6)
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description (Result)
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =SERIESSUM(A3,0,2,A4:A7)
+      </p>
+     </td>
+     <td>
+      <p>
+       Approximation to the cosine of Pi/4 radians, or 45 degrees (0.707103)
+      </p>
+     </td>
+     <td>
+      <p>
+       0.707103
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

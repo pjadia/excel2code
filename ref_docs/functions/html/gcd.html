@@ -1,0 +1,177 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    GCD
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Returns the greatest common divisor of two or more integers. The greatest common divisor is the largest integer that divides both number1 and number2 without a remainder.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   GCD(number1, [number2], ...)
+  </p>
+  <p>
+   The GCD function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Number1, number2, ...
+     </b>
+     Number1 is required, subsequent numbers are optional. 1 to 255 values. If any value is not an integer, it is truncated.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If any argument is nonnumeric, GCD returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If any argument is less than zero, GCD returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     One divides any value evenly.
+    </p>
+   </li>
+   <li>
+    <p>
+     A prime number has only itself and one as even divisors.
+    </p>
+   </li>
+   <li>
+    <p>
+     If a parameter to GCD is &gt;=2^53, GCD returns the #NUM! error value.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p id="__goback">
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =GCD(5, 2)
+      </p>
+     </td>
+     <td>
+      <p>
+       Greatest common divisor of 5 and 2
+      </p>
+     </td>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =GCD(24, 36)
+      </p>
+     </td>
+     <td>
+      <p>
+       Greatest common divisor of 24 and 36
+      </p>
+     </td>
+     <td>
+      <p>
+       12
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =GCD(7, 1)
+      </p>
+     </td>
+     <td>
+      <p>
+       Greatest common divisor of 7 and 1
+      </p>
+     </td>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =GCD(5, 0)
+      </p>
+     </td>
+     <td>
+      <p>
+       Greatest common divisor of 5 and 0
+      </p>
+     </td>
+     <td>
+      <p>
+       5
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

@@ -1,0 +1,134 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   The
+   <b class="ocpLegacyBold">
+    CORREL
+   </b>
+   function returns the correlation coefficient of two cell ranges. Use the correlation coefficient to determine the relationship between two properties. For example, you can examine the relationship between a location's average temperature and the use of air conditioners.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Syntax
+  </h2>
+  <p>
+   <b class="ocpLegacyBold">
+    CORREL(array1, array2)
+   </b>
+  </p>
+  <p>
+   The CORREL function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      array1
+     </b>
+     Required. A range of cell values.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      array2
+     </b>
+     Required. A second range of cell values.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If an array or reference argument contains text, logical values, or empty cells, those values are ignored; however, cells with zero values are included.
+    </p>
+   </li>
+   <li>
+    <p>
+     If array1 and array2 have a different number of data points, CORREL returns a #N/A error.
+    </p>
+   </li>
+   <li>
+    <p>
+     If either array1 or array2 is empty, or if
+     <b class="ocpLegacyBold">
+      s
+     </b>
+     (the standard deviation) of their values equals zero, CORREL returns a #DIV/0! error.
+    </p>
+   </li>
+   <li>
+    <p>
+     As much as the correlation coefficient is closer to +1 or -1, it indicates positive (+1) or negative (-1) correlation between the arrays. Positive correlation means that if the values in one array are increasing, the values in the other array increase as well. A correlation coefficient that is closer to 0, indicates no or weak correlation.
+    </p>
+   </li>
+   <li>
+    <p>
+     The equation for the correlation coefficient is:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/20801406-bfa6-4991-b08f-ebdc0c76af8c?format=avif&amp;w=320 320w,        /images/en-us/20801406-bfa6-4991-b08f-ebdc0c76af8c?format=avif&amp;w=480 480w,        /images/en-us/20801406-bfa6-4991-b08f-ebdc0c76af8c?format=avif&amp;w=640 640w,        /images/en-us/20801406-bfa6-4991-b08f-ebdc0c76af8c?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/20801406-bfa6-4991-b08f-ebdc0c76af8c?format=webp&amp;w=320 320w,        /images/en-us/20801406-bfa6-4991-b08f-ebdc0c76af8c?format=webp&amp;w=480 480w,        /images/en-us/20801406-bfa6-4991-b08f-ebdc0c76af8c?format=webp&amp;w=640 640w,        /images/en-us/20801406-bfa6-4991-b08f-ebdc0c76af8c?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/20801406-bfa6-4991-b08f-ebdc0c76af8c?format=jpeg&amp;w=320 320w,        /images/en-us/20801406-bfa6-4991-b08f-ebdc0c76af8c?format=jpeg&amp;w=480 480w,        /images/en-us/20801406-bfa6-4991-b08f-ebdc0c76af8c?format=jpeg&amp;w=640 640w,        /images/en-us/20801406-bfa6-4991-b08f-ebdc0c76af8c?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/20801406-bfa6-4991-b08f-ebdc0c76af8c" style="aspect-ratio: 260/57" width="260"/>
+     </picture>
+    </p>
+    <p>
+     where
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/e50bfa35-f7a7-44ee-91eb-d25d79f90f42?format=avif&amp;w=320 320w,        /images/en-us/e50bfa35-f7a7-44ee-91eb-d25d79f90f42?format=avif&amp;w=480 480w,        /images/en-us/e50bfa35-f7a7-44ee-91eb-d25d79f90f42?format=avif&amp;w=640 640w,        /images/en-us/e50bfa35-f7a7-44ee-91eb-d25d79f90f42?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/e50bfa35-f7a7-44ee-91eb-d25d79f90f42?format=webp&amp;w=320 320w,        /images/en-us/e50bfa35-f7a7-44ee-91eb-d25d79f90f42?format=webp&amp;w=480 480w,        /images/en-us/e50bfa35-f7a7-44ee-91eb-d25d79f90f42?format=webp&amp;w=640 640w,        /images/en-us/e50bfa35-f7a7-44ee-91eb-d25d79f90f42?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/e50bfa35-f7a7-44ee-91eb-d25d79f90f42?format=jpeg&amp;w=320 320w,        /images/en-us/e50bfa35-f7a7-44ee-91eb-d25d79f90f42?format=jpeg&amp;w=480 480w,        /images/en-us/e50bfa35-f7a7-44ee-91eb-d25d79f90f42?format=jpeg&amp;w=640 640w,        /images/en-us/e50bfa35-f7a7-44ee-91eb-d25d79f90f42?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="x and y" class="fluentImage" loading="lazy" src="/images/en-us/e50bfa35-f7a7-44ee-91eb-d25d79f90f42" style="aspect-ratio: 52/19" width="52"/>
+     </picture>
+    </p>
+    <p>
+     are the sample means AVERAGE(array1) and AVERAGE(array2).
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Example
+  </h2>
+  <p>
+   The following example returns the correlation coefficient of the two data sets in columns A and B.
+  </p>
+  <p>
+   <picture>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/b291ca29-cc59-445e-a862-b54544cb19b0?format=avif&amp;w=320 320w,        /images/en-us/b291ca29-cc59-445e-a862-b54544cb19b0?format=avif&amp;w=480 480w,        /images/en-us/b291ca29-cc59-445e-a862-b54544cb19b0?format=avif&amp;w=640 640w,        /images/en-us/b291ca29-cc59-445e-a862-b54544cb19b0?format=avif&amp;w=800 800w" type="image/avif"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/b291ca29-cc59-445e-a862-b54544cb19b0?format=webp&amp;w=320 320w,        /images/en-us/b291ca29-cc59-445e-a862-b54544cb19b0?format=webp&amp;w=480 480w,        /images/en-us/b291ca29-cc59-445e-a862-b54544cb19b0?format=webp&amp;w=640 640w,        /images/en-us/b291ca29-cc59-445e-a862-b54544cb19b0?format=webp&amp;w=800 800w" type="image/webp"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/b291ca29-cc59-445e-a862-b54544cb19b0?format=jpeg&amp;w=320 320w,        /images/en-us/b291ca29-cc59-445e-a862-b54544cb19b0?format=jpeg&amp;w=480 480w,        /images/en-us/b291ca29-cc59-445e-a862-b54544cb19b0?format=jpeg&amp;w=640 640w,        /images/en-us/b291ca29-cc59-445e-a862-b54544cb19b0?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+    <img alt="Use the CORREL function to return the correlation coefficient of two data sets in column A &amp; B with =CORREL(A1:A6,B2:B6). The result is 0.997054486." class="fluentImage" loading="lazy" src="/images/en-us/b291ca29-cc59-445e-a862-b54544cb19b0" style="aspect-ratio: 258/207" width="258"/>
+   </picture>
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Need more help?
+  </h2>
+  <p>
+   You can always ask an expert in the
+   <a class="ocpExternalLink" data-bi-type="anchor" href="https://techcommunity.microsoft.com/t5/Excel/ct-p/Excel_Cat" target="_blank">
+    Excel Tech Community
+   </a>
+   or get support in
+   <a class="ocpExternalLink" data-bi-type="anchor" href="https://answers.microsoft.com/lang/msoffice/forum/msoffice_excel" target="_blank">
+    Communities
+   </a>
+   .
+  </p>
+  <p>
+  </p>
+ </section>
+</article>

@@ -1,0 +1,110 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   Use the PERCENTOF function to return the percentage that a subset makes up of a given data set. It commonly used in GROUPBY and PIVOTBY functions.
+  </p>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpNote">
+     Note:
+    </b>
+    PERCENTOF is logically equivalent to
+    <span class="ocpCodeInline">
+     =SUM(data_subset)/SUM(data_all)
+    </span>
+   </p>
+  </div>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Syntax
+  </h2>
+  <p>
+   The PERCENTOF function sums the values in the subset and divides it by all the values.
+  </p>
+  <p>
+   <b class="ocpLegacyBold">
+    =PERCENTOF(data_subset,data_all)
+   </b>
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Argument
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        data_subset
+       </b>
+      </p>
+      <p>
+       Required
+      </p>
+     </td>
+     <td>
+      <p>
+       The values that in the data subset
+      </p>
+      <p>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        data_all
+       </b>
+      </p>
+      <p>
+       Required
+      </p>
+     </td>
+     <td>
+      <p>
+       The values that make up the entire set.
+      </p>
+      <p>
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   <b class="ocpLegacyBold">
+    Example 1
+   </b>
+   uses PERCENTOF to calculate the percentage that Bib-Shorts and Bike Racks comprise of the entire set.
+  </p>
+  <p>
+   <picture>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/c6141729-ef5f-4741-89d5-131726d2fa3a?format=avif&amp;w=320 320w,        /images/en-us/c6141729-ef5f-4741-89d5-131726d2fa3a?format=avif&amp;w=480 480w,        /images/en-us/c6141729-ef5f-4741-89d5-131726d2fa3a?format=avif&amp;w=640 640w,        /images/en-us/c6141729-ef5f-4741-89d5-131726d2fa3a?format=avif&amp;w=800 800w" type="image/avif"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/c6141729-ef5f-4741-89d5-131726d2fa3a?format=webp&amp;w=320 320w,        /images/en-us/c6141729-ef5f-4741-89d5-131726d2fa3a?format=webp&amp;w=480 480w,        /images/en-us/c6141729-ef5f-4741-89d5-131726d2fa3a?format=webp&amp;w=640 640w,        /images/en-us/c6141729-ef5f-4741-89d5-131726d2fa3a?format=webp&amp;w=800 800w" type="image/webp"/>
+    <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/c6141729-ef5f-4741-89d5-131726d2fa3a?format=jpeg&amp;w=320 320w,        /images/en-us/c6141729-ef5f-4741-89d5-131726d2fa3a?format=jpeg&amp;w=480 480w,        /images/en-us/c6141729-ef5f-4741-89d5-131726d2fa3a?format=jpeg&amp;w=640 640w,        /images/en-us/c6141729-ef5f-4741-89d5-131726d2fa3a?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+    <img alt="=PERCENTOF(C3:C4,C3:C14)" class="fluentImage" loading="lazy" src="/images/en-us/c6141729-ef5f-4741-89d5-131726d2fa3a" style="aspect-ratio: 601/360" width="601"/>
+   </picture>
+  </p>
+ </section>
+</article>

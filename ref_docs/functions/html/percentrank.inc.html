@@ -1,0 +1,297 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   Returns the rank of a value in a data set as a percentage (0..1, inclusive) of the data set.
+  </p>
+  <p>
+   This function can be used to evaluate the relative standing of a value within a data set. For example, you can use PERCENTRANK.INC to evaluate the standing of an aptitude test score among all scores for the test.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <p>
+   PERCENTRANK.INC(array,x,[significance])
+  </p>
+  <p>
+   The PERCENTRANK.INC function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Array
+     </b>
+     Required. The array or range of data with numeric values that defines relative standing.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      X
+     </b>
+     Required. The value for which you want to know the rank.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Significance
+     </b>
+     Optional. A value that identifies the number of significant digits for the returned percentage value. If omitted, PERCENTRANK.INC uses three digits (0.xxx).
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If array is empty, PERCENTRANK.INC returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If significance &lt; 1, PERCENTRANK.INC returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If x does not match one of the values in array, PERCENTRANK.INC interpolates to return the correct percentage rank.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </th>
+     <th>
+     </th>
+     <th>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       13
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       12
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       11
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       8
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =PERCENTRANK.INC(A2:A11,2)
+      </p>
+     </td>
+     <td>
+      <p>
+       Percent rank of 2 in the range A2:A11 (0.333, because 3 values in the set are smaller than 2, and 6 are larger than 2; 3/(3+6)=0.333).
+      </p>
+     </td>
+     <td>
+      <p>
+       0.333
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =PERCENTRANK.INC(A2:A11,4)
+      </p>
+     </td>
+     <td>
+      <p>
+       Percent rank of 4 in the range A2:A11.
+      </p>
+     </td>
+     <td>
+      <p>
+       0.555
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =PERCENTRANK.INC(A2:A11,8)
+      </p>
+     </td>
+     <td>
+      <p>
+       Percent rank of 8 in the range A2:A11.
+      </p>
+     </td>
+     <td>
+      <p>
+       0.666
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =PERCENTRANK.INC(A2:A11,5)
+      </p>
+     </td>
+     <td>
+      <p>
+       Percent rank of 5 in the range A2:A11 (0.583, one-quarter of the way between the PERCENTRANK.INC of 4 and the PERCENTRANK.INC of 8).
+      </p>
+     </td>
+     <td>
+      <p>
+       0.583
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

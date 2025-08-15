@@ -1,0 +1,228 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    REPLACE
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Description
+  </h2>
+  <p>
+   REPLACE replaces part of a text string, based on the number of characters you specify, with a different text string.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Syntax
+  </h2>
+  <p>
+   REPLACE(old_text, start_num, num_chars, new_text)
+  </p>
+  <p>
+   The REPLACE function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Old_text
+     </b>
+     Required. Text in which you want to replace some characters.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Start_num
+     </b>
+     Required. The position of the character in old_text that you want to replace with new_text.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Num_chars
+     </b>
+     Required. The number of characters in old_text that you want REPLACE to replace with new_text.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      New_text
+     </b>
+     Required. The text that will replace characters in old_text.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </th>
+     <th>
+     </th>
+     <th>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       abcdefghijk
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       2009
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       123456
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description (Result)
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =REPLACE(A2,6,5,"*")
+      </p>
+     </td>
+     <td>
+      <p>
+       Replaces five characters in abcdefghijk with a single * character, starting with the sixth character (f).
+      </p>
+     </td>
+     <td>
+      <p>
+       abcde*k
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =REPLACE(A3,3,2,"10")
+      </p>
+     </td>
+     <td>
+      <p>
+       Replaces the last two digits (09) of 2009 with 10.
+      </p>
+     </td>
+     <td>
+      <p>
+       2010
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =REPLACE(A4,1,3,"@")
+      </p>
+     </td>
+     <td>
+      <p>
+       Replaces the first three characters of 123456 with a single @ character.
+      </p>
+     </td>
+     <td>
+      <p>
+       @456
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+  </p>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpImportant">
+     Important:
+    </b>
+   </p>
+   <ul class="ocpAlertSectionListContainer">
+    <li>
+     <p>
+      The REPLACEB function is deprecated.
+     </p>
+    </li>
+    <li>
+     <p>
+      In workbooks set to
+      <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/compatibility-versions-49f5d3bf-d9a4-47a3-9db8-e776f664cbf9">
+       Compatibility Version 2
+      </a>
+      , REPLACE has improved behavior with Surrogate Pairs, counting them as one character instead of two. Variation Selectors (commonly used with emojis) will still be counted as separate characters. Read more here:
+      <a class="ocpExternalLink" data-bi-type="anchor" href="https://authoring.support.microsoft.com/repo/gp.smc.office/content/preview/.c/neutral/content/Excel/Excel_Desktop/Compatibility%20and%20File%20Format/compatibility-versions.ddue.xml" target="_blank">
+       The Unicode standard
+      </a>
+     </p>
+    </li>
+   </ul>
+  </div>
+  <p>
+  </p>
+ </section>
+</article>

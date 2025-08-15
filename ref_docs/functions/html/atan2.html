@@ -1,0 +1,180 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    ATAN2
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Returns the arctangent, or inverse tangent, of the specified x- and y-coordinates. The arctangent is the angle from the x-axis to a line containing the origin (0, 0) and a point with coordinates (x_num, y_num). The angle is given in radians between -pi and pi, excluding -pi.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   ATAN2(x_num, y_num)
+  </p>
+  <p>
+   The ATAN2 function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      X_num
+     </b>
+     Required. The x-coordinate of the point.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Y_num
+     </b>
+     Required. The y-coordinate of the point.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     A positive result represents a counterclockwise angle from the x-axis; a negative result represents a clockwise angle.
+    </p>
+   </li>
+   <li>
+    <p>
+     ATAN2(a,b) equals ATAN(b/a), except that a can equal 0 in ATAN2.
+    </p>
+   </li>
+   <li>
+    <p>
+     If both x_num and y_num are 0, ATAN2 returns the #DIV/0! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     To express the arctangent in degrees, multiply the result by 180/PI( ) or use the DEGREES function.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p id="__goback">
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =ATAN2(1, 1)
+      </p>
+     </td>
+     <td>
+      <p>
+       Arctangent of the point 1,1 in radians, pi/4
+      </p>
+     </td>
+     <td>
+      <p>
+       0.785398163
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =ATAN2(-1, -1)
+      </p>
+     </td>
+     <td>
+      <p>
+       Arctangent of the point -1,-1 in radians, -3*pi/4
+      </p>
+     </td>
+     <td>
+      <p>
+       -2.35619449
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =ATAN2(-1, -1)*180/PI()
+      </p>
+     </td>
+     <td>
+      <p>
+       Arctangent of the point 1,1 in degrees
+      </p>
+     </td>
+     <td>
+      <p>
+       -135
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =DEGREES(ATAN2(-1, -1))
+      </p>
+     </td>
+     <td>
+      <p>
+       Arctangent of the point 1,1 in degrees
+      </p>
+     </td>
+     <td>
+      <p>
+       -135
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

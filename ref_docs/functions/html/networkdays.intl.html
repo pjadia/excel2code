@@ -1,0 +1,405 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   Returns the number of whole workdays between two dates using parameters to indicate which and how many days are weekend days. Weekend days and any days that are specified as holidays are not considered as workdays.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <p>
+   NETWORKDAYS.INTL(start_date, end_date, [weekend], [holidays])
+  </p>
+  <p>
+   The NETWORKDAYS.INTL function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Start_date and end_date
+     </b>
+     Required. The dates for which the difference is to be computed. The start_date can be earlier than, the same as, or later than the end_date.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Weekend
+     </b>
+     Optional. Indicates the days of the week that are weekend days and are not included in the number of whole working days between start_date and end_date. Weekend is a weekend number or string that specifies when weekends occur.
+    </p>
+    <p>
+     Weekend number values indicate the following weekend days:
+    </p>
+   </li>
+  </ul>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Weekend number
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Weekend days
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       1 or omitted
+      </p>
+     </td>
+     <td>
+      <p>
+       Saturday, Sunday
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+     <td>
+      <p>
+       Sunday, Monday
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+     <td>
+      <p>
+       Monday, Tuesday
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+     <td>
+      <p>
+       Tuesday, Wednesday
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       5
+      </p>
+     </td>
+     <td>
+      <p>
+       Wednesday, Thursday
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       6
+      </p>
+     </td>
+     <td>
+      <p>
+       Thursday, Friday
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       7
+      </p>
+     </td>
+     <td>
+      <p>
+       Friday, Saturday
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       11
+      </p>
+     </td>
+     <td>
+      <p>
+       Sunday only
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       12
+      </p>
+     </td>
+     <td>
+      <p>
+       Monday only
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       13
+      </p>
+     </td>
+     <td>
+      <p>
+       Tuesday only
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       14
+      </p>
+     </td>
+     <td>
+      <p>
+       Wednesday only
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       15
+      </p>
+     </td>
+     <td>
+      <p>
+       Thursday only
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       16
+      </p>
+     </td>
+     <td>
+      <p>
+       Friday only
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       17
+      </p>
+     </td>
+     <td>
+      <p>
+       Saturday only
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+   Weekend string values are seven characters long and each character in the string represents a day of the week, starting with Monday.
+   <b class="ocpLiteral">
+    1
+   </b>
+   represents a non-workday and
+   <b class="ocpLiteral">
+    0
+   </b>
+   represents a workday. Only the characters
+   <b class="ocpLiteral">
+    1
+   </b>
+   and
+   <b class="ocpLiteral">
+    0
+   </b>
+   are permitted in the string. Using
+   <b class="ocpLiteral">
+    1111111
+   </b>
+   will always return
+   <b class="ocpLiteral">
+    0
+   </b>
+   .
+  </p>
+  <p>
+   For example,
+   <b class="ocpLiteral">
+    0000011
+   </b>
+   would result in a weekend that is Saturday and Sunday.
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Holidays
+     </b>
+     Optional. An optional set of one or more dates that are to be excluded from the working day calendar. Holidays shall be a range of cells that contain the dates, or an array constant of the serial values that represent those dates. The ordering of dates or serial values in holidays can be arbitrary.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If start_date is later than end_date, the return value will be negative, and the magnitude will be the number of whole workdays.
+    </p>
+   </li>
+   <li>
+    <p>
+     If start_date is out of range for the current date base value, NETWORKDAYS.INTL returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If end_date is out of range for the current date base value, NETWORKDAYS.INTL returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If a weekend string is of invalid length or contains invalid characters, NETWORKDAYS.INTL returns the #VALUE! error value.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </th>
+     <th>
+      <p id="__goback">
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =NETWORKDAYS.INTL(DATE(2006,1,1),DATE(2006,1,31))
+      </p>
+     </td>
+     <td>
+      <p>
+       Results in 22 future workdays. Subtracts 9 nonworking weekend days (5 Saturdays and 4 Sundays) from the 31 total days between the two dates. By default, Saturday and Sunday are considered non-working days.
+      </p>
+     </td>
+     <td>
+      <p>
+       22
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =NETWORKDAYS.INTL(DATE(2006,2,28),DATE(2006,1,31))
+      </p>
+     </td>
+     <td>
+      <p>
+       Results in -21, which is 21 workdays in the past.
+      </p>
+     </td>
+     <td>
+      <p>
+       -21
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =NETWORKDAYS.INTL(DATE(2006,1,1),DATE(2006,2,1),7,{"2006/1/2","2006/1/16"})
+      </p>
+     </td>
+     <td>
+      <p>
+       Results in 22 future workdays by sutracting 10 nonworking days (4 Fridays, 4 Saturdays, 2 Holidays) from the 32 days between Jan 1 2006 and Feb 1 2006. Uses the 7 argument for weekend, which is Friday and Saturday. There are also two holidays in this time period.
+      </p>
+     </td>
+     <td>
+      <p>
+       22
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =NETWORKDAYS.INTL(DATE(2006,1,1),DATE(2006,2,1),"0010001",{"2006/1/2","2006/1/16"})
+      </p>
+     </td>
+     <td>
+      <p>
+       Results in 22 future workdays. Same time period as example directly above, but with Sunday and Wednesday as weekend days.
+      </p>
+     </td>
+     <td>
+      <p>
+       20
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

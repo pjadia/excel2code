@@ -1,0 +1,308 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   Returns the test for independence. CHITEST returns the value from the chi-squared (χ2) distribution for the statistic and the appropriate degrees of freedom. You can use χ2 tests to determine whether hypothesized results are verified by an experiment.
+  </p>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpImportant">
+     Important:
+    </b>
+    This function has been replaced with one or more new functions that may provide improved accuracy and whose names better reflect their usage. Although this function is still available for backward compatibility, you should consider using the new functions from now on, because this function may not be available in future versions of Excel.
+   </p>
+  </div>
+  <p>
+   For more information about the new function, see
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/chisq-test-function-2e8a7861-b14a-4985-aa93-fb88de3f260f">
+    CHISQ.TEST function
+   </a>
+   .
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   CHITEST(actual_range,expected_range)
+  </p>
+  <p>
+   The CHITEST function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Actual_range
+     </b>
+     Required. The range of data that contains observations to test against expected values.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Expected_range
+     </b>
+     Required. The range of data that contains the ratio of the product of row totals and column totals to the grand total.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If actual_range and expected_range have a different number of data points, CHITEST returns the #N/A error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     The χ2 test first calculates a χ2 statistic using the formula:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/27d031b5-9f62-4e5d-9507-19ac5f533deb?format=avif&amp;w=320 320w,        /images/en-us/27d031b5-9f62-4e5d-9507-19ac5f533deb?format=avif&amp;w=480 480w,        /images/en-us/27d031b5-9f62-4e5d-9507-19ac5f533deb?format=avif&amp;w=640 640w,        /images/en-us/27d031b5-9f62-4e5d-9507-19ac5f533deb?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/27d031b5-9f62-4e5d-9507-19ac5f533deb?format=webp&amp;w=320 320w,        /images/en-us/27d031b5-9f62-4e5d-9507-19ac5f533deb?format=webp&amp;w=480 480w,        /images/en-us/27d031b5-9f62-4e5d-9507-19ac5f533deb?format=webp&amp;w=640 640w,        /images/en-us/27d031b5-9f62-4e5d-9507-19ac5f533deb?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/27d031b5-9f62-4e5d-9507-19ac5f533deb?format=jpeg&amp;w=320 320w,        /images/en-us/27d031b5-9f62-4e5d-9507-19ac5f533deb?format=jpeg&amp;w=480 480w,        /images/en-us/27d031b5-9f62-4e5d-9507-19ac5f533deb?format=jpeg&amp;w=640 640w,        /images/en-us/27d031b5-9f62-4e5d-9507-19ac5f533deb?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/27d031b5-9f62-4e5d-9507-19ac5f533deb" style="aspect-ratio: 153/52" width="153"/>
+     </picture>
+    </p>
+    <p>
+     where:
+    </p>
+    <p>
+     Aij = actual frequency in the i-th row, j-th column
+    </p>
+    <p>
+     Eij = expected frequency in the i-th row, j-th column
+    </p>
+    <p>
+     r = number or rows
+    </p>
+    <p>
+     c = number of columns
+    </p>
+   </li>
+   <li>
+    <p>
+     A low value of χ2 is an indicator of independence. As can be seen from the formula, χ2 is always positive or 0, and is 0 only if Aij = Eij for every i,j.
+    </p>
+   </li>
+   <li>
+    <p>
+     CHITEST returns the probability that a value of the χ2 statistic at least as high as the value calculated by the above formula could have happened by chance under the assumption of independence. In computing this probability, CHITEST uses the χ2 distribution with an appropriate number of degrees of freedom, df. If r &gt; 1 and c &gt; 1, then df = (r - 1)(c - 1). If r = 1 and c &gt; 1, then df = c - 1 or if r &gt; 1 and c = 1, then df = r - 1. r = c= 1 is not allowed and #N/A is returned.
+    </p>
+   </li>
+   <li>
+    <p>
+     Use of CHITEST is most appropriate when Eij’s are not too small. Some statisticians suggest that each Eij should be greater than or equal to 5.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Men (Actual)
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Women (Actual)
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       58
+      </p>
+     </td>
+     <td>
+      <p>
+       35
+      </p>
+     </td>
+     <td>
+      <p>
+       Agree
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       11
+      </p>
+     </td>
+     <td>
+      <p>
+       25
+      </p>
+     </td>
+     <td>
+      <p>
+       Neutral
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       10
+      </p>
+     </td>
+     <td>
+      <p>
+       23
+      </p>
+     </td>
+     <td>
+      <p>
+       Disagree
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Men (Expected)
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Women (Expected)
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       45.35
+      </p>
+     </td>
+     <td>
+      <p>
+       47.65
+      </p>
+     </td>
+     <td>
+      <p>
+       Agree
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       17.56
+      </p>
+     </td>
+     <td>
+      <p>
+       18.44
+      </p>
+     </td>
+     <td>
+      <p>
+       Neutral
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       16.09
+      </p>
+     </td>
+     <td>
+      <p>
+       16.91
+      </p>
+     </td>
+     <td>
+      <p>
+       Disagree
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =CHITEST(A2:B4,A6:B8)
+      </p>
+     </td>
+     <td>
+      <p>
+       The χ2 statistic for the data above is 16.16957 with 2 degrees of freedom.
+      </p>
+     </td>
+     <td>
+      <p>
+       0.0003082
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

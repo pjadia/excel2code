@@ -1,0 +1,251 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p id="__goback">
+   This article describes the formula syntax and usage of the BITAND function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Returns a bitwise 'AND' of two numbers.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   BITAND( number1, number2)
+  </p>
+  <p>
+   The BITAND function syntax has the following arguments.
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Number1
+     </b>
+     Required. Must be in decimal form and greater than or equal to 0.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Number2
+     </b>
+     Required. Must be in decimal form and greater than or equal to 0.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     BITAND returns a decimal number.
+    </p>
+   </li>
+   <li>
+    <p>
+     The result is a bitwise 'AND' of its parameters.
+    </p>
+   </li>
+   <li>
+    <p>
+     The value of each bit position is counted only if both parameter's bits at that position are 1.
+    </p>
+   </li>
+   <li>
+    <p>
+     The values returned from the bit positions progress from right to left as powers of 2. The rightmost bit returns 1 (2^0), the bit to its left returns 2 (2^1), and so on.
+    </p>
+   </li>
+   <li>
+    <p>
+     If either argument is less than 0, BITAND returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If either argument is a non-integer or is greater than (2^48)-1, BITAND returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If either argument is a non-numeric value, BITAND returns the #VALUE! error value.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        How it works
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =BITAND(1,5)
+      </p>
+     </td>
+     <td>
+      <p>
+       Compares the binary representations of 1 and 5.
+      </p>
+     </td>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+      <p>
+       The binary representation of 1 is 1, and the binary representation of 5 is 101. Their bits match only at the rightmost position. This is returned as 2^0, or 1.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =BITAND(13,25)
+      </p>
+     </td>
+     <td>
+      <p>
+       Compares the binary representations of 13 and 25.
+      </p>
+     </td>
+     <td>
+      <p>
+       9
+      </p>
+     </td>
+     <td>
+      <p>
+       The binary representation of 13 is 1101, and the binary representation of 25 is 11001. Their bits match at the rightmost position and at the position fourth from the right. This is returned as (2^0)+ (2^3), or 9.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Decimal number
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Binary representation
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      <p>
+       13
+      </p>
+     </td>
+     <td>
+      <p>
+       1101
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+      <p>
+       25
+      </p>
+     </td>
+     <td>
+      <p>
+       11001
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+   <a class="ocpTopOfPage" data-bi-type="anchor" href="#">
+    Top of Page
+   </a>
+  </p>
+ </section>
+</article>

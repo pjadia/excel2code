@@ -1,0 +1,397 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   The
+   <b class="ocpLegacyBold">
+    REGEXREPLACE
+   </b>
+   function allows you to replace text from a string with another string, based on a supplied regular expression ("regex").
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Syntax
+  </h2>
+  <p>
+   The
+   <b class="ocpLegacyBold">
+    REGEXREPLACE
+   </b>
+   function replaces strings within the provided
+   <i class="ocpItalic">
+    text
+   </i>
+   that matches the
+   <i class="ocpItalic">
+    pattern
+   </i>
+   with
+   <i class="ocpItalic">
+    replacement
+   </i>
+   .
+  </p>
+  <p>
+   The syntax of the REGEXEXTRACT function is:
+  </p>
+  <p>
+   <b class="ocpLegacyBold">
+    REGEXREPLACE(text, pattern, replacement, [occurrence], [case_sensitivity])
+   </b>
+  </p>
+  <p>
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       Argument
+      </p>
+     </th>
+     <th>
+      <p>
+       Description
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        text
+       </b>
+      </p>
+      <p>
+       (required)
+      </p>
+     </td>
+     <td>
+      <p>
+       The text or the reference to a cell containing the text you want to replace strings within.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        pattern
+       </b>
+      </p>
+      <p>
+       (required)
+      </p>
+     </td>
+     <td>
+      <p>
+       The regular expression ("regex") that describes the pattern of text you want to replace.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        replacement
+       </b>
+      </p>
+      <p>
+       (required)
+      </p>
+     </td>
+     <td>
+      <p>
+       The text you want to replace instances of
+       <i class="ocpItalic">
+        pattern
+       </i>
+       .
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        occurrence
+       </b>
+      </p>
+      <p>
+      </p>
+     </td>
+     <td>
+      <p>
+       Specifies which instance of the pattern you want to replace. By default, occurrence is 0, which replaces all instances. A negative number replaces that instance, searching from the end.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+      </p>
+      <p>
+       <b class="ocpLegacyBold">
+        case_sensitivity
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       Determines whether the match is case-sensitive. By default, the match is case-sensitive. Enter one of the following:
+      </p>
+      <p>
+       <b class="ocpLegacyBold">
+        0:
+       </b>
+       Case sensitive
+      </p>
+      <p>
+       <b class="ocpLegacyBold">
+        1:
+       </b>
+       Case insensitive
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+  </p>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpNote">
+     Notes:
+    </b>
+    When writing regex patterns, symbols called ‘tokens’ can be used that match with a variety of characters. These are some simple tokens for reference:
+   </p>
+   <ul class="ocpAlertSectionListContainer">
+    <li>
+     <p>
+      “[0-9]”: any numerical digit
+     </p>
+    </li>
+    <li>
+     <p>
+      “[a-z]”: a character in the range of a to z
+     </p>
+    </li>
+    <li>
+     <p>
+      “.”: any character
+     </p>
+    </li>
+    <li>
+     <p>
+      “a”: the “a” character
+     </p>
+    </li>
+    <li>
+     <p>
+      “a*”: zero or more “a”
+     </p>
+    </li>
+    <li>
+     <p>
+      “a+”: one or more “a”
+     </p>
+    </li>
+    <li>
+     <p>
+      All regular expressions for this function, as well as
+      <a class="ocpExternalLink" data-bi-type="anchor" href="https://prod.support.services.microsoft.com/en-us/topic/7d38200b-5e5c-4196-b4e6-9bff73afbd31" target="_blank">
+       REGEXTEST
+      </a>
+      and
+      <a class="ocpExternalLink" data-bi-type="anchor" href="https://prod.support.services.microsoft.com/en-us/topic/4b96c140-9205-4b6e-9fbe-6aa9e783ff57" target="_blank">
+       REGEXEXTRACT
+      </a>
+      use the PCRE2 'flavor' of regex.
+     </p>
+    </li>
+    <li>
+     <p>
+      REGEXEXTRACT always return text values. You can convert these results back to a number with the VALUE function.
+     </p>
+    </li>
+   </ul>
+  </div>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Examples
+  </h2>
+  <p>
+   Copy the example data and paste it in cell A1 of a new Excel worksheet. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <div class="ocpSection">
+   <h3 class="ocpExpandoHead">
+    <button aria-controls="ID0EDBD-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EDBD-button" ms.interactiontype="11" type="button">
+     <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+      <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+      </i>
+     </div>
+     <div class="ocpExpandoHeadTitleContainer" role="none">
+      Example 1
+     </div>
+    </button>
+   </h3>
+   <div aria-labelledby="ID0EDBD-button" class="ocpebw" id="ID0EDBD-panel" role="region">
+    <div class="ocpExpandoBody">
+     <p>
+      Use REGEXREPLACE to anonymize phone numbers by replacing their first 3 digits with ***, using pattern
+     </p>
+     <p>
+      "[0-9]+-"
+     </p>
+     <table aria-label="" class="banded">
+      <tbody>
+       <tr>
+        <td>
+         <p>
+          <b class="ocpLegacyBold">
+           Data
+          </b>
+         </p>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          Sonia Rees(378) 555-4195
+          <br aria-hidden="true"/>
+          Angel Brown(878) 555-8622
+          <br aria-hidden="true"/>
+          Blake Martin(437) 555-8987
+          <br aria-hidden="true"/>
+          William Kirby(619) 555-4212
+          <br aria-hidden="true"/>
+          Avery Smith(579) 555-5658
+          <br aria-hidden="true"/>
+          Parker Jones(346) 555-0925
+          <br aria-hidden="true"/>
+          Liam Small(405) 555-0887
+          <br aria-hidden="true"/>
+          Hollie Rees(666) 555-1872
+         </p>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          <b class="ocpLegacyBold">
+           Formulas
+          </b>
+         </p>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          =REGEXREPLACE(A2,"[0-9]+-","***-")
+         </p>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p>
+      The following illustration shows the result. You will need to wrap text on cell A4 to show the line breaks in the result.
+     </p>
+     <p>
+      <picture>
+       <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/bc730dc8-724c-4670-ac0b-936b74d9f7bb?format=avif&amp;w=320 320w,        /images/en-us/bc730dc8-724c-4670-ac0b-936b74d9f7bb?format=avif&amp;w=480 480w,        /images/en-us/bc730dc8-724c-4670-ac0b-936b74d9f7bb?format=avif&amp;w=640 640w,        /images/en-us/bc730dc8-724c-4670-ac0b-936b74d9f7bb?format=avif&amp;w=800 800w" type="image/avif"/>
+       <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/bc730dc8-724c-4670-ac0b-936b74d9f7bb?format=webp&amp;w=320 320w,        /images/en-us/bc730dc8-724c-4670-ac0b-936b74d9f7bb?format=webp&amp;w=480 480w,        /images/en-us/bc730dc8-724c-4670-ac0b-936b74d9f7bb?format=webp&amp;w=640 640w,        /images/en-us/bc730dc8-724c-4670-ac0b-936b74d9f7bb?format=webp&amp;w=800 800w" type="image/webp"/>
+       <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/bc730dc8-724c-4670-ac0b-936b74d9f7bb?format=jpeg&amp;w=320 320w,        /images/en-us/bc730dc8-724c-4670-ac0b-936b74d9f7bb?format=jpeg&amp;w=480 480w,        /images/en-us/bc730dc8-724c-4670-ac0b-936b74d9f7bb?format=jpeg&amp;w=640 640w,        /images/en-us/bc730dc8-724c-4670-ac0b-936b74d9f7bb?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+       <img alt='Using REGEXREPLACE to replace the first three digits of each phone number in mixed text with *, using pattern "[0-9]+-"' class="fluentImage" loading="lazy" src="/images/en-us/bc730dc8-724c-4670-ac0b-936b74d9f7bb" style="aspect-ratio: 223/389" width="223"/>
+      </picture>
+     </p>
+    </div>
+   </div>
+  </div>
+  <div class="ocpSection">
+   <h3 class="ocpExpandoHead">
+    <button aria-controls="ID0EBBD-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EBBD-button" ms.interactiontype="11" type="button">
+     <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+      <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+      </i>
+     </div>
+     <div class="ocpExpandoHeadTitleContainer" role="none">
+      Example 2
+     </div>
+    </button>
+   </h3>
+   <div aria-labelledby="ID0EBBD-button" class="ocpebw" id="ID0EBBD-panel" role="region">
+    <div class="ocpExpandoBody">
+     <p>
+      Use REGEXREPLACE with capturing groups to separate and reorder given name and last name, using pattern: "([A-Z][a-z]+)([A-Z][a-z]+)"; and replacement: "$2, $1".
+     </p>
+     <p>
+      <b class="ocpLegacyBold">
+       Note:
+      </b>
+      Capturing groups are defined in
+      <i class="ocpItalic">
+       pattern
+      </i>
+      with parentheses "()", and can be referenced in
+      <i class="ocpItalic">
+       replacement
+      </i>
+      as "$n". In this example, $1 and $2 reference the first and second capturing groups, respectively.
+     </p>
+     <table aria-label="" class="banded">
+      <tbody>
+       <tr>
+        <td>
+         <p>
+          <b class="ocpLegacyBold">
+           Data
+          </b>
+         </p>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          SoniaBrown
+         </p>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          <b class="ocpLegacyBold">
+           Formulas
+          </b>
+         </p>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <p>
+          =REGEXREPLACE(A2,"([A-Z][a-z]+)([A-Z][a-z]+)","$2, $1")
+         </p>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <p>
+      The following illustration shows the results.
+     </p>
+     <p>
+      <picture>
+       <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/c04ce32a-004a-4878-ae47-14596f5ed949?format=avif&amp;w=320 320w,        /images/en-us/c04ce32a-004a-4878-ae47-14596f5ed949?format=avif&amp;w=480 480w,        /images/en-us/c04ce32a-004a-4878-ae47-14596f5ed949?format=avif&amp;w=640 640w,        /images/en-us/c04ce32a-004a-4878-ae47-14596f5ed949?format=avif&amp;w=800 800w" type="image/avif"/>
+       <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/c04ce32a-004a-4878-ae47-14596f5ed949?format=webp&amp;w=320 320w,        /images/en-us/c04ce32a-004a-4878-ae47-14596f5ed949?format=webp&amp;w=480 480w,        /images/en-us/c04ce32a-004a-4878-ae47-14596f5ed949?format=webp&amp;w=640 640w,        /images/en-us/c04ce32a-004a-4878-ae47-14596f5ed949?format=webp&amp;w=800 800w" type="image/webp"/>
+       <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/c04ce32a-004a-4878-ae47-14596f5ed949?format=jpeg&amp;w=320 320w,        /images/en-us/c04ce32a-004a-4878-ae47-14596f5ed949?format=jpeg&amp;w=480 480w,        /images/en-us/c04ce32a-004a-4878-ae47-14596f5ed949?format=jpeg&amp;w=640 640w,        /images/en-us/c04ce32a-004a-4878-ae47-14596f5ed949?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+       <img alt='Use REGEXREPLACE with capturing groups to separate and reorder given name and last name, using pattern: "([A-Z][a-z]+)([A-Z][a-z]+)" and replacement: "$2, $1"' class="fluentImage" loading="lazy" src="/images/en-us/c04ce32a-004a-4878-ae47-14596f5ed949" style="aspect-ratio: 134/109" width="134"/>
+      </picture>
+     </p>
+     <p>
+     </p>
+    </div>
+   </div>
+  </div>
+ </section>
+</article>

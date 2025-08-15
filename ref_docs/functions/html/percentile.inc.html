@@ -1,0 +1,186 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   Returns the k-th percentile of values in a range, where k is in the range 0 to 1, inclusive.
+  </p>
+  <p>
+   You can use the
+   <b class="ocpUI">
+    PERCENTILE.INC
+   </b>
+   function to establish a threshold of acceptance. For example, you can decide to examine candidates who score above the 90th percentile.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <p>
+   <b class="ocpUI">
+    PERCENTILE.INC(array,k)
+   </b>
+  </p>
+  <p>
+   The PERCENTILE.INC function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Array
+     </b>
+     Required. The array or range of data that defines relative standing.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      K
+     </b>
+     Required. The percentile value in the range 0 to 1, inclusive.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If array is empty, PERCENTILE.INC returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If k is nonnumeric, PERCENTILE.INC returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If k is &lt; 0 or if k &gt; 1, PERCENTILE.INC returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If k is not a multiple of 1/(n - 1), PERCENTILE.INC interpolates to determine the value at the k-th percentile.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </th>
+     <th>
+     </th>
+     <th>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        R
+       </b>
+       <b class="ocpLegacyBold">
+        esult
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =PERCENTILE.INC(A2:A5,0.3)
+      </p>
+     </td>
+     <td>
+      <p>
+       30th percentile of the list in the range A2:A5.
+      </p>
+     </td>
+     <td>
+      <p>
+       1.9
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

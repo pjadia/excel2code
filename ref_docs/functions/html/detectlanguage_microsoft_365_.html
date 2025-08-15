@@ -1,0 +1,137 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpNote">
+     Note:
+    </b>
+    This function is a service backed function. The supported languages and results may vary as languages are added or removed.
+   </p>
+  </div>
+  <p>
+   This article describes the formula syntax and usage of the DETECTLANGUAGE function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Description
+  </h2>
+  <p>
+   With the DETECTLANGUAGE() function, you can easily identify the language used in a specified text or range. This function uses
+   <a class="ocpExternalLink" data-bi-type="anchor" href="https://www.microsoft.com/translator/" target="_blank">
+    Microsoft Translation Services.
+   </a>
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <p>
+   The syntax for the DETECTLANGUAGE() function is as follows:
+  </p>
+  <p>
+   =DETECTLANGUAGE(text)
+  </p>
+  <p>
+   The function has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpLegacyBold">
+      text
+     </b>
+     - The text or reference to cells containing text to evaluate.
+    </p>
+   </li>
+  </ul>
+  <p>
+   The supported languages and their respective language codes can be found:
+   <a class="ocpExternalLink" data-bi-type="anchor" href="https://learn.microsoft.com/azure/ai-services/Translator/language-support" target="_blank">
+    Supported Languages and Language Codes
+   </a>
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Example
+  </h2>
+  <p>
+   Suppose you have the following text in cell A1: "Hola mundo!" and you want to find out what the language of the text is. You can use the DETECTLANGUAGE() function as follows:
+  </p>
+  <p>
+   =DETECTLANGUAGE(A1)
+  </p>
+  <p>
+   This will return the detected language for the text in cell A1. The language code "es" for Spanish will be displayed in the cell where you entered the formula.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Common Errors
+  </h2>
+  <div class="ocpSection">
+   <h3 class="ocpExpandoHead">
+    <button aria-controls="ID0EFBD-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EFBD-button" ms.interactiontype="11" type="button">
+     <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+      <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+      </i>
+     </div>
+     <div class="ocpExpandoHeadTitleContainer" role="none">
+      Text Too Long
+     </div>
+    </button>
+   </h3>
+   <div aria-labelledby="ID0EFBD-button" class="ocpebw" id="ID0EFBD-panel" role="region">
+    <div class="ocpExpandoBody">
+     <p>
+      You have too many characters in a cell. Reduce your cell size and try again.
+     </p>
+    </div>
+   </div>
+  </div>
+  <div class="ocpSection">
+   <h3 class="ocpExpandoHead">
+    <button aria-controls="ID0EDBD-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EDBD-button" ms.interactiontype="11" type="button">
+     <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+      <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+      </i>
+     </div>
+     <div class="ocpExpandoHeadTitleContainer" role="none">
+      Error in Value
+     </div>
+    </button>
+   </h3>
+   <div aria-labelledby="ID0EDBD-button" class="ocpebw" id="ID0EDBD-panel" role="region">
+    <div class="ocpExpandoBody">
+     <p>
+      You have a non-text value in your cell. The function only accepts a text argument.
+     </p>
+    </div>
+   </div>
+  </div>
+  <div class="ocpSection">
+   <h3 class="ocpExpandoHead">
+    <button aria-controls="ID0EBBD-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EBBD-button" ms.interactiontype="11" type="button">
+     <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+      <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+      </i>
+     </div>
+     <div class="ocpExpandoHeadTitleContainer" role="none">
+      Request Throttled
+     </div>
+    </button>
+   </h3>
+   <div aria-labelledby="ID0EBBD-button" class="ocpebw" id="ID0EBBD-panel" role="region">
+    <div class="ocpExpandoBody">
+     <p>
+      You have exceeded your daily quota of the translation function.
+     </p>
+     <p>
+     </p>
+    </div>
+   </div>
+  </div>
+ </section>
+</article>

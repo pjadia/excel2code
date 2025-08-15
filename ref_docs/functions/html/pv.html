@@ -1,0 +1,346 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   <b class="ocpLegacyBold">
+    PV
+   </b>
+   , one of the
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/financial-functions-reference-5658d81e-6035-4f24-89c1-fbf124c2b1d8">
+    financial functions
+   </a>
+   , calculates the present value of a loan or an investment, based on a constant interest rate. You can use PV with either periodic, constant payments (such as a mortgage or other loan), or a future value that's your investment goal.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <p>
+   PV(rate, nper, pmt, [fv], [type])
+  </p>
+  <p>
+   The PV function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Rate
+     </b>
+     Required. The interest rate per period. For example, if you obtain an automobile loan at a 10 percent annual interest rate and make monthly payments, your interest rate per month is 10%/12, or 0.83%. You would enter 10%/12, or 0.83%, or 0.0083, into the formula as the rate.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Nper
+     </b>
+     Required. The total number of payment periods in an annuity. For example, if you get a four-year car loan and make monthly payments, your loan has 4*12 (or 48) periods. You would enter 48 into the formula for nper.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Pmt
+     </b>
+     Required. The payment made each period and cannot change over the life of the annuity. Typically, pmt includes principal and interest but no other fees or taxes. For example, the monthly payments on a $10,000, four-year car loan at 12 percent are $263.33. You would enter -263.33 into the formula as the pmt. If pmt is omitted, you must include the fv argument.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Fv
+     </b>
+     Optional. The future value or a cash balance you want to attain after the last payment is made. If fv is omitted, it is assumed to be 0 (the future value of a loan, for example, is 0). For example, if you want to save $50,000 to pay for a special project in 18 years, then $50,000 is the future value. You could then make a conservative guess at an interest rate and determine how much you must save each month. If fv is omitted, you must include the pmt argument.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Type
+     </b>
+     Optional. The number 0 or 1 and indicates when payments are due.
+    </p>
+   </li>
+  </ul>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Set type equal to
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        If payments are due
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       0 or omitted
+      </p>
+     </td>
+     <td>
+      <p>
+       At the end of the period
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+      <p>
+       At the beginning of the period
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     Make sure that you are consistent about the units you use for specifying rate and nper. If you make monthly payments on a four-year loan at 12 percent annual interest, use 12%/12 for rate and 4*12 for nper. If you make annual payments on the same loan, use 12% for rate and 4 for nper.
+    </p>
+   </li>
+   <li>
+    <p>
+     The following functions apply to annuities:
+    </p>
+   </li>
+  </ul>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       CUMIPMT
+      </p>
+     </th>
+     <th>
+      <p>
+       PPMT
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       CUMPRINC
+      </p>
+     </td>
+     <td>
+      <p>
+       PV
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       FV
+      </p>
+     </td>
+     <td>
+      <p>
+       RATE
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       FVSCHEDULE
+      </p>
+     </td>
+     <td>
+      <p>
+       XIRR
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       IPMT
+      </p>
+     </td>
+     <td>
+      <p>
+       XNPV
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       PMT
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <ul>
+   <li>
+    <p>
+     An annuity is a series of constant cash payments made over a continuous period. For example, a car loan or a mortgage is an annuity. For more information, see the description for each annuity function.
+    </p>
+   </li>
+   <li>
+    <p>
+     In annuity functions, cash you pay out, such as a deposit to savings, is represented by a negative number. Cash you receive, such as a dividend check, is represented by a positive number. For example, a $1,000 deposit to the bank would be represented by the argument -1000 if you are the depositor and by the argument 1000 if you are the bank.
+    </p>
+   </li>
+   <li>
+    <p>
+     Microsoft Excel solves for one financial argument in terms of the others. If rate is not 0, then:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/84f0f2bb-eca8-4d52-b8e2-619601f1cc31?format=avif&amp;w=320 320w,        /images/en-us/84f0f2bb-eca8-4d52-b8e2-619601f1cc31?format=avif&amp;w=480 480w,        /images/en-us/84f0f2bb-eca8-4d52-b8e2-619601f1cc31?format=avif&amp;w=640 640w,        /images/en-us/84f0f2bb-eca8-4d52-b8e2-619601f1cc31?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/84f0f2bb-eca8-4d52-b8e2-619601f1cc31?format=webp&amp;w=320 320w,        /images/en-us/84f0f2bb-eca8-4d52-b8e2-619601f1cc31?format=webp&amp;w=480 480w,        /images/en-us/84f0f2bb-eca8-4d52-b8e2-619601f1cc31?format=webp&amp;w=640 640w,        /images/en-us/84f0f2bb-eca8-4d52-b8e2-619601f1cc31?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/84f0f2bb-eca8-4d52-b8e2-619601f1cc31?format=jpeg&amp;w=320 320w,        /images/en-us/84f0f2bb-eca8-4d52-b8e2-619601f1cc31?format=jpeg&amp;w=480 480w,        /images/en-us/84f0f2bb-eca8-4d52-b8e2-619601f1cc31?format=jpeg&amp;w=640 640w,        /images/en-us/84f0f2bb-eca8-4d52-b8e2-619601f1cc31?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/84f0f2bb-eca8-4d52-b8e2-619601f1cc31" style="aspect-ratio: 258/67" width="258"/>
+     </picture>
+    </p>
+    <p>
+     If rate is 0, then:
+    </p>
+   </li>
+  </ul>
+  <p>
+   (pmt * nper) + pv + fv = 0
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </th>
+     <th>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       $500.00
+      </p>
+     </td>
+     <td>
+      <p>
+       Money paid out of an insurance annuity at the end of every month.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       8%
+      </p>
+     </td>
+     <td>
+      <p>
+       Interest rate earned on the money paid out.
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       20
+      </p>
+     </td>
+     <td>
+      <p>
+       Years the money will be paid out.
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =PV(A3/12, 12*A4, A2, , 0)
+      </p>
+     </td>
+     <td>
+      <p>
+       Present value of an annuity with the terms in A2:A4.
+      </p>
+     </td>
+     <td>
+      <p>
+       ($59,777.15)
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

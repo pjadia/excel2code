@@ -1,0 +1,190 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   Returns a number that is rounded up to the nearest integer or to the nearest multiple of significance. Regardless of the sign of the number, the number is rounded up. However, if the number or the significance is zero, zero is returned.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   CEILING.PRECISE(number, [significance])
+  </p>
+  <p>
+   The CEILING.PRECISE function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Number
+     </b>
+     Required. The value to be rounded.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Significance
+     </b>
+     Optional. The multiple to which number is to be rounded.
+    </p>
+    <p>
+     If significance is omitted, its default value is 1.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     The absolute value of the multiple is used, so that the CEILING.PRECISE function returns the mathematical ceiling irrespective of the signs of number and significance.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p id="__goback">
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =CEILING.PRECISE(4.3)
+      </p>
+     </td>
+     <td>
+      <p>
+       Rounds 4.3 up to the nearest multiple of 1.
+      </p>
+     </td>
+     <td>
+      <p>
+       5
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =CEILING.PRECISE(-4.3)
+      </p>
+     </td>
+     <td>
+      <p>
+       Rounds -4.3 up to the nearest multiple of 1. Rounds toward 0 because the number is negative.
+      </p>
+     </td>
+     <td>
+      <p>
+       -4
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =CEILING.PRECISE(4.3, 2)
+      </p>
+     </td>
+     <td>
+      <p>
+       Rounds 4.3 up to the nearest multiple of 2.
+      </p>
+     </td>
+     <td>
+      <p>
+       6
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =CEILING.PRECISE(4.3,-2)
+      </p>
+     </td>
+     <td>
+      <p>
+       Rounds 4.3 up to the nearest multiple of -2.
+      </p>
+     </td>
+     <td>
+      <p>
+       6
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =CEILING.PRECISE(-4.3,2)
+      </p>
+     </td>
+     <td>
+      <p>
+       Rounds -4.3 up to the nearest multiple of 2. Rounds toward 0 because the number is negative.
+      </p>
+     </td>
+     <td>
+      <p>
+       -4
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =CEILING.PRECISE(-4.3,-2)
+      </p>
+     </td>
+     <td>
+      <p>
+       Rounds -4.3 up to the nearest multiple of -2.
+      </p>
+     </td>
+     <td>
+      <p>
+       -4
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

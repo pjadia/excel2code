@@ -1,0 +1,291 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    SUMX2MY2
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Description
+  </h2>
+  <p>
+   This Excel function returns the sum of the difference of
+   <b class="ocpLegacyBold">
+    the squares
+   </b>
+   of corresponding values in two arrays.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <p>
+   SUMX2MY2(array_x, array_y)
+  </p>
+  <p>
+   The SUMX2MY2 function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      array_x
+     </b>
+     Required. The first array or range of values.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      array_y
+     </b>
+     Required. The second array or range of values.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     The arguments should be either
+     <br aria-hidden="true"/>
+     &gt; numbers or
+     <br aria-hidden="true"/>
+     &gt; names, arrays, or references that contain numbers.
+    </p>
+   </li>
+   <li>
+    <p>
+     If an array or reference argument contains text, logical values, or empty cells, those values are ignored. However, cells with the value zero are included.
+    </p>
+   </li>
+   <li>
+    <p>
+     If array_x and array_y have a different number of values, the SUMX2MY2 function returns the #N/A error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     The equation for the sum of the difference of squares is:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/9b81a807-b9a5-4ca7-aad1-0f94dc418208?format=avif&amp;w=320 320w,        /images/en-us/9b81a807-b9a5-4ca7-aad1-0f94dc418208?format=avif&amp;w=480 480w,        /images/en-us/9b81a807-b9a5-4ca7-aad1-0f94dc418208?format=avif&amp;w=640 640w,        /images/en-us/9b81a807-b9a5-4ca7-aad1-0f94dc418208?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/9b81a807-b9a5-4ca7-aad1-0f94dc418208?format=webp&amp;w=320 320w,        /images/en-us/9b81a807-b9a5-4ca7-aad1-0f94dc418208?format=webp&amp;w=480 480w,        /images/en-us/9b81a807-b9a5-4ca7-aad1-0f94dc418208?format=webp&amp;w=640 640w,        /images/en-us/9b81a807-b9a5-4ca7-aad1-0f94dc418208?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/9b81a807-b9a5-4ca7-aad1-0f94dc418208?format=jpeg&amp;w=320 320w,        /images/en-us/9b81a807-b9a5-4ca7-aad1-0f94dc418208?format=jpeg&amp;w=480 480w,        /images/en-us/9b81a807-b9a5-4ca7-aad1-0f94dc418208?format=jpeg&amp;w=640 640w,        /images/en-us/9b81a807-b9a5-4ca7-aad1-0f94dc418208?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/9b81a807-b9a5-4ca7-aad1-0f94dc418208" style="aspect-ratio: 184/21" width="184"/>
+     </picture>
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   Copy the example content in the following table (including the formula rows) and paste in cell A1 of a new Excel worksheet. If the formulas do not automatically show results, you can select then press F2 and press Enter. Adjust column widths as needed to see all of the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </th>
+     <th>
+     </th>
+     <th>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        First array
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Second array
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+     <td>
+      <p>
+       6
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+     <td>
+      <p>
+       5
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       9
+      </p>
+     </td>
+     <td>
+      <p>
+       11
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+      <p>
+       7
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       8
+      </p>
+     </td>
+     <td>
+      <p>
+       5
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       7
+      </p>
+     </td>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       5
+      </p>
+     </td>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description (Result)
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =SUMX2MY2(A2:A8,B2:B8)
+      </p>
+     </td>
+     <td>
+      <p>
+       Sum of the difference of squares of the two arrays above (-55)
+      </p>
+     </td>
+     <td>
+      <p>
+       -55
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =SUMX2MY2({2, 3, 9, 1, 8, 7, 5}, {6, 5, 11, 7, 5, 4, 4})
+      </p>
+     </td>
+     <td>
+      <p>
+       Sum of the difference of squares of the two arrays constants (-55)
+      </p>
+     </td>
+     <td>
+      <p>
+       -55
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

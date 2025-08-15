@@ -1,0 +1,140 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p id="__goback">
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    GAMMALN
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Description
+  </h2>
+  <p>
+   Returns the natural logarithm of the gamma function, Γ(x).
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <p>
+   GAMMALN(x)
+  </p>
+  <p>
+   The GAMMALN function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      X
+     </b>
+     Required. The value for which you want to calculate GAMMALN.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If x is nonnumeric, GAMMALN returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If x ≤ 0, GAMMALN returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     The number e raised to the GAMMALN(i) power, where i is an integer, returns the same result as (i - 1)!.
+    </p>
+   </li>
+   <li>
+    <p>
+     GAMMALN is calculated as follows:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/e6ff3f70-1cac-4136-a6ae-0fb44abd1877?format=avif&amp;w=320 320w,        /images/en-us/e6ff3f70-1cac-4136-a6ae-0fb44abd1877?format=avif&amp;w=480 480w,        /images/en-us/e6ff3f70-1cac-4136-a6ae-0fb44abd1877?format=avif&amp;w=640 640w,        /images/en-us/e6ff3f70-1cac-4136-a6ae-0fb44abd1877?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/e6ff3f70-1cac-4136-a6ae-0fb44abd1877?format=webp&amp;w=320 320w,        /images/en-us/e6ff3f70-1cac-4136-a6ae-0fb44abd1877?format=webp&amp;w=480 480w,        /images/en-us/e6ff3f70-1cac-4136-a6ae-0fb44abd1877?format=webp&amp;w=640 640w,        /images/en-us/e6ff3f70-1cac-4136-a6ae-0fb44abd1877?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/e6ff3f70-1cac-4136-a6ae-0fb44abd1877?format=jpeg&amp;w=320 320w,        /images/en-us/e6ff3f70-1cac-4136-a6ae-0fb44abd1877?format=jpeg&amp;w=480 480w,        /images/en-us/e6ff3f70-1cac-4136-a6ae-0fb44abd1877?format=jpeg&amp;w=640 640w,        /images/en-us/e6ff3f70-1cac-4136-a6ae-0fb44abd1877?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/e6ff3f70-1cac-4136-a6ae-0fb44abd1877" style="aspect-ratio: 180/19" width="180"/>
+     </picture>
+    </p>
+    <p>
+     where:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/d49f0ccc-c243-4da4-962c-c0bde5310e5b?format=avif&amp;w=320 320w,        /images/en-us/d49f0ccc-c243-4da4-962c-c0bde5310e5b?format=avif&amp;w=480 480w,        /images/en-us/d49f0ccc-c243-4da4-962c-c0bde5310e5b?format=avif&amp;w=640 640w,        /images/en-us/d49f0ccc-c243-4da4-962c-c0bde5310e5b?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/d49f0ccc-c243-4da4-962c-c0bde5310e5b?format=webp&amp;w=320 320w,        /images/en-us/d49f0ccc-c243-4da4-962c-c0bde5310e5b?format=webp&amp;w=480 480w,        /images/en-us/d49f0ccc-c243-4da4-962c-c0bde5310e5b?format=webp&amp;w=640 640w,        /images/en-us/d49f0ccc-c243-4da4-962c-c0bde5310e5b?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/d49f0ccc-c243-4da4-962c-c0bde5310e5b?format=jpeg&amp;w=320 320w,        /images/en-us/d49f0ccc-c243-4da4-962c-c0bde5310e5b?format=jpeg&amp;w=480 480w,        /images/en-us/d49f0ccc-c243-4da4-962c-c0bde5310e5b?format=jpeg&amp;w=640 640w,        /images/en-us/d49f0ccc-c243-4da4-962c-c0bde5310e5b?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Gammaln Precise" class="fluentImage" loading="lazy" src="/images/en-us/d49f0ccc-c243-4da4-962c-c0bde5310e5b" style="aspect-ratio: 224/88" width="224"/>
+     </picture>
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =GAMMALN(4)
+      </p>
+     </td>
+     <td>
+      <p>
+       Natural logarithm of the gamma function at 4.
+      </p>
+     </td>
+     <td>
+      <p>
+       1.7917595
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

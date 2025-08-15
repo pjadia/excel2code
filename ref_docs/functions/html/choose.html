@@ -1,0 +1,369 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    CHOOSE
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Uses index_num to return a value from the list of value arguments. Use CHOOSE to select one of up to 254 values based on the index number. For example, if value1 through value7 are the days of the week, CHOOSE returns one of the days when a number between 1 and 7 is used as index_num.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   CHOOSE(index_num, value1, [value2], ...)
+  </p>
+  <p>
+   The CHOOSE function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Index_num
+     </b>
+     Required. Specifies which value argument is selected. Index_num must be a number between 1 and 254, or a formula or reference to a cell containing a number between 1 and 254.
+    </p>
+    <ul>
+     <li>
+      <p>
+       If index_num is 1, CHOOSE returns value1; if it is 2, CHOOSE returns value2; and so on.
+      </p>
+     </li>
+     <li>
+      <p>
+       If index_num is less than 1 or greater than the number of the last value in the list, CHOOSE returns the #VALUE! error value.
+      </p>
+     </li>
+     <li>
+      <p>
+       If index_num is a fraction, it is truncated to the lowest integer before being used.
+      </p>
+     </li>
+    </ul>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Value1, value2, ...
+     </b>
+     Value 1 is required, subsequent values are optional. 1 to 254 value arguments from which CHOOSE selects a value or an action to perform based on index_num. The arguments can be numbers, cell references, defined names, formulas, functions, or text.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If index_num is an array, every value is evaluated when CHOOSE is evaluated.
+    </p>
+   </li>
+   <li>
+    <p>
+     The value arguments to CHOOSE can be range references as well as single values.
+    </p>
+    <p>
+     For example, the formula:
+    </p>
+   </li>
+  </ul>
+  <p>
+   =SUM(CHOOSE(2,A1:A10,B1:B10,C1:C10))
+  </p>
+  <p>
+   evaluates to:
+  </p>
+  <p>
+   =SUM(B1:B10)
+  </p>
+  <p>
+   which then returns a value based on the values in the range B1:B10.
+  </p>
+  <p>
+   The CHOOSE function is evaluated first, returning the reference B1:B10. The SUM function is then evaluated using B1:B10, the result of the CHOOSE function, as its argument.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection" data-bi-id="__examples" id="__examples">
+  <h2 class="" id="ID0EFD">
+   Examples
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       1st
+      </p>
+     </td>
+     <td>
+      <p>
+       Nails
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       2nd
+      </p>
+     </td>
+     <td>
+      <p>
+       Screws
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       3rd
+      </p>
+     </td>
+     <td>
+      <p>
+       Nuts
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       Finished
+      </p>
+     </td>
+     <td>
+      <p>
+       Bolts
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =CHOOSE(2,A2,A3,A4,A5)
+      </p>
+     </td>
+     <td>
+      <p>
+       Value of the second list argument (value of cell A3)
+      </p>
+     </td>
+     <td>
+      <p>
+       2nd
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =CHOOSE(4,B2,B3,B4,B5)
+      </p>
+     </td>
+     <td>
+      <p>
+       Value of the fourth list argument (value of cell B5)
+      </p>
+     </td>
+     <td>
+      <p>
+       Bolts
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =CHOOSE(3,"Wide",115,"world",8)
+      </p>
+     </td>
+     <td>
+      <p>
+       Value of the third list argument
+      </p>
+     </td>
+     <td>
+      <p>
+       world
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <section aria-labelledby="ID0EFBBD" class="ocpSection">
+   <h3 class="" id="ID0EFBBD">
+    Example 2
+   </h3>
+   <table aria-label="" class="banded">
+    <thead>
+     <tr>
+      <td>
+       <p>
+        <b class="ocpLegacyBold">
+         Data
+        </b>
+       </p>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <p>
+        23
+       </p>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        45
+       </p>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        12
+       </p>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        10
+       </p>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        <b class="ocpLegacyBold">
+         Formula
+        </b>
+       </p>
+      </td>
+      <td>
+       <p>
+        <b class="ocpLegacyBold">
+         Description (Result)
+        </b>
+       </p>
+      </td>
+      <td>
+       <p>
+        <b class="ocpLegacyBold">
+         Result
+        </b>
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        =SUM(A2:CHOOSE(2,A3,A4,A5))
+       </p>
+      </td>
+      <td>
+       <p>
+        Sums the range A2:A4. The CHOOSE function returns A4 as the second part of the range for the SUM function.
+       </p>
+      </td>
+      <td>
+       <p>
+        80
+       </p>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </section>
+ </section>
+</article>

@@ -1,0 +1,266 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   Returns the rank of a value in a data set as a percentage (0..1, exclusive) of the data set.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <p>
+   PERCENTRANK.EXC(array,x,[significance])
+  </p>
+  <p>
+   The PERCENTRANK.EXC function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Array
+     </b>
+     Required. The array or range of data with numeric values that defines relative standing
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      X
+     </b>
+     Required. The value for which you want to know the rank.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Significance
+     </b>
+     Optional. A value that identifies the number of significant digits for the returned percentage value. If omitted, PERCENTRANK.EXC uses three digits (0.xxx).
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If array is empty, PERCENTRANK.EXC returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If significance &lt; 1, PERCENTRANK.EXC returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If x does not match one of the values in array, PERCENTRANK.EXC interpolates to return the correct percentage rank.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </th>
+     <th>
+     </th>
+     <th>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       6
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       6
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       6
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       7
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       8
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       9
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =PERCENTRANK.EXC(A2:A10, 7)
+      </p>
+     </td>
+     <td>
+      <p>
+       Returns the rank of the value 7 from the array contained in A2:A10.
+      </p>
+     </td>
+     <td>
+      <p>
+       0.7
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =PERCENTRANK.EXC(A2:A10,5.43)
+      </p>
+     </td>
+     <td>
+      <p>
+       Returns the rank of the value 5.43 in the same array.
+      </p>
+     </td>
+     <td>
+      <p>
+       0.381
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =PERCENTRANK.EXC(A2:A10,5.43,1)
+      </p>
+     </td>
+     <td>
+      <p>
+       Returns the rank of the value 5.43 in the same array, displaying only 1 significant digit in the result (the default is 3).
+      </p>
+     </td>
+     <td>
+      <p>
+       0.3
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

@@ -1,0 +1,538 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <div class="supARG" data-bi-view="Grid 1x2">
+   <div class="supARG-row">
+    <div class="supARG-column-1-2" data-bi-compnm="row-1,col-1" data-bi-view="Grid 1x2">
+     <div class="ocpSection">
+      <h2 class="ocpExpandoHead">
+       <button aria-controls="ID0EBBDBDR-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EBBDBDR-button" ms.interactiontype="11" type="button">
+        <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+         <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+         </i>
+        </div>
+        <div class="ocpExpandoHeadTitleContainer" role="none">
+         Release notes
+        </div>
+       </button>
+      </h2>
+      <div aria-labelledby="ID0EBBDBDR-button" class="ocpebw" id="ID0EBBDBDR-panel" role="region">
+       <div class="ocpExpandoBody">
+        <p>
+         <a class="ocpExternalLink" data-bi-type="anchor" href="https://learn.microsoft.com/officeupdates/current-channel" target="_blank">
+          Current Channel
+         </a>
+        </p>
+        <p>
+         <a class="ocpExternalLink" data-bi-type="anchor" href="https://learn.microsoft.com/officeupdates/monthly-enterprise-channel" target="_blank">
+          Monthly Enterprise Channel
+         </a>
+        </p>
+        <p>
+         <a class="ocpExternalLink" data-bi-type="anchor" href="https://learn.microsoft.com/officeupdates/semi-annual-enterprise-channel" target="_blank">
+          Semi-Annual Enterprise Channel
+         </a>
+        </p>
+        <p>
+         <a class="ocpExternalLink" data-bi-type="anchor" href="https://learn.microsoft.com/officeupdates/semi-annual-enterprise-channel-preview" target="_blank">
+          Semi-Annual Enterprise Channel (Preview)
+         </a>
+        </p>
+        <p>
+         <a class="ocpExternalLink" data-bi-type="anchor" href="https://learn.microsoft.com/officeupdates/release-notes-office-for-mac" target="_blank">
+          Office for Mac
+         </a>
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="supARG-column-1-2" data-bi-compnm="row-1,col-2" data-bi-view="Grid 1x2">
+     <p>
+     </p>
+    </div>
+   </div>
+  </div>
+  <p>
+   Returns text that occurs before a given character or string. It is the opposite of the
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/textafter-function-c8db2546-5b51-416a-9690-c7e6722e90b4">
+    TEXTAFTER function
+   </a>
+   .
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDP" class="ocpSection">
+  <h2 class="" id="ID0EDP">
+   Syntax
+  </h2>
+  <p>
+   =TEXTBEFORE(text,delimiter,[instance_num], [match_mode], [match_end], [if_not_found])
+  </p>
+  <p>
+   The TEXTBEFORE function syntax has the following arguments:
+  </p>
+  <p>
+   <b class="ocpRunInHead">
+    text
+   </b>
+   The text you are searching within. Wildcard characters are not allowed. If text is an empty string, Excel returns empty text. Required.
+  </p>
+  <p>
+   <b class="ocpRunInHead">
+    delimiter
+   </b>
+   The text that marks the point before which you want to extract. Required.
+  </p>
+  <p>
+   <b class="ocpRunInHead">
+    instance_num
+   </b>
+   The instance of the delimiter after which you want to extract the text.   By default, instance_num = 1.  A negative number starts searching text from the end. Optional.
+  </p>
+  <p>
+   <b class="ocpRunInHead">
+    match_mode
+   </b>
+   Determines whether the text search is case-sensitive. The default is case-sensitive. Optional. Enter one of the following:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      0
+     </b>
+     Case sensitive.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      1
+     </b>
+     Case insensitive.
+    </p>
+   </li>
+  </ul>
+  <p>
+   <b class="ocpRunInHead">
+    <span class="ocpFictitious">
+     match_end
+    </span>
+   </b>
+   Treats the end of text as a delimiter. By default, the text is an exact match. Optional. Enter the following:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      0
+     </b>
+     Don't match the delimiter against the end of the text.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      1
+     </b>
+     Match the delimiter against the end of the text.
+    </p>
+   </li>
+  </ul>
+  <p>
+   <b class="ocpRunInHead">
+    if_not_found
+   </b>
+   Value returned if no match is found. By default, #N/A is returned. Optional.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDN" class="ocpSection">
+  <h2 class="" id="ID0EDN">
+   Remarks
+  </h2>
+  <p>
+   When searching with an empty delimiter value, TEXTBEFORE matches immediately. It returns empty text when searching from the front (if instance_num is positive) and the entire text when searching from the end (if instance_num is negative).
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       Example
+      </p>
+     </th>
+     <th>
+      <p>
+       Result
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =TEXTBEFORE("Red riding hood’s, red hood", "hood")
+      </p>
+     </td>
+     <td>
+      <p>
+       Red riding
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =TEXTBEFORE("Red riding hood’s, red hood", "")
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =TEXTBEFORE("Red riding hood’s, red hood", "", -1)
+      </p>
+     </td>
+     <td>
+      <p>
+       Red riding hood’s, red hood
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+ <section aria-labelledby="ID0EDL" class="ocpSection">
+  <h2 class="" id="ID0EDL">
+   Errors
+  </h2>
+  <ul>
+   <li>
+    <p>
+     Excel returns a #VALUE! error if instance_num = 0 or if instance_num is greater than the length of text.
+    </p>
+   </li>
+   <li>
+    <p>
+     Excel returns a #N/A error if delimiter isn’t contained in text.
+    </p>
+   </li>
+   <li>
+    <p>
+     Excel returns a #N/A error if instance_num is greater than the number of occurrences of delimiter in text.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Examples
+  </h2>
+  <p>
+   Copy the example data in each of the following tables and paste it in cell A1 of a new Excel worksheet. If you need to, you can adjust the column widths to see all the data.
+  </p>
+ </section>
+ <div class="ocpSection">
+  <h2 class="ocpExpandoHead">
+   <button aria-controls="ID0EH-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EH-button" ms.interactiontype="11" type="button">
+    <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+     <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+     </i>
+    </div>
+    <div class="ocpExpandoHeadTitleContainer" role="none">
+     Example 1
+    </div>
+   </button>
+  </h2>
+  <div aria-labelledby="ID0EH-button" class="ocpebw" id="ID0EH-panel" role="region">
+   <div class="ocpExpandoBody">
+    <table aria-label="" class="banded">
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         <b class="ocpLegacyBold">
+          Data
+         </b>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Little Red Riding Hood's red hood
+        </p>
+       </td>
+       <td>
+        <p>
+        </p>
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Little red Riding Hood's red hood
+        </p>
+       </td>
+       <td>
+        <p>
+        </p>
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <b class="ocpLegacyBold">
+          Formulas
+         </b>
+        </p>
+       </td>
+       <td>
+        <p>
+         <b class="ocpLegacyBold">
+          Results
+         </b>
+        </p>
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         =TEXTBEFORE(A2,"Red")
+        </p>
+       </td>
+       <td>
+        <p>
+         Little
+        </p>
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         =TEXTBEFORE(A3,"Red")
+        </p>
+       </td>
+       <td>
+        <p>
+         #N/A
+        </p>
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         =TEXTBEFORE(A3,"red",2)
+        </p>
+       </td>
+       <td>
+        <p>
+         Little red Riding Hood's
+        </p>
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         =TEXTBEFORE(A3,"red",-2)
+        </p>
+       </td>
+       <td>
+        <p>
+         Little
+        </p>
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         =TEXTBEFORE(A3,"Red",,FALSE)
+        </p>
+       </td>
+       <td>
+        <p>
+         #N/A
+        </p>
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         =TEXTBEFORE(A3,"red",3)
+        </p>
+       </td>
+       <td>
+        <p>
+         #N/A
+        </p>
+       </td>
+       <td>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+  </div>
+ </div>
+ <div class="ocpSection">
+  <h2 class="ocpExpandoHead">
+   <button aria-controls="ID0EF-panel" aria-expanded="false" class="expandoButtonLink" id="ID0EF-button" ms.interactiontype="11" type="button">
+    <div aria-hidden="true" class="ocpExpandoHeadChevronContainer">
+     <i class="ms-Icon--expandoCollapsed ocpExpander" role="none">
+     </i>
+    </div>
+    <div class="ocpExpandoHeadTitleContainer" role="none">
+     Example 2
+    </div>
+   </button>
+  </h2>
+  <div aria-labelledby="ID0EF-button" class="ocpebw" id="ID0EF-panel" role="region">
+   <div class="ocpExpandoBody">
+    <table aria-label="" class="banded">
+     <tbody>
+      <tr>
+       <td>
+        <p>
+         <b class="ocpLegacyBold">
+          Data
+         </b>
+        </p>
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Marcus Aurelius
+        </p>
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Socrates
+        </p>
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         Immanuel Kant
+        </p>
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         <b class="ocpLegacyBold">
+          Formulas
+         </b>
+        </p>
+       </td>
+       <td>
+        <p>
+         <b class="ocpLegacyBold">
+          Results
+         </b>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         =TEXTBEFORE(A2," ",,,1)
+        </p>
+       </td>
+       <td>
+        <p>
+         Marcus
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         =TEXTBEFORE(A3," ",,,0)
+        </p>
+       </td>
+       <td>
+        <p>
+         #N/A
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         =TEXTBEFORE(A3," ",,,1)
+        </p>
+       </td>
+       <td>
+        <p>
+         Socrates
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <p>
+         =TEXTBEFORE(A4," ",,,1)
+        </p>
+       </td>
+       <td>
+        <p>
+         Immanuel
+        </p>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+  </div>
+ </div>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   See Also
+  </h2>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/text-functions-reference-cccd86ad-547d-4ea9-a065-7bb697c2a56e">
+    Text functions (reference)
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/textsplit-function-b1ca414e-4c21-4ca0-b1b7-bdecace8a6e7">
+    TEXTSPLIT function
+   </a>
+  </p>
+  <p>
+   <a class="ocpArticleLink" data-bi-type="anchor" href="/en-us/office/textafter-function-c8db2546-5b51-416a-9690-c7e6722e90b4">
+    TEXTAFTER function
+   </a>
+  </p>
+ </section>
+</article>

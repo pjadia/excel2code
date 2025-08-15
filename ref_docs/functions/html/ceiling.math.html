@@ -1,0 +1,285 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p id="__goback">
+   Here is the formula syntax and use of the
+   <b class="ocpLegacyBold">
+    CEILING.MATH
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Description
+  </h2>
+  <p>
+   The CEILING.MATH function rounds a number up to the nearest integer or, optionally, to the nearest multiple of significance.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <p>
+   CEILING.MATH(
+   <b class="ocpLegacyBold">
+    number
+   </b>
+   , [
+   <b class="ocpLegacyBold">
+    significance
+   </b>
+   ], [
+   <b class="ocpLegacyBold">
+    mode
+   </b>
+   ])
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      number
+     </b>
+     Required. (must be between -2.229E-308.and 9.99E+307.)
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      significance
+     </b>
+     Optional. This is the number of significant digits after the decimal point to which
+     <b class="ocpLegacyBold">
+      number
+     </b>
+     is to be rounded.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      mode
+     </b>
+     Optional. This controls whether negative numbers are rounded toward or away from zero.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     By default,
+     <b class="ocpLegacyBold">
+      significance
+     </b>
+     is +1 for positive numbers and -1 for negative numbers.
+    </p>
+   </li>
+   <li>
+    <p>
+     By default, positive numbers with decimal portions are rounded up to the nearest integer. For example, 6.3 is rounded up to 7.
+    </p>
+   </li>
+   <li>
+    <p>
+     By default, negative numbers with decimal portions are rounded up (toward 0) to the nearest integer. For example, -6.7 is rounded up to -6.
+    </p>
+   </li>
+   <li>
+    <p>
+     Using the
+     <b class="ocpLegacyBold">
+      significance
+     </b>
+     and
+     <b class="ocpLegacyBold">
+      mode
+     </b>
+     arguments, you can change the direction of the rounding for negative numbers. For example, rounding -6.3 to a
+     <b class="ocpLegacyBold">
+      significance
+     </b>
+     of 1 with a
+     <b class="ocpLegacyBold">
+      mode
+     </b>
+     of 1 will round
+     <i class="ocpItalic">
+      away
+     </i>
+     from 0, to -7.  Combinations of Significance and Mode values can affect rounding of negative numbers in different ways.
+    </p>
+   </li>
+   <li>
+    <p>
+     The
+     <b class="ocpLegacyBold">
+      mode
+     </b>
+     argument does not affect positive numbers.
+    </p>
+   </li>
+   <li>
+    <p>
+     The
+     <b class="ocpLegacyBold">
+      significance
+     </b>
+     argument rounds the number up to the nearest integer that is a multiple of the specified significance. The exception is where the number to be rounded is an integer. For example, for a significance of 3 the number is rounded up to the next integer that is a multiple of 3.
+    </p>
+   </li>
+   <li>
+    <p>
+     If
+     <b class="ocpLegacyBold">
+      number
+     </b>
+     divided by a
+     <b class="ocpLegacyBold">
+      significance
+     </b>
+     of 2 or greater results in a remainder, the result is rounded up.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   Copy all of the following table. In a new Excel worksheet, paste it in to cell A1 (and adjacent). If you do not automatically see the Results, select the formula, press F2 and press Enter. Adjust column widths if needed to see everything.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =CEILING.MATH(24.3,5)
+      </p>
+     </td>
+     <td>
+      <p>
+       Rounds 24.3 up to the nearest integer that is a multiple of 5.
+      </p>
+     </td>
+     <td>
+      <p>
+       25
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =CEILING.MATH(6.7)
+      </p>
+     </td>
+     <td>
+      <p>
+       Rounds 6.7 up to the nearest integer.
+      </p>
+     </td>
+     <td>
+      <p>
+       7
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =CEILING.MATH(-8.1,2)
+      </p>
+     </td>
+     <td>
+      <p>
+       Rounds -8.1 up (toward 0) to the nearest integer that is a multiple of 2.
+      </p>
+     </td>
+     <td>
+      <p>
+       -8
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =CEILING.MATH(-5.5,2,-1)
+      </p>
+     </td>
+     <td>
+      <p>
+       Rounds -5.5 down (away from 0) to the nearest integer that is a multiple of 2 with a mode of -1 which reverses rounding direction.
+      </p>
+     </td>
+     <td>
+      <p>
+       -6
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+   <a class="ocpTopOfPage" data-bi-type="anchor" href="#">
+    Top of Page
+   </a>
+  </p>
+ </section>
+</article>

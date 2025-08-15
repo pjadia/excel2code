@@ -1,0 +1,438 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p id="__goback">
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    NPV
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Description
+  </h2>
+  <p>
+   Calculates the net present value of an investment by using a discount rate and a series of future payments (negative values) and income (positive values).
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <p>
+   NPV(rate,value1,[value2],...)
+  </p>
+  <p>
+   The NPV function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Rate
+     </b>
+     Required. The rate of discount over the length of one period.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Value1, value2, ...
+     </b>
+     Value1 is required, subsequent values are optional. 1 to 254 arguments representing the payments and income.
+    </p>
+    <ul>
+     <li>
+      <p>
+       Value1, value2, ... must be equally spaced in time and occur at the end of each period.
+      </p>
+     </li>
+     <li>
+      <p>
+       NPV uses the order of value1, value2, ... to interpret the order of cash flows. Be sure to enter your payment and income values in the correct sequence.
+      </p>
+     </li>
+     <li>
+      <p>
+       Arguments that are empty cells, logical values, or text representations of numbers, error values, or text that cannot be translated into numbers are ignored.
+      </p>
+     </li>
+     <li>
+      <p>
+       If an argument is an array or reference, only numbers in that array or reference are counted. Empty cells, logical values, text, or error values in the array or reference are ignored.
+      </p>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     The NPV investment begins one period before the date of the value1 cash flow and ends with the last cash flow in the list. The NPV calculation is based on future cash flows. If your first cash flow occurs at the beginning of the first period, the first value must be added to the NPV result, not included in the values arguments. For more information, see the examples below.
+    </p>
+   </li>
+   <li>
+    <p>
+     If n is the number of cash flows in the list of values, the formula for NPV is:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/f3b0b484-d582-43ad-8f4a-3044eec7f6f1?format=avif&amp;w=320 320w,        /images/en-us/f3b0b484-d582-43ad-8f4a-3044eec7f6f1?format=avif&amp;w=480 480w,        /images/en-us/f3b0b484-d582-43ad-8f4a-3044eec7f6f1?format=avif&amp;w=640 640w,        /images/en-us/f3b0b484-d582-43ad-8f4a-3044eec7f6f1?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/f3b0b484-d582-43ad-8f4a-3044eec7f6f1?format=webp&amp;w=320 320w,        /images/en-us/f3b0b484-d582-43ad-8f4a-3044eec7f6f1?format=webp&amp;w=480 480w,        /images/en-us/f3b0b484-d582-43ad-8f4a-3044eec7f6f1?format=webp&amp;w=640 640w,        /images/en-us/f3b0b484-d582-43ad-8f4a-3044eec7f6f1?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/f3b0b484-d582-43ad-8f4a-3044eec7f6f1?format=jpeg&amp;w=320 320w,        /images/en-us/f3b0b484-d582-43ad-8f4a-3044eec7f6f1?format=jpeg&amp;w=480 480w,        /images/en-us/f3b0b484-d582-43ad-8f4a-3044eec7f6f1?format=jpeg&amp;w=640 640w,        /images/en-us/f3b0b484-d582-43ad-8f4a-3044eec7f6f1?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/f3b0b484-d582-43ad-8f4a-3044eec7f6f1" style="aspect-ratio: 135/37" width="135"/>
+     </picture>
+    </p>
+   </li>
+   <li>
+    <p>
+     NPV is similar to the PV function (present value). The primary difference between PV and NPV is that PV allows cash flows to begin either at the end or at the beginning of the period. Unlike the variable NPV cash flow values, PV cash flows must be constant throughout the investment. For information about annuities and financial functions, see PV.
+    </p>
+   </li>
+   <li>
+    <p>
+     NPV is also related to the IRR function (internal rate of return). IRR is the rate for which NPV equals zero: NPV(IRR(...), ...) = 0.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection" data-bi-id="__example" id="__example">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </th>
+     <th>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       0.1
+      </p>
+     </td>
+     <td>
+      <p>
+       Annual discount rate
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       -10000
+      </p>
+     </td>
+     <td>
+      <p>
+       Initial cost of investment one year from today
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       3000
+      </p>
+     </td>
+     <td>
+      <p>
+       Return from first year
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       4200
+      </p>
+     </td>
+     <td>
+      <p>
+       Return from second year
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       6800
+      </p>
+     </td>
+     <td>
+      <p>
+       Return from third year
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =NPV(A2, A3, A4, A5, A6)
+      </p>
+     </td>
+     <td>
+      <p>
+       Net present value of this investment
+      </p>
+     </td>
+     <td>
+      <p>
+       $1,188.44
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <section aria-labelledby="" class="ocpSection">
+  </section>
+  <section aria-labelledby="ID0EDBBD" class="ocpSection">
+   <h3 class="" id="ID0EDBBD">
+    Example 2
+   </h3>
+   <table aria-label="" class="banded">
+    <thead>
+     <tr>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         Data
+        </b>
+       </p>
+      </th>
+      <th>
+       <p>
+        <b class="ocpLegacyBold">
+         Description
+        </b>
+       </p>
+      </th>
+      <th>
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <p>
+        0.08
+       </p>
+      </td>
+      <td>
+       <p>
+        Annual discount rate. This might represent the rate of inflation or the interest rate of a competing investment.
+       </p>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        -40000
+       </p>
+      </td>
+      <td>
+       <p>
+        Initial cost of investment
+       </p>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        8000
+       </p>
+      </td>
+      <td>
+       <p>
+        Return from first year
+       </p>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        9200
+       </p>
+      </td>
+      <td>
+       <p>
+        Return from second year
+       </p>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        10000
+       </p>
+      </td>
+      <td>
+       <p>
+        Return from third year
+       </p>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        12000
+       </p>
+      </td>
+      <td>
+       <p>
+        Return from fourth year
+       </p>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        14500
+       </p>
+      </td>
+      <td>
+       <p>
+        Return from fifth year
+       </p>
+      </td>
+      <td>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        <b class="ocpLegacyBold">
+         Formula
+        </b>
+       </p>
+      </td>
+      <td>
+       <p>
+        <b class="ocpLegacyBold">
+         Description
+        </b>
+       </p>
+      </td>
+      <td>
+       <p>
+        <b class="ocpLegacyBold">
+         Result
+        </b>
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        =NPV(A2, A4:A8)+A3
+       </p>
+      </td>
+      <td>
+       <p>
+        Net present value of this investment
+       </p>
+      </td>
+      <td>
+       <p>
+        $1,922.06
+       </p>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       <p>
+        =NPV(A2, A4:A8, -9000)+A3
+       </p>
+      </td>
+      <td>
+       <p>
+        Net present value of this investment, with a loss in the sixth year of 9000
+       </p>
+      </td>
+      <td>
+       <p>
+        ($3,749.47)
+       </p>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <p>
+    <a class="ocpTopOfPage" data-bi-area="__example" data-bi-type="anchor" href="#">
+     Top of Page
+    </a>
+   </p>
+  </section>
+ </section>
+</article>

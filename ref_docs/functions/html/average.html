@@ -1,0 +1,356 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    AVERAGE
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Description
+  </h2>
+  <p>
+   Returns the average (arithmetic mean) of the arguments. For example, if the range A1:A20 contains numbers, the formula
+   <b class="ocpLegacyBold">
+    =
+   </b>
+   <b class="ocpLegacyBold">
+    AVERAGE(
+   </b>
+   <b class="ocpLegacyBold">
+    A1:A20)
+   </b>
+   returns the average of those numbers.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <p>
+   AVERAGE(number1, [number2], ...)
+  </p>
+  <p>
+   The AVERAGE function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Number1
+     </b>
+     Required. The first number, cell reference, or range for which you want the average.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Number2, ...
+     </b>
+     Optional. Additional numbers, cell references or ranges for which you want the average, up to a maximum of 255.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     Arguments can either be numbers or names, ranges, or cell references that contain numbers.
+    </p>
+   </li>
+   <li>
+    <p>
+     Logical values and text representations of numbers that you type directly into the list of arguments are not counted.
+    </p>
+   </li>
+   <li>
+    <p>
+     If a range or cell reference argument contains text, logical values, or empty cells, those values are ignored; however, cells with the value zero are included.
+    </p>
+   </li>
+   <li>
+    <p>
+     Arguments that are error values or text that cannot be translated into numbers cause errors.
+    </p>
+   </li>
+   <li>
+    <p>
+     If you want to include logical values and text representations of numbers in a reference as part of the calculation, use the
+     <b class="ocpLegacyBold">
+      AVERAGEA
+     </b>
+     function.
+    </p>
+   </li>
+   <li>
+    <p>
+     If you want to calculate the average of only the values that meet certain criteria, use the
+     <b class="ocpLegacyBold">
+      AVERAGEIF
+     </b>
+     function or the
+     <b class="ocpLegacyBold">
+      AVERAGEIFS
+     </b>
+     function.
+    </p>
+   </li>
+  </ul>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpNote">
+     Note:
+    </b>
+    The
+    <b class="ocpLegacyBold">
+     AVERAGE
+    </b>
+    function measures central tendency, which is the location of the center of a group of numbers in a statistical distribution. The three most common measures of central tendency are:
+   </p>
+  </div>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpLegacyBold">
+      Average
+     </b>
+     , which is the arithmetic mean, and is calculated by adding a group of numbers and then dividing by the count of those numbers. For example, the average of 2, 3, 3, 5, 7, and 10 is 30 divided by 6, which is 5.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpLegacyBold">
+      Median
+     </b>
+     , which is the middle number of a group of numbers; that is, half the numbers have values that are greater than the median, and half the numbers have values that are less than the median. For example, the median of 2, 3, 3, 5, 7, and 10 is 4.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpLegacyBold">
+      Mode
+     </b>
+     , which is the most frequently occurring number in a group of numbers. For example, the mode of 2, 3, 3, 5, 7, and 10 is 3.
+    </p>
+   </li>
+  </ul>
+  <p>
+   For a symmetrical distribution of a group of numbers, these three measures of central tendency are all the same. For a skewed distribution of a group of numbers, they can be different.
+  </p>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpTip">
+     Tip:
+    </b>
+    When you average cells, keep in mind the difference between empty cells and those containing the value zero, especially if you have cleared the
+    <b class="ocpUI">
+     Show a zero in cells that have a zero value
+    </b>
+    check box in the
+    <b class="ocpUI">
+     Excel Options
+    </b>
+    dialog box in the Excel desktop application. When this option is selected, empty cells are not counted, but zero values are.
+   </p>
+  </div>
+  <p>
+   To locate the
+   <b class="ocpUI">
+    Show a zero in cells that have a zero value
+   </b>
+   check box:
+  </p>
+  <ul>
+   <li>
+    <p>
+     On the
+     <b class="ocpUI">
+      File
+     </b>
+     tab, select
+     <b class="ocpUI">
+      Options
+     </b>
+     , and then, in the
+     <b class="ocpUI">
+      Advanced
+     </b>
+     category, look under
+     <b class="ocpUI">
+      Display options for this worksheet
+     </b>
+     .
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </th>
+     <th>
+     </th>
+     <th>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       10
+      </p>
+     </td>
+     <td>
+      <p>
+       15
+      </p>
+     </td>
+     <td>
+      <p>
+       32
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       7
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       9
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       27
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =AVERAGE(A2:A6)
+      </p>
+     </td>
+     <td>
+      <p>
+       Average of the numbers in cells A2 through A6.
+      </p>
+     </td>
+     <td>
+      <p>
+       11
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =AVERAGE(A2:A6, 5)
+      </p>
+     </td>
+     <td>
+      <p>
+       Average of the numbers in cells A2 through A6 and the number 5.
+      </p>
+     </td>
+     <td>
+      <p>
+       10
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =AVERAGE(A2:C2)
+      </p>
+     </td>
+     <td>
+      <p>
+       Average of the numbers in cells A2 through C2.
+      </p>
+     </td>
+     <td>
+      <p>
+       19
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

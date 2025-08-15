@@ -1,0 +1,197 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    ROUNDUP
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Rounds a number up, away from 0 (zero).
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   ROUNDUP(number, num_digits)
+  </p>
+  <p>
+   The ROUNDUP function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Number
+     </b>
+     Required. Any real number that you want rounded up.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Num_digits
+     </b>
+     Required. The number of digits to which you want to round number.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     ROUNDUP behaves like ROUND, except that it always rounds a number up.
+    </p>
+   </li>
+   <li>
+    <p>
+     If num_digits is greater than 0 (zero), then number is rounded up to the specified number of decimal places.
+    </p>
+   </li>
+   <li>
+    <p>
+     If num_digits is 0, then number is rounded up to the nearest integer.
+    </p>
+   </li>
+   <li>
+    <p>
+     If num_digits is less than 0, then number is rounded up to the left of the decimal point.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description (Result)
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =ROUNDUP(3.2,0)
+      </p>
+     </td>
+     <td>
+      <p>
+       Rounds 3.2 up to zero decimal places.
+      </p>
+     </td>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =ROUNDUP(76.9,0)
+      </p>
+     </td>
+     <td>
+      <p>
+       Rounds 76.9 up to zero decimal places.
+      </p>
+     </td>
+     <td>
+      <p>
+       77
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =ROUNDUP(3.14159, 3)
+      </p>
+     </td>
+     <td>
+      <p>
+       Rounds 3.14159 up to three decimal places.
+      </p>
+     </td>
+     <td>
+      <p>
+       3.142
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =ROUNDUP(-3.14159, 1)
+      </p>
+     </td>
+     <td>
+      <p>
+       Rounds -3.14159 up to one decimal place.
+      </p>
+     </td>
+     <td>
+      <p>
+       -3.2
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =ROUNDUP(31415.92654, -2)
+      </p>
+     </td>
+     <td>
+      <p>
+       Rounds 31415.92654 up to 2 decimal places to the left of the decimal point.
+      </p>
+     </td>
+     <td>
+      <p>
+       31500
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

@@ -1,0 +1,202 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p id="__goback">
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    F.DIST.RT
+   </b>
+   function in Microsoft Excel.
+  </p>
+  <p>
+   Returns the (right-tailed) F probability distribution (degree of diversity) for two data sets. You can use this function to determine whether two data sets have different degrees of diversity. For example, you can examine the test scores of men and women entering high school and determine if the variability in the females is different from that found in the males.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   F.DIST.RT(x,deg_freedom1,deg_freedom2)
+  </p>
+  <p>
+   The F.DIST.RT function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      X
+     </b>
+     Required. The value at which to evaluate the function.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Deg_freedom1
+     </b>
+     Required. The numerator degrees of freedom.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Deg_freedom2
+     </b>
+     Required. The denominator degrees of freedom.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If any argument is nonnumeric, F.DIST.RT returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If x is negative, F.DIST.RT returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If deg_freedom1 or deg_freedom2 is not an integer, it is truncated.
+    </p>
+   </li>
+   <li>
+    <p>
+     If deg_freedom1 &lt; 1 F.DIST.RT returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If deg_freedom2 &lt; 1 F.DIST.RT returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     F.DIST.RT is calculated as F.DIST.RT=P( F&gt;x ), where F is a random variable that has an F distribution with deg_freedom1 and deg_freedom2 degrees of freedom.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       15.2068649
+      </p>
+     </td>
+     <td>
+      <p>
+       Value at which to evaluate the function
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       6
+      </p>
+     </td>
+     <td>
+      <p>
+       Numerator degrees of freedom
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+     <td>
+      <p>
+       Denominator degrees of freedom
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =F.DIST.RT(A2,A3,A4)
+      </p>
+     </td>
+     <td>
+      <p>
+       F probability distribution for the terms above.
+      </p>
+     </td>
+     <td>
+      <p>
+       0.01
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

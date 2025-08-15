@@ -1,0 +1,374 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    DISC
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Returns the discount rate for a security.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   DISC(settlement, maturity, pr, redemption, [basis])
+  </p>
+  <div class="ocpAlert">
+   <p class="ocpAlertSection">
+    <b class="ocpImportant">
+     Important:
+    </b>
+    Dates should be entered by using the DATE function, or as results of other formulas or functions. For example, use DATE(2018,5,23) for the 23rd day of May, 2018. Problems can occur if dates are entered as text.
+   </p>
+  </div>
+  <p>
+   The DISC function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Settlement
+     </b>
+     Required. The security's settlement date. The security settlement date is the date after the issue date when the security is traded to the buyer.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Maturity
+     </b>
+     Required. The security's maturity date. The maturity date is the date when the security expires.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Pr
+     </b>
+     Required. The security's price per $100 face value.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Redemption
+     </b>
+     Required. The security's redemption value per $100 face value.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Basis
+     </b>
+     Optional. The type of day count basis to use.
+    </p>
+   </li>
+  </ul>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Basis
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Day count basis
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       0 or omitted
+      </p>
+     </td>
+     <td>
+      <p>
+       US (NASD) 30/360
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+      <p>
+       Actual/actual
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+     <td>
+      <p>
+       Actual/360
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+     <td>
+      <p>
+       Actual/365
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+     <td>
+      <p>
+       European 30/360
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     Microsoft Excel stores dates as sequential serial numbers so they can be used in calculations. By default, January 1, 1900 is serial number 1, and January 1, 2018 is serial number 43101 because it is 43,101 days after January 1, 1900.
+    </p>
+   </li>
+   <li>
+    <p>
+     The settlement date is the date a buyer purchases a coupon, such as a bond. The maturity date is the date when a coupon expires. For example, suppose a 30-year bond is issued on January 1, 2018, and is purchased by a buyer six months later. The issue date would be January 1, 2018, the settlement date would be July 1, 2018, and the maturity date would be January 1, 2048, 30 years after the January 1, 2018, issue date.
+    </p>
+   </li>
+   <li>
+    <p>
+     Settlement, maturity, and basis are truncated to integers.
+    </p>
+   </li>
+   <li>
+    <p>
+     If settlement or maturity is not a valid serial date number, DISC returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If pr ≤ 0 or if redemption ≤ 0, DISC returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If basis &lt; 0 or if basis &gt; 4, DISC returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If settlement ≥ maturity, DISC returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     DISC is calculated as follows:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/66aa56c3-db09-4129-90cd-5ad6ad1ee706?format=avif&amp;w=320 320w,        /images/en-us/66aa56c3-db09-4129-90cd-5ad6ad1ee706?format=avif&amp;w=480 480w,        /images/en-us/66aa56c3-db09-4129-90cd-5ad6ad1ee706?format=avif&amp;w=640 640w,        /images/en-us/66aa56c3-db09-4129-90cd-5ad6ad1ee706?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/66aa56c3-db09-4129-90cd-5ad6ad1ee706?format=webp&amp;w=320 320w,        /images/en-us/66aa56c3-db09-4129-90cd-5ad6ad1ee706?format=webp&amp;w=480 480w,        /images/en-us/66aa56c3-db09-4129-90cd-5ad6ad1ee706?format=webp&amp;w=640 640w,        /images/en-us/66aa56c3-db09-4129-90cd-5ad6ad1ee706?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/66aa56c3-db09-4129-90cd-5ad6ad1ee706?format=jpeg&amp;w=320 320w,        /images/en-us/66aa56c3-db09-4129-90cd-5ad6ad1ee706?format=jpeg&amp;w=480 480w,        /images/en-us/66aa56c3-db09-4129-90cd-5ad6ad1ee706?format=jpeg&amp;w=640 640w,        /images/en-us/66aa56c3-db09-4129-90cd-5ad6ad1ee706?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/66aa56c3-db09-4129-90cd-5ad6ad1ee706" style="aspect-ratio: 220/41" width="220"/>
+     </picture>
+    </p>
+    <p>
+     where:
+    </p>
+    <ul>
+     <li>
+      <p>
+       B = number of days in a year, depending on the year basis.
+      </p>
+     </li>
+     <li>
+      <p>
+       DSM = number of days between settlement and maturity.
+      </p>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       07/01/2018
+      </p>
+     </td>
+     <td>
+      <p>
+       Settlement date
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       01/01/2048
+      </p>
+     </td>
+     <td>
+      <p>
+       Maturity date
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       97.975
+      </p>
+     </td>
+     <td>
+      <p>
+       Price
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       100
+      </p>
+     </td>
+     <td>
+      <p>
+       Redemption value
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+      <p>
+       Actual/actual basis (see above)
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =DISC(A2,A3,A4,A5,A6)
+      </p>
+     </td>
+     <td>
+      <p>
+       The bond discount rate, for a bond with the above terms
+      </p>
+     </td>
+     <td>
+      <p>
+       0.001038
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

@@ -1,0 +1,244 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    PEARSON
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Returns the Pearson product moment correlation coefficient, r, a dimensionless index that ranges from -1.0 to 1.0 inclusive and reflects the extent of a linear relationship between two data sets.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   PEARSON(array1, array2)
+  </p>
+  <p>
+   The PEARSON function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Array1
+     </b>
+     Required. A set of independent values.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Array2
+     </b>
+     Required. A set of dependent values.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     The arguments must be either numbers or names, array constants, or references that contain numbers.
+    </p>
+   </li>
+   <li>
+    <p>
+     If an array or reference argument contains text, logical values, or empty cells, those values are ignored; however, cells with the value zero are included.
+    </p>
+   </li>
+   <li>
+    <p>
+     If array1 and array2 are empty or have a different number of data points, PEARSON returns the #N/A error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     The formula for the Pearson product moment correlation coefficient, r, is:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/7f6cc4a2-abb4-4ebe-a8a9-9607f51aff80?format=avif&amp;w=320 320w,        /images/en-us/7f6cc4a2-abb4-4ebe-a8a9-9607f51aff80?format=avif&amp;w=480 480w,        /images/en-us/7f6cc4a2-abb4-4ebe-a8a9-9607f51aff80?format=avif&amp;w=640 640w,        /images/en-us/7f6cc4a2-abb4-4ebe-a8a9-9607f51aff80?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/7f6cc4a2-abb4-4ebe-a8a9-9607f51aff80?format=webp&amp;w=320 320w,        /images/en-us/7f6cc4a2-abb4-4ebe-a8a9-9607f51aff80?format=webp&amp;w=480 480w,        /images/en-us/7f6cc4a2-abb4-4ebe-a8a9-9607f51aff80?format=webp&amp;w=640 640w,        /images/en-us/7f6cc4a2-abb4-4ebe-a8a9-9607f51aff80?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/7f6cc4a2-abb4-4ebe-a8a9-9607f51aff80?format=jpeg&amp;w=320 320w,        /images/en-us/7f6cc4a2-abb4-4ebe-a8a9-9607f51aff80?format=jpeg&amp;w=480 480w,        /images/en-us/7f6cc4a2-abb4-4ebe-a8a9-9607f51aff80?format=jpeg&amp;w=640 640w,        /images/en-us/7f6cc4a2-abb4-4ebe-a8a9-9607f51aff80?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/7f6cc4a2-abb4-4ebe-a8a9-9607f51aff80" style="aspect-ratio: 188/60" width="188"/>
+     </picture>
+    </p>
+    <p>
+     where x and y are the sample means AVERAGE(array1) and AVERAGE(array2).
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Data
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Independent values
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Dependent values
+       </b>
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       9
+      </p>
+     </td>
+     <td>
+      <p>
+       10
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       7
+      </p>
+     </td>
+     <td>
+      <p>
+       6
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       5
+      </p>
+     </td>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+     <td>
+      <p>
+       5
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       1
+      </p>
+     </td>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description (Result)
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        R
+       </b>
+       <b class="ocpLegacyBold">
+        esult
+       </b>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =PEARSON(A3:A7,B3:B7)
+      </p>
+     </td>
+     <td>
+      <p>
+       Pearson product moment correlation coefficient for the data sets above (0.699379)
+      </p>
+     </td>
+     <td>
+      <p>
+       0.699379
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

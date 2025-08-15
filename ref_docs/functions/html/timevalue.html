@@ -1,0 +1,128 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    TIMEVALUE
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Returns the decimal number of the time represented by a text string. The decimal number is a value ranging from 0 (zero) to 0.99988426, representing the times from 0:00:00 (12:00:00 AM) to 23:59:59 (11:59:59 P.M.).
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   TIMEVALUE(time_text)
+  </p>
+  <p>
+   The TIMEVALUE function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Time_text
+     </b>
+     Required. A text string that represents a time in any one of the Microsoft Excel time formats; for example, "6:45 PM" and "18:45" text strings within quotation marks that represent time.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     Date information in time_text is ignored.
+    </p>
+   </li>
+   <li>
+    <p>
+     Time values are a portion of a date value and represented by a decimal number (for example, 12:00 PM is represented as 0.5 because it is half of a day).
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =TIMEVALUE("2:24 AM")
+      </p>
+     </td>
+     <td>
+      <p>
+       Decimal part of a day, with only the time specified.
+      </p>
+     </td>
+     <td>
+      <p>
+       0.10
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =TIMEVALUE("22-Aug-2011 6:35 AM")
+      </p>
+     </td>
+     <td>
+      <p>
+       Decimal part of a day, with date and time specified.
+      </p>
+     </td>
+     <td>
+      <p>
+       0.2743
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

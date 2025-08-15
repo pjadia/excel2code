@@ -1,0 +1,160 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p id="__goback">
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    FACTDOUBLE
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Returns the double factorial of a number.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   FACTDOUBLE(number)
+  </p>
+  <p>
+   The FACTDOUBLE function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Number
+     </b>
+     Required. The value for which to return the double factorial. If number is not an integer, it is truncated.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If number is nonnumeric, FACTDOUBLE returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If number is negative, FACTDOUBLE returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If number is even:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/4cedd576-367f-4b23-84cf-525b78a8336b?format=avif&amp;w=320 320w,        /images/en-us/4cedd576-367f-4b23-84cf-525b78a8336b?format=avif&amp;w=480 480w,        /images/en-us/4cedd576-367f-4b23-84cf-525b78a8336b?format=avif&amp;w=640 640w,        /images/en-us/4cedd576-367f-4b23-84cf-525b78a8336b?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/4cedd576-367f-4b23-84cf-525b78a8336b?format=webp&amp;w=320 320w,        /images/en-us/4cedd576-367f-4b23-84cf-525b78a8336b?format=webp&amp;w=480 480w,        /images/en-us/4cedd576-367f-4b23-84cf-525b78a8336b?format=webp&amp;w=640 640w,        /images/en-us/4cedd576-367f-4b23-84cf-525b78a8336b?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/4cedd576-367f-4b23-84cf-525b78a8336b?format=jpeg&amp;w=320 320w,        /images/en-us/4cedd576-367f-4b23-84cf-525b78a8336b?format=jpeg&amp;w=480 480w,        /images/en-us/4cedd576-367f-4b23-84cf-525b78a8336b?format=jpeg&amp;w=640 640w,        /images/en-us/4cedd576-367f-4b23-84cf-525b78a8336b?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/4cedd576-367f-4b23-84cf-525b78a8336b" style="aspect-ratio: 178/14" width="178"/>
+     </picture>
+    </p>
+   </li>
+   <li>
+    <p>
+     If number is odd:
+    </p>
+    <p>
+     <picture>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/5a4ad766-a2f5-4005-924c-9d1bb6582404?format=avif&amp;w=320 320w,        /images/en-us/5a4ad766-a2f5-4005-924c-9d1bb6582404?format=avif&amp;w=480 480w,        /images/en-us/5a4ad766-a2f5-4005-924c-9d1bb6582404?format=avif&amp;w=640 640w,        /images/en-us/5a4ad766-a2f5-4005-924c-9d1bb6582404?format=avif&amp;w=800 800w" type="image/avif"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/5a4ad766-a2f5-4005-924c-9d1bb6582404?format=webp&amp;w=320 320w,        /images/en-us/5a4ad766-a2f5-4005-924c-9d1bb6582404?format=webp&amp;w=480 480w,        /images/en-us/5a4ad766-a2f5-4005-924c-9d1bb6582404?format=webp&amp;w=640 640w,        /images/en-us/5a4ad766-a2f5-4005-924c-9d1bb6582404?format=webp&amp;w=800 800w" type="image/webp"/>
+      <source sizes="(max-width: 480px) 320px, (max-width: 768px) 480px, (max-width: 1024px) 640px, 800px" srcset="/images/en-us/5a4ad766-a2f5-4005-924c-9d1bb6582404?format=jpeg&amp;w=320 320w,        /images/en-us/5a4ad766-a2f5-4005-924c-9d1bb6582404?format=jpeg&amp;w=480 480w,        /images/en-us/5a4ad766-a2f5-4005-924c-9d1bb6582404?format=jpeg&amp;w=640 640w,        /images/en-us/5a4ad766-a2f5-4005-924c-9d1bb6582404?format=jpeg&amp;w=800 800w" type="image/jpeg"/>
+      <img alt="Equation" class="fluentImage" loading="lazy" src="/images/en-us/5a4ad766-a2f5-4005-924c-9d1bb6582404" style="aspect-ratio: 175/14" width="175"/>
+     </picture>
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =FACTDOUBLE(6)
+      </p>
+     </td>
+     <td>
+      <p>
+       Double factorial of 6. For 6, an even number, the double factorial is equivalent to 6*4*2; using this equation:
+       <br aria-hidden="true"/>
+       <br aria-hidden="true"/>
+       n!! = n*(n-2)*(n-4)...(4)(2)
+      </p>
+     </td>
+     <td>
+      <p>
+       48
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =FACTDOUBLE(7)
+      </p>
+     </td>
+     <td>
+      <p>
+       Double factorial of 7. For 7, an odd number, the double factorial is equivalent to 7*5*3; using this equation:
+       <br aria-hidden="true"/>
+       <br aria-hidden="true"/>
+       n!! = n*(n-2)*(n-4)...(3)(1)
+      </p>
+     </td>
+     <td>
+      <p>
+       105
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

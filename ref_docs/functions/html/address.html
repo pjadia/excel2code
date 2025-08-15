@@ -1,0 +1,364 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p id="__goback">
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    ADDRESS
+   </b>
+   function in Microsoft Excel. For information about working with mailing addresses or creating mailing labels, go to
+   <a class="ocpExternalLink" data-bi-type="anchor" href="https://support.microsoft.com/office/create-and-print-mailing-labels-for-an-address-list-in-excel-d9484315-5123-48ae-bc58-2e8dcf271252" target="_blank">
+    Create and print mailing labels for an address list in Excel
+   </a>
+   .
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Description
+  </h2>
+  <p>
+   You can use the
+   <b class="ocpLegacyBold">
+    ADDRESS
+   </b>
+   function to obtain the address of a cell in a worksheet, given specified row and column numbers. For example,
+   <b class="ocpLegacyBold">
+    ADDRESS(
+   </b>
+   <b class="ocpLegacyBold">
+    2,3)
+   </b>
+   returns
+   <b class="ocpLegacyBold">
+    $C$2
+   </b>
+   . As another example,
+   <b class="ocpLegacyBold">
+    ADDRESS(
+   </b>
+   <b class="ocpLegacyBold">
+    77,300)
+   </b>
+   returns
+   <b class="ocpLegacyBold">
+    $KN$77
+   </b>
+   . You can use other functions, such as the
+   <b class="ocpLegacyBold">
+    ROW
+   </b>
+   and
+   <b class="ocpLegacyBold">
+    COLUMN
+   </b>
+   functions, to provide the row and column number arguments for the
+   <b class="ocpLegacyBold">
+    ADDRESS
+   </b>
+   function.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Syntax
+  </h2>
+  <p>
+   ADDRESS(row_num, column_num, [abs_num], [a1], [sheet_text])
+  </p>
+  <p>
+   The ADDRESS function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      row_num
+     </b>
+     Required. A numeric value that specifies the row number to use in the cell reference.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      column_num
+     </b>
+     Required. A numeric value that specifies the column number to use in the cell reference.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      abs_num
+     </b>
+     Optional. A numeric value that specifies the type of reference to return.
+    </p>
+   </li>
+  </ul>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        abs_num
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Returns this type of reference
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       1 or omitted
+      </p>
+     </td>
+     <td>
+      <p>
+       Absolute
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       2
+      </p>
+     </td>
+     <td>
+      <p>
+       Absolute row; relative column
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       3
+      </p>
+     </td>
+     <td>
+      <p>
+       Relative row; absolute column
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       4
+      </p>
+     </td>
+     <td>
+      <p>
+       Relative
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      A1
+     </b>
+     Optional. A logical value that specifies the A1 or R1C1 reference style. In A1 style, columns are labeled alphabetically, and rows are labeled numerically. In R1C1 reference style, both columns and rows are labeled numerically. If the A1 argument is TRUE or omitted, the
+     <b class="ocpLegacyBold">
+      ADDRESS
+     </b>
+     function returns an A1-style reference; if FALSE, the
+     <b class="ocpLegacyBold">
+      ADDRESS
+     </b>
+     function returns an R1C1-style reference.
+    </p>
+    <div class="ocpAlert">
+     <p class="ocpAlertSection">
+      <b class="ocpNote">
+       Note:
+      </b>
+      To change the reference style that Excel uses, click the
+      <b class="ocpUI">
+       File
+      </b>
+      tab, click
+      <b class="ocpUI">
+       Options
+      </b>
+      , and then click
+      <b class="ocpUI">
+       Formulas
+      </b>
+      . Under
+      <b class="ocpUI">
+       Working with formulas
+      </b>
+      , select or clear the
+      <b class="ocpUI">
+       R1C1 reference style
+      </b>
+      check box.
+     </p>
+    </div>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      sheet_text
+     </b>
+     Optional. A text value that specifies the name of the worksheet to be used as the external reference. For example, the formula
+     <b class="ocpLegacyBold">
+      =
+     </b>
+     <b class="ocpLegacyBold">
+      ADDRESS(
+     </b>
+     <b class="ocpLegacyBold">
+      1,1,,,"Sheet2")
+     </b>
+     returns
+     <b class="ocpLegacyBold">
+      Sheet2!$A$1
+     </b>
+     . If the
+     <b class="ocpLegacyBold">
+      <i class="ocpItalic">
+       sheet_text
+      </i>
+     </b>
+     argument is omitted, no sheet name is used, and the address returned by the function refers to a cell on the current sheet.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection" data-bi-id="__example" id="__example">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =ADDRESS(2,3)
+      </p>
+     </td>
+     <td>
+      <p>
+       Absolute reference
+      </p>
+     </td>
+     <td>
+      <p>
+       $C$2
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =ADDRESS(2,3,2)
+      </p>
+     </td>
+     <td>
+      <p>
+       Absolute row; relative column
+      </p>
+     </td>
+     <td>
+      <p>
+       C$2
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =ADDRESS(2,3,2,FALSE)
+      </p>
+     </td>
+     <td>
+      <p>
+       Absolute row; relative column in R1C1 reference style
+      </p>
+     </td>
+     <td>
+      <p>
+       R2C[3]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =ADDRESS(2,3,1,FALSE,"[Book1]Sheet1")
+      </p>
+     </td>
+     <td>
+      <p>
+       Absolute reference to another workbook and worksheet
+      </p>
+     </td>
+     <td>
+      <p>
+       '[Book1]Sheet1'!R2C3
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =ADDRESS(2,3,1,FALSE,"EXCEL SHEET")
+      </p>
+     </td>
+     <td>
+      <p>
+       Absolute reference to another worksheet
+      </p>
+     </td>
+     <td>
+      <p>
+       'EXCEL SHEET'!R2C3
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

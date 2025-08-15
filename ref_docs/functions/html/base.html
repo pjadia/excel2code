@@ -1,0 +1,197 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p id="__goback">
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    BASE
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFJ" class="ocpSection">
+  <h2 class="" id="ID0EFJ">
+   Description
+  </h2>
+  <p>
+   Converts a number into a text representation with the given radix (base).
+  </p>
+ </section>
+ <section aria-labelledby="ID0EFH" class="ocpSection">
+  <h2 class="" id="ID0EFH">
+   Syntax
+  </h2>
+  <p>
+   BASE(Number, Radix [Min_length])
+  </p>
+  <p>
+   The BASE function syntax has the following arguments.
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Number
+     </b>
+     Required. The number that you want to convert. Must be an integer greater than or equal to 0 and less than 2^53.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Radix
+     </b>
+     Required. The base radix that you want to convert the number into. Must be an integer greater than or equal to 2 and less than or equal to 36.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Min_length
+     </b>
+     Optional. The minimum length of the returned string. Must be an integer greater than or equal to 0.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFF" class="ocpSection">
+  <h2 class="" id="ID0EFF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If Number, Radix, or Min_length are outside the minimum or maximum constraints, BASE returns the #NUM! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If Number is a non-numeric value, BASE returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     Any non-integer number entered as an argument is truncated to an integer.
+    </p>
+   </li>
+   <li>
+    <p>
+     If the Min_length argument is included, leading zeros are added to the result if the result would otherwise be shorter than the minimum length specified. For example, BASE(16,2) returns 10000, but BASE(16,2,8) returns 00010000.
+    </p>
+   </li>
+   <li>
+    <p>
+     The maximum value of the Min_length argument is 255.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EFD" class="ocpSection">
+  <h2 class="" id="ID0EFD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </td>
+     <td>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </td>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =BASE(7,2)
+      </p>
+     </td>
+     <td>
+      <p>
+       Converts the decimal number 7 to base 2 (binary). Result is 111.
+      </p>
+     </td>
+     <td>
+      <p>
+       111
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =BASE(100,16)
+      </p>
+     </td>
+     <td>
+      <p>
+       Converts the decimal number 100 to base 16 (hexadecimal). The result is 64.
+      </p>
+     </td>
+     <td>
+      <p>
+       64
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td>
+     </td>
+     <td>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =BASE(15,2,10)
+      </p>
+     </td>
+     <td>
+      <p>
+       Converts the decimal number 15 to base 2 (binary), with a minimum length of 10. The result is 0000001111, which is 1111 with 6 leading zeros to make the string 10 characters long.
+      </p>
+     </td>
+     <td>
+      <p>
+       0000001111
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+   <a class="ocpTopOfPage" data-bi-type="anchor" href="#">
+    Top of Page
+   </a>
+  </p>
+ </section>
+</article>

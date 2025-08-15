@@ -1,0 +1,136 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p id="__goback">
+   This article describes the formula syntax and usage of the
+   <b class="ocpLegacyBold">
+    ERF
+   </b>
+   function in Microsoft Excel.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Description
+  </h2>
+  <p>
+   Returns the error function integrated between lower_limit and upper_limit.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Syntax
+  </h2>
+  <p>
+   ERF(lower_limit,[upper_limit])
+  </p>
+  <p>
+   The ERF function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Lower_limit
+     </b>
+     Required. The lower bound for integrating ERF.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Upper_limit
+     </b>
+     Optional. The upper bound for integrating ERF. If omitted, ERF integrates between zero and lower_limit.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     If lower_limit is nonnumeric, ERF returns the #VALUE! error value.
+    </p>
+   </li>
+   <li>
+    <p>
+     If upper_limit is nonnumeric, ERF returns the #VALUE! error value.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =ERF(0.745)
+      </p>
+     </td>
+     <td>
+      <p>
+       Error function integrated between 0 and 0.74500
+      </p>
+     </td>
+     <td>
+      <p>
+       0.70792892
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =ERF(1)
+      </p>
+     </td>
+     <td>
+      <p>
+       Error function integrated between 0 and 1.
+      </p>
+     </td>
+     <td>
+      <p>
+       0.84270079
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+</article>

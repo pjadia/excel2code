@@ -1,0 +1,166 @@
+<article class="ocpArticleContent">
+ <section class="ocpIntroduction">
+  <p>
+   MROUND returns a number rounded to the desired multiple.
+  </p>
+ </section>
+ <section aria-labelledby="ID0EDJ" class="ocpSection">
+  <h2 class="" id="ID0EDJ">
+   Syntax
+  </h2>
+  <p>
+   MROUND(number, multiple)
+  </p>
+  <p>
+   The MROUND function syntax has the following arguments:
+  </p>
+  <ul>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Number
+     </b>
+     Required. The value to round.
+    </p>
+   </li>
+   <li>
+    <p>
+     <b class="ocpRunInHead">
+      Multiple
+     </b>
+     Required. The multiple to which you want to round number.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDH" class="ocpSection">
+  <h2 class="" id="ID0EDH">
+   Remarks
+  </h2>
+  <ul>
+   <li>
+    <p>
+     MROUND rounds up, away from zero, if the remainder of dividing number by multiple is greater than or equal to half the value of multiple.
+    </p>
+   </li>
+   <li>
+    <p>
+     The Number and Multiple arguments must have the same sign. If not, a #NUM error is returned.
+    </p>
+   </li>
+  </ul>
+ </section>
+ <section aria-labelledby="ID0EDF" class="ocpSection">
+  <h2 class="" id="ID0EDF">
+   Example
+  </h2>
+  <p>
+   Copy the example data in the following table, and paste it in cell A1 of a new Excel worksheet. For formulas to show results, select them, press F2, and then press Enter. If you need to, you can adjust the column widths to see all the data.
+  </p>
+  <table aria-label="" class="banded">
+   <thead>
+    <tr>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Formula
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Description
+       </b>
+      </p>
+     </th>
+     <th>
+      <p>
+       <b class="ocpLegacyBold">
+        Result
+       </b>
+      </p>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <p>
+       =MROUND(10, 3)
+      </p>
+     </td>
+     <td>
+      <p>
+       Rounds 10 to the nearest multiple of 3.
+      </p>
+     </td>
+     <td>
+      <p>
+       9
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =MROUND(-10, -3)
+      </p>
+     </td>
+     <td>
+      <p>
+       Rounds -10 to the nearest multiple of -3.
+      </p>
+     </td>
+     <td>
+      <p>
+       -9
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =MROUND(1.3, 0.2)
+      </p>
+     </td>
+     <td>
+      <p>
+       Rounds 1.3 to the nearest multiple of 0.2.
+      </p>
+     </td>
+     <td>
+      <p>
+       1.4
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>
+       =MROUND(5, -2)
+      </p>
+     </td>
+     <td>
+      <p>
+       Returns the #NUM! error message because -2 and 5 have different signs.
+      </p>
+     </td>
+     <td>
+      <p>
+       #NUM!
+      </p>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </section>
+ <section aria-labelledby="ID0EDD" class="ocpSection">
+  <h2 class="" id="ID0EDD">
+   Known Limitations
+  </h2>
+  <p>
+   When a ﻿decimal value is provided to the Multiple argument , the rounding direction is undefined for midpoint numbers. For example MROUND(6.05,0.1) returns 6.0 while MROUND(7.05,0.1) returns 7.1.
+  </p>
+ </section>
+</article>
